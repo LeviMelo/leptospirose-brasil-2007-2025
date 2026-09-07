@@ -1,0 +1,132 @@
+[em verde: texto de exemplo – deixar na cor preta após ajustes; em vermelho: orientações adicionais – observar e apagar]
+**Manter a formatação do documento: fonte Times New Roman 12, espaçamento simples e texto alinhado à esquerda.**
+
+modalidade
+Título
+
+Resumo
+(250 palavras –linguagem clara e objetiva, fácil de entender ao público, sem siglas ou explicar siglas consagradas na primeira menção)
+Objetivo: claro, sucinto e compatível com a introdução do manuscrito. Métodos: delineamento, fonte das informações, medida de frequência/associação e de dispersão calculadas. Resultados: número de participantes, dados numéricos das afirmações (resultado das medidas calculadas). Conclusão: resposta ao objetivo a partir dos resultados apresentados no resumo
+
+Palavras-chave: Cinco descritores de acordo com http://DeCS.bvs.br;
+
+[PARA PESQUISA COM APRECIAÇÃO POR UM COMITÊ]
+Aspectos éticos
+Esta pesquisa respeitou os princípios éticos, obtendo os seguintes dados de aprovação:
+Comitê de ética em pesquisa
+
+
+Número do parecer
+
+
+Data de aprovação
+
+
+Certificado de apresentação de apreciação ética
+
+
+Registro do consentimento livre e esclarecido
+
+
+
+
+[PARA PESQUISA COM APRECIAÇÃO POR MAIS DE UM COMITÊ]
+Aspectos éticos
+Esta pesquisa respeitou os princípios éticos, obtendo os seguintes dados de aprovação:
+Comitê de ética em pesquisa
+Número do parecer
+Data de aprovação
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Registro do consentimento livre e esclarecido
+
+
+
+
+[PARA PESQUISA SEM APRECIAÇÃO ÉTICA]
+Aspectos éticos
+[frase que explique ausência de apreciação ética]
+
+
+🡪 Observar limite de palavras nas instruções aos autores: da introdução até o final da discussão, o manuscrito deve conter no máximo 3.500 palavras (Artigo original; Revisão; Debate, Diretriz) ou 1.500 palavras (Nota de pesquisa; Artigo de opinião; Série metodológica).
+Introdução
+
+Observar o guia de redação pertinente ao delineamento.
+Iniciar tratando diretamente do tema principal da pesquisa; questões teóricas, regulatórias ou históricas devem ser evitadas. A função desta seção é apresentar o estado da arte e justificar a pesquisa; detalhes e pormenores devem ser evitados. Ao final da seção, descrever brevemente o objetivo da pesquisa, compatível ao apresentado no resumo.
+
+Métodos
+Observar o guia de redação pertinente ao delineamento.
+Recomenda-se estruturar de acordo com os tópicos previstos no guia de redação do delineamento, na ordem preconizada. Não alterar ordem nem denominações dos tópicos.
+
+Resultados
+Observar o guia de redação pertinente ao delineamento.
+Iniciar pela inclusão dos participantes e sua caracterização. Apresentar resultados em sequência que evolua linearmente seguindo a ordem das ilustrações, evitar texto circular (tratar, mudar de tema e retomar) e excesso de repetição entre texto do resultado e ilustrações.
+Recomenda-se estruturar o texto em um parágrafo por ilustração, destacando os resultados principais de cada ilustração e indicando a ilustração em seguida. Optar por linguagem simples e direta: apresentar dados, evitar extrapolações ou interpretações dos resultados (que pertencem à discussão).
+
+Discussão
+Observar o guia de redação pertinente ao delineamento.
+O primeiro parágrafo da discussão deve resumir os achados, interpretando-os e sem repetir números nem citar ilustrações: não informar o que fez, interpretar o que encontrou.
+Apresentar as limitações do estudo, levando em consideração fontes potenciais de viés ou imprecisão no segundo parágrafo. 
+Após esclarecer as limitações da pesquisa, o texto da discussão deve ser guiado pelos achados seus achados. Interpretar cada resultado relevante e discuti-lo à luz da literatura. Esgotar o tema abordado e evitar retomá-lo adiante no texto de modo circular e redundante. Evitar parágrafos sem conexão com a literatura ou que somente a revisam, sem discussão com os resultados. Assegurar que a discussão faz a ponte entre os achados e pesquisas compatíveis – com delineamento, amostragem e demais aspectos metodológicos comparáveis ao que foi realizado na pesquisa –, ou evidenciar as discrepâncias; caracterizar o estudo citado (delineamento, pessoa, tempo e lugar) de modo a esclarecer semelhanças e diferenças pertinentes a tal confrontação.
+O último parágrafo (curto e conciso) deve apresentar a conclusão da pesquisa com base do que se pode afirmar a partir dos resultados.
+
+
+Disponibilidade de dados
+Apresentar declaração sobre o acesso aos dados de pesquisa (bancos de dados, códigos, métodos e outros materiais utilizados e resultantes da pesquisa), incluindo o link do repositório, com a devida citação no corpo do manuscrito e inclusão da referência na seção “Referências”.
+O banco de dados e os códigos de análise utilizados na pesquisa estão disponíveis em http://xxxxx.
+
+Registro do protocolo
+Para revisões sistemáticas e ensaios clínicos, fornecer informações de registro do protocolo: nome do repositório e número de registro, ou informar ausência de protocolo e registro (em alinhamento à Política editorial da RESS, ensaios clínicos sem registro são inelegíveis à publicação). Detalhar alterações entre o protocolo e a pesquisa final.
+
+Uso de inteligência artificial generativa
+Declarar o uso de tecnologias assistidas por inteligência artificial na elaboração do manuscrito e informar cuidados tomados para assegurar a acurácia nas citações e originalidade do conteúdo.
+A primeira versão da introdução foi elaborada com auxílio do ChatGPT (http://xxxxx), com a finalidade de identificar pesquisas mais recentes. Todas as referências citadas neste estudo foram verificadas em texto completo e cada citação foi conferida para assegurar a confiabilidade e originalidade das afirmações construídas com auxílio de inteligência artificial generativa.
+
+Referências
+Observar limite de referências de acordo com a modalidade do manuscrito: 30 (Artigo original; Debate, Diretriz) ou 20 (Nota de pesquisa; Artigo de opinião; Série metodológica).
+A lista de referências deve ser preparada no estilo Vancouver (http://www.nlm.nih.gov/bsd/uniform_requirements.html) e listadas na ordem de citação no texto. Recomenda-se fortemente o uso de gerenciador de referências bibliográficas, como EndNote, Mendeley e Zotero para citar as referências no texto e automaticamente gerar a lista de referências nesta seção.
+Artigo científico (Journal Article)
+Morehouse SI, Tung RS. Statistical evidence for early extinction of reptiles due to the K/T event. J Paleontology. 1993;17(2):198-209.
+Livro (Book)
+Billoski TV. Introduction to Paleontology. 6th ed. New York: Institutional Press; 1992. 212 p.
+Capítulo de livro (Book section)
+Schwartz MT, Billoski TV. Greenhouse hypothesis: effect on dinosaur extinction. In: Jones BT, Lovecraft NV, editors. Extinction. New York: Barnes and Ellis; 1990. p. 175-89.
+Site (Web page)
+Foley KM, Gelband H, editors. Improving palliative care for cancer [Internet]. Washington: National Academy Press; 2001 [cited 2002 Jul 9]. Available from: https://www.nap.edu/catalog/10149/improving-palliative-care-for-cancer.
+Banco de dados (Datasets)
+Kraemer MUG, Sinka ME, Duda KA, Mylne A, Shearer FM, Brady OJ et. al. The global compendium of Aedes aegypti and Ae. albopictus occurrence [dataset]. 2015 Jun 30 [cited 2015 Oct 23]. Dryad Digital Repository. Available from: https://datadryad.org/stash/dataset/doi:10.5061/dryad.47v3c Referenced in doi: 10.7554/eLife.08347
+
+Tabelas e figuras
+Observar o guia de redação do delineamento para priorizar as informações que devem ser apresentadas como ilustração e atentar para o limite de ilustrações de acordo com a modalidade do manuscrito: 5 (Artigo original; Revisão; Debate, Diretriz); 3 (Nota de pesquisa; Artigo de opinião; Série metodológica).
+
+[Figura X. título informativo do conteúdo, sem informar nome/tipo do gráfico. Siglas essenciais para compreensão da ilustração devem constar preferencialmente no título. Após ponto seguido, informar o local, ano(s) e total de participantes incluídos na ilustração. Separar termos por vírgula e não incluir ponto no final dos títulos. Não incluir detalhes metodológicos ou tipo de ilustração (ex.: gráfico de fluxo; mapa) do título das tabelas e figuras.
+
+Tabela X. Siglas essenciais para compreensão da ilustração devem constar preferencialmente no título, conforme exemplo: “Tabela 3. Razões de prevalências (RP) brutas e ajustadas e intervalos de confiança de 95% (IC95%) do [desfecho] pelas variáveis do estudo. Local, ano (n=xx)”. 
+
+Notas de rodapé devem ser utilizadas para esclarecer resultado apresentado, identificadas por letras do alfabeto minúsculas e sobrescritas, em ordem sequencial. As notas abaixo das ilustrações devem ser identificadas por “Nota(s):” e separadas por ponto e vírgula. A autoria das ilustrações deve ser dos autores, dispensando tal indicação em nota de rodapé, semelhante à fonte dos dados e demais detalhes metodológicos, que devem constar nos métodos.
+
+Títulos e notas de rodapé devem ficar fora das linhas de grade das tabelas. 
+
+Apresente dados que se complementam em coluna única, como frequência absoluta e relativa: “| n (%) |” e medida de associação e de dispersão: “| RP (IC95%) |”. Evite colunas com recíproco de dado já apresentado (informação redundante), por exemplo: somente uma coluna com a distribuição absoluta e relativa da doença, sem necessidade de outra coluna com a distribuição entre saudáveis.
+
+Todos os dados das células devem ter a mesma natureza do que foi informado no cabeçalho da tabela. Não é permitido, por exemplo, em uma tabela cujo cabeçalho informa contagens, incluir média e desvio padrão. Especifique as estatísticas relatadas nos cabeçalhos (ex.: “Média±DP”, “Mediana (IIQ)”, “n (%)”) e informe o tamanho do grupo e/ou unidades de medida nas colunas ou linhas, quando aplicável; sem repetir unidades em cada célula (ex.: %).
+
+Informe a unidade na linha da variável (ex.: “Renda (salários mínimos)”; “Faixa etária (anos)”) e remova repetições nas categorias da variável (ex.: “salários mínimos”; “anos”). Utilize hífen (“-”) para intervalos numéricos das categorias (ex.: 0-4) e assegure compatibilidade entre as categorizações apresentadas nas tabelas e aquelas informadas nos métodos, com consistência em todo o texto. Variáveis ou categorias de referência nas investigações de associações devem ser indicadas na célula da tabela por “1,00”.
+
+Alinhe os dados numéricos à direita e os de texto à esquerda nas células. Organize linhas e colunas de forma lógica e intuitiva, aplicando hierarquia para organizar as variáveis. Agrupe variáveis semelhantes e ordene colunas e linhas de forma lógica (ex.: ordem alfabética, cronológica, crescente/decrescente).]
