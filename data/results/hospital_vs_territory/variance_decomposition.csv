@@ -1,0 +1,3 @@
+outcome,admissions,events,moment_between_region_tau_pp,moment_between_hospital_within_region_tau_pp,moment_variance_ratio_hospital_over_region,glmm_hospital_variance,glmm_hospital_MOR,glmm_home_region_variance,glmm_home_region_MOR,glmm_hospital_variance_share_pct,glmm_home_region_variance_share_pct
+died,34629,2147,3.5829581286442607,2.4195956980322104,0.4560391646749304,0.36947748,1.78569587,0.37083499,1.78759717,9.16776481,9.20144849
+any_icu,34629,5402,11.143258643043344,11.919527434695373,1.1441781588761162,2.43923854,4.43604869,0.32049314,1.71601957,40.32065945,5.29775763

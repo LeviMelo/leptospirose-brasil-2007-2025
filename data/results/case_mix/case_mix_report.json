@@ -1,0 +1,120 @@
+{
+  "window": [
+    2007,
+    2025
+  ],
+  "eligibility": {
+    "regions_total": 432,
+    "regions_eligible": 208,
+    "cases_total": 66358,
+    "cases_eligible": 63881,
+    "min_hosp_known": 30,
+    "min_outcome_known": 20
+  },
+  "age_fatality": {
+    "cfr_0_14_pct": 3.4834834834834836,
+    "cfr_70plus_pct": 25.428571428571427,
+    "cfp_ratio_70plus_vs_0_14": 7.29975369458128,
+    "cfp_ratio_70plus_vs_15_29": 3.9637566619004287,
+    "cfp_ratio_70plus_vs_15_29_lo": 3.5918244533743455,
+    "cfp_ratio_70plus_vs_15_29_hi": 4.37420232494936,
+    "age_coding_completeness": 0.9999849302269508,
+    "sex_coding_completeness": 0.9999397209078031
+  },
+  "composition": {
+    "pct_60plus_Q1": 7.635818066961465,
+    "pct_60plus_Q5": 10.77456647398844,
+    "pct_male_Q1": 71.01231838281743,
+    "pct_male_Q5": 82.76287388220783,
+    "age_p90_Q1": 57.0,
+    "age_p90_Q5": 60.0,
+    "age_mean_Q1": 33.94926599969388,
+    "age_mean_Q5": 38.57205770060098,
+    "pct_60plus_max_quintile": 3,
+    "pct_60plus_monotone_in_H": false,
+    "region_level": {
+      "n_regions": 208,
+      "H_vs_share_60plus": {
+        "rho": 0.18792444829408678,
+        "p": 0.006563566011927873
+      },
+      "H_vs_mean_age": {
+        "rho": 0.1211133585014625,
+        "p": 0.08140072510382726
+      },
+      "H_vs_share_male": {
+        "rho": 0.15690408512901555,
+        "p": 0.023617018002381227
+      },
+      "H_vs_cfr": {
+        "rho": 0.5251511793277079,
+        "p": 3.8486120344124786e-16
+      }
+    }
+  },
+  "standardisation": {
+    "standard_population": "all confirmed cases nationally with coded age and sex",
+    "standard_n": 66353,
+    "strata": 12,
+    "crude_Q1_pct": 2.6703499079189688,
+    "crude_Q5_pct": 17.184499912724736,
+    "std_Q1_pct": 3.125023037971866,
+    "std_Q5_pct": 16.660543853804672,
+    "crude_Q5_over_Q1": 6.435298932834159,
+    "crude_Q5_over_Q1_lo": 5.733437580052317,
+    "crude_Q5_over_Q1_hi": 7.223078960346609,
+    "std_Q5_over_Q1": 5.33133472981285,
+    "std_Q5_over_Q1_lo": 4.750362187619118,
+    "std_Q5_over_Q1_hi": 5.99618576795238,
+    "gradient_retained_pct": 79.68898828448314,
+    "age_only_Q5_over_Q1": 5.64985710494872,
+    "expected_Q1_pct": 8.835284876493937,
+    "expected_Q5_pct": 10.1466119468296,
+    "expected_Q5_over_Q1": 1.1484193309741961,
+    "scfr_Q1": 0.3022369901193985,
+    "scfr_Q5": 1.6936195059764936,
+    "scfr_Q5_over_Q1": 5.603614254189835,
+    "crude_monotone_in_H": true,
+    "std_monotone_in_H": true,
+    "bootstrap_reps": 4000,
+    "max_gamma_vs_bootstrap_gap_pp": 0.029726806090735636
+  },
+  "stratified": {
+    "<30": {
+      "Q1_cfr_pct": 1.5337423312883436,
+      "Q5_cfr_pct": 10.44695745826602,
+      "Q5_over_Q1": 6.811416262789446,
+      "Q5_over_Q1_lo": 5.374384990088237,
+      "Q5_over_Q1_hi": 8.632688501206687,
+      "Q1_outcome_known": 5216,
+      "Q5_outcome_known": 3714,
+      "monotone": true
+    },
+    "30-59": {
+      "Q1_cfr_pct": 2.8669527896995706,
+      "Q5_cfr_pct": 18.137028483448805,
+      "Q5_over_Q1": 6.326238977011335,
+      "Q5_over_Q1_lo": 5.4008236940875145,
+      "Q5_over_Q1_hi": 7.4102214516038085,
+      "Q1_outcome_known": 5825,
+      "Q5_outcome_known": 6495,
+      "monotone": true
+    },
+    "60+": {
+      "Q1_cfr_pct": 7.955801104972375,
+      "Q5_cfr_pct": 32.26837060702875,
+      "Q5_over_Q1": 4.05595491657792,
+      "Q5_over_Q1_lo": 3.204311956509252,
+      "Q5_over_Q1_hi": 5.1339477892888805,
+      "Q1_outcome_known": 905,
+      "Q5_outcome_known": 1252,
+      "monotone": true
+    }
+  },
+  "covariate_file": {
+    "path": "data/results/case_mix/region_year_agesex.csv",
+    "region_years": 8208,
+    "region_years_with_a_case": 5184,
+    "regions": 432
+  }
+}

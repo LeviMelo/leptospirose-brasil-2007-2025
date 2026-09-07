@@ -1,0 +1,577 @@
+{
+  "study": "Ascertainment breadth and reported case fatality of leptospirosis, Brazil, 2007-2025",
+  "manuscript": "paper/artigo.qmd",
+  "code_repository": "https://github.com/LeviMelo/leptospirose-brasil-2007-2025",
+  "generated_at": "2026-09-07T13:43:29+00:00",
+  "generated_by": "studies/leptospirosis/72_reporting_checklist.py",
+  "analytic_window": {
+    "cases": {
+      "from": 2007,
+      "to": 2025,
+      "dated_by": "symptom onset (SEM_PRI)"
+    },
+    "three_system_comparison": {
+      "from": 2008,
+      "to": 2024,
+      "reason": "the only years in which SINAN, SIM and SIH all have complete national coverage"
+    },
+    "unit_of_analysis": "health region x calendar year",
+    "analytic_population_confirmed_cases": 66358
+  },
+  "source_systems": [
+    {
+      "id": "SINAN-LEPT",
+      "name": "Sistema de Informação de Agravos de Notificação, agravo leptospirose (LEPTBR)",
+      "custodian": "Ministerio da Saude / DATASUS",
+      "granularity": "notification record (line level)",
+      "coverage_used": "annual national files 2007-2025",
+      "role": "numerator: confirmed cases, deaths, hospitalisation, confirmation criterion, clinical block, demography",
+      "key_fields": [
+        "CLASSI_FIN",
+        "SEM_PRI",
+        "ID_MN_RESI",
+        "EVOLUCAO",
+        "ATE_HOSP",
+        "CRITERIO",
+        "CLI_ICTERI",
+        "CLI_RENAL",
+        "CLI_HEMORR",
+        "NU_IDADE_N",
+        "CS_SEXO"
+      ],
+      "note": "The series starts in 2007 because SINAN NET replaced SINAN Windows that year; only 46 fields are common to the two layouts and the classification, criterion and outcome variables change name and code set."
+    },
+    {
+      "id": "SIM-DO",
+      "name": "Sistema de Informacoes sobre Mortalidade, declaracoes de obito",
+      "custodian": "Ministerio da Saude / DATASUS",
+      "granularity": "death certificate",
+      "coverage_used": "2008-2024 (the common window of the three systems)",
+      "role": "independent numerator: population mortality with underlying cause ICD-10 A27",
+      "key_fields": [
+        "CAUSABAS",
+        "CODMUNRES",
+        "DTOBITO"
+      ],
+      "note": "Underlying cause only for the primary count. The multiple-cause chain gives a different total and the two definitions are not interchangeable."
+    },
+    {
+      "id": "SIH-RD",
+      "name": "Sistema de Informacoes Hospitalares, arquivos reduzidos de AIH",
+      "custodian": "Ministerio da Saude / DATASUS",
+      "granularity": "hospital admission authorisation (AIH), not person",
+      "coverage_used": "2008-2024",
+      "role": "independent numerator: admissions with principal diagnosis A27",
+      "key_fields": [
+        "DIAG_PRINC",
+        "MUNIC_RES",
+        "DT_INTER",
+        "MORTE",
+        "DIAS_PERM",
+        "UTI_MES_TO"
+      ],
+      "note": "An AIH is a billing record; a transferred patient generates more than one. Counts are admissions, never people."
+    },
+    {
+      "id": "IBGE",
+      "name": "Estimativas populacionais IBGE redistribuidas pelo Ministerio da Saude (POPSVS), malha municipal 2022, e Censo 2022 via SIDRA",
+      "custodian": "Instituto Brasileiro de Geografia e Estatistica; Ministerio da Saude",
+      "granularity": "municipality x sex x single year of age x calendar year",
+      "coverage_used": "2007-2025 for person-years; 2022 cross-section for socioeconomic covariates",
+      "role": "denominator: person-years for every rate; socioeconomic covariates for the confounding check",
+      "key_fields": [
+        "COD_MUN",
+        "SEXO",
+        "IDADE",
+        "SIDRA 10296/10295/9933"
+      ],
+      "note": "Gate on the build: the 2022 total must land within 5% of the Censo 2022 count of 203,080,756; it is 3.9% higher because the estimates incorporate measured post-enumeration undercount. A failing gate aborts."
+    }
+  ],
+  "software": {
+    "python": "3.11.15",
+    "python_executable": "python.exe",
+    "polars": "1.41.2",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pyarrow": "24.0.0",
+    "R": "R version 4.4.1 (2024-06-14 ucrt)",
+    "R:INLA": "24.12.11",
+    "R:data.table": "1.18.2.1",
+    "R:arrow": "22.0.0",
+    "R:sf": "1.0.20",
+    "R:spdep": "1.4.2",
+    "R:jsonlite": "2.0.0",
+    "R:sandwich": "3.1.2",
+    "renv_lockfile": "renv.lock",
+    "renv_status": "The project is out-of-sync -- use `renv::status()` for details."
+  },
+  "prerequisite_scripts": [
+    {
+      "script": "studies/leptospirosis/01_extract_sinan.py",
+      "purpose": "Decode the annual national SINAN-LEPT files against the codebook registry."
+    },
+    {
+      "script": "studies/leptospirosis/02_denominators.py",
+      "purpose": "Build municipal person-years by sex and single year of age from POPSVS, with the Censo 2022 reconciliation gate.",
+      "produces": [
+        "data/interim/population_municipal_year.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/05_triangulation_extract.py",
+      "purpose": "Extract SIM A27 deaths and SIH A27 admissions from the national microdata.",
+      "produces": [
+        "data/interim/sim_a27_deaths.parquet",
+        "data/interim/sih_a27_admissions.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/21_build_line_level.py",
+      "purpose": "Assemble the decoded case-level frame with one row per notification and a decode state per field.",
+      "produces": [
+        "data/interim/lept_line_level.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/31_build_atlas.py",
+      "purpose": "Build the municipality atlas: the municipality to health region, UF and macro-region crosswalk on the 2022 lattice.",
+      "produces": [
+        "data/results/atlas/municipality_atlas.parquet"
+      ]
+    },
+    {
+      "script": "paper/R/prep_geo.R",
+      "purpose": "Dissolve municipal geometry into health-region polygons; the source of the BYM2 adjacency graph.",
+      "produces": [
+        "paper/figures/geo_health_region.gpkg"
+      ]
+    }
+  ],
+  "analysis_scripts": [
+    {
+      "script": "studies/leptospirosis/60_analysis_panel.py",
+      "language": "python",
+      "purpose": "The analysis panel: health region by year, with every field rule made explicit.",
+      "output_dir": "data/results/analysis_panel",
+      "outputs": [
+        "data/results/analysis_panel/panel_report.json",
+        "data/results/analysis_panel/region_totals.parquet",
+        "data/results/analysis_panel/region_year_panel.parquet",
+        "data/results/analysis_panel/study_flow.csv"
+      ],
+      "n_outputs": 4,
+      "inputs": [
+        "lept_line_level.parquet",
+        "municipality_atlas.parquet",
+        "population_municipal_year.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/61_denominator_coupling.py",
+      "language": "python",
+      "purpose": "The shared-denominator problem, and the test that discriminates.",
+      "output_dir": "data/results/coupling",
+      "outputs": [
+        "data/results/coupling/cfr_overall_vs_within_hospitalised.csv",
+        "data/results/coupling/coupling_report.json"
+      ],
+      "n_outputs": 2,
+      "inputs": [
+        "region_totals.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/62_triangulation.py",
+      "language": "python",
+      "purpose": "Three systems, one common window: does population mortality track reported case fatality?",
+      "output_dir": "data/results/triangulation",
+      "outputs": [
+        "data/results/triangulation/flat_mortality_threshold_sweep.csv",
+        "data/results/triangulation/numerator_invariance_by_stratum.csv",
+        "data/results/triangulation/region_three_systems.parquet",
+        "data/results/triangulation/three_systems_by_stratum.csv",
+        "data/results/triangulation/triangulation_report.json"
+      ],
+      "n_outputs": 5,
+      "inputs": [
+        "municipality_atlas.parquet",
+        "region_year_panel.parquet",
+        "sih_a27_admissions.parquet",
+        "sim_a27_deaths.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/63_missingness_record.py",
+      "language": "python",
+      "purpose": "Is H confounded by differential record completeness, and is the study RECORD-compliant?",
+      "output_dir": "data/results/data_quality_record",
+      "outputs": [
+        "data/results/data_quality_record/cfr_adversarial_gradient_bounds.csv",
+        "data/results/data_quality_record/cfr_extreme_bounds.csv",
+        "data/results/data_quality_record/cfr_gradient_by_completeness_restriction.csv",
+        "data/results/data_quality_record/completeness_by_H_quintile.csv",
+        "data/results/data_quality_record/completeness_by_macroregion.csv",
+        "data/results/data_quality_record/completeness_by_year.csv",
+        "data/results/data_quality_record/completeness_overall.csv",
+        "data/results/data_quality_record/completeness_vs_H_spearman.csv",
+        "data/results/data_quality_record/data_quality_record_report.json",
+        "data/results/data_quality_record/field_dictionary.csv",
+        "data/results/data_quality_record/record_checklist.csv",
+        "data/results/data_quality_record/region_completeness.parquet"
+      ],
+      "n_outputs": 12,
+      "inputs": [
+        "lept_line_level.parquet",
+        "municipality_atlas.parquet",
+        "region_year_panel.parquet",
+        "study_flow.csv"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/64_exclusion_sensitivity.py",
+      "language": "python",
+      "purpose": "What the minimum-case rule removes, and whether the answer depends on it.",
+      "output_dir": "data/results/exclusion_sensitivity",
+      "outputs": [
+        "data/results/exclusion_sensitivity/excluded_macroregion_composition.csv",
+        "data/results/exclusion_sensitivity/exclusion_by_threshold.csv",
+        "data/results/exclusion_sensitivity/exclusion_sensitivity_report.json",
+        "data/results/exclusion_sensitivity/gradient_by_threshold.csv",
+        "data/results/exclusion_sensitivity/gradient_summary_by_threshold.csv",
+        "data/results/exclusion_sensitivity/hierarchical_model_fits.csv",
+        "data/results/exclusion_sensitivity/inla_fits.json",
+        "data/results/exclusion_sensitivity/model_frame_region.csv",
+        "data/results/exclusion_sensitivity/model_frame_region_year.csv",
+        "data/results/exclusion_sensitivity/region_inclusion.csv"
+      ],
+      "n_outputs": 10,
+      "inputs": [
+        "municipality_atlas.parquet",
+        "population_municipal_year.parquet",
+        "region_totals.parquet",
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/65_construct_validity.py",
+      "language": "python",
+      "purpose": "Is the case-fatality gradient a property of disease, or of confirmation and coding?",
+      "output_dir": "data/results/construct_validity",
+      "outputs": [
+        "data/results/construct_validity/cfr_by_quintile_by_criterion.csv",
+        "data/results/construct_validity/clinical_block_completeness.csv",
+        "data/results/construct_validity/construct_validity_report.json",
+        "data/results/construct_validity/lab_share_by_quintile.csv",
+        "data/results/construct_validity/lab_share_by_year.csv",
+        "data/results/construct_validity/lab_share_rs_by_year.csv",
+        "data/results/construct_validity/pathway_mechanism_by_quintile.csv",
+        "data/results/construct_validity/region_H_variants.parquet",
+        "data/results/construct_validity/severity_gradient_summary.csv",
+        "data/results/construct_validity/severity_incidence_by_quintile.csv",
+        "data/results/construct_validity/severity_score_distribution.csv",
+        "data/results/construct_validity/total_incidence_by_quintile.csv"
+      ],
+      "n_outputs": 12,
+      "inputs": [
+        "lept_line_level.parquet",
+        "municipality_atlas.parquet",
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/66_case_mix.py",
+      "language": "python",
+      "purpose": "Does demographic case mix explain the case-fatality gradient across H?",
+      "output_dir": "data/results/case_mix",
+      "outputs": [
+        "data/results/case_mix/age_fatality_national.csv",
+        "data/results/case_mix/age_sex_fatality_national.csv",
+        "data/results/case_mix/case_mix_report.json",
+        "data/results/case_mix/cfr_by_H_quintile_within_age_stratum.csv",
+        "data/results/case_mix/composition_by_H_quintile.csv",
+        "data/results/case_mix/H_quintile_assignment.csv",
+        "data/results/case_mix/region_year_agesex.csv",
+        "data/results/case_mix/standardised_cfr_by_H_quintile.csv"
+      ],
+      "n_outputs": 8,
+      "inputs": [
+        "lept_line_level.parquet",
+        "municipality_atlas.parquet",
+        "region_totals.parquet",
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/67_rs2024_event.py",
+      "language": "python",
+      "purpose": "Rio Grande do Sul, May 2024: a within-territory perturbation of ascertainment breadth.",
+      "output_dir": "data/results/rs2024_event",
+      "outputs": [
+        "data/results/rs2024_event/rs2024_event_report.json",
+        "data/results/rs2024_event/rs_annual_summary.csv",
+        "data/results/rs2024_event/rs_monthly_series.csv",
+        "data/results/rs2024_event/rs_monthly_series.parquet",
+        "data/results/rs2024_event/state_H_2024_vs_pre.csv",
+        "data/results/rs2024_event/state_H_2024_vs_pre.parquet",
+        "data/results/rs2024_event/state_H_2024_vs_pre_all_states.csv"
+      ],
+      "n_outputs": 7,
+      "inputs": [
+        "lept_line_level.parquet",
+        "municipality_atlas.parquet",
+        "population_municipal_year.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/68_primary_model.R",
+      "language": "R",
+      "purpose": "The primary model: is reported case fatality a function of how far surveillance reaches into the clinical spectrum?",
+      "output_dir": "data/results/primary_model",
+      "outputs": [
+        "data/results/primary_model/graph_node_codes.rds",
+        "data/results/primary_model/health_region_bym2.adj",
+        "data/results/primary_model/model_estimates.csv",
+        "data/results/primary_model/primary_model_report.json",
+        "data/results/primary_model/spatial_effects_A_vs_B.csv"
+      ],
+      "n_outputs": 5,
+      "inputs": [
+        "geo_health_region.gpkg",
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/69_within_region.py",
+      "language": "python",
+      "purpose": "Does reported case fatality follow ascertainment inside a single territory?",
+      "output_dir": "data/results/within_region",
+      "outputs": [
+        "data/results/within_region/composition_counterfactual.csv",
+        "data/results/within_region/first_difference_by_region.csv",
+        "data/results/within_region/first_difference_pairs.csv",
+        "data/results/within_region/lag_lead.csv",
+        "data/results/within_region/measurement_error_correction.csv",
+        "data/results/within_region/threat_ledger_checks.csv",
+        "data/results/within_region/within_region_report.json",
+        "data/results/within_region/within_vs_between_by_threshold.csv"
+      ],
+      "n_outputs": 8,
+      "inputs": [
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/70_descriptives.py",
+      "language": "python",
+      "purpose": "Descriptive table for the manuscript, rebuilt on corrected denominators.",
+      "output_dir": "data/results/descriptives",
+      "outputs": [
+        "data/results/descriptives/descriptives_report.json",
+        "data/results/descriptives/national_by_year.csv",
+        "data/results/descriptives/table1_by_region.csv"
+      ],
+      "n_outputs": 3,
+      "inputs": [
+        "region_year_panel.parquet"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/71_manuscript_tables.py",
+      "language": "python",
+      "purpose": "The two manuscript tables, formatted for print.",
+      "output_dir": "data/results/manuscript_tables",
+      "outputs": [
+        "data/results/manuscript_tables/kable_snippets.R",
+        "data/results/manuscript_tables/manuscript_tables.json",
+        "data/results/manuscript_tables/suppl_quintis_valores_absolutos.csv",
+        "data/results/manuscript_tables/table1_descritiva.csv",
+        "data/results/manuscript_tables/table2_modelos.csv",
+        "data/results/manuscript_tables/table2_nota.csv"
+      ],
+      "n_outputs": 6,
+      "inputs": [
+        "model_estimates.csv",
+        "primary_model_report.json",
+        "region_year_panel.parquet",
+        "table1_by_region.csv"
+      ]
+    },
+    {
+      "script": "studies/leptospirosis/72_reporting_checklist.py",
+      "language": "python",
+      "purpose": "Emit the STROBE/RECORD checklist, the supplementary-material inventory and this reproducibility manifest.",
+      "output_dir": "data/results/reporting",
+      "outputs": [
+        "data/results/reporting/record_strobe_checklist.csv",
+        "data/results/reporting/REFERENCE_LEDGER.csv",
+        "data/results/reporting/reproducibility_manifest.json",
+        "data/results/reporting/RESULTS_LEDGER.csv",
+        "data/results/reporting/supplementary_inventory.csv"
+      ],
+      "n_outputs": 5,
+      "inputs": [
+        "H_quintile_assignment.csv",
+        "case_mix_report.json",
+        "cfr_adversarial_gradient_bounds.csv",
+        "cfr_by_H_quintile_within_age_stratum.csv",
+        "cfr_by_quintile_by_criterion.csv",
+        "cfr_extreme_bounds.csv",
+        "cfr_gradient_by_completeness_restriction.csv",
+        "clinical_block_completeness.csv",
+        "completeness_by_H_quintile.csv",
+        "completeness_by_macroregion.csv",
+        "completeness_by_year.csv",
+        "completeness_overall.csv",
+        "completeness_vs_H_spearman.csv",
+        "composition_by_H_quintile.csv",
+        "construct_validity_report.json",
+        "coupling_report.json",
+        "descriptives_report.json",
+        "excluded_macroregion_composition.csv",
+        "exclusion_by_threshold.csv",
+        "exclusion_sensitivity_report.json",
+        "field_dictionary.csv",
+        "geo_health_region.gpkg",
+        "gradient_by_threshold.csv",
+        "gradient_summary_by_threshold.csv",
+        "health_region_bym2.adj",
+        "hierarchical_model_fits.csv",
+        "lab_share_by_quintile.csv",
+        "lab_share_by_year.csv",
+        "lab_share_rs_by_year.csv",
+        "lept_line_level.parquet",
+        "model_estimates.csv",
+        "municipality_atlas.parquet",
+        "national_by_year.csv",
+        "panel_report.json",
+        "population_municipal_year.parquet",
+        "primary_model_report.json",
+        "region_H_variants.parquet",
+        "region_completeness.parquet",
+        "region_inclusion.csv",
+        "region_three_systems.parquet",
+        "region_year_panel.parquet",
+        "rs2024_event_report.json",
+        "severity_gradient_summary.csv",
+        "severity_incidence_by_quintile.csv",
+        "severity_score_distribution.csv",
+        "sih_a27_admissions.parquet",
+        "sim_a27_deaths.parquet",
+        "spatial_effects_A_vs_B.csv",
+        "standardised_cfr_by_H_quintile.csv",
+        "study_flow.csv",
+        "table1_by_region.csv",
+        "threat_ledger_checks.csv",
+        "three_systems_by_stratum.csv",
+        "total_incidence_by_quintile.csv",
+        "triangulation_report.json",
+        "within_region_report.json"
+      ],
+      "inputs_note": "These are the evidence paths the checklist and inventory cite; this script opens only study_flow.csv for a value and asserts the existence of the rest. It therefore runs last, after everything it certifies."
+    },
+    {
+      "script": "studies/leptospirosis/73_ledgers.py",
+      "language": "python",
+      "purpose": "Build the RESULTS_LEDGER and REFERENCE_LEDGER required by FEEDBACK_2 §82.",
+      "output_dir": null,
+      "outputs": [],
+      "n_outputs": 0,
+      "inputs": [
+        "RESULTS_LEDGER.csv",
+        "case_mix_report.json",
+        "construct_validity_report.json",
+        "coupling_report.json",
+        "exclusion_sensitivity_report.json",
+        "panel_report.json",
+        "primary_model_report.json",
+        "study_flow.csv",
+        "table1_by_region.csv",
+        "three_systems_by_stratum.csv",
+        "triangulation_report.json"
+      ]
+    }
+  ],
+  "execution_order": {
+    "derivation": "Dependency edges are derived by scanning each script's source for the basenames of the datasets the pipeline produces, then topologically sorting. Scripts sharing a stage read nothing the others write and may run in any order or in parallel.",
+    "prerequisites_first": [
+      "studies/leptospirosis/01_extract_sinan.py",
+      "studies/leptospirosis/02_denominators.py",
+      "studies/leptospirosis/05_triangulation_extract.py",
+      "studies/leptospirosis/21_build_line_level.py",
+      "studies/leptospirosis/31_build_atlas.py",
+      "paper/R/prep_geo.R"
+    ],
+    "stages": [
+      {
+        "stage": 0,
+        "scripts": [
+          "studies/leptospirosis/60_analysis_panel.py",
+          "studies/leptospirosis/67_rs2024_event.py"
+        ]
+      },
+      {
+        "stage": 1,
+        "scripts": [
+          "studies/leptospirosis/61_denominator_coupling.py",
+          "studies/leptospirosis/62_triangulation.py",
+          "studies/leptospirosis/63_missingness_record.py",
+          "studies/leptospirosis/64_exclusion_sensitivity.py",
+          "studies/leptospirosis/65_construct_validity.py",
+          "studies/leptospirosis/66_case_mix.py",
+          "studies/leptospirosis/68_primary_model.R",
+          "studies/leptospirosis/69_within_region.py",
+          "studies/leptospirosis/70_descriptives.py"
+        ]
+      },
+      {
+        "stage": 2,
+        "scripts": [
+          "studies/leptospirosis/71_manuscript_tables.py",
+          "studies/leptospirosis/72_reporting_checklist.py"
+        ]
+      },
+      {
+        "stage": 3,
+        "scripts": [
+          "studies/leptospirosis/73_ledgers.py"
+        ]
+      }
+    ],
+    "linear_order": [
+      "studies/leptospirosis/60_analysis_panel.py",
+      "studies/leptospirosis/67_rs2024_event.py",
+      "studies/leptospirosis/61_denominator_coupling.py",
+      "studies/leptospirosis/62_triangulation.py",
+      "studies/leptospirosis/63_missingness_record.py",
+      "studies/leptospirosis/64_exclusion_sensitivity.py",
+      "studies/leptospirosis/65_construct_validity.py",
+      "studies/leptospirosis/66_case_mix.py",
+      "studies/leptospirosis/68_primary_model.R",
+      "studies/leptospirosis/69_within_region.py",
+      "studies/leptospirosis/70_descriptives.py",
+      "studies/leptospirosis/71_manuscript_tables.py",
+      "studies/leptospirosis/72_reporting_checklist.py",
+      "studies/leptospirosis/73_ledgers.py"
+    ],
+    "verified": true,
+    "order_violations": []
+  },
+  "reporting_artefacts": {
+    "checklist": "data/results/reporting/record_strobe_checklist.csv",
+    "supplementary_inventory": "data/results/reporting/supplementary_inventory.csv",
+    "manifest": "data/results/reporting/reproducibility_manifest.json"
+  },
+  "known_gaps": [
+    "Participants (STROBE 13, partial)",
+    "Generalisability (STROBE 21, partial)",
+    "Funding (STROBE 22, not_yet)",
+    "The type of data used should be specified in the title or abstract; where possible, name the databases (RECORD 1.1, partial)",
+    "Reference any validation studies of the codes or algorithms used to select the population; if validation was done for this study, give methods and results (RECORD 6.2, partial)",
+    "Describe the extent to which the investigators had access to the database population used to create the study population (RECORD 12.1, partial)"
+  ],
+  "build_problems": [
+    "manifest: 73_ledgers.py is numbered >= 60 but has no declared output directory in OUTPUT_DIRS; its outputs are unknown",
+    "manifest: renv reports the R library out of sync with renv.lock; the recorded package versions are those actually loaded, not those pinned"
+  ]
+}

@@ -1,0 +1,2 @@
+min_denominator,region_years,regions,deaths,observed_or_per_10pp,observed_lo,observed_hi,composition_only_or_per_10pp,composition_only_lo,composition_only_hi,share_of_observed_log_odds_explained_by_composition,national_cfr_hospitalised,national_cfr_non_hospitalised
+10,1185,110,4682,1.2093147778195499,1.145657763302324,1.276508813275355,1.1721493217692767,1.1582586961072172,1.1862065332570517,0.8357581233225637,0.13477601735976932,0.010653613590555715

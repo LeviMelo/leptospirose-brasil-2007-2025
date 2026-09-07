@@ -1,0 +1,4227 @@
+{
+  "admissions": 34629,
+  "window": [
+    2008,
+    2024
+  ],
+  "hospitals": 1723,
+  "moment_decomposition": {
+    "died": {
+      "outcome": "died",
+      "min_hospital_volume": 50,
+      "between_region_unrestricted": {
+        "clusters": 233,
+        "events": 2147,
+        "n": 34629,
+        "pooled_pct": 6.200005775506079,
+        "observed_var": 0.00158371245598165,
+        "sampling_var": 0.00039130092662996826,
+        "tau2": 0.0011924115293516816,
+        "tau_pct_points": 3.453131230277357
+      },
+      "between_hospital_unrestricted": {
+        "clusters": 1723,
+        "events": 2147,
+        "n": 34629,
+        "pooled_pct": 6.200005775506079,
+        "observed_var": 0.004257539503646341,
+        "sampling_var": 0.0028936115733194647,
+        "tau2": 0.0013639279303268763,
+        "tau_pct_points": 3.6931394914447466
+      },
+      "between_region": {
+        "clusters": 29,
+        "events": 1166,
+        "n": 17544,
+        "pooled_pct": 6.646146830825353,
+        "observed_var": 0.0013863173712572365,
+        "sampling_var": 0.00010255847609543843,
+        "tau2": 0.001283758895161798,
+        "tau_pct_points": 3.5829581286442607
+      },
+      "between_hospital_within_region": {
+        "regions_assessed": 29,
+        "hospitals": 129,
+        "admissions": 17544,
+        "tau2": 0.0005854443341935979,
+        "tau_pct_points": 2.4195956980322104
+      },
+      "ratio_within_region_hospital_to_between_region": 0.4560391646749304
+    },
+    "any_icu": {
+      "outcome": "any_icu",
+      "min_hospital_volume": 50,
+      "between_region_unrestricted": {
+        "clusters": 233,
+        "events": 5402,
+        "n": 34629,
+        "pooled_pct": 15.599641918623119,
+        "observed_var": 0.009894012201119014,
+        "sampling_var": 0.0008858799843553675,
+        "tau2": 0.009008132216763647,
+        "tau_pct_points": 9.491118067310957
+      },
+      "between_hospital_unrestricted": {
+        "clusters": 1723,
+        "events": 5402,
+        "n": 34629,
+        "pooled_pct": 15.599641918623119,
+        "observed_var": 0.028260339588576107,
+        "sampling_var": 0.006550949412207289,
+        "tau2": 0.021709390176368817,
+        "tau_pct_points": 14.734106751469128
+      },
+      "between_region": {
+        "clusters": 29,
+        "events": 3116,
+        "n": 17544,
+        "pooled_pct": 17.761057911536707,
+        "observed_var": 0.012658664933358762,
+        "sampling_var": 0.0002414436147827439,
+        "tau2": 0.012417221318576017,
+        "tau_pct_points": 11.143258643043344
+      },
+      "between_hospital_within_region": {
+        "regions_assessed": 29,
+        "hospitals": 129,
+        "admissions": 17544,
+        "tau2": 0.014207513426645568,
+        "tau_pct_points": 11.919527434695373
+      },
+      "ratio_within_region_hospital_to_between_region": 1.1441781588761162
+    }
+  },
+  "identifying_variation": {
+    "30": {
+      "min_hospital_volume": 30,
+      "hospitals": 165,
+      "admissions": 18935,
+      "deaths": 1265,
+      "off_modal_band_admissions": 959,
+      "off_modal_band_deaths": 63,
+      "off_modal_band_icu": 265,
+      "within_hospital_sd_home_hosp_share": 0.03129732677225742,
+      "national_sd_home_hosp_share": 0.13868729778890035,
+      "variance_retained_pct": 5.092618178318964
+    },
+    "50": {
+      "min_hospital_volume": 50,
+      "hospitals": 112,
+      "admissions": 16972,
+      "deaths": 1136,
+      "off_modal_band_admissions": 849,
+      "off_modal_band_deaths": 59,
+      "off_modal_band_icu": 239,
+      "within_hospital_sd_home_hosp_share": 0.03134639582726958,
+      "national_sd_home_hosp_share": 0.13868729778890035,
+      "variance_retained_pct": 5.108599470045525
+    },
+    "100": {
+      "min_hospital_volume": 100,
+      "hospitals": 56,
+      "admissions": 12977,
+      "deaths": 919,
+      "off_modal_band_admissions": 616,
+      "off_modal_band_deaths": 46,
+      "off_modal_band_icu": 177,
+      "within_hospital_sd_home_hosp_share": 0.03173062531355245,
+      "national_sd_home_hosp_share": 0.13868729778890035,
+      "variance_retained_pct": 5.234604677203967
+    }
+  },
+  "hospital_stratified": {
+    "30": {
+      "min_hospital_volume": 30,
+      "admissions": 18935,
+      "died": {
+        "deep_home_pct": 5.928694071305928,
+        "deep_lo": 5.471486653359047,
+        "deep_hi": 6.41203291314053,
+        "deep_n": 9901,
+        "shallow_home_pct": 7.5049811822005745,
+        "shallow_lo": 6.969912033614864,
+        "shallow_hi": 8.067641012177685,
+        "shallow_n": 9034,
+        "crude_or": 1.2874471046929525,
+        "hospital_stratified": {
+          "strata": 103,
+          "exposed_events": 427,
+          "exposed_n": 6285,
+          "unexposed_events": 463,
+          "unexposed_n": 6990,
+          "or_mh": 0.9790414546151557,
+          "or_lo": 0.7045171076009829,
+          "or_hi": 1.3605378201800002,
+          "se_log_or": 0.16788845464435787
+        },
+        "min_detectable_or_80pct_power": 1.6001344756643874
+      },
+      "any_icu": {
+        "deep_home_pct": 16.06908393091607,
+        "deep_lo": 15.350714629700798,
+        "deep_hi": 16.807471108585762,
+        "deep_n": 9901,
+        "shallow_home_pct": 19.703342926721277,
+        "shallow_lo": 18.887464055705696,
+        "shallow_hi": 20.53880473579342,
+        "shallow_n": 9034,
+        "crude_or": 1.2816613716838774,
+        "hospital_stratified": {
+          "strata": 103,
+          "exposed_events": 1257,
+          "exposed_n": 6285,
+          "unexposed_events": 1261,
+          "unexposed_n": 6990,
+          "or_mh": 1.186274239735477,
+          "or_lo": 0.9441918372900141,
+          "or_hi": 1.4904244204218215,
+          "se_log_or": 0.11645072482944646
+        },
+        "min_detectable_or_80pct_power": 1.3855013081918708
+      }
+    },
+    "50": {
+      "min_hospital_volume": 50,
+      "admissions": 16972,
+      "died": {
+        "deep_home_pct": 6.073680716893462,
+        "deep_lo": 5.589980627413603,
+        "deep_hi": 6.585923612079251,
+        "deep_n": 9039,
+        "shallow_home_pct": 7.3994705659901685,
+        "shallow_lo": 6.832878704287506,
+        "shallow_hi": 7.997590420786059,
+        "shallow_n": 7933,
+        "crude_or": 1.2357269634119308,
+        "hospital_stratified": {
+          "strata": 72,
+          "exposed_events": 357,
+          "exposed_n": 5511,
+          "unexposed_events": 440,
+          "unexposed_n": 6547,
+          "or_mh": 0.9882222409627592,
+          "or_lo": 0.7010646968540353,
+          "or_hi": 1.3930001067173785,
+          "se_log_or": 0.17515685596491773
+        },
+        "min_detectable_or_80pct_power": 1.6330332853102714
+      },
+      "any_icu": {
+        "deep_home_pct": 16.218608253125346,
+        "deep_lo": 15.464132540019,
+        "deep_hi": 16.994922397129596,
+        "deep_n": 9039,
+        "shallow_home_pct": 20.068070086978445,
+        "shallow_lo": 19.19154788251109,
+        "shallow_hi": 20.966635743397497,
+        "shallow_n": 7933,
+        "crude_or": 1.2969382435665766,
+        "hospital_stratified": {
+          "strata": 72,
+          "exposed_events": 1122,
+          "exposed_n": 5511,
+          "unexposed_events": 1185,
+          "unexposed_n": 6547,
+          "or_mh": 1.1678915680577597,
+          "or_lo": 0.9145180639672681,
+          "or_hi": 1.49146393984103,
+          "se_log_or": 0.12477454236797614
+        },
+        "min_detectable_or_80pct_power": 1.418172000388721
+      }
+    },
+    "100": {
+      "min_hospital_volume": 100,
+      "admissions": 12977,
+      "died": {
+        "deep_home_pct": 6.693803708729082,
+        "deep_lo": 6.103976987326516,
+        "deep_hi": 7.322039549007522,
+        "deep_n": 6633,
+        "shallow_home_pct": 7.487389659520807,
+        "shallow_lo": 6.851526800849958,
+        "shallow_hi": 8.162656596685988,
+        "shallow_n": 6344,
+        "crude_or": 1.1281504284997215,
+        "hospital_stratified": {
+          "strata": 40,
+          "exposed_events": 293,
+          "exposed_n": 4473,
+          "unexposed_events": 389,
+          "unexposed_n": 5237,
+          "or_mh": 0.9834494047101424,
+          "or_lo": 0.6706173893506974,
+          "or_hi": 1.4422124254206499,
+          "se_log_or": 0.1953405243158888
+        },
+        "min_detectable_or_80pct_power": 1.7279806425385598
+      },
+      "any_icu": {
+        "deep_home_pct": 16.659128599427106,
+        "deep_lo": 15.769691617339776,
+        "deep_hi": 17.577978868171552,
+        "deep_n": 6633,
+        "shallow_home_pct": 19.59331651954603,
+        "shallow_lo": 18.622871374885847,
+        "shallow_hi": 20.591795844238696,
+        "shallow_n": 6344,
+        "crude_or": 1.2190501197085835,
+        "hospital_stratified": {
+          "strata": 40,
+          "exposed_events": 935,
+          "exposed_n": 4473,
+          "unexposed_events": 955,
+          "unexposed_n": 5237,
+          "or_mh": 0.9373125446218602,
+          "or_lo": 0.7035266102567832,
+          "or_hi": 1.2487868880820858,
+          "se_log_or": 0.146383206165342
+        },
+        "min_detectable_or_80pct_power": 1.5066263971491332
+      }
+    }
+  },
+  "discordant_cells": [
+    {
+      "band_res": 1,
+      "band_mov": 2,
+      "n": 38,
+      "deaths": 3,
+      "icu": 12,
+      "cfr_pct": 7.894736842105263,
+      "cfr_lo": 1.658647586452953,
+      "cfr_hi": 21.377329118061816
+    },
+    {
+      "band_res": 1,
+      "band_mov": 3,
+      "n": 16,
+      "deaths": 2,
+      "icu": 8,
+      "cfr_pct": 12.5,
+      "cfr_lo": 1.5513603815413894,
+      "cfr_hi": 38.34762368492635
+    },
+    {
+      "band_res": 1,
+      "band_mov": 4,
+      "n": 21,
+      "deaths": 2,
+      "icu": 8,
+      "cfr_pct": 9.523809523809524,
+      "cfr_lo": 1.174931788444581,
+      "cfr_hi": 30.377440691392422
+    },
+    {
+      "band_res": 1,
+      "band_mov": 5,
+      "n": 17,
+      "deaths": 1,
+      "icu": 5,
+      "cfr_pct": 5.88235294117647,
+      "cfr_lo": 0.14881743912666356,
+      "cfr_hi": 28.688939666722067
+    },
+    {
+      "band_res": 2,
+      "band_mov": 1,
+      "n": 35,
+      "deaths": 1,
+      "icu": 7,
+      "cfr_pct": 2.857142857142857,
+      "cfr_lo": 0.07231043763380954,
+      "cfr_hi": 14.917207965643165
+    },
+    {
+      "band_res": 2,
+      "band_mov": 3,
+      "n": 32,
+      "deaths": 3,
+      "icu": 8,
+      "cfr_pct": 9.375,
+      "cfr_lo": 1.9767180173284877,
+      "cfr_hi": 25.022695068379463
+    },
+    {
+      "band_res": 2,
+      "band_mov": 4,
+      "n": 90,
+      "deaths": 5,
+      "icu": 19,
+      "cfr_pct": 5.555555555555555,
+      "cfr_lo": 1.8282545814883577,
+      "cfr_hi": 12.490266592901712
+    },
+    {
+      "band_res": 2,
+      "band_mov": 5,
+      "n": 35,
+      "deaths": 3,
+      "icu": 9,
+      "cfr_pct": 8.571428571428571,
+      "cfr_lo": 1.80376398142175,
+      "cfr_hi": 23.057501865887716
+    },
+    {
+      "band_res": 3,
+      "band_mov": 1,
+      "n": 11,
+      "deaths": 3,
+      "icu": 4,
+      "cfr_pct": 27.27272727272727,
+      "cfr_lo": 6.021773417290667,
+      "cfr_hi": 60.97425595724212
+    },
+    {
+      "band_res": 3,
+      "band_mov": 2,
+      "n": 64,
+      "deaths": 5,
+      "icu": 26,
+      "cfr_pct": 7.8125,
+      "cfr_lo": 2.5853840167968123,
+      "cfr_hi": 17.29783290042076
+    },
+    {
+      "band_res": 3,
+      "band_mov": 4,
+      "n": 108,
+      "deaths": 8,
+      "icu": 23,
+      "cfr_pct": 7.4074074074074066,
+      "cfr_lo": 3.2521451516261575,
+      "cfr_hi": 14.07450688571433
+    },
+    {
+      "band_res": 3,
+      "band_mov": 5,
+      "n": 100,
+      "deaths": 5,
+      "icu": 30,
+      "cfr_pct": 5.0,
+      "cfr_lo": 1.6431879182052158,
+      "cfr_hi": 11.283491110546274
+    },
+    {
+      "band_res": 4,
+      "band_mov": 1,
+      "n": 13,
+      "deaths": 3,
+      "icu": 3,
+      "cfr_pct": 23.076923076923077,
+      "cfr_lo": 5.038107349115155,
+      "cfr_hi": 53.81315392340409
+    },
+    {
+      "band_res": 4,
+      "band_mov": 2,
+      "n": 41,
+      "deaths": 0,
+      "icu": 13,
+      "cfr_pct": 0.0,
+      "cfr_lo": 0.0,
+      "cfr_hi": 8.604383629402843
+    },
+    {
+      "band_res": 4,
+      "band_mov": 3,
+      "n": 242,
+      "deaths": 20,
+      "icu": 59,
+      "cfr_pct": 8.264462809917356,
+      "cfr_lo": 5.12118637707351,
+      "cfr_hi": 12.47526372087083
+    },
+    {
+      "band_res": 4,
+      "band_mov": 5,
+      "n": 198,
+      "deaths": 8,
+      "icu": 68,
+      "cfr_pct": 4.040404040404041,
+      "cfr_lo": 1.7602432098431355,
+      "cfr_hi": 7.805720314457866
+    },
+    {
+      "band_res": 5,
+      "band_mov": 1,
+      "n": 9,
+      "deaths": 0,
+      "icu": 1,
+      "cfr_pct": 0.0,
+      "cfr_lo": 0.0,
+      "cfr_hi": 33.62671168799428
+    },
+    {
+      "band_res": 5,
+      "band_mov": 2,
+      "n": 8,
+      "deaths": 0,
+      "icu": 2,
+      "cfr_pct": 0.0,
+      "cfr_lo": 0.0,
+      "cfr_hi": 36.94166475528192
+    },
+    {
+      "band_res": 5,
+      "band_mov": 3,
+      "n": 23,
+      "deaths": 0,
+      "icu": 3,
+      "cfr_pct": 0.0,
+      "cfr_lo": 0.0,
+      "cfr_hi": 14.818512891522436
+    },
+    {
+      "band_res": 5,
+      "band_mov": 4,
+      "n": 97,
+      "deaths": 13,
+      "icu": 28,
+      "cfr_pct": 13.402061855670103,
+      "cfr_lo": 7.333368121832071,
+      "cfr_hi": 21.827092112563186
+    }
+  ],
+  "discordant_summary": {
+    "discordant_admissions": 1198,
+    "observed_deaths": 85,
+    "expected_under_home_band_schedule": 69.0070132969888,
+    "expected_under_treatment_band_schedule": 78.8836327821604,
+    "concordant_fatality_schedule_pct": {
+      "1": 4.071889918562201,
+      "2": 3.3849592846878496,
+      "3": 7.162397413578711,
+      "4": 5.259006047856955,
+      "5": 9.133341743408604
+    }
+  },
+  "referral_centre_hypothesis": {
+    "concentration": [
+      {
+        "band": 1,
+        "admissions": 3661,
+        "hospitals": 252,
+        "top1_share_pct": 5.49030319584813,
+        "top5_share_pct": 22.58945643266867,
+        "top10_share_pct": 34.79923518164436,
+        "hhi": 0.01899399392117584
+      },
+      {
+        "band": 2,
+        "admissions": 6457,
+        "hospitals": 401,
+        "top1_share_pct": 8.223633266222704,
+        "top5_share_pct": 23.571317949512157,
+        "top10_share_pct": 34.02508905064271,
+        "hhi": 0.020025568413422647
+      },
+      {
+        "band": 3,
+        "admissions": 8328,
+        "hospitals": 437,
+        "top1_share_pct": 6.484149855907781,
+        "top5_share_pct": 22.526416906820366,
+        "top10_share_pct": 34.498078770413066,
+        "hhi": 0.018175407476923557
+      },
+      {
+        "band": 4,
+        "admissions": 8112,
+        "hospitals": 591,
+        "top1_share_pct": 6.545857988165681,
+        "top5_share_pct": 21.819526627218934,
+        "top10_share_pct": 34.048323471400394,
+        "hhi": 0.016967247732922516
+      },
+      {
+        "band": 5,
+        "admissions": 8071,
+        "hospitals": 434,
+        "top1_share_pct": 11.981167141618139,
+        "top5_share_pct": 25.411968777103212,
+        "top10_share_pct": 33.34159335893941,
+        "hhi": 0.024619578922602726
+      }
+    ],
+    "gradient_within_strata": {
+      "all": {
+        "n": [
+          3661,
+          6457,
+          8328,
+          8112,
+          8071
+        ],
+        "deaths": [
+          153,
+          225,
+          597,
+          431,
+          741
+        ],
+        "cfr_pct": [
+          4.179186014750068,
+          3.4845903670435185,
+          7.168587896253602,
+          5.313116370808679,
+          9.18101846115723
+        ],
+        "cfr_lo": [
+          3.5541401191240634,
+          3.0506565613683807,
+          6.623602291438692,
+          4.834984892559792,
+          8.559676680665671
+        ],
+        "cfr_hi": [
+          4.878652994622446,
+          3.9611634873922794,
+          7.743765021486336,
+          5.823660634650177,
+          9.83201077544255
+        ],
+        "Q5_over_Q1": 2.1968436984507593
+      },
+      "treated in own municipality": {
+        "n": [
+          2836,
+          4271,
+          5176,
+          5912,
+          6538
+        ],
+        "deaths": [
+          105,
+          150,
+          350,
+          289,
+          595
+        ],
+        "cfr_pct": [
+          3.702397743300423,
+          3.512058066026692,
+          6.761978361669242,
+          4.888362652232747,
+          9.100642398286936
+        ],
+        "cfr_lo": [
+          3.037983479992337,
+          2.9802706838633197,
+          6.09280543431584,
+          4.352643223133761,
+          8.414175594241266
+        ],
+        "cfr_hi": [
+          4.4643942185417655,
+          4.108580917883147,
+          7.480392053018785,
+          5.469135225196873,
+          9.823836500711124
+        ],
+        "Q5_over_Q1": 2.4580401753849292
+      },
+      "referred out of municipality": {
+        "n": [
+          825,
+          2186,
+          3152,
+          2200,
+          1533
+        ],
+        "deaths": [
+          48,
+          75,
+          247,
+          142,
+          146
+        ],
+        "cfr_pct": [
+          5.818181818181818,
+          3.43092406221409,
+          7.836294416243655,
+          6.454545454545454,
+          9.523809523809524
+        ],
+        "cfr_lo": [
+          4.320663983928235,
+          2.7080079489346707,
+          6.921701028104243,
+          5.46358507332888,
+          8.100369127524207
+        ],
+        "cfr_hi": [
+          7.640364016499582,
+          4.281887468449005,
+          8.83000533216068,
+          7.563326248806723,
+          11.104383086303098
+        ],
+        "Q5_over_Q1": 1.6369047619047619
+      },
+      "hospital volume < 50": {
+        "n": [
+          1775,
+          2479,
+          2592,
+          3257,
+          3124
+        ],
+        "deaths": [
+          60,
+          105,
+          117,
+          170,
+          282
+        ],
+        "cfr_pct": [
+          3.3802816901408446,
+          4.235578862444534,
+          4.513888888888888,
+          5.219527172244397,
+          9.026888604353394
+        ],
+        "cfr_lo": [
+          2.589221940300283,
+          3.477117327912666,
+          3.7471618852800628,
+          4.480820628123478,
+          8.044709813722788
+        ],
+        "cfr_hi": [
+          4.329866893956915,
+          5.1043913515984665,
+          5.385346603571262,
+          6.039882782977875,
+          10.08654281991406
+        ],
+        "Q5_over_Q1": 2.670454545454546
+      },
+      "hospital volume >= 50": {
+        "n": [
+          1886,
+          3978,
+          5736,
+          4855,
+          4947
+        ],
+        "deaths": [
+          93,
+          120,
+          480,
+          261,
+          459
+        ],
+        "cfr_pct": [
+          4.931071049840933,
+          3.0165912518853695,
+          8.368200836820083,
+          5.3759011328527295,
+          9.278350515463918
+        ],
+        "cfr_lo": [
+          3.9981690183530505,
+          2.5072448612748053,
+          7.6641849659409536,
+          4.758172798087578,
+          8.483970818089615
+        ],
+        "cfr_hi": [
+          6.007089916861518,
+          3.5963955082965655,
+          9.114893240380926,
+          6.047954093650837,
+          10.121150546804483
+        ],
+        "Q5_over_Q1": 1.8816095776521449
+      }
+    }
+  },
+  "rate_arithmetic": {
+    "person_years": [
+      214218183.7368421,
+      348576919.6315789,
+      416251410.7894737,
+      742045067.3157895,
+      937660482.1052631
+    ],
+    "sinan_incidence_per_100k": [
+      5.4024358708114795,
+      3.098024967176191,
+      3.068337948879567,
+      1.5012565261429316,
+      1.266129929390288
+    ],
+    "sinan_incidence_lo": [
+      5.304451648025282,
+      3.0398664405402465,
+      3.0153523562695943,
+      1.4735064634290536,
+      1.2434557928886845
+    ],
+    "sinan_incidence_hi": [
+      5.501775442357377,
+      3.157016516103893,
+      3.1220209484939887,
+      1.5293978829318113,
+      1.2891136969799522
+    ],
+    "sinan_hospitalisation_share": [
+      0.38589821135401364,
+      0.6439485137512733,
+      0.7190729721265268,
+      0.8127468581687612,
+      0.8914252021563343
+    ],
+    "sinan_hospitalised_rate_per_100k": [
+      2.084790339500913,
+      1.9949685731774451,
+      2.2063588883894414,
+      1.2201415249280163,
+      1.1286601282629225
+    ],
+    "sinan_hospitalised_lo": [
+      2.024090061785745,
+      1.9483523314467779,
+      2.161462786398767,
+      1.1951367716362709,
+      1.1072579309497574
+    ],
+    "sinan_hospitalised_hi": [
+      2.1468485500550196,
+      2.042418501121624,
+      2.2519527698252317,
+      1.2455377085852883,
+      1.150372013249699
+    ],
+    "sih_admission_rate_per_100k": [
+      1.709005246957645,
+      1.8523888520285825,
+      2.0007139397329343,
+      1.0931950574570433,
+      0.8607593211008265
+    ],
+    "sih_admission_lo": [
+      1.6540892773176283,
+      1.807479244710625,
+      1.9579721934431589,
+      1.0695336481332642,
+      0.8420818095429217
+    ],
+    "sih_admission_hi": [
+      1.7652798614618723,
+      1.8981322724604721,
+      2.0441535882624664,
+      1.1172479752798752,
+      0.8797466673030593
+    ],
+    "sih_over_sinan_hospitalised": [
+      0.8197492163009404,
+      0.9285303422490653,
+      0.9067944250871081,
+      0.8959575878064945,
+      0.7626381933289237
+    ],
+    "band_to_band_incidence_ratio": [
+      1.7438322570188094,
+      1.0096752765800991,
+      2.0438465348509243,
+      1.1857049512018647
+    ],
+    "band_to_band_share_ratio": [
+      1.6687004365525047,
+      1.1166622125387349,
+      1.1302703476188392,
+      1.0968054729425185
+    ],
+    "counts": [
+      {
+        "band": 1,
+        "person_years": 214218183.7368421,
+        "sinan_cases": 11573,
+        "sinan_hospitalised": 4466,
+        "sih_admissions": 3661
+      },
+      {
+        "band": 2,
+        "person_years": 348576919.6315789,
+        "sinan_cases": 10799,
+        "sinan_hospitalised": 6954,
+        "sih_admissions": 6457
+      },
+      {
+        "band": 3,
+        "person_years": 416251410.7894737,
+        "sinan_cases": 12772,
+        "sinan_hospitalised": 9184,
+        "sih_admissions": 8328
+      },
+      {
+        "band": 4,
+        "person_years": 742045067.3157895,
+        "sinan_cases": 11140,
+        "sinan_hospitalised": 9054,
+        "sih_admissions": 8112
+      },
+      {
+        "band": 5,
+        "person_years": 937660482.1052631,
+        "sinan_cases": 11872,
+        "sinan_hospitalised": 10583,
+        "sih_admissions": 8071
+      }
+    ]
+  },
+  "nonmonotonicity_candidates": {
+    "referral": {
+      "rate_by_residence": [
+        1.709005246957645,
+        1.8523888520285825,
+        2.0007139397329343,
+        1.0931950574570433,
+        0.8607593211008265
+      ],
+      "rate_by_treatment_location": [
+        1.6940672060118256,
+        1.8400529807823027,
+        2.0072004042349505,
+        1.0675901436359339,
+        0.8827288936626863
+      ],
+      "net_inflow_pct": [
+        -0.8740781207320358,
+        -0.6659439368127629,
+        0.32420749279538086,
+        -2.3422090729783074,
+        2.5523479122785186
+      ]
+    },
+    "within_macro_region": [
+      {
+        "band": 3,
+        "region": "Centro-Oeste",
+        "sinan_cases": 36,
+        "sinan_hospitalised": 26,
+        "py": 2369304.3157894737,
+        "hosp_rate_per_100k": 1.0973685324730675,
+        "lo": 0.7168375587049526,
+        "hi": 1.6078991554291349
+      },
+      {
+        "band": 4,
+        "region": "Centro-Oeste",
+        "sinan_cases": 169,
+        "sinan_hospitalised": 149,
+        "py": 61025489.631578945,
+        "hosp_rate_per_100k": 0.24416026958495188,
+        "lo": 0.2065306724250121,
+        "hi": 0.28666256587383876
+      },
+      {
+        "band": 5,
+        "region": "Centro-Oeste",
+        "sinan_cases": 488,
+        "sinan_hospitalised": 434,
+        "py": 94226939.68421052,
+        "hosp_rate_per_100k": 0.46059014699458056,
+        "lo": 0.4182710077316603,
+        "hi": 0.5060304904745716
+      },
+      {
+        "band": 2,
+        "region": "Nordeste",
+        "sinan_cases": 100,
+        "sinan_hospitalised": 65,
+        "py": 7863740.105263158,
+        "hosp_rate_per_100k": 0.8265786906728498,
+        "lo": 0.6379359828494164,
+        "hi": 1.0535423946732674
+      },
+      {
+        "band": 3,
+        "region": "Nordeste",
+        "sinan_cases": 3802,
+        "sinan_hospitalised": 2854,
+        "py": 121592554.57894737,
+        "hosp_rate_per_100k": 2.347183188874415,
+        "lo": 2.261851896979575,
+        "hi": 2.4349098585158906
+      },
+      {
+        "band": 4,
+        "region": "Nordeste",
+        "sinan_cases": 1749,
+        "sinan_hospitalised": 1465,
+        "py": 214759453.89473686,
+        "hosp_rate_per_100k": 0.682158560860404,
+        "lo": 0.6476703715575824,
+        "hi": 0.7180063241092747
+      },
+      {
+        "band": 5,
+        "region": "Nordeste",
+        "sinan_cases": 3646,
+        "sinan_hospitalised": 3369,
+        "py": 221094977.21052632,
+        "hosp_rate_per_100k": 1.52377952792299,
+        "lo": 1.4727551821158447,
+        "hi": 1.5761205695579354
+      },
+      {
+        "band": 1,
+        "region": "Norte",
+        "sinan_cases": 5676,
+        "sinan_hospitalised": 1692,
+        "py": 55285904.89473684,
+        "hosp_rate_per_100k": 3.0604545647241035,
+        "lo": 2.916349617775239,
+        "hi": 3.209837615178114
+      },
+      {
+        "band": 2,
+        "region": "Norte",
+        "sinan_cases": 1148,
+        "sinan_hospitalised": 697,
+        "py": 27094945.36842105,
+        "hosp_rate_per_100k": 2.5724355244958272,
+        "lo": 2.384980017692334,
+        "hi": 2.7707093640051594
+      },
+      {
+        "band": 3,
+        "region": "Norte",
+        "sinan_cases": 308,
+        "sinan_hospitalised": 219,
+        "py": 21110047.94736842,
+        "hosp_rate_per_100k": 1.037420665959693,
+        "lo": 0.90456276157008,
+        "hi": 1.1842996486751682
+      },
+      {
+        "band": 4,
+        "region": "Norte",
+        "sinan_cases": 2045,
+        "sinan_hospitalised": 1677,
+        "py": 114927085.42105263,
+        "hosp_rate_per_100k": 1.4591860516222601,
+        "lo": 1.3901757333668265,
+        "hi": 1.5307355040024424
+      },
+      {
+        "band": 5,
+        "region": "Norte",
+        "sinan_cases": 153,
+        "sinan_hospitalised": 136,
+        "py": 12737304.578947369,
+        "hosp_rate_per_100k": 1.0677298258595873,
+        "lo": 0.8958289611772217,
+        "hi": 1.2630048507800733
+      },
+      {
+        "band": 1,
+        "region": "Sudeste",
+        "sinan_cases": 3273,
+        "sinan_hospitalised": 1480,
+        "py": 103751637.05263159,
+        "hosp_rate_per_100k": 1.4264835158689777,
+        "lo": 1.3547258589800777,
+        "hi": 1.5010552820789091
+      },
+      {
+        "band": 2,
+        "region": "Sudeste",
+        "sinan_cases": 2635,
+        "sinan_hospitalised": 1669,
+        "py": 157117897.47368422,
+        "hosp_rate_per_100k": 1.0622596323118072,
+        "lo": 1.0119026290308193,
+        "hi": 1.1144739731525823
+      },
+      {
+        "band": 3,
+        "region": "Sudeste",
+        "sinan_cases": 2436,
+        "sinan_hospitalised": 1710,
+        "py": 134113164.63157895,
+        "hosp_rate_per_100k": 1.2750426139727038,
+        "lo": 1.2153188378091064,
+        "hi": 1.3369421067806355
+      },
+      {
+        "band": 4,
+        "region": "Sudeste",
+        "sinan_cases": 2959,
+        "sinan_hospitalised": 2447,
+        "py": 230085275.10526317,
+        "hosp_rate_per_100k": 1.0635187318617005,
+        "lo": 1.0217936573284174,
+        "hi": 1.1065103192858676
+      },
+      {
+        "band": 5,
+        "region": "Sudeste",
+        "sinan_cases": 7461,
+        "sinan_hospitalised": 6531,
+        "py": 593579573.0526316,
+        "hosp_rate_per_100k": 1.1002737116462242,
+        "lo": 1.0737491398036074,
+        "hi": 1.1272879248369947
+      },
+      {
+        "band": 1,
+        "region": "Sul",
+        "sinan_cases": 2624,
+        "sinan_hospitalised": 1294,
+        "py": 55180641.78947368,
+        "hosp_rate_per_100k": 2.3450252806716083,
+        "lo": 2.2189804273379505,
+        "hi": 2.4763644544003514
+      },
+      {
+        "band": 2,
+        "region": "Sul",
+        "sinan_cases": 6916,
+        "sinan_hospitalised": 4523,
+        "py": 156500336.68421054,
+        "hosp_rate_per_100k": 2.890089629089168,
+        "lo": 2.8064704745066416,
+        "hi": 2.9755674677013144
+      },
+      {
+        "band": 3,
+        "region": "Sul",
+        "sinan_cases": 6190,
+        "sinan_hospitalised": 4375,
+        "py": 137066339.31578946,
+        "hosp_rate_per_100k": 3.1918850549589446,
+        "lo": 3.0979964345926776,
+        "hi": 3.287896071057356
+      },
+      {
+        "band": 4,
+        "region": "Sul",
+        "sinan_cases": 4218,
+        "sinan_hospitalised": 3316,
+        "py": 121247763.26315789,
+        "hosp_rate_per_100k": 2.7348958123069917,
+        "lo": 2.6425940195406348,
+        "hi": 2.8295987067419786
+      },
+      {
+        "band": 5,
+        "region": "Sul",
+        "sinan_cases": 124,
+        "sinan_hospitalised": 113,
+        "py": 16021687.578947369,
+        "hosp_rate_per_100k": 0.705293992553462,
+        "lo": 0.5812620736879845,
+        "hi": 0.8479578980779642
+      }
+    ],
+    "hospital_supply": {
+      "hospitals": [
+        252,
+        401,
+        437,
+        591,
+        434
+      ],
+      "hospitals_per_million_py": [
+        1.1763707244832737,
+        1.1503917138972615,
+        1.0498462916225892,
+        0.7964475825408193,
+        0.46285410154597784
+      ],
+      "share_admissions_in_icu_capable_hospital_pct": [
+        58.26276973504507,
+        67.43069536936657,
+        73.00672430355426,
+        70.1923076923077,
+        85.15673398587535
+      ]
+    },
+    "macro_region_standardised": {
+      "crude_hospitalised_rate": [
+        2.084790339500913,
+        1.9949685731774451,
+        2.206358888389442,
+        1.2201415249280163,
+        1.128660128262922
+      ],
+      "standardised_hospitalised_rate": [
+        1.8522090056502378,
+        1.5037433066545827,
+        1.8222080638816696,
+        1.2737836123106916,
+        1.0773663067242596
+      ],
+      "note": "standard population = national person-years by macro-region; bands with no person-years in a macro-region contribute nothing to that stratum, so coverage is stated alongside",
+      "strata_covered_per_band": [
+        3,
+        4,
+        5,
+        5,
+        5
+      ]
+    },
+    "share_vs_incidence_across_health_regions": {
+      "n_health_regions": 212,
+      "spearman": -0.4476940191465828,
+      "p": 7.611049896467283e-12
+    },
+    "urbanisation": [
+      {
+        "band": 1,
+        "case_weighted_urban_share": 0.8094718201244873
+      },
+      {
+        "band": 2,
+        "case_weighted_urban_share": 0.8367636701111274
+      },
+      {
+        "band": 3,
+        "case_weighted_urban_share": 0.892421000890073
+      },
+      {
+        "band": 4,
+        "case_weighted_urban_share": 0.8579243831155055
+      },
+      {
+        "band": 5,
+        "case_weighted_urban_share": 0.9650696294113842
+      }
+    ]
+  },
+  "r_models": {
+    "n": 34629,
+    "hospitals": 1723,
+    "home_regions": 212,
+    "died": {
+      "crossed_home_region_and_hospital": {
+        "CNES": {
+          "variance": 0.36947748,
+          "sd": 0.60784659,
+          "median_odds_ratio": 1.78569587
+        },
+        "hr_res": {
+          "variance": 0.37083499,
+          "sd": 0.60896223,
+          "median_odds_ratio": 1.78759717
+        }
+      },
+      "nested_hospital_in_treatment_region": {
+        "CNES": {
+          "variance": 0.36611756,
+          "sd": 0.60507649,
+          "median_odds_ratio": 1.7809837
+        },
+        "hr_mov": {
+          "variance": 0.40744089,
+          "sd": 0.63831097,
+          "median_odds_ratio": 1.83834794
+        }
+      },
+      "crossed_adjusted_for_band": {
+        "CNES": {
+          "variance": 0.3501628,
+          "sd": 0.59174555,
+          "median_odds_ratio": 1.75848007
+        },
+        "hr_res": {
+          "variance": 0.32489187,
+          "sd": 0.56999287,
+          "median_odds_ratio": 1.72236881
+        }
+      },
+      "band_fixed_effects": [
+        {
+          "term": "(Intercept)",
+          "estimate": -3.37750958,
+          "se": 0.18076857,
+          "z": -18.68416434
+        },
+        {
+          "term": "band_res_f2",
+          "estimate": -0.11387845,
+          "se": 0.22959309,
+          "z": -0.49600119
+        },
+        {
+          "term": "band_res_f3",
+          "estimate": 0.10189633,
+          "se": 0.23019273,
+          "z": 0.44265657
+        },
+        {
+          "term": "band_res_f4",
+          "estimate": 0.17606268,
+          "se": 0.21331812,
+          "z": 0.82535269
+        },
+        {
+          "term": "band_res_f5",
+          "estimate": 0.76068121,
+          "se": 0.22535171,
+          "z": 3.37552882
+        },
+        {
+          "term": "age_z",
+          "estimate": 0.59593095,
+          "se": 0.02341132,
+          "z": 25.45482002
+        },
+        {
+          "term": "female",
+          "estimate": 0.03552212,
+          "se": 0.06128703,
+          "z": 0.57960262
+        },
+        {
+          "term": "year_c",
+          "estimate": -0.01524208,
+          "se": 0.00498257,
+          "z": -3.05907868
+        }
+      ],
+      "hospital_only": {
+        "CNES": {
+          "variance": 0.74005846,
+          "sd": 0.8602665,
+          "median_odds_ratio": 2.27182757
+        }
+      },
+      "home_region_only": {
+        "hr_res": {
+          "variance": 0.49922459,
+          "sd": 0.70655827,
+          "median_odds_ratio": 1.96200428
+        }
+      },
+      "variance_share_pct": {
+        "hospital": 9.16776481,
+        "home_health_region": 9.20144849,
+        "residual": 81.6307867,
+        "hospital_to_region_ratio": 0.99633931
+      }
+    },
+    "any_icu": {
+      "crossed_home_region_and_hospital": {
+        "CNES": {
+          "variance": 2.43923854,
+          "sd": 1.56180618,
+          "median_odds_ratio": 4.43604869
+        },
+        "hr_res": {
+          "variance": 0.32049314,
+          "sd": 0.56612113,
+          "median_odds_ratio": 1.71601957
+        }
+      },
+      "nested_hospital_in_treatment_region": {
+        "CNES": {
+          "variance": 2.19775166,
+          "sd": 1.48248159,
+          "median_odds_ratio": 4.11277711
+        },
+        "hr_mov": {
+          "variance": 0.61285823,
+          "sd": 0.78285263,
+          "median_odds_ratio": 2.11011328
+        }
+      },
+      "crossed_adjusted_for_band": {
+        "CNES": {
+          "variance": 2.45636231,
+          "sd": 1.56727863,
+          "median_odds_ratio": 4.45926551
+        },
+        "hr_res": {
+          "variance": 0.25882393,
+          "sd": 0.50874741,
+          "median_odds_ratio": 1.62463015
+        }
+      },
+      "band_fixed_effects": [
+        {
+          "term": "(Intercept)",
+          "estimate": -2.70373674,
+          "se": 0.18486899,
+          "z": -14.62515011
+        },
+        {
+          "term": "band_res_f2",
+          "estimate": -0.27224731,
+          "se": 0.22876676,
+          "z": -1.19006499
+        },
+        {
+          "term": "band_res_f3",
+          "estimate": 0.20176316,
+          "se": 0.23046261,
+          "z": 0.87547023
+        },
+        {
+          "term": "band_res_f4",
+          "estimate": 0.2561811,
+          "se": 0.21478833,
+          "z": 1.19271426
+        },
+        {
+          "term": "band_res_f5",
+          "estimate": 0.64373903,
+          "se": 0.23154257,
+          "z": 2.78021891
+        },
+        {
+          "term": "age_z",
+          "estimate": 0.23008775,
+          "se": 0.01740423,
+          "z": 13.22021647
+        },
+        {
+          "term": "female",
+          "estimate": -0.22103026,
+          "se": 0.04835978,
+          "z": -4.57053859
+        },
+        {
+          "term": "year_c",
+          "estimate": 0.0776759,
+          "se": 0.00376307,
+          "z": 20.64161846
+        }
+      ],
+      "hospital_only": {
+        "CNES": {
+          "variance": 2.8477773,
+          "sd": 1.68753587,
+          "median_odds_ratio": 5.00128132
+        }
+      },
+      "home_region_only": {
+        "hr_res": {
+          "variance": 0.65392877,
+          "sd": 0.80865862,
+          "median_odds_ratio": 2.16269962
+        }
+      },
+      "variance_share_pct": {
+        "hospital": 40.32065945,
+        "home_health_region": 5.29775763,
+        "residual": 54.38158292,
+        "hospital_to_region_ratio": 7.61089168
+      }
+    },
+    "conditional_logistic": {
+      "volume_ge_1": {
+        "hospitals": 419,
+        "admissions": 23762,
+        "deaths": 1614,
+        "died_home_depth": {
+          "label": "in-hospital death ~ home health-region hospitalisation share",
+          "n": 23762,
+          "events": 1614,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 0.13733745,
+              "or": 1.14721521,
+              "se": 0.77120981,
+              "z": 0.17808052,
+              "p": 0.85865974,
+              "or_lo": 0.2530334,
+              "or_hi": 5.20130037
+            },
+            {
+              "term": "age_z",
+              "beta": 0.58705281,
+              "or": 1.79867954,
+              "se": 0.02776094,
+              "z": 21.14671748,
+              "p": 2.95823889e-99,
+              "or_lo": 1.70342573,
+              "or_hi": 1.89925984
+            },
+            {
+              "term": "female",
+              "beta": 0.03555919,
+              "or": 1.03619898,
+              "se": 0.07176582,
+              "z": 0.49548919,
+              "p": 0.62025485,
+              "or_lo": 0.90023286,
+              "or_hi": 1.19270065
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01583195,
+              "or": 0.98429272,
+              "se": 0.0060092,
+              "z": -2.63461605,
+              "p": 0.00842325,
+              "or_lo": 0.97276768,
+              "or_hi": 0.9959543
+            },
+            {
+              "term": "referred_hr",
+              "beta": -0.04364547,
+              "or": 0.95729329,
+              "se": 0.09493543,
+              "z": -0.45973843,
+              "p": 0.64570398,
+              "or_lo": 0.79475696,
+              "or_hi": 1.15307004
+            }
+          ]
+        },
+        "died_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 23762,
+          "events": 1614,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.89100094,
+              "or": 6.6259976,
+              "se": 0.21839666,
+              "p": 4.77754457e-18,
+              "or_lo": 4.31865273,
+              "or_hi": 10.16609737
+            },
+            {
+              "term": "age_z",
+              "beta": 0.55589665,
+              "or": 1.7435036,
+              "se": 0.02625592,
+              "p": 1.72162164e-99,
+              "or_lo": 1.65604968,
+              "or_hi": 1.83557584
+            },
+            {
+              "term": "female",
+              "beta": 0.09850335,
+              "or": 1.1035181,
+              "se": 0.06918557,
+              "p": 0.15451723,
+              "or_lo": 0.96357941,
+              "or_hi": 1.2637798
+            },
+            {
+              "term": "year_c",
+              "beta": -0.00327526,
+              "or": 0.9967301,
+              "se": 0.00529401,
+              "p": 0.53613237,
+              "or_lo": 0.98644123,
+              "or_hi": 1.00712628
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.02239881,
+              "or": 1.02265155,
+              "se": 0.08765741,
+              "p": 0.7983163,
+              "or_lo": 0.8612162,
+              "or_hi": 1.21434803
+            }
+          ]
+        },
+        "died_home_depth_unadjusted": {
+          "label": "unadjusted",
+          "n": 23762,
+          "events": 1614,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 0.13700683,
+              "or": 1.14683598,
+              "se": 0.7212546,
+              "z": 0.18995627,
+              "p": 0.8493434,
+              "or_lo": 0.27896968,
+              "or_hi": 4.71460833
+            }
+          ]
+        },
+        "icu_home_depth": {
+          "label": "ICU use ~ home health-region hospitalisation share",
+          "n": 23762,
+          "events": 4156,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 0.64202024,
+              "or": 1.90031609,
+              "se": 0.54583701,
+              "z": 1.17621235,
+              "p": 0.23951003,
+              "or_lo": 0.65192855,
+              "or_hi": 5.53925925
+            },
+            {
+              "term": "age_z",
+              "beta": 0.20620737,
+              "or": 1.22900804,
+              "se": 0.02002263,
+              "z": 10.29871485,
+              "p": 7.14088906e-25,
+              "or_lo": 1.18171056,
+              "or_hi": 1.27819858
+            },
+            {
+              "term": "female",
+              "beta": -0.1938968,
+              "or": 0.82374291,
+              "se": 0.05543516,
+              "z": -3.4977225,
+              "p": 0.00046925,
+              "or_lo": 0.73893176,
+              "or_hi": 0.9182883
+            },
+            {
+              "term": "year_c",
+              "beta": 0.08319926,
+              "or": 1.08675833,
+              "se": 0.00430005,
+              "z": 19.34842601,
+              "p": 2.10162785e-83,
+              "or_lo": 1.07763751,
+              "or_hi": 1.09595635
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.37465907,
+              "or": 1.45449546,
+              "se": 0.06412933,
+              "z": 5.8422422,
+              "p": 5.15028536e-09,
+              "or_lo": 1.28269789,
+              "or_hi": 1.64930265
+            }
+          ]
+        },
+        "icu_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 23762,
+          "events": 4156,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.79296358,
+              "or": 6.00722899,
+              "se": 0.14112356,
+              "p": 5.55260435e-37,
+              "or_lo": 4.55561891,
+              "or_hi": 7.92138255
+            },
+            {
+              "term": "age_z",
+              "beta": 0.22556852,
+              "or": 1.25303489,
+              "se": 0.01748779,
+              "p": 4.58160457e-38,
+              "or_lo": 1.21081352,
+              "or_hi": 1.29672854
+            },
+            {
+              "term": "female",
+              "beta": -0.23039337,
+              "or": 0.79422112,
+              "se": 0.05065569,
+              "p": 5.41008717e-06,
+              "or_lo": 0.71915489,
+              "or_hi": 0.87712286
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06795593,
+              "or": 1.07031814,
+              "se": 0.00354128,
+              "p": 4.51717178e-82,
+              "or_lo": 1.06291488,
+              "or_hi": 1.07777297
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.53800042,
+              "or": 1.71257899,
+              "se": 0.05238956,
+              "p": 9.69767325e-25,
+              "or_lo": 1.54545269,
+              "or_hi": 1.89777845
+            }
+          ]
+        },
+        "died_home_depth_municipal": {
+          "label": "in-hospital death ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 20104,
+          "events": 1418,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 0.81072266,
+              "or": 2.24953306,
+              "se": 0.53241701,
+              "z": 1.52272119,
+              "p": 0.12782848,
+              "or_lo": 0.79230039,
+              "or_hi": 6.38697019
+            },
+            {
+              "term": "age_z",
+              "beta": 0.59330292,
+              "or": 1.8099567,
+              "se": 0.02980333,
+              "z": 19.90726755,
+              "p": 3.51997464e-88,
+              "or_lo": 1.70725769,
+              "or_hi": 1.91883351
+            },
+            {
+              "term": "female",
+              "beta": 0.02453638,
+              "or": 1.02483988,
+              "se": 0.07690358,
+              "z": 0.31905386,
+              "p": 0.74968567,
+              "or_lo": 0.88144328,
+              "or_hi": 1.19156479
+            },
+            {
+              "term": "year_c",
+              "beta": -0.0118952,
+              "or": 0.98817527,
+              "se": 0.00643885,
+              "z": -1.84741151,
+              "p": 0.06468752,
+              "or_lo": 0.97578272,
+              "or_hi": 1.0007252
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.00382169,
+              "or": 0.9961856,
+              "se": 0.0758688,
+              "z": -0.05037237,
+              "p": 0.95982565,
+              "or_lo": 0.85853783,
+              "or_hi": 1.15590218
+            }
+          ]
+        },
+        "died_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 20104,
+          "events": 1418,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.44376494,
+              "or": 4.23661645,
+              "se": 0.21117924,
+              "p": 8.10492902e-12,
+              "or_lo": 2.8006559,
+              "or_hi": 6.40882693
+            },
+            {
+              "term": "age_z",
+              "beta": 0.57459438,
+              "or": 1.77640984,
+              "se": 0.02819455,
+              "p": 2.53600891e-92,
+              "or_lo": 1.68090621,
+              "or_hi": 1.87733968
+            },
+            {
+              "term": "female",
+              "beta": 0.05990984,
+              "or": 1.06174082,
+              "se": 0.07423334,
+              "p": 0.419639,
+              "or_lo": 0.91797282,
+              "or_hi": 1.22802499
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00293646,
+              "or": 1.00294078,
+              "se": 0.00566823,
+              "p": 0.60441924,
+              "or_lo": 0.99186004,
+              "or_hi": 1.0141453
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.12228682,
+              "or": 1.13007818,
+              "se": 0.06333699,
+              "p": 0.05351608,
+              "or_lo": 0.99814803,
+              "or_hi": 1.2794462
+            }
+          ]
+        },
+        "icu_home_depth_municipal": {
+          "label": "ICU use ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 20104,
+          "events": 3620,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": -0.06001217,
+              "or": 0.94175308,
+              "se": 0.3446752,
+              "z": -0.17411223,
+              "p": 0.86177726,
+              "or_lo": 0.47922955,
+              "or_hi": 1.85067646
+            },
+            {
+              "term": "age_z",
+              "beta": 0.18989213,
+              "or": 1.20911917,
+              "se": 0.02168969,
+              "z": 8.75494975,
+              "p": 2.04194436e-18,
+              "or_lo": 1.15879462,
+              "or_hi": 1.26162923
+            },
+            {
+              "term": "female",
+              "beta": -0.21973681,
+              "or": 0.80273004,
+              "se": 0.06010438,
+              "z": -3.65592022,
+              "p": 0.00025626,
+              "or_lo": 0.71352245,
+              "or_hi": 0.90309075
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07940104,
+              "or": 1.08263842,
+              "se": 0.00464058,
+              "z": 17.11015875,
+              "p": 1.24659281e-65,
+              "or_lo": 1.07283589,
+              "or_hi": 1.09253051
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.20888458,
+              "or": 1.23230276,
+              "se": 0.05349395,
+              "z": 3.90482659,
+              "p": 9.429e-05,
+              "or_lo": 1.1096409,
+              "or_hi": 1.36852391
+            }
+          ]
+        },
+        "icu_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 20104,
+          "events": 3620,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.49068262,
+              "or": 4.44012542,
+              "se": 0.13796696,
+              "p": 3.27255404e-27,
+              "or_lo": 3.38809356,
+              "or_hi": 5.81882214
+            },
+            {
+              "term": "age_z",
+              "beta": 0.21957563,
+              "or": 1.24554804,
+              "se": 0.0188799,
+              "p": 2.89675895e-31,
+              "or_lo": 1.20029939,
+              "or_hi": 1.29250247
+            },
+            {
+              "term": "female",
+              "beta": -0.27958428,
+              "or": 0.756098,
+              "se": 0.05478136,
+              "p": 3.33183009e-07,
+              "or_lo": 0.67912116,
+              "or_hi": 0.8418
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06475242,
+              "or": 1.06689485,
+              "se": 0.00380125,
+              "p": 4.55697976e-65,
+              "or_lo": 1.05897553,
+              "or_hi": 1.07487339
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.41781626,
+              "or": 1.51864161,
+              "se": 0.04078767,
+              "p": 1.26323889e-24,
+              "or_lo": 1.40196164,
+              "or_hi": 1.64503242
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor": {
+          "label": "in-hospital death ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 19564,
+          "events": 1366,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.62816717,
+              "or": 1.87417239,
+              "se": 0.51347781,
+              "z": 1.22335797,
+              "p": 0.22119452,
+              "or_lo": 0.68505967,
+              "or_hi": 5.12732296
+            },
+            {
+              "term": "age_z",
+              "beta": 0.59217749,
+              "or": 1.80792086,
+              "se": 0.03039977,
+              "z": 19.4796695,
+              "p": 1.63330414e-84,
+              "or_lo": 1.70334496,
+              "or_hi": 1.91891715
+            },
+            {
+              "term": "female",
+              "beta": 0.03326235,
+              "or": 1.03382173,
+              "se": 0.07810586,
+              "z": 0.42586239,
+              "p": 0.67020812,
+              "or_lo": 0.88707553,
+              "or_hi": 1.20484369
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01274471,
+              "or": 0.98733616,
+              "se": 0.00655636,
+              "z": -1.94386869,
+              "p": 0.05191129,
+              "or_lo": 0.9747296,
+              "or_hi": 1.00010577
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.04896293,
+              "or": 0.95221642,
+              "se": 0.07976954,
+              "z": -0.61380492,
+              "p": 0.53934424,
+              "or_lo": 0.81439382,
+              "or_hi": 1.11336321
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 19564,
+          "events": 1366,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 1.22021897,
+              "or": 3.38792951,
+              "se": 0.20223103,
+              "p": 1.60160967e-09,
+              "or_lo": 2.27924936,
+              "or_hi": 5.0358976
+            },
+            {
+              "term": "age_z",
+              "beta": 0.57278532,
+              "or": 1.7731991,
+              "se": 0.02871536,
+              "p": 1.59145888e-88,
+              "or_lo": 1.67615624,
+              "or_hi": 1.87586037
+            },
+            {
+              "term": "female",
+              "beta": 0.06861494,
+              "or": 1.07102372,
+              "se": 0.07531264,
+              "p": 0.36225953,
+              "or_lo": 0.92404192,
+              "or_hi": 1.24138504
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00213048,
+              "or": 1.00213275,
+              "se": 0.00576515,
+              "p": 0.71172209,
+              "or_lo": 0.99087269,
+              "or_hi": 1.01352077
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.09379721,
+              "or": 1.09833699,
+              "se": 0.06630082,
+              "p": 0.15715011,
+              "or_lo": 0.9644933,
+              "or_hi": 1.2507543
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor": {
+          "label": "ICU ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 19564,
+          "events": 3502,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": -0.03399614,
+              "or": 0.96657524,
+              "se": 0.33724572,
+              "z": -0.10080525,
+              "p": 0.91970506,
+              "or_lo": 0.49907557,
+              "or_hi": 1.87199642
+            },
+            {
+              "term": "age_z",
+              "beta": 0.19387616,
+              "or": 1.21394594,
+              "se": 0.02212762,
+              "z": 8.76172644,
+              "p": 1.92282445e-18,
+              "or_lo": 1.1624223,
+              "or_hi": 1.26775332
+            },
+            {
+              "term": "female",
+              "beta": -0.20655736,
+              "or": 0.8133796,
+              "se": 0.06095045,
+              "z": -3.38893881,
+              "p": 0.00070164,
+              "or_lo": 0.72179057,
+              "or_hi": 0.9165905
+            },
+            {
+              "term": "year_c",
+              "beta": 0.08042345,
+              "or": 1.08374588,
+              "se": 0.00471386,
+              "z": 17.06106793,
+              "p": 2.89219181e-65,
+              "or_lo": 1.07377909,
+              "or_hi": 1.09380519
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.21726792,
+              "or": 1.242677,
+              "se": 0.05576512,
+              "z": 3.89612581,
+              "p": 9.774e-05,
+              "or_lo": 1.11401242,
+              "or_hi": 1.3862019
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 19564,
+          "events": 3502,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 1.1225694,
+              "or": 3.07273916,
+              "se": 0.13088002,
+              "p": 9.73056359e-18,
+              "or_lo": 2.37748821,
+              "or_hi": 3.97130296
+            },
+            {
+              "term": "age_z",
+              "beta": 0.22156623,
+              "or": 1.2480299,
+              "se": 0.01918661,
+              "p": 7.55904295e-31,
+              "or_lo": 1.20196832,
+              "or_hi": 1.29585665
+            },
+            {
+              "term": "female",
+              "beta": -0.26785513,
+              "or": 0.7650186,
+              "se": 0.05539452,
+              "p": 1.32872595e-06,
+              "or_lo": 0.68630826,
+              "or_hi": 0.85275596
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06428059,
+              "or": 1.06639158,
+              "se": 0.00385248,
+              "p": 1.67031957e-62,
+              "or_lo": 1.05836974,
+              "or_hi": 1.07447423
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.42861189,
+              "or": 1.53512511,
+              "se": 0.04208671,
+              "p": 2.33704116e-24,
+              "or_lo": 1.41357496,
+              "or_hi": 1.66712709
+            }
+          ]
+        }
+      },
+      "volume_ge_30": {
+        "hospitals": 192,
+        "admissions": 20976,
+        "deaths": 1439,
+        "died_home_depth": {
+          "label": "in-hospital death ~ home health-region hospitalisation share",
+          "n": 20976,
+          "events": 1439,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.95076483,
+              "or": 0.38644534,
+              "se": 0.9515774,
+              "z": -0.99914608,
+              "p": 0.31772393,
+              "or_lo": 0.05985343,
+              "or_hi": 2.49509519
+            },
+            {
+              "term": "age_z",
+              "beta": 0.58748138,
+              "or": 1.79945056,
+              "se": 0.02923397,
+              "z": 20.09584441,
+              "p": 8.02379605e-90,
+              "or_lo": 1.69924288,
+              "or_hi": 1.90556769
+            },
+            {
+              "term": "female",
+              "beta": 0.03185748,
+              "or": 1.03237036,
+              "se": 0.07569562,
+              "z": 0.42086294,
+              "p": 0.67385517,
+              "or_lo": 0.89002482,
+              "or_hi": 1.19748185
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01732046,
+              "or": 0.98282868,
+              "se": 0.00630421,
+              "z": -2.74744227,
+              "p": 0.00600621,
+              "or_lo": 0.97075931,
+              "or_hi": 0.9950481
+            },
+            {
+              "term": "referred_hr",
+              "beta": -0.1182133,
+              "or": 0.88850651,
+              "se": 0.10584934,
+              "z": -1.11680718,
+              "p": 0.26407678,
+              "or_lo": 0.72203765,
+              "or_hi": 1.09335549
+            }
+          ]
+        },
+        "died_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 20976,
+          "events": 1439,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.99156207,
+              "or": 7.32697005,
+              "se": 0.23499682,
+              "p": 2.35388962e-17,
+              "or_lo": 4.62265077,
+              "or_hi": 11.61335624
+            },
+            {
+              "term": "age_z",
+              "beta": 0.5603016,
+              "or": 1.75120058,
+              "se": 0.02798184,
+              "p": 3.41915278e-89,
+              "or_lo": 1.65774326,
+              "or_hi": 1.84992666
+            },
+            {
+              "term": "female",
+              "beta": 0.10489638,
+              "or": 1.11059553,
+              "se": 0.07335579,
+              "p": 0.15272641,
+              "or_lo": 0.96186519,
+              "or_hi": 1.28232359
+            },
+            {
+              "term": "year_c",
+              "beta": -0.00371958,
+              "or": 0.99628733,
+              "se": 0.00565202,
+              "p": 0.51047577,
+              "or_lo": 0.9853114,
+              "or_hi": 1.00738553
+            },
+            {
+              "term": "referred_hr",
+              "beta": -0.03002852,
+              "or": 0.97041785,
+              "se": 0.09740893,
+              "p": 0.75787477,
+              "or_lo": 0.80175675,
+              "or_hi": 1.17455926
+            }
+          ]
+        },
+        "died_home_depth_unadjusted": {
+          "label": "unadjusted",
+          "n": 20976,
+          "events": 1439,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.44868073,
+              "or": 0.63846991,
+              "se": 0.85743367,
+              "z": -0.52328331,
+              "p": 0.60077711,
+              "or_lo": 0.11892637,
+              "or_hi": 3.42769927
+            }
+          ]
+        },
+        "icu_home_depth": {
+          "label": "ICU use ~ home health-region hospitalisation share",
+          "n": 20976,
+          "events": 3681,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 0.98606899,
+              "or": 2.68067596,
+              "se": 0.64838442,
+              "z": 1.5208092,
+              "p": 0.12830772,
+              "or_lo": 0.7521914,
+              "or_hi": 9.55345096
+            },
+            {
+              "term": "age_z",
+              "beta": 0.20150361,
+              "or": 1.22324065,
+              "se": 0.02115524,
+              "z": 9.52499602,
+              "p": 1.65048244e-21,
+              "or_lo": 1.17355703,
+              "or_hi": 1.27502768
+            },
+            {
+              "term": "female",
+              "beta": -0.1595996,
+              "or": 0.85248506,
+              "se": 0.05830065,
+              "z": -2.73752692,
+              "p": 0.00619031,
+              "or_lo": 0.76043178,
+              "or_hi": 0.95568174
+            },
+            {
+              "term": "year_c",
+              "beta": 0.0795462,
+              "or": 1.08279559,
+              "se": 0.00450049,
+              "z": 17.67502119,
+              "p": 6.53158664e-70,
+              "or_lo": 1.0732863,
+              "or_hi": 1.09238913
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.28095343,
+              "or": 1.32439193,
+              "se": 0.07028418,
+              "z": 3.9973924,
+              "p": 6.404e-05,
+              "or_lo": 1.15395647,
+              "or_hi": 1.52000013
+            }
+          ]
+        },
+        "icu_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 20976,
+          "events": 3681,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.80619909,
+              "or": 6.08726624,
+              "se": 0.15174006,
+              "p": 1.13833155e-32,
+              "or_lo": 4.5212503,
+              "or_hi": 8.19569981
+            },
+            {
+              "term": "age_z",
+              "beta": 0.22490106,
+              "or": 1.25219881,
+              "se": 0.01869281,
+              "p": 2.42937666e-33,
+              "or_lo": 1.20715114,
+              "or_hi": 1.29892754
+            },
+            {
+              "term": "female",
+              "beta": -0.21589038,
+              "or": 0.80582363,
+              "se": 0.05376976,
+              "p": 5.942e-05,
+              "or_lo": 0.72522081,
+              "or_hi": 0.89538486
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06742083,
+              "or": 1.06974556,
+              "se": 0.00376986,
+              "p": 1.56720383e-71,
+              "or_lo": 1.06187041,
+              "or_hi": 1.07767912
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.51697023,
+              "or": 1.67693921,
+              "se": 0.05776014,
+              "p": 3.54537893e-19,
+              "or_lo": 1.49744504,
+              "or_hi": 1.87794878
+            }
+          ]
+        },
+        "died_home_depth_municipal": {
+          "label": "in-hospital death ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 18417,
+          "events": 1294,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.24760215,
+              "or": 3.48198368,
+              "se": 0.60654359,
+              "z": 2.05690437,
+              "p": 0.03969543,
+              "or_lo": 1.06053842,
+              "or_hi": 11.43212737
+            },
+            {
+              "term": "age_z",
+              "beta": 0.59703975,
+              "or": 1.81673284,
+              "se": 0.03106689,
+              "z": 19.21788242,
+              "p": 2.62256558e-82,
+              "or_lo": 1.70941063,
+              "or_hi": 1.93079308
+            },
+            {
+              "term": "female",
+              "beta": 0.01368692,
+              "or": 1.01378101,
+              "se": 0.08025921,
+              "z": 0.17053389,
+              "p": 0.86459028,
+              "or_lo": 0.86621586,
+              "or_hi": 1.18648479
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01253109,
+              "or": 0.98754709,
+              "se": 0.0066537,
+              "z": -1.88332586,
+              "p": 0.05965622,
+              "or_lo": 0.97475185,
+              "or_hi": 1.0005103
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.01435718,
+              "or": 0.9857454,
+              "se": 0.07916971,
+              "z": -0.18134683,
+              "p": 0.85609535,
+              "or_lo": 0.84406159,
+              "or_hi": 1.15121218
+            }
+          ]
+        },
+        "died_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 18417,
+          "events": 1294,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.43918332,
+              "or": 4.21725025,
+              "se": 0.22619455,
+              "p": 1.98379117e-10,
+              "or_lo": 2.70700265,
+              "or_hi": 6.57007102
+            },
+            {
+              "term": "age_z",
+              "beta": 0.5785824,
+              "or": 1.78350834,
+              "se": 0.02966916,
+              "p": 1.07369351e-84,
+              "or_lo": 1.68275249,
+              "or_hi": 1.890297
+            },
+            {
+              "term": "female",
+              "beta": 0.06891884,
+              "or": 1.07134926,
+              "se": 0.07778626,
+              "p": 0.37561601,
+              "or_lo": 0.91985225,
+              "or_hi": 1.24779738
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00247828,
+              "or": 1.00248136,
+              "se": 0.00597778,
+              "p": 0.6784475,
+              "or_lo": 0.99080438,
+              "or_hi": 1.01429595
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.11812889,
+              "or": 1.12538916,
+              "se": 0.06645874,
+              "p": 0.07548977,
+              "or_lo": 0.98794304,
+              "or_hi": 1.28195727
+            }
+          ]
+        },
+        "icu_home_depth_municipal": {
+          "label": "ICU use ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 18417,
+          "events": 3291,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 0.04560595,
+              "or": 1.0466619,
+              "se": 0.36930661,
+              "z": 0.12349076,
+              "p": 0.90171849,
+              "or_lo": 0.50751196,
+              "or_hi": 2.15857204
+            },
+            {
+              "term": "age_z",
+              "beta": 0.19179251,
+              "or": 1.21141913,
+              "se": 0.02259716,
+              "z": 8.48746204,
+              "p": 2.1119869e-17,
+              "or_lo": 1.1589357,
+              "or_hi": 1.26627932
+            },
+            {
+              "term": "female",
+              "beta": -0.19477856,
+              "or": 0.82301689,
+              "se": 0.06250048,
+              "z": -3.11643303,
+              "p": 0.00183053,
+              "or_lo": 0.72812721,
+              "or_hi": 0.9302726
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07704336,
+              "or": 1.0800889,
+              "se": 0.00479112,
+              "z": 16.08044711,
+              "p": 3.49844944e-58,
+              "or_lo": 1.0699937,
+              "or_hi": 1.09027935
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.18880803,
+              "or": 1.20780907,
+              "se": 0.05547468,
+              "z": 3.40349937,
+              "p": 0.00066529,
+              "or_lo": 1.0833712,
+              "or_hi": 1.34654008
+            }
+          ]
+        },
+        "icu_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 18417,
+          "events": 3291,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.46006025,
+              "or": 4.30621896,
+              "se": 0.14768391,
+              "p": 4.76932942e-23,
+              "or_lo": 3.2239257,
+              "or_hi": 5.75184525
+            },
+            {
+              "term": "age_z",
+              "beta": 0.21991223,
+              "or": 1.24596736,
+              "se": 0.01988377,
+              "p": 1.9634975e-28,
+              "or_lo": 1.19834332,
+              "or_hi": 1.29548407
+            },
+            {
+              "term": "female",
+              "beta": -0.25788574,
+              "or": 0.77268352,
+              "se": 0.05736853,
+              "p": 6.94890928e-06,
+              "or_lo": 0.69050777,
+              "or_hi": 0.86463881
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06335046,
+              "or": 1.06540016,
+              "se": 0.00399514,
+              "p": 1.25988687e-56,
+              "or_lo": 1.05709015,
+              "or_hi": 1.07377549
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.41735719,
+              "or": 1.5179446,
+              "se": 0.04275785,
+              "p": 1.65600138e-22,
+              "or_lo": 1.39591734,
+              "or_hi": 1.65063915
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor": {
+          "label": "in-hospital death ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 17960,
+          "events": 1246,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.75401537,
+              "or": 2.12551765,
+              "se": 0.57851108,
+              "z": 1.3033724,
+              "p": 0.19244765,
+              "or_lo": 0.68395282,
+              "or_hi": 6.60546332
+            },
+            {
+              "term": "age_z",
+              "beta": 0.5968262,
+              "or": 1.81634493,
+              "se": 0.03167635,
+              "z": 18.84138012,
+              "p": 3.45829504e-79,
+              "or_lo": 1.7070053,
+              "or_hi": 1.93268814
+            },
+            {
+              "term": "female",
+              "beta": 0.02232728,
+              "or": 1.0225784,
+              "se": 0.08146138,
+              "z": 0.2740842,
+              "p": 0.78401992,
+              "or_lo": 0.8716764,
+              "or_hi": 1.1996041
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01349712,
+              "or": 0.98659356,
+              "se": 0.00677385,
+              "z": -1.992534,
+              "p": 0.0463125,
+              "or_lo": 0.97358139,
+              "or_hi": 0.99977964
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.04965366,
+              "or": 0.95155893,
+              "se": 0.08300508,
+              "z": -0.59820034,
+              "p": 0.54970626,
+              "or_lo": 0.80868678,
+              "or_hi": 1.11967256
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 17960,
+          "events": 1246,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 1.150415,
+              "or": 3.15950383,
+              "se": 0.21426966,
+              "p": 7.91719577e-08,
+              "or_lo": 2.07600727,
+              "or_hi": 4.80849205
+            },
+            {
+              "term": "age_z",
+              "beta": 0.57834212,
+              "or": 1.78307985,
+              "se": 0.03022831,
+              "p": 1.35512125e-81,
+              "or_lo": 1.68050548,
+              "or_hi": 1.89191513
+            },
+            {
+              "term": "female",
+              "beta": 0.07916475,
+              "or": 1.08238263,
+              "se": 0.07886626,
+              "p": 0.31548237,
+              "or_lo": 0.9273603,
+              "or_hi": 1.26331929
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00130361,
+              "or": 1.00130446,
+              "se": 0.00608262,
+              "p": 0.83029964,
+              "or_lo": 0.98943785,
+              "or_hi": 1.01331339
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.08576909,
+              "or": 1.08955472,
+              "se": 0.06973904,
+              "p": 0.21875038,
+              "or_lo": 0.95035525,
+              "or_hi": 1.24914286
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor": {
+          "label": "ICU ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 17960,
+          "events": 3191,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.03997892,
+              "or": 1.04078884,
+              "se": 0.36152094,
+              "z": 0.11058536,
+              "p": 0.91194516,
+              "or_lo": 0.51242439,
+              "or_hi": 2.11395365
+            },
+            {
+              "term": "age_z",
+              "beta": 0.19514695,
+              "or": 1.21548959,
+              "se": 0.02302576,
+              "z": 8.47515667,
+              "p": 2.34763372e-17,
+              "or_lo": 1.16185336,
+              "or_hi": 1.2716019
+            },
+            {
+              "term": "female",
+              "beta": -0.17869042,
+              "or": 0.83636478,
+              "se": 0.06330741,
+              "z": -2.82258321,
+              "p": 0.00476385,
+              "or_lo": 0.73876682,
+              "or_hi": 0.94685633
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07840831,
+              "or": 1.08156418,
+              "se": 0.00486479,
+              "z": 16.1175249,
+              "p": 1.92152512e-58,
+              "or_lo": 1.0713005,
+              "or_hi": 1.0919262
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.20710105,
+              "or": 1.23010686,
+              "se": 0.05773693,
+              "z": 3.58697725,
+              "p": 0.00033453,
+              "or_lo": 1.09849017,
+              "or_hi": 1.37749334
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 17960,
+          "events": 3191,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 1.0651487,
+              "or": 2.90127037,
+              "se": 0.13886565,
+              "p": 1.71522114e-14,
+              "or_lo": 2.20995473,
+              "or_hi": 3.80884263
+            },
+            {
+              "term": "age_z",
+              "beta": 0.22149373,
+              "or": 1.24793942,
+              "se": 0.020189,
+              "p": 5.26794314e-28,
+              "or_lo": 1.19952218,
+              "or_hi": 1.29831097
+            },
+            {
+              "term": "female",
+              "beta": -0.24721203,
+              "or": 0.78097509,
+              "se": 0.05795025,
+              "p": 1.991e-05,
+              "or_lo": 0.69712223,
+              "or_hi": 0.87491413
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06316131,
+              "or": 1.06519865,
+              "se": 0.00404583,
+              "p": 6.08285893e-55,
+              "or_lo": 1.05678521,
+              "or_hi": 1.07367907
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.4305582,
+              "or": 1.53811585,
+              "se": 0.04411741,
+              "p": 1.68192776e-22,
+              "or_lo": 1.41070288,
+              "or_hi": 1.67703661
+            }
+          ]
+        }
+      },
+      "volume_ge_50": {
+        "hospitals": 129,
+        "admissions": 18621,
+        "deaths": 1281,
+        "died_home_depth": {
+          "label": "in-hospital death ~ home health-region hospitalisation share",
+          "n": 18621,
+          "events": 1281,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -1.01084012,
+              "or": 0.36391312,
+              "se": 0.98345126,
+              "z": -1.02784974,
+              "p": 0.30402051,
+              "or_lo": 0.05295014,
+              "or_hi": 2.50108426
+            },
+            {
+              "term": "age_z",
+              "beta": 0.59104013,
+              "or": 1.80586577,
+              "se": 0.03088966,
+              "z": 19.13391621,
+              "p": 1.31791507e-81,
+              "or_lo": 1.69977586,
+              "or_hi": 1.91857717
+            },
+            {
+              "term": "female",
+              "beta": 0.00705988,
+              "or": 1.00708486,
+              "se": 0.08062136,
+              "z": 0.08756836,
+              "p": 0.93021975,
+              "or_lo": 0.85988383,
+              "or_hi": 1.17948481
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01404112,
+              "or": 0.986057,
+              "se": 0.00666528,
+              "z": -2.1066051,
+              "p": 0.03515182,
+              "or_lo": 0.97325897,
+              "or_hi": 0.99902331
+            },
+            {
+              "term": "referred_hr",
+              "beta": -0.08860269,
+              "or": 0.91520912,
+              "se": 0.10974031,
+              "z": -0.80738511,
+              "p": 0.41944464,
+              "or_lo": 0.7380869,
+              "or_hi": 1.13483619
+            }
+          ]
+        },
+        "died_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 18621,
+          "events": 1281,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.76552848,
+              "or": 5.84466032,
+              "se": 0.24628126,
+              "p": 7.56863465e-13,
+              "or_lo": 3.60678648,
+              "or_hi": 9.47104977
+            },
+            {
+              "term": "age_z",
+              "beta": 0.56112755,
+              "or": 1.75264758,
+              "se": 0.02961724,
+              "p": 4.76684427e-80,
+              "or_lo": 1.65380344,
+              "or_hi": 1.85739942
+            },
+            {
+              "term": "female",
+              "beta": 0.08226358,
+              "or": 1.08574195,
+              "se": 0.07825517,
+              "p": 0.29315648,
+              "or_lo": 0.93135334,
+              "or_hi": 1.26572326
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00183078,
+              "or": 1.00183246,
+              "se": 0.0059958,
+              "p": 0.76010369,
+              "or_lo": 0.99012807,
+              "or_hi": 1.01367521
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.03558254,
+              "or": 1.03622317,
+              "se": 0.10075274,
+              "p": 0.7239633,
+              "or_lo": 0.85053235,
+              "or_hi": 1.26245459
+            }
+          ]
+        },
+        "died_home_depth_unadjusted": {
+          "label": "unadjusted",
+          "n": 18621,
+          "events": 1281,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.53060947,
+              "or": 0.58824634,
+              "se": 0.88782339,
+              "z": -0.59765205,
+              "p": 0.55007213,
+              "or_lo": 0.10323542,
+              "or_hi": 3.35189003
+            }
+          ]
+        },
+        "icu_home_depth": {
+          "label": "ICU use ~ home health-region hospitalisation share",
+          "n": 18621,
+          "events": 3299,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 0.75065111,
+              "or": 2.11837887,
+              "se": 0.68256378,
+              "z": 1.09975233,
+              "p": 0.27144005,
+              "or_lo": 0.55589608,
+              "or_hi": 8.07260415
+            },
+            {
+              "term": "age_z",
+              "beta": 0.20345934,
+              "or": 1.22563533,
+              "se": 0.0223832,
+              "z": 9.08982241,
+              "p": 9.92009541e-20,
+              "or_lo": 1.17302779,
+              "or_hi": 1.28060218
+            },
+            {
+              "term": "female",
+              "beta": -0.15939206,
+              "or": 0.852662,
+              "se": 0.06189361,
+              "z": -2.57525897,
+              "p": 0.01001651,
+              "or_lo": 0.75525221,
+              "or_hi": 0.96263535
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07924568,
+              "or": 1.08247023,
+              "se": 0.00476619,
+              "z": 16.62664487,
+              "p": 4.46930462e-62,
+              "or_lo": 1.07240518,
+              "or_hi": 1.09262975
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.27769851,
+              "or": 1.32008814,
+              "se": 0.07412273,
+              "z": 3.74646875,
+              "p": 0.00017934,
+              "or_lo": 1.14158534,
+              "or_hi": 1.52650234
+            }
+          ]
+        },
+        "icu_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 18621,
+          "events": 3299,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.85234829,
+              "or": 6.37477178,
+              "se": 0.16058378,
+              "p": 8.77959923e-31,
+              "or_lo": 4.65342764,
+              "or_hi": 8.73285638
+            },
+            {
+              "term": "age_z",
+              "beta": 0.22005117,
+              "or": 1.24614049,
+              "se": 0.01981502,
+              "p": 1.18260212e-28,
+              "or_lo": 1.19867134,
+              "or_hi": 1.2954895
+            },
+            {
+              "term": "female",
+              "beta": -0.22359523,
+              "or": 0.79963874,
+              "se": 0.0571848,
+              "p": 9.228e-05,
+              "or_lo": 0.71485365,
+              "or_hi": 0.89447975
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06890227,
+              "or": 1.0713315,
+              "se": 0.00399653,
+              "p": 1.31814479e-66,
+              "or_lo": 1.06297233,
+              "or_hi": 1.0797564
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.54736445,
+              "or": 1.72869095,
+              "se": 0.06054674,
+              "p": 1.56154858e-19,
+              "or_lo": 1.53524938,
+              "or_hi": 1.94650619
+            }
+          ]
+        },
+        "died_home_depth_municipal": {
+          "label": "in-hospital death ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 16640,
+          "events": 1162,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.00504532,
+              "or": 2.73203109,
+              "se": 0.62452397,
+              "z": 1.60929823,
+              "p": 0.10755115,
+              "or_lo": 0.80330432,
+              "or_hi": 9.29161433
+            },
+            {
+              "term": "age_z",
+              "beta": 0.60238301,
+              "or": 1.82646611,
+              "se": 0.0326732,
+              "z": 18.43660979,
+              "p": 6.68005616e-76,
+              "or_lo": 1.71316672,
+              "or_hi": 1.94725849
+            },
+            {
+              "term": "female",
+              "beta": -0.01067355,
+              "or": 0.98938321,
+              "se": 0.08499251,
+              "z": -0.12558228,
+              "p": 0.90006259,
+              "or_lo": 0.83756294,
+              "or_hi": 1.16872307
+            },
+            {
+              "term": "year_c",
+              "beta": -0.00977979,
+              "or": 0.99026788,
+              "se": 0.00700473,
+              "z": -1.3961693,
+              "p": 0.16266352,
+              "or_lo": 0.97676513,
+              "or_hi": 1.00395729
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.01020587,
+              "or": 0.98984603,
+              "se": 0.08237255,
+              "z": -0.12389894,
+              "p": 0.90139529,
+              "or_lo": 0.8422688,
+              "or_hi": 1.16328085
+            }
+          ]
+        },
+        "died_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 16640,
+          "events": 1162,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.21415659,
+              "or": 3.36745272,
+              "se": 0.23684107,
+              "p": 2.95238761e-07,
+              "or_lo": 2.11689012,
+              "or_hi": 5.35679095
+            },
+            {
+              "term": "age_z",
+              "beta": 0.57827938,
+              "or": 1.78296797,
+              "se": 0.03125801,
+              "p": 2.05706524e-76,
+              "or_lo": 1.67701208,
+              "or_hi": 1.8956183
+            },
+            {
+              "term": "female",
+              "beta": 0.05565887,
+              "or": 1.05723697,
+              "se": 0.08245886,
+              "p": 0.49968238,
+              "or_lo": 0.89946018,
+              "or_hi": 1.24268982
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00702436,
+              "or": 1.00704909,
+              "se": 0.00631765,
+              "p": 0.26619708,
+              "or_lo": 0.99465609,
+              "or_hi": 1.0195965
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.12061905,
+              "or": 1.12819505,
+              "se": 0.06932061,
+              "p": 0.081856,
+              "or_lo": 0.98486634,
+              "or_hi": 1.29238255
+            }
+          ]
+        },
+        "icu_home_depth_municipal": {
+          "label": "ICU use ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 16640,
+          "events": 2991,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 0.04501299,
+              "or": 1.04604145,
+              "se": 0.38618492,
+              "z": 0.11655813,
+              "p": 0.90721022,
+              "or_lo": 0.49070632,
+              "or_hi": 2.22985248
+            },
+            {
+              "term": "age_z",
+              "beta": 0.19726799,
+              "or": 1.21807043,
+              "se": 0.02375514,
+              "z": 8.30422406,
+              "p": 1.00473884e-16,
+              "or_lo": 1.16265702,
+              "or_hi": 1.2761249
+            },
+            {
+              "term": "female",
+              "beta": -0.19174586,
+              "or": 0.82551664,
+              "se": 0.0658632,
+              "z": -2.91127445,
+              "p": 0.00359958,
+              "or_lo": 0.72554096,
+              "or_hi": 0.93926842
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07651895,
+              "or": 1.07952265,
+              "se": 0.00504452,
+              "z": 15.16872614,
+              "p": 5.69718022e-52,
+              "or_lo": 1.06890172,
+              "or_hi": 1.09024911
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.19376053,
+              "or": 1.21380558,
+              "se": 0.0579597,
+              "z": 3.34302162,
+              "p": 0.00082871,
+              "or_lo": 1.08345988,
+              "or_hi": 1.35983251
+            }
+          ]
+        },
+        "icu_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 16640,
+          "events": 2991,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.56718504,
+              "or": 4.79313668,
+              "se": 0.15757707,
+              "p": 2.6380777e-23,
+              "or_lo": 3.51955293,
+              "or_hi": 6.52757884
+            },
+            {
+              "term": "age_z",
+              "beta": 0.21496748,
+              "or": 1.23982158,
+              "se": 0.0209123,
+              "p": 8.72023883e-25,
+              "or_lo": 1.19003101,
+              "or_hi": 1.29169537
+            },
+            {
+              "term": "female",
+              "beta": -0.25712474,
+              "or": 0.77327175,
+              "se": 0.06048126,
+              "p": 2.125e-05,
+              "or_lo": 0.68683033,
+              "or_hi": 0.87059232
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06393303,
+              "or": 1.066021,
+              "se": 0.00420793,
+              "p": 3.90679389e-52,
+              "or_lo": 1.05726511,
+              "or_hi": 1.07484941
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.41537829,
+              "or": 1.51494372,
+              "se": 0.0445922,
+              "p": 1.2190201e-20,
+              "or_lo": 1.38815785,
+              "or_hi": 1.65330944
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor": {
+          "label": "in-hospital death ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 16267,
+          "events": 1124,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.5630005,
+              "or": 1.75593329,
+              "se": 0.59471368,
+              "z": 0.94667488,
+              "p": 0.34380447,
+              "or_lo": 0.54736561,
+              "or_hi": 5.63298396
+            },
+            {
+              "term": "age_z",
+              "beta": 0.59625163,
+              "or": 1.81530161,
+              "se": 0.0331662,
+              "z": 17.97768773,
+              "p": 2.913938e-72,
+              "or_lo": 1.70105028,
+              "or_hi": 1.93722665
+            },
+            {
+              "term": "female",
+              "beta": -0.00689286,
+              "or": 0.99313084,
+              "se": 0.08612356,
+              "z": -0.0800346,
+              "p": 0.93620974,
+              "or_lo": 0.83887377,
+              "or_hi": 1.1757536
+            },
+            {
+              "term": "year_c",
+              "beta": -0.01190981,
+              "or": 0.98816083,
+              "se": 0.00711727,
+              "z": -1.67336881,
+              "p": 0.09425471,
+              "or_lo": 0.97447184,
+              "or_hi": 1.00204211
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.04036371,
+              "or": 0.96044006,
+              "se": 0.08629658,
+              "z": -0.4677324,
+              "p": 0.63997597,
+              "or_lo": 0.81098557,
+              "or_hi": 1.13743713
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 16267,
+          "events": 1124,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.90719821,
+              "or": 2.47737173,
+              "se": 0.22293862,
+              "p": 4.716e-05,
+              "or_lo": 1.60037585,
+              "or_hi": 3.83495582
+            },
+            {
+              "term": "age_z",
+              "beta": 0.57377792,
+              "or": 1.77496006,
+              "se": 0.03171661,
+              "p": 3.76769221e-73,
+              "or_lo": 1.66798009,
+              "or_hi": 1.88880144
+            },
+            {
+              "term": "female",
+              "beta": 0.0633469,
+              "or": 1.06539636,
+              "se": 0.08347419,
+              "p": 0.44792433,
+              "or_lo": 0.90459991,
+              "or_hi": 1.25477505
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00495305,
+              "or": 1.00496534,
+              "se": 0.00641914,
+              "p": 0.44034794,
+              "or_lo": 0.99240055,
+              "or_hi": 1.0176892
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.08516799,
+              "or": 1.08889997,
+              "se": 0.07261475,
+              "p": 0.24084617,
+              "or_lo": 0.94444585,
+              "or_hi": 1.25544853
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor": {
+          "label": "ICU ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 16267,
+          "events": 2908,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": -0.01573333,
+              "or": 0.9843898,
+              "se": 0.37763829,
+              "z": -0.04166242,
+              "p": 0.96676781,
+              "or_lo": 0.46958574,
+              "or_hi": 2.06357046
+            },
+            {
+              "term": "age_z",
+              "beta": 0.2005411,
+              "or": 1.22206384,
+              "se": 0.02412359,
+              "z": 8.31307153,
+              "p": 9.32562704e-17,
+              "or_lo": 1.16562669,
+              "or_hi": 1.28123356
+            },
+            {
+              "term": "female",
+              "beta": -0.18128516,
+              "or": 0.83419745,
+              "se": 0.06661319,
+              "z": -2.72146047,
+              "p": 0.00649942,
+              "or_lo": 0.73209352,
+              "or_hi": 0.95054164
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07731852,
+              "or": 1.08038615,
+              "se": 0.00511347,
+              "z": 15.12057291,
+              "p": 1.18507088e-51,
+              "or_lo": 1.06961217,
+              "or_hi": 1.09126864
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.20804171,
+              "or": 1.23126453,
+              "se": 0.06034259,
+              "z": 3.44767617,
+              "p": 0.00056543,
+              "or_lo": 1.09392291,
+              "or_hi": 1.38584933
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 16267,
+          "events": 2908,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 1.10880327,
+              "or": 3.03072925,
+              "se": 0.14686524,
+              "p": 4.35924639e-14,
+              "or_lo": 2.27265194,
+              "or_hi": 4.04167467
+            },
+            {
+              "term": "age_z",
+              "beta": 0.21644116,
+              "or": 1.24165003,
+              "se": 0.0211696,
+              "p": 1.54575112e-24,
+              "or_lo": 1.19118517,
+              "or_hi": 1.29425284
+            },
+            {
+              "term": "female",
+              "beta": -0.25019212,
+              "or": 0.77865117,
+              "se": 0.06102464,
+              "p": 4.134e-05,
+              "or_lo": 0.69087221,
+              "or_hi": 0.87758292
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06327063,
+              "or": 1.0653151,
+              "se": 0.00425542,
+              "p": 5.29851014e-50,
+              "or_lo": 1.05646666,
+              "or_hi": 1.07423765
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.4261341,
+              "or": 1.53132611,
+              "se": 0.04595187,
+              "p": 1.80155163e-20,
+              "or_lo": 1.3994348,
+              "or_hi": 1.67564766
+            }
+          ]
+        }
+      },
+      "volume_ge_100": {
+        "hospitals": 61,
+        "admissions": 13768,
+        "deaths": 997,
+        "died_home_depth": {
+          "label": "in-hospital death ~ home health-region hospitalisation share",
+          "n": 13768,
+          "events": 997,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.99742322,
+              "or": 0.36882861,
+              "se": 1.089359,
+              "z": -0.91560562,
+              "p": 0.35987378,
+              "or_lo": 0.04360572,
+              "or_hi": 3.11964876
+            },
+            {
+              "term": "age_z",
+              "beta": 0.60713928,
+              "or": 1.83517397,
+              "se": 0.03514909,
+              "z": 17.27325633,
+              "p": 7.48001234e-67,
+              "or_lo": 1.71300144,
+              "or_hi": 1.96605993
+            },
+            {
+              "term": "female",
+              "beta": -0.10388729,
+              "or": 0.90132688,
+              "se": 0.09399886,
+              "z": -1.10519731,
+              "p": 0.2690741,
+              "or_lo": 0.74966783,
+              "or_hi": 1.08366681
+            },
+            {
+              "term": "year_c",
+              "beta": -0.02872697,
+              "or": 0.97168173,
+              "se": 0.0076408,
+              "z": -3.75967913,
+              "p": 0.00017013,
+              "or_lo": 0.95723827,
+              "or_hi": 0.98634312
+            },
+            {
+              "term": "referred_hr",
+              "beta": -0.1156185,
+              "or": 0.890815,
+              "se": 0.12289619,
+              "z": -0.94078185,
+              "p": 0.34681666,
+              "or_lo": 0.70012595,
+              "or_hi": 1.13344087
+            }
+          ]
+        },
+        "died_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 13768,
+          "events": 997,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.54429926,
+              "or": 4.68468771,
+              "se": 0.2897929,
+              "p": 9.87683729e-08,
+              "or_lo": 2.65462968,
+              "or_hi": 8.26717908
+            },
+            {
+              "term": "age_z",
+              "beta": 0.56678494,
+              "or": 1.76259109,
+              "se": 0.03403249,
+              "p": 2.8193563e-62,
+              "or_lo": 1.64885526,
+              "or_hi": 1.88417226
+            },
+            {
+              "term": "female",
+              "beta": 0.02177816,
+              "or": 1.02201704,
+              "se": 0.09127053,
+              "p": 0.81140714,
+              "or_lo": 0.85460827,
+              "or_hi": 1.22221942
+            },
+            {
+              "term": "year_c",
+              "beta": -0.0026465,
+              "or": 0.997357,
+              "se": 0.00679288,
+              "p": 0.69683301,
+              "or_lo": 0.98416616,
+              "or_hi": 1.01072464
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.08006345,
+              "or": 1.0833558,
+              "se": 0.11270968,
+              "p": 0.47748641,
+              "or_lo": 0.86862175,
+              "or_hi": 1.35117477
+            }
+          ]
+        },
+        "died_home_depth_unadjusted": {
+          "label": "unadjusted",
+          "n": 13768,
+          "events": 997,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.31000251,
+              "or": 0.73344512,
+              "se": 0.9739437,
+              "z": -0.31829613,
+              "p": 0.75026032,
+              "or_lo": 0.10872515,
+              "or_hi": 4.94772135
+            }
+          ]
+        },
+        "icu_home_depth": {
+          "label": "ICU use ~ home health-region hospitalisation share",
+          "n": 13768,
+          "events": 2467,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": -0.27418866,
+              "or": 0.76018865,
+              "se": 0.77037279,
+              "z": -0.35591685,
+              "p": 0.72190284,
+              "or_lo": 0.1679449,
+              "or_hi": 3.4409308
+            },
+            {
+              "term": "age_z",
+              "beta": 0.16444513,
+              "or": 1.17873889,
+              "se": 0.02616225,
+              "z": 6.28558766,
+              "p": 3.26615795e-10,
+              "or_lo": 1.11981906,
+              "or_hi": 1.24075882
+            },
+            {
+              "term": "female",
+              "beta": -0.13085389,
+              "or": 0.87734596,
+              "se": 0.07219027,
+              "z": -1.81262493,
+              "p": 0.06988969,
+              "or_lo": 0.76159008,
+              "or_hi": 1.01069584
+            },
+            {
+              "term": "year_c",
+              "beta": 0.08025495,
+              "or": 1.08356329,
+              "se": 0.00553155,
+              "z": 14.50859428,
+              "p": 1.06888635e-47,
+              "or_lo": 1.07187894,
+              "or_hi": 1.09537501
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.19399469,
+              "or": 1.21408984,
+              "se": 0.08826354,
+              "z": 2.19790294,
+              "p": 0.02795602,
+              "or_lo": 1.02122017,
+              "or_hi": 1.44338526
+            }
+          ]
+        },
+        "icu_home_depth_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 13768,
+          "events": 2467,
+          "terms": [
+            {
+              "term": "hs_res",
+              "beta": 1.64112286,
+              "or": 5.16096128,
+              "se": 0.19178137,
+              "p": 1.15582665e-17,
+              "or_lo": 3.5439126,
+              "or_hi": 7.51585165
+            },
+            {
+              "term": "age_z",
+              "beta": 0.17530864,
+              "or": 1.19161394,
+              "se": 0.02323752,
+              "p": 4.55051418e-14,
+              "or_lo": 1.13855863,
+              "or_hi": 1.24714156
+            },
+            {
+              "term": "female",
+              "beta": -0.18480637,
+              "or": 0.83126523,
+              "se": 0.06655037,
+              "p": 0.00548734,
+              "or_lo": 0.72961003,
+              "or_hi": 0.94708386
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06879473,
+              "or": 1.07121629,
+              "se": 0.00458909,
+              "p": 8.41742566e-51,
+              "or_lo": 1.06162431,
+              "or_hi": 1.08089494
+            },
+            {
+              "term": "referred_hr",
+              "beta": 0.58103154,
+              "or": 1.78788175,
+              "se": 0.06918904,
+              "p": 4.55155786e-17,
+              "or_lo": 1.56114733,
+              "or_hi": 2.04754612
+            }
+          ]
+        },
+        "died_home_depth_municipal": {
+          "label": "in-hospital death ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 12444,
+          "events": 918,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.2489097,
+              "or": 3.4865395,
+              "se": 0.69605154,
+              "z": 1.79427763,
+              "p": 0.07276887,
+              "or_lo": 0.89105305,
+              "or_hi": 13.64223788
+            },
+            {
+              "term": "age_z",
+              "beta": 0.62689134,
+              "or": 1.8717828,
+              "se": 0.03689489,
+              "z": 16.99127986,
+              "p": 9.52871243e-65,
+              "or_lo": 1.74120494,
+              "or_hi": 2.01215306
+            },
+            {
+              "term": "female",
+              "beta": -0.12458937,
+              "or": 0.88285936,
+              "se": 0.09838492,
+              "z": -1.26634625,
+              "p": 0.20538914,
+              "or_lo": 0.72802215,
+              "or_hi": 1.07062765
+            },
+            {
+              "term": "year_c",
+              "beta": -0.02519666,
+              "or": 0.97511813,
+              "se": 0.00798918,
+              "z": -3.15384776,
+              "p": 0.00161133,
+              "or_lo": 0.95996788,
+              "or_hi": 0.99050748
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.02966629,
+              "or": 0.97076943,
+              "se": 0.09135945,
+              "z": -0.32472057,
+              "p": 0.74539257,
+              "or_lo": 0.81161368,
+              "or_hi": 1.16113529
+            }
+          ]
+        },
+        "died_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 12444,
+          "events": 918,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 0.84574412,
+              "or": 2.32971076,
+              "se": 0.27077341,
+              "p": 0.00178751,
+              "or_lo": 1.37029801,
+              "or_hi": 3.96085537
+            },
+            {
+              "term": "age_z",
+              "beta": 0.58816554,
+              "or": 1.80068211,
+              "se": 0.03562077,
+              "p": 3.01387032e-61,
+              "or_lo": 1.67925264,
+              "or_hi": 1.93089233
+            },
+            {
+              "term": "female",
+              "beta": -0.01429675,
+              "or": 0.98580497,
+              "se": 0.09554422,
+              "p": 0.88105269,
+              "or_lo": 0.81745174,
+              "or_hi": 1.18883034
+            },
+            {
+              "term": "year_c",
+              "beta": 0.00055263,
+              "or": 1.00055278,
+              "se": 0.00711201,
+              "p": 0.93806396,
+              "or_lo": 0.98670229,
+              "or_hi": 1.0145977
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.13959642,
+              "or": 1.14980966,
+              "se": 0.07651933,
+              "p": 0.06810237,
+              "or_lo": 0.98967224,
+              "or_hi": 1.33585869
+            }
+          ]
+        },
+        "icu_home_depth_municipal": {
+          "label": "ICU use ~ home MUNICIPALITY hospitalisation share (>=30 cases)",
+          "n": 12444,
+          "events": 2256,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": -0.21508612,
+              "or": 0.80647198,
+              "se": 0.42117032,
+              "z": -0.5106868,
+              "p": 0.60957039,
+              "or_lo": 0.35324976,
+              "or_hi": 1.8411819
+            },
+            {
+              "term": "age_z",
+              "beta": 0.16345256,
+              "or": 1.17756949,
+              "se": 0.02753806,
+              "z": 5.93551433,
+              "p": 2.92925739e-09,
+              "or_lo": 1.11569548,
+              "or_hi": 1.24287489
+            },
+            {
+              "term": "female",
+              "beta": -0.15019225,
+              "or": 0.86054252,
+              "se": 0.0760534,
+              "z": -1.97482638,
+              "p": 0.04828785,
+              "or_lo": 0.74136892,
+              "or_hi": 0.99887304
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07764897,
+              "or": 1.08074322,
+              "se": 0.00582344,
+              "z": 13.33386293,
+              "p": 1.47080173e-40,
+              "or_lo": 1.06847781,
+              "or_hi": 1.09314943
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.12249503,
+              "or": 1.1303135,
+              "se": 0.06591162,
+              "z": 1.85847385,
+              "p": 0.06310175,
+              "or_lo": 0.99333059,
+              "or_hi": 1.28618672
+            }
+          ]
+        },
+        "icu_home_depth_municipal_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 12444,
+          "events": 2256,
+          "terms": [
+            {
+              "term": "munic_hosp_share",
+              "beta": 1.29540752,
+              "or": 3.65248411,
+              "se": 0.18564424,
+              "p": 2.99618021e-12,
+              "or_lo": 2.53842754,
+              "or_hi": 5.25547411
+            },
+            {
+              "term": "age_z",
+              "beta": 0.16482938,
+              "or": 1.17919191,
+              "se": 0.02436083,
+              "p": 1.32242281e-11,
+              "or_lo": 1.12421177,
+              "or_hi": 1.23686087
+            },
+            {
+              "term": "female",
+              "beta": -0.19923007,
+              "or": 0.81936136,
+              "se": 0.06961999,
+              "p": 0.00421404,
+              "or_lo": 0.71484806,
+              "or_hi": 0.93915487
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06287005,
+              "or": 1.06488845,
+              "se": 0.00480653,
+              "p": 4.277529e-39,
+              "or_lo": 1.05490345,
+              "or_hi": 1.07496796
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.39236638,
+              "or": 1.48048003,
+              "se": 0.05060672,
+              "p": 8.95727291e-15,
+              "or_lo": 1.34068034,
+              "or_hi": 1.63485735
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor": {
+          "label": "in-hospital death ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 12103,
+          "events": 880,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.58269264,
+              "or": 1.79085407,
+              "se": 0.66654292,
+              "z": 0.87420123,
+              "p": 0.38200868,
+              "or_lo": 0.48493933,
+              "or_hi": 6.61352482
+            },
+            {
+              "term": "age_z",
+              "beta": 0.61993735,
+              "or": 1.85881158,
+              "se": 0.03761623,
+              "z": 16.48058307,
+              "p": 5.0594548e-61,
+              "or_lo": 1.72669563,
+              "or_hi": 2.00103621
+            },
+            {
+              "term": "female",
+              "beta": -0.13777611,
+              "or": 0.87129375,
+              "se": 0.10038843,
+              "z": -1.3724302,
+              "p": 0.16992955,
+              "or_lo": 0.71566906,
+              "or_hi": 1.06075955
+            },
+            {
+              "term": "year_c",
+              "beta": -0.0290423,
+              "or": 0.97137538,
+              "se": 0.00816591,
+              "z": -3.55652767,
+              "p": 0.00037579,
+              "or_lo": 0.95595208,
+              "or_hi": 0.98704751
+            },
+            {
+              "term": "referred_munic",
+              "beta": -0.0680605,
+              "or": 0.93420395,
+              "se": 0.09612937,
+              "z": -0.70800947,
+              "p": 0.47893938,
+              "or_lo": 0.77377506,
+              "or_hi": 1.127895
+            }
+          ]
+        },
+        "died_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 12103,
+          "events": 880,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.48525776,
+              "or": 1.62459372,
+              "se": 0.25392621,
+              "p": 0.05600216,
+              "or_lo": 0.98763942,
+              "or_hi": 2.67233637
+            },
+            {
+              "term": "age_z",
+              "beta": 0.58220046,
+              "or": 1.78997287,
+              "se": 0.03626167,
+              "p": 5.22867166e-58,
+              "or_lo": 1.66717003,
+              "or_hi": 1.92182131
+            },
+            {
+              "term": "female",
+              "beta": -0.02155536,
+              "or": 0.97867529,
+              "se": 0.09738155,
+              "p": 0.82482026,
+              "or_lo": 0.80862241,
+              "or_hi": 1.18449021
+            },
+            {
+              "term": "year_c",
+              "beta": -0.00297004,
+              "or": 0.99703436,
+              "se": 0.00726415,
+              "p": 0.68263973,
+              "or_lo": 0.98293944,
+              "or_hi": 1.0113314
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.09223171,
+              "or": 1.09661889,
+              "se": 0.08054184,
+              "p": 0.25215104,
+              "or_lo": 0.93647702,
+              "or_hi": 1.28414576
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor": {
+          "label": "ICU ~ SURVIVOR-ONLY home municipality hospitalisation share",
+          "n": 12103,
+          "events": 2189,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": -0.39455431,
+              "or": 0.67398036,
+              "se": 0.41413506,
+              "z": -0.95271891,
+              "p": 0.34073251,
+              "or_lo": 0.29931491,
+              "or_hi": 1.51763078
+            },
+            {
+              "term": "age_z",
+              "beta": 0.16484018,
+              "or": 1.17920464,
+              "se": 0.02801247,
+              "z": 5.88452887,
+              "p": 3.9918945e-09,
+              "or_lo": 1.11620634,
+              "or_hi": 1.24575854
+            },
+            {
+              "term": "female",
+              "beta": -0.1370602,
+              "or": 0.87191774,
+              "se": 0.07697809,
+              "z": -1.78050921,
+              "p": 0.07499266,
+              "or_lo": 0.74980864,
+              "or_hi": 1.01391275
+            },
+            {
+              "term": "year_c",
+              "beta": 0.07790072,
+              "or": 1.08101533,
+              "se": 0.00590582,
+              "z": 13.19049349,
+              "p": 9.95315481e-40,
+              "or_lo": 1.06857427,
+              "or_hi": 1.09360123
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.13422005,
+              "or": 1.14364445,
+              "se": 0.06889605,
+              "z": 1.94815302,
+              "p": 0.05139666,
+              "or_lo": 0.99918412,
+              "or_hi": 1.30899061
+            }
+          ]
+        },
+        "icu_home_depth_municipal_survivor_pooled": {
+          "label": "same model, hospital NOT held fixed",
+          "n": 12103,
+          "events": 2189,
+          "terms": [
+            {
+              "term": "munic_hosp_share_surv",
+              "beta": 0.72035614,
+              "or": 2.05516501,
+              "se": 0.17089957,
+              "p": 2.497e-05,
+              "or_lo": 1.47019198,
+              "or_hi": 2.8728923
+            },
+            {
+              "term": "age_z",
+              "beta": 0.16839807,
+              "or": 1.1834076,
+              "se": 0.0246669,
+              "p": 8.67787005e-12,
+              "or_lo": 1.1275543,
+              "or_hi": 1.24202759
+            },
+            {
+              "term": "female",
+              "beta": -0.19776332,
+              "or": 0.82056404,
+              "se": 0.07026579,
+              "p": 0.00488527,
+              "or_lo": 0.71499175,
+              "or_hi": 0.94172464
+            },
+            {
+              "term": "year_c",
+              "beta": 0.06130197,
+              "or": 1.06321992,
+              "se": 0.00486558,
+              "p": 2.13522026e-36,
+              "or_lo": 1.05312869,
+              "or_hi": 1.07340785
+            },
+            {
+              "term": "referred_munic",
+              "beta": 0.40888233,
+              "or": 1.5051346,
+              "se": 0.05217991,
+              "p": 4.65086354e-15,
+              "or_lo": 1.35881053,
+              "or_hi": 1.66721564
+            }
+          ]
+        }
+      }
+    },
+    "hospital_properties_within_home_region": {
+      "label": "in-hospital death ~ hospital characteristics | home region",
+      "n": 34629,
+      "events": 2147,
+      "terms": [
+        {
+          "term": "log_vol",
+          "beta": -0.06901527,
+          "or": 0.93331243,
+          "se": 0.02471163,
+          "p": 0.005225,
+          "or_lo": 0.88918491,
+          "or_hi": 0.97962987
+        },
+        {
+          "term": "hosp_ever_icu",
+          "beta": 1.24129598,
+          "or": 3.46009479,
+          "se": 0.09243707,
+          "p": 4.11381507e-41,
+          "or_lo": 2.8867154,
+          "or_hi": 4.14736275
+        },
+        {
+          "term": "hosp_inflow_share",
+          "beta": 0.0721576,
+          "or": 1.07482472,
+          "se": 0.1471492,
+          "p": 0.6238719,
+          "or_lo": 0.80552999,
+          "or_hi": 1.4341467
+        },
+        {
+          "term": "age_z",
+          "beta": 0.60013595,
+          "or": 1.82236654,
+          "se": 0.02338008,
+          "p": 2.61599467e-145,
+          "or_lo": 1.74074118,
+          "or_hi": 1.90781941
+        },
+        {
+          "term": "female",
+          "beta": 0.01854019,
+          "or": 1.01871313,
+          "se": 0.06140925,
+          "p": 0.76271916,
+          "or_lo": 0.90319035,
+          "or_hi": 1.14901187
+        },
+        {
+          "term": "year_c",
+          "beta": -0.01212118,
+          "or": 0.98795199,
+          "se": 0.00479575,
+          "p": 0.0114884,
+          "or_lo": 0.97870907,
+          "or_hi": 0.9972822
+        }
+      ]
+    },
+    "depth_within_treatment_region": {
+      "label": "in-hospital death ~ home depth | treatment region",
+      "n": 34629,
+      "events": 2147,
+      "terms": [
+        {
+          "term": "hs_res",
+          "beta": 0.41325708,
+          "or": 1.51173361,
+          "se": 0.76355016,
+          "p": 0.58834831,
+          "or_lo": 0.33847629,
+          "or_hi": 6.75184219
+        },
+        {
+          "term": "age_z",
+          "beta": 0.60684088,
+          "or": 1.83462642,
+          "se": 0.02326088,
+          "p": 4.92657107e-150,
+          "or_lo": 1.75286144,
+          "or_hi": 1.92020547
+        },
+        {
+          "term": "female",
+          "beta": -0.00216107,
+          "or": 0.99784127,
+          "se": 0.06106768,
+          "p": 0.97177032,
+          "or_lo": 0.88527786,
+          "or_hi": 1.12471715
+        },
+        {
+          "term": "year_c",
+          "beta": -0.0133464,
+          "or": 0.98674227,
+          "se": 0.00476792,
+          "p": 0.00512284,
+          "or_lo": 0.97756399,
+          "or_hi": 0.99600672
+        }
+      ]
+    }
+  }
+}

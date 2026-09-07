@@ -1,0 +1,30 @@
+{
+  "analytic_population": 66358,
+  "national": {
+    "incidence_per_100k": 1.7258502337014172,
+    "cfr": 0.09752060698425184,
+    "H": 0.7222196221587807,
+    "share_lab": 0.8573195498480661,
+    "share_severe": 0.5489487681268503,
+    "outcome_completeness": 0.9196027607824226,
+    "hosp_completeness": 0.9659875222279153,
+    "deaths": 5951,
+    "outcome_known": 61023
+  },
+  "incidence_range_across_regions": {
+    "max_region": "Sul",
+    "max": 3.982997887773784,
+    "min_region": "Centro-Oeste",
+    "min": 0.37499474398161187
+  },
+  "cfr_range_across_regions": {
+    "max_region": "Nordeste",
+    "max": 0.1422676360778149,
+    "min_region": "Norte",
+    "min": 0.054499895594069744
+  },
+  "year_range": [
+    2007,
+    2025
+  ]
+}

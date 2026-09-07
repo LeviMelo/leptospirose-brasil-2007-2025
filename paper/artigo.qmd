@@ -1,0 +1,660 @@
+---
+title: "Amplitude de detecção e letalidade notificada da leptospirose: estudo ecológico de séries temporais, Brasil, 2007–2025"
+lang: pt-BR
+format:
+  typst:
+    papersize: a4
+    margin: {x: 2.5cm, y: 2.5cm}
+    fontsize: 12pt
+    font: "Times New Roman"
+    section-numbering: ""
+    keep-typ: true
+  docx:
+    reference-doc: ress-reference.docx
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(arrow); library(data.table); library(jsonlite); library(knitr)
+})
+ROOT <- normalizePath("..", mustWork = TRUE)
+RES  <- file.path(ROOT, "data", "results")
+
+# Significant-digit convention, fixed once. Reviewers objected that the previous
+# draft alternated between 3,00% / 17,09% / 8,81% / 0,494 with no rule.
+#   counts        -> integer, thousands separator
+#   percentages   -> one decimal
+#   rates /100k   -> two decimals
+#   odds ratios   -> two decimals
+#   correlations  -> two decimals
+br <- function(x, d = 1) format(round(x, d), decimal.mark = ",", big.mark = ".",
+                                nsmall = d, trim = TRUE)
+ib <- function(x) formatC(as.integer(round(x)), big.mark = ".", format = "d")
+pc <- function(x, d = 1) paste0(br(x, d), "%")
+# "3,0% (2,7–3,3)" — the unit sits on the estimate, not repeated in the interval.
+cip <- function(e, l, h, d = 1) sprintf("%s%% (%s–%s)", br(e, d), br(l, d), br(h, d))
+ci  <- function(e, l, h, d = 2) sprintf("%s (%s–%s)", br(e, d), br(l, d), br(h, d))
+
+flow <- fread(file.path(RES, "analysis_panel/study_flow.csv"))
+fl <- function(k) {
+  v <- flow[trimws(step) == trimws(k)]$n
+  stopifnot(length(v) == 1L)   # a miss must stop the build, not render blank
+  v
+}
+pan  <- fromJSON(file.path(RES, "analysis_panel/panel_report.json"))
+desc <- fread(file.path(RES, "descriptives/table1_by_region.csv"))
+drep <- fromJSON(file.path(RES, "descriptives/descriptives_report.json"))
+mod  <- fromJSON(file.path(RES, "primary_model/primary_model_report.json"))
+tri  <- fread(file.path(RES, "triangulation/three_systems_by_stratum.csv"))
+trep <- fromJSON(file.path(RES, "triangulation/triangulation_report.json"))
+cpl  <- fromJSON(file.path(RES, "coupling/coupling_report.json"))
+cvr  <- fromJSON(file.path(RES, "construct_validity/construct_validity_report.json"))
+cmx  <- fromJSON(file.path(RES, "case_mix/case_mix_report.json"))
+dqr  <- fromJSON(file.path(RES, "data_quality_record/data_quality_record_report.json"))
+exc  <- fromJSON(file.path(RES, "exclusion_sensitivity/exclusion_sensitivity_report.json"))
+rs   <- fromJSON(file.path(RES, "rs2024_event/rs2024_event_report.json"))
+wth  <- fromJSON(file.path(RES, "within_region/within_region_report.json"))
+
+N_NOT   <- fl("notifications in the SINAN files")
+N_CONF  <- fl("confirmed (CLASSI_FIN = confirmado)")
+N_FINAL <- fl("ANALYTIC POPULATION")
+N_UNDAT <- fl("confirmed, excluded: symptom-onset date invalid")
+N_OUT   <- fl("confirmed, excluded: onset outside 2007-2025")
+N_NOGEO <- fl("in window, excluded: no residence municipality")
+
+BR <- desc[stratum == "Brasil"]
+SEVP <- cvr$strand2_severity_phenotype$severity_gradients[[
+  "all confirmed cases | jaundice OR renal OR haemorrhage (primary)"]]
+CFRD <- cvr$strand1_confirmation_pathway$cfr_gradient_by_case_definition
+dqrq <- fread(file.path(RES, "data_quality_record/completeness_by_H_quintile.csv"))
+orH <- function(m) mod$models[[m]]$or_H_per_10pp
+```
+
+**Aspectos éticos**
+
+O estudo utilizou exclusivamente microdados de acesso público, disponibilizados
+sem identificadores nominais pelo Departamento de Informática do Sistema Único de
+Saúde. Os registros estão no nível do indivíduo, ainda que toda a análise seja
+conduzida sobre agregados territoriais. Não houve contato com participantes nem
+acesso a identificadores diretos. \[INSERIR: fundamentação ética confirmada pela
+instituição e a norma aplicável — ver nota do autor.\]
+
+## Resumo
+
+**Objetivo.** Avaliar se a variação da letalidade notificada da leptospirose entre
+territórios e ao longo do tempo se associa a diferenças no espectro clínico
+captado pela vigilância, usando a proporção de casos confirmados internados como
+indicador operacional inverso dessa amplitude.
+
+**Métodos.** Estudo ecológico de séries temporais, região de saúde por ano,
+2007–2025, sobre casos confirmados do Sistema de Informação de Agravos de
+Notificação. A exposição *H* é a proporção de casos confirmados com registro de
+internação; valores altos indicam casos detectados mais concentrados entre
+hospitalizados. Ajustou-se modelo binomial hierárquico com efeito espacial e
+tendência temporal, e especificação com efeitos fixos de região e ano.
+Compararam-se notificação, internação hospitalar e mortalidade populacional por
+CID-10 A27.
+
+**Resultados.** Analisaram-se `r ib(N_FINAL)` casos confirmados. Entre quintis de
+*H*, a letalidade subiu de `r pc(100*tri$cfr[1], 1)` para `r pc(100*tri$cfr[5], 1)`
+e a incidência caiu de `r br(tri$sinan_incidence_per_100k[1], 2)` para
+`r br(tri$sinan_incidence_per_100k[5], 2)` por 100.000 pessoas-ano; a mortalidade
+populacional variou entre `r br(min(tri$sim_mortality_per_1m), 2)` e
+`r br(max(tri$sim_mortality_per_1m), 2)` por milhão, sem gradiente monotônico.
+Cada 10 pontos percentuais de *H* associaram-se a razão de chances de óbito de
+`r ci(orH("C_plus_case_mix")$estimate, orH("C_plus_case_mix")$lower, orH("C_plus_case_mix")$upper)`
+e, com efeitos fixos de região e ano,
+`r ci(mod$within_region$or_H_per_10pp_case_mix$estimate, mod$within_region$or_H_per_10pp_case_mix$lower, mod$within_region$or_H_per_10pp_case_mix$upper)`.
+
+**Conclusão.** A letalidade notificada associou-se fortemente à composição do
+espectro de casos captado pela vigilância, enquanto a mortalidade populacional não
+apresentou gradiente monotônico com a proporção de casos hospitalizados.
+Comparações de letalidade devem considerar a composição dos casos detectados.
+
+Palavras-chave: Leptospirose; Vigilância Epidemiológica; Sistemas de Informação
+em Saúde; Notificação de Doenças; Estudos Ecológicos.
+
+## Introdução
+
+A leptospirose causa cerca de 1,03 milhão de casos e 58.900 óbitos por ano no
+mundo, com maior peso em populações urbanas pobres e em trabalhadores expostos a
+água contaminada.[1] No Brasil é de notificação compulsória, e o Sistema de
+Informação de Agravos de Notificação (SINAN) é a principal fonte nacional de
+incidência e de letalidade.
+
+Um caso só entra nesse sistema após atravessar uma sequência de filtros —
+infecção, doença sintomática, procura por serviço, suspeita, notificação,
+confirmação. Essa sequência tende a selecionar casos clinicamente mais evidentes
+e graves, de modo que quadros leves têm menor probabilidade de alcançar a
+confirmação e o registro final. Coortes
+urbanas em Salvador mostram que a maior parte das infecções não chega ao serviço
+de saúde,[2,3] e inquérito sorológico em pacientes com dengue negativa em São
+Paulo detectou IgM anti-*Leptospira* em 11,3% das amostras contra 64 casos
+oficialmente registrados no período, cerca de treze vezes a incidência
+notificada.[4] O denominador da letalidade notificada é, portanto, uma amostra
+seletiva da doença que ocorre, e a intensidade dessa seleção pode variar entre
+territórios.
+
+Um território que investiga sobretudo o caso grave produz, para a mesma doença,
+menos casos notificados e maior letalidade do que um território que também
+alcança o caso leve. A descrição
+nacional mais recente, para 2000–2015, reportou 60.952 casos confirmados,
+incidência de 1,9 por 100.000 habitantes e letalidade de 10,0% entre 58.986 casos
+com desfecho conhecido, e nomeou a subnotificação como limitação não resolvida,
+sem dispor de instrumento para medi-la.[5] Uma análise estadual posterior manteve
+esse desenho.[6]
+
+Este estudo avalia se a variação da letalidade notificada entre territórios e ao
+longo do tempo está associada a diferenças no espectro clínico captado pela
+vigilância. A proporção de casos confirmados registrados como internados é
+avaliada como **indicador operacional inverso** dessa amplitude: quanto maior,
+mais restrita ao caso grave é a detecção. A questão não é propor um índice, mas
+verificar se uma variável já coletada em todo o país operacionaliza um mecanismo
+de seleção específico e mensurável.
+
+## Métodos
+
+**Delineamento e período.** Estudo ecológico de séries temporais, unidade região
+de saúde por ano, de janeiro de 2007 a dezembro de 2025. O relato segue a
+iniciativa STROBE e sua extensão RECORD para estudos com dados de saúde coletados
+rotineiramente.[7,8] A série inicia em 2007 porque o SINAN mudou de sistema
+naquele ano: apenas 46 dos campos do leiaute anterior sobrevivem no SINAN NET, e
+as variáveis de classificação, critério e evolução mudam de nome e de códigos.
+
+**Cenário e fontes de dados.** Os 5.570 municípios brasileiros, agregados em 439
+regiões de saúde segundo a divisão oficial. Casos: arquivos anuais nacionais
+SINAN-LEPT. Óbitos populacionais: Sistema de Informações sobre Mortalidade (SIM),
+**causa básica** CID-10 A27, por município de residência e ano do óbito.
+Internações: Sistema de Informações Hospitalares (SIH), **diagnóstico principal**
+A27, contando **autorizações de internação hospitalar (AIH)** — não pessoas
+distintas —, por município de residência e ano da data de internação, sem
+deduplicação de reinternações ou de AIH de longa permanência. Denominadores:
+estimativas populacionais do Instituto Brasileiro de Geografia e Estatística
+compatíveis com a Revisão 2024 das projeções.[9] Os municípios foram atribuídos a
+439 regiões de saúde por uma única configuração contemporânea, aplicada
+retrospectivamente a todo o período: mudanças de limite entre 2007 e 2025 não são
+modeladas. As datas exatas de extração de cada sistema, a versão da divisão de
+regiões de saúde e a malha municipal utilizada constam do Material Suplementar
+(S1). As comparações entre os três sistemas usam a janela comum **2008–2024**,
+única em que todos têm anos completos.
+
+**Variáveis.** As regras de operacionalização são as seguintes; o dicionário
+completo de campos, códigos e transformações está no material suplementar (S3).
+
+O caso confirmado é o registro com `CLASSI_FIN` = confirmado, datado pela semana
+de início de sintomas (`SEM_PRI`) e alocado ao município de residência
+(`ID_MN_RESI`); o óbito por leptospirose vem de `EVOLUCAO`, a internação de
+`ATE_HOSP`, a confirmação laboratorial de `CRITERIO` e o fenótipo grave de
+`CLI_ICTERI`, `CLI_RENAL` e `CLI_HEMORR`, segundo o guia de vigilância do
+Ministério da Saúde.[10] O dicionário completo de campos, códigos, regras de dado
+ausente e de agregação está no Material Suplementar (S1).
+
+O campo `EVOLUCAO` registra o desfecho após investigação (cura, óbito por
+leptospirose, óbito por outras causas) além de códigos de informação ausente;
+óbito por outras causas é desfecho conhecido que não é óbito por leptospirose.
+Cada campo carrega um estado de decodificação — válido, ignorado, ausente ou
+inválido — e os quatro não são intercambiáveis. **Campo em branco nunca é lido
+como resposta negativa:** toda proporção é calculada sobre seu próprio
+denominador válido, e esses denominadores são reportados.
+
+A **incidência notificada** divide os casos confirmados pelas pessoas-ano da
+população residente, por 100.000; a **letalidade**, os óbitos por leptospirose
+pelos casos com desfecho registrado; a **mortalidade populacional**, os óbitos
+com causa básica A27 pelas mesmas pessoas-ano, por milhão. **Nas estimativas
+agregadas somaram-se primeiro os eventos e os denominadores de cada unidade,
+calculando taxas e proporções apenas após essa agregação**, evitando médias
+simples de razões municipais.
+
+**Vieses.** *H* e a letalidade são calculados sobre subconjuntos dos mesmos casos
+confirmados detectados, cada um sobre o seu denominador de campo válido, e ambos
+são influenciados pela gravidade clínica, de modo que parte da associação é
+esperada por construção; essa parcela foi quantificada por padronização
+aritmética, e a mortalidade populacional foi incluída por não depender do
+denominador de casos notificados. A completude do campo de evolução varia entre
+territórios e o modelo foi reajustado sob restrição a ela. O caráter ecológico
+impede inferência individual.
+
+**Tamanho do estudo.** Todos os casos confirmados do período; não houve
+amostragem. O modelo hierárquico reteve as células com exposição e desfecho
+estimáveis, sem aplicar o limiar de 30 casos usado apenas nas descrições por
+quintil. Como *H* é uma proporção estimada com maior incerteza em células
+pequenas, realizou-se análise de sensibilidade restrita a células com pelo menos
+10 casos contribuindo para o seu denominador. O efeito do limiar descritivo é
+reportado em quatro valores.
+
+**Processamento.** A extração, o processamento e a análise foram implementados em
+Python e R com auxílio de assistente de inteligência artificial generativa
+(Claude, Anthropic) no desenvolvimento e na revisão do código, versionado e
+reexecutável a partir das bases públicas.
+
+**Análise do evento de 2024 no Rio Grande do Sul.** A janela do evento é
+**maio a julho de 2024** e a linha de base é **maio a julho de 2019 a 2023**,
+sazonalmente equivalente — a leptospirose é sazonal, e uma base anual confundiria
+a perturbação da vigilância com a composição sazonal. Compararam-se *H*, a
+confirmação laboratorial e a letalidade entre as janelas por razão de chances com
+intervalo exato. A comparação entre unidades federativas usa 2024 contra
+2019–2023 e restringe-se às sete com ao menos 150 casos confirmados em 2024. A
+Figura 3B agrega por **trimestre civil**, para que os denominadores sustentem
+intervalos interpretáveis; a janela do evento cai no segundo trimestre de 2024.
+Os valores foram confrontados com o relato independente do evento.[14]
+
+**Métodos estatísticos.** Intervalos exatos de Poisson (Garwood) para taxas e de
+Clopper–Pearson[11] para proporções. A associação monotônica entre variáveis
+regionais foi resumida pelo coeficiente de correlação de postos de Spearman (ρ).
+As regiões de saúde foram ordenadas por *H* e agrupadas em cinco estratos, **cada
+um contendo aproximadamente 20% do total de casos confirmados incluídos** — não
+20% das regiões —, de modo que cada estrato sustente estimativa de precisão
+semelhante; o número de regiões, casos e pessoas-ano de cada estrato é reportado.
+
+O modelo principal estima a chance de óbito entre os casos com desfecho conhecido
+de cada região de saúde em cada ano, em função de *H*. Como regiões vizinhas
+tendem a se parecer e o país mudou ao longo de dezenove anos, o modelo inclui um
+termo espacial, que deixa regiões contíguas compartilharem informação, e um termo
+de tendência anual, ambos estimados junto com a exposição em modelo hierárquico
+bayesiano.[12,13] A exposição entra de forma contínua e **todo coeficiente é
+reportado como razão de chances por +10 pontos percentuais de *H***.
+
+Ajustou-se uma sequência de modelos para separar o que a exposição explica do que
+lugar e tempo já explicavam: **A** apenas espaço e tempo, **B** acrescenta *H*,
+**C** acrescenta a proporção de casos com 60 anos ou mais e a proporção de casos
+do sexo masculino e **D** repete C apenas
+onde o campo de desfecho está preenchido em ao menos 95% dos casos. Ajustou-se
+ainda um modelo binomial com ligação logito incluindo **efeitos fixos de região e
+de ano** e as mesmas duas covariáveis de composição, com erros-padrão robustos
+agrupados por região: cada região serve de controle de si mesma, e a associação
+vem apenas das mudanças de *H* da própria região ao longo dos anos. Essa
+especificação remove a confusão por características regionais estáveis no tempo,
+mas não por características que variem dentro da região ao longo do período. A
+especificação matemática completa, distribuições a priori, matriz de vizinhança,
+parametrização espacial e temporal e versões de software estão descritas no
+Material Suplementar.
+
+## Resultados
+
+### População do estudo e completude
+
+Entre 2007 e 2025 o SINAN registrou `r ib(N_NOT)` notificações, das quais
+`r ib(N_CONF)` foram confirmadas. Excluíram-se `r ib(N_UNDAT)` registros com data
+de início de sintomas inválida, que não podem ser alocados a nenhum ano,
+`r ib(N_OUT)` com início fora da janela e `r ib(N_NOGEO)` sem município de
+residência, restando `r ib(N_FINAL)` casos — a população analítica.
+
+A completude dos campos foi de `r pc(100*pan$national$hosp_completeness, 1)` para
+internação, `r pc(100*pan$national$criterion_completeness, 1)` para critério de
+confirmação, `r pc(100*pan$national$outcome_completeness, 1)` para evolução e
+`r pc(100*pan$national$severity_completeness, 1)` para o bloco clínico completo.
+
+Das `r ib(439*19)` combinações região-ano possíveis,
+`r ib((439 - mod$data$regions_in_panel) * 19)` correspondem às
+`r ib(439 - mod$data$regions_in_panel)` regiões de saúde que não registraram
+nenhum caso confirmado em todo o período e por isso não compõem o painel,
+restando `r ib(mod$data$panel_cells)`. Entram nos modelos as células com pelo
+menos um caso com desfecho registrado e denominador válido para *H*, sem limiar
+de contagem: descartaram-se
+`r ib(mod$data$excluded_zero_outcome_denominator)` células sem desfecho
+registrado e `r ib(mod$data$excluded_undefined_H)` com *H* indefinido, deixando
+`r ib(mod$data$analysis_cells)` células de `r ib(mod$data$regions)` regiões, com
+`r ib(mod$data$cases)` casos e `r ib(mod$data$deaths)` óbitos sobre
+`r ib(mod$data$outcome_known)` desfechos conhecidos. Os modelos A, B e C usam
+exatamente essas mesmas células.
+
+### Geografia descritiva
+
+A incidência notificada e a letalidade ordenam-se de modo quase inverso entre as
+macrorregiões, e *H* acompanha a letalidade (Tabela 1). O Sul apresentou a maior incidência com letalidade relativamente baixa
+(`r pc(100*desc[stratum=="Sul"]$cfr, 1)`); o Nordeste, incidência baixa e a maior
+letalidade do país (`r pc(100*desc[stratum=="Nordeste"]$cfr, 1)`); a menor
+incidência foi observada no Centro-Oeste
+(`r br(desc[stratum=="Centro-Oeste"]$incidence_per_100k, 2)` por 100.000
+pessoas-ano). O Norte teve a menor proporção de casos internados
+(`r pc(100*desc[stratum=="Norte"]$H, 1)`) e letalidade de
+`r pc(100*desc[stratum=="Norte"]$cfr, 1)`; o Nordeste, com
+`r pc(100*desc[stratum=="Nordeste"]$H, 1)`, cerca de três vezes maior. No mapa por região de saúde (Figura 1) os padrões são
+geograficamente distintos: a incidência concentra-se no Sul e na Amazônia
+ocidental, a letalidade e *H* no Nordeste e no interior.
+
+```{=typst}
+#block(breakable: false)[
+```
+
+![](figures/figura1_geografia.png){width=100%}
+
+**Figura 1.** Incidência notificada (A), letalidade (B) e proporção de casos
+confirmados internados, *H* (C), por região de saúde, com ampliação da faixa
+Sul–Sudeste (D–F). Brasil, 2007–2025 (n = 66.358 casos confirmados; 311 regiões
+de saúde com estimativa)
+
+Notas: escalas truncadas no percentil 98 das regiões estimáveis, com o limite
+superior marcado "+"; regiões com menos de 10 casos confirmados aparecem em
+cinza, sem estimativa; as molduras vermelhas marcam a janela ampliada, escolhida
+por concentração de casos
+```{=typst}
+]
+```
+
+```{=typst}
+#block(breakable: false)[
+```
+
+**Tabela 1.** Casos confirmados, incidência notificada, letalidade, proporção de
+casos internados (*H*), confirmação laboratorial e completude do campo de desfecho,
+por macrorregião. Brasil, 2007–2025 (n = 66.358 casos confirmados)
+
+```{r tab1}
+t1 <- fread(file.path(RES, "manuscript_tables/table1_descritiva.csv"))
+kable(t1, align = c("l", rep("r", ncol(t1) - 1)))
+```
+```{=typst}
+]
+```
+
+
+### Associação principal
+
+Entre as regiões de saúde, a letalidade cresce continuamente com *H* (Figura 2A).
+Nos estratos de igual massa de casos, ela sobe de `r pc(100*tri$cfr[1], 1)` no
+quintil de detecção mais ampla para `r pc(100*tri$cfr[5], 1)` no de detecção mais
+restrita, uma razão de `r br(trep$cfr_gradient_Q5_over_Q1, 2)` vezes.
+
+No modelo hierárquico, cada 10 pontos percentuais de *H* associam-se a razão de
+chances de óbito de
+`r ci(orH("B_plus_H")$estimate, orH("B_plus_H")$lower, orH("B_plus_H")$upper)`
+após ajuste espacial e temporal, praticamente inalterada com a inclusão da
+composição etária e por sexo
+(`r ci(orH("C_plus_case_mix")$estimate, orH("C_plus_case_mix")$lower, orH("C_plus_case_mix")$upper)`)
+e sob restrição às regiões-ano com completude do desfecho de ao menos 95%
+(`r ci(orH("D_complete_outcomes")$estimate, orH("D_complete_outcomes")$lower, orH("D_complete_outcomes")$upper)`)
+(Tabela 2). A inclusão de *H* reduziu em
+`r pc(100*mod$spatial_variance_absorbed_by_H$proportion_absorbed_marginal, 1)` a
+variância marginal do componente espacial em relação ao modelo A, ajustado sobre
+as mesmas células sem *H*
+(`r br(mod$spatial_variance_absorbed_by_H$marginal_variance_A, 2)` para
+`r br(mod$spatial_variance_absorbed_by_H$marginal_variance_B, 2)` na escala do
+logito).
+
+```{=typst}
+#block(breakable: false)[
+```
+
+![](figures/figura2_associacao.png){width=100%}
+
+**Figura 2.** Associação entre *H* e a letalidade notificada por região de saúde
+(A), incidência de casos graves e não graves por quintil de *H* (B) e comparação
+entre três fontes nacionais com mecanismos de observação e denominadores
+distintos, indexada ao primeiro quintil (C). Brasil, 2007–2025 (A: n = 311
+regiões de saúde; B e C: n = 165 regiões, 56.332 casos, 2008–2024)
+
+Notas: em (a) cada ponto é uma região de saúde com ao menos 10 casos com campo de
+internação válido, com área proporcional ao número de casos, e a linha é um ajuste
+binomial com faixa de 95%; em (b) a escala vertical é logarítmica e os intervalos
+são exatos de Poisson; em (c) cada série é indexada ao seu próprio primeiro
+quintil (I = 100) porque as três têm unidades diferentes — incidência e internação
+por 100.000 e mortalidade por 1.000.000 de pessoas-ano —, e os valores absolutos com intervalos
+estão no Material Suplementar (S5); a janela comum é 2008–2024
+```{=typst}
+]
+```
+
+Na especificação com efeitos fixos de região e de ano, em que as características
+territoriais invariantes no tempo são removidas por construção, a razão de chances
+foi
+`r ci(mod$within_region$or_H_per_10pp_case_mix$estimate, mod$within_region$or_H_per_10pp_case_mix$lower, mod$within_region$or_H_per_10pp_case_mix$upper)`
+(`r ib(mod$within_region$regions_contributing)` de
+`r ib(mod$within_region$regions_total)` regiões contribuíram). A magnitude foi
+semelhante à do modelo hierárquico.
+
+### Composição dos casos detectados
+
+*H* e a letalidade são calculados sobre subconjuntos dos mesmos casos confirmados
+detectados, cada um sobre o seu próprio denominador de campo válido, e ambos são
+influenciados pela gravidade clínica. Em análise de padronização aritmética,
+mantendo fixas as letalidades específicas de internados
+(`r pc(100*cpl$f_hospitalised_measured, 1)`) e de não internados
+(`r pc(100*cpl$f_nonhospitalised_measured, 1)`) nos valores nacionais e variando
+apenas a composição entre eles, o gradiente esperado entre os quintis extremos é
+de `r br(cpl$gradient_predicted_by_mix_alone, 2)` vezes, contra
+`r br(cpl$gradient_cfr_overall_Q5_over_Q1, 2)` vezes observados. Trata-se de
+decomposição descritiva, não de fração atribuível identificada.
+
+A mortalidade populacional não depende do denominador de casos notificados
+(Figura 2C). Entre os mesmos quintis, a incidência notificada caiu
+`r br(trep$sinan_incidence_gradient_Q1_over_Q5, 2)` vezes e a taxa de internações
+hospitalares `r br(trep$sih_admission_gradient_Q1_over_Q5, 2)` vezes. A
+mortalidade por A27 na população variou entre
+`r br(min(tri$sim_mortality_per_1m), 2)` e `r br(max(tri$sim_mortality_per_1m), 2)`
+por milhão de pessoas-ano, **sem apresentar o gradiente monotônico observado para
+a letalidade notificada** (ρ = `r br(trep$spearman_H_vs_sim_mortality, 2)`).
+Nacionalmente, a razão entre a contagem de óbitos do SIM e a contagem registrada
+no SINAN foi
+`r br(trep$numerator_invariance$sim_per_sinan_death_national, 2)`; por estrato
+variou entre
+`r br(min(trep$numerator_invariance$sim_per_sinan_death_by_stratum), 2)` e
+`r br(max(trep$numerator_invariance$sim_per_sinan_death_by_stratum), 2)`. São
+comparações de contagens agregadas, não relacionamento de registros. A taxa de
+óbitos por habitante calculada com o próprio numerador do SINAN também não se
+ordenou com *H* (ρ =
+`r br(trep$numerator_invariance$spearman_H_vs_sinan_death_rate_per_capita, 2)`).
+
+### Validação do mecanismo
+
+Se a detecção mais concentrada em hospitalizados perde preferencialmente casos
+leves, o déficit de incidência deve concentrar-se na doença não grave. A
+incidência de casos não graves foi
+`r br(SEVP$nonsevere_Q1_over_Q5, 2)` vezes maior no primeiro quintil que no
+quinto (IC95% `r br(SEVP$nonsevere_lo, 2)`–`r br(SEVP$nonsevere_hi, 2)`), contra
+`r br(SEVP$severe_Q1_over_Q5, 2)` vezes para a doença grave (IC95%
+`r br(SEVP$severe_lo, 2)`–`r br(SEVP$severe_hi, 2)`) (Figura 2B). O padrão manteve-se sob as seis definições de gravidade avaliadas, especificadas
+no Material Suplementar. A definição primária — icterícia, insuficiência renal ou
+hemorragia — foi fixada por critério clínico antes das comparações, por
+corresponder às manifestações que definem a forma grave na ficha de notificação;
+verificou-se, depois, que é também a que deixa o maior gradiente residual entre
+os casos graves, ou seja, a menos favorável à hipótese testada.
+
+O ajuste por idade e sexo atenuou, mas não eliminou, a associação. A letalidade
+nacional variou de `r pc(cmx$age_fatality$cfr_0_14_pct, 1)` entre 0 e 14 anos a
+`r pc(cmx$age_fatality$cfr_70plus_pct, 1)` acima de 70 anos, e a proporção de
+casos com 60 anos ou mais foi `r pc(cmx$composition$pct_60plus_Q5, 1)` no quinto
+quintil contra `r pc(cmx$composition$pct_60plus_Q1, 1)` no primeiro. A
+padronização direta por idade e sexo moveu a razão entre os quintis extremos de
+`r br(cmx$standardisation$crude_Q5_over_Q1, 2)` para
+`r br(cmx$standardisation$std_Q5_over_Q1, 2)`, e o gradiente manteve-se
+monotônico dentro de cada faixa etária ampla. A associação também permaneceu em
+análise restrita aos casos com confirmação laboratorial: a razão entre os
+quintis extremos foi `r br(CFRD[["laboratory-confirmed only"]]$Q5_over_Q1, 2)`
+contra `r br(CFRD[["all confirmed"]]$Q5_over_Q1, 2)` no conjunto, e *H*
+recalculado apenas sobre casos laboratoriais preservou a ordenação das regiões
+(ρ = `r br(cvr$strand1_confirmation_pathway$H_vs_H_lab$spearman_rho, 2)`).
+
+A completude do campo de desfecho foi menor onde *H* é maior:
+`r pc(dqrq[H_quintile==1 & grepl("outcome", measure)]$pct_valid, 1)` no primeiro
+quintil contra `r pc(dqrq[H_quintile==5 & grepl("outcome", measure)]$pct_valid, 1)`
+no quinto. Em análise de sensibilidade de pior caso — atribuindo óbito a todos os
+desfechos não registrados do primeiro quintil e sobrevivência a todos os do quinto,
+cenário deliberadamente implausível construído para limitar o efeito possível da
+perda diferencial — a razão entre os quintis extremos foi de 1,86. O modelo D,
+restrito às células com completude de ao menos 95%, estimou
+`r ci(orH("D_complete_outcomes")$estimate, orH("D_complete_outcomes")$lower, orH("D_complete_outcomes")$upper)`.
+Aos limiares de 10, 20, 30 e 50 casos a razão entre os quintis extremos variou
+entre 6,2 e 6,6, ; o modelo principal já não aplica limiar de contagem, e a
+sensibilidade à precisão da exposição é o modelo F (Tabela 2).
+As `r ib(exc$a_what_is_excluded_at_30$health_regions_excluded)` regiões excluídas
+ao limiar de 30 concentram
+`r pc(exc$a_what_is_excluded_at_30$excluded_person_year_share_pct, 1)` da
+população e `r pc(exc$a_what_is_excluded_at_30$excluded_case_share_pct, 1)` dos
+casos.
+
+### O episódio do Rio Grande do Sul, 2024
+
+A enchente de maio de 2024 submeteu um único território a uma mudança abrupta de
+esforço de busca (Figura 3). Os casos confirmados com início de sintomas em maio de
+2024 superaram em cinco vezes o máximo mensal de 2019–2023, e *H* caiu de
+`r pc(71.1, 1)` na linha de base para `r pc(40.7, 1)` em 2024, razão de chances de
+`r ci(0.279, 0.238, 0.327)`. O movimento é específico: entre as sete unidades
+federativas com ao menos 150 casos confirmados em 2024, o Rio Grande do Sul caiu
+30,4 pontos percentuais e a segunda maior queda foi de 4,4. Não se observou tendência
+descendente evidente de *H* antes do evento, e em 2025 *H* foi de
+`r pc(63.9, 1)`. A
+extração reproduz o relato independente do evento: 950 casos confirmados contra
+958 e 29 óbitos contra 30 na mesma janela.[14]
+
+**Um componente do episódio não sustenta a leitura de detecção e é reportado como
+tal.** Restrita aos casos com confirmação laboratorial, em que o afrouxamento do
+critério clínico-epidemiológico não pode ter acrescentado ninguém, *H* ainda cai
+(`r ci(0.53, 0.31, 0.91)`), mas a letalidade não acompanha: 3,4% para 5,7%, razão
+de chances de `r ci(1.72, 0.41, 15.4)`. O evento sustenta *H* como indicador de
+amplitude de detecção, sem fornecer nesse estrato evidência independente de que
+ampliar a detecção reduza a letalidade sob definição de caso fixa.
+
+```{=typst}
+#block(breakable: false)[
+```
+
+![](figures/figura3_rs2024.png){width=100%}
+
+**Figura 3.** Casos confirmados por mês de início de sintomas (A), proporção de
+casos internados e de confirmação laboratorial (B) e variação de *H* entre 2024 e
+a linha de base 2019–2023 por unidade federativa (C). Rio Grande do Sul e Brasil,
+2019–2025 (A e B: n = 3.527 casos confirmados no Rio Grande do Sul; C: n = 7
+unidades federativas com ao menos 150 casos confirmados em 2024)
+
+Notas: a faixa sombreada em (a) e (b) marca maio a julho de 2024, janela da
+enchente; as bandas em (b) são intervalos de Clopper–Pearson; em (c) incluem-se as
+unidades federativas com ao menos 150 casos confirmados em 2024
+```{=typst}
+]
+```
+
+```{=typst}
+#block(breakable: false)[
+```
+
+**Tabela 2.** Razão de chances de óbito por leptospirose entre casos confirmados
+com desfecho conhecido, por +10 pontos percentuais de *H*, segundo especificação do
+modelo. Brasil, 2007–2025 (n = 4.941 células região-ano, 426 regiões de saúde)
+
+```{r tab2}
+t2 <- fread(file.path(RES, "manuscript_tables/table2_modelos.csv"))
+kable(t2, align = c("l", "l", "r", "r", "l"))
+```
+
+```{r tab2nota, results="asis"}
+nota <- fread(file.path(RES, "manuscript_tables/table2_nota.csv"))
+cat("
+Notas: ", nota[[1]][1], "
+", sep = "")
+```
+```{=typst}
+]
+```
+
+
+## Discussão
+
+A letalidade notificada da leptospirose no Brasil variou mais de seis vezes entre
+territórios, e essa variação está fortemente associada à composição dos casos que
+entram no denominador. A comparação entre fontes reforça essa interpretação: onde
+a letalidade notificada é mais alta, a incidência notificada é substancialmente
+menor e a taxa de internações também, ao passo que a mortalidade populacional pela
+mesma causa não apresentou gradiente monotônico com *H*. A magnitude foi
+semelhante na especificação intrarregional, o que indica que a associação não
+decorre apenas de diferenças estáveis entre territórios.
+
+O achado converge com desenhos que alcançam denominadores mais amplos que o de
+casos notificados — o de infecção e o de doença sintomática, distintos entre si:
+coortes urbanas em Salvador mostram que a maior parte das infecções não chega ao
+serviço de saúde,[2,3] e o inquérito sorológico de São Paulo estima cerca de treze
+vezes a incidência notificada.[4] Nenhum é replicável nacionalmente, ao passo que
+o campo de internação existe para todos os municípios desde 2007.
+
+A comparação mais direta é com a descrição nacional de 2000–2015, que reportou
+letalidade de 10,0% e incidência de 1,9 por 100.000 e nomeou a subnotificação como
+limitação não resolvida, dispondo apenas do SINAN.[5] A ordenação regional é a
+mesma descrita há uma década: o contraste persiste, e o que se altera é sua
+interpretação. O mesmo vale para as análises estaduais, que descrevem incidência e
+mortalidade sem relacioná-las ao alcance da detecção.[6]
+
+
+**Limitações.** O estudo é ecológico e nenhuma associação autoriza inferência
+sobre indivíduos. Exposição e desfecho são calculados sobre subconjuntos do mesmo conjunto de casos
+confirmados detectados, e, variando apenas a composição entre internados e não internados,
+a padronização aritmética reproduz um contraste de
+`r br(cpl$gradient_predicted_by_mix_alone, 2)` vezes contra
+`r br(cpl$gradient_cfr_overall_Q5_over_Q1, 2)` observados; o restante apoia-se na comparação com uma fonte que não depende
+do denominador de casos notificados, embora ambas possam, em princípio, partilhar
+um ponto cego — um óbito não reconhecido como leptospirose escapa ao SINAN e ao
+SIM igualmente. *H* é uma proporção estimada a partir de contagens finitas e é
+imprecisa em células com poucos casos, motivo pelo qual se analisou também o
+subconjunto com ao menos 10 casos no seu denominador. A especificação com efeitos
+fixos remove características regionais estáveis no tempo, mas não a confusão por
+fatores que variem dentro da região ao longo do período — acesso, política de
+internação, prática diagnóstica, gravidade circulante ou contexto de surto. Parte da associação entre territórios permanece como heterogeneidade
+regional não explicada. A letalidade repousa no campo de evolução, cuja completude varia com a
+exposição na direção capaz de inflar o gradiente, ainda que o resultado sobreviva
+à análise de sensibilidade de pior caso. O fenótipo grave vem de campos da notificação, não
+de prontuário. *H* depende também do limiar de internação e da oferta de leitos e
+não é indicador puro de esforço de busca. Por fim, o episódio do Rio Grande do Sul
+é validação de apoio, não experimento natural: a enchente alterou simultaneamente
+exposição, gravidade verdadeira, acesso, capacidade laboratorial e tempo até o
+tratamento, e o próprio sistema de notificação foi interrompido durante parte do
+evento.[14]
+
+**Implicações.** Uma letalidade elevada não deve ser lida isoladamente como falha
+assistencial, nem uma letalidade baixa como sucesso: em territórios de detecção
+restrita a primeira é esperada, e em territórios de busca intensa a segunda também.
+Séries temporais de letalidade são igualmente afetadas, já que mudanças no esforço
+de busca deslocam a composição dos casos captados. O episódio do Rio Grande do Sul
+mostra que mudanças abruptas na vigilância podem coincidir com grandes mudanças na
+composição dos casos detectados, tornando a letalidade notificada difícil de
+interpretar isoladamente. Recomenda-se que comparações de letalidade entre unidades federativas, entre
+regiões de saúde ou ao longo do tempo sejam apresentadas com a proporção de casos
+internados ao lado, como indicador de comparabilidade — informação já coletada e
+disponível nos sistemas nacionais.
+
+A proporção de casos confirmados internados pode assim servir como indicador
+operacional de comparabilidade, sem ser interpretada como medida direta de
+desempenho da vigilância: gravidade clínica, acesso e prática de internação
+também a determinam.
+
+## Disponibilidade de dados
+
+Os dados utilizados são públicos e provêm do Departamento de Informática do
+Sistema Único de Saúde e do Instituto Brasileiro de Geografia e Estatística. O
+código de extração, processamento e análise, o dicionário de variáveis, a lista de
+verificação STROBE/RECORD, o registro de rastreabilidade dos resultados e os
+arquivos que sustentam cada número deste manuscrito compõem um pacote de
+reprodutibilidade que **será depositado no SciELO Data após a aceitação**,
+conforme a política do periódico, incluindo o banco analítico derivado no nível
+região-ano, o código de extração, decodificação e análise, o dicionário de
+variáveis, a lista de verificação STROBE/RECORD e o registro de rastreabilidade
+dos resultados. Nenhum depósito havia sido efetuado até a submissão.
+
+## Uso de inteligência artificial generativa
+
+Utilizou-se assistente de inteligência artificial generativa (Claude, Anthropic)
+em duas frentes: no desenvolvimento e na revisão do código de extração,
+processamento e análise dos dados; e na redação e revisão do texto do manuscrito.
+Todas as estimativas foram geradas por código versionado e reexecutável a partir
+das bases públicas, e cada valor citado no texto é lido dos arquivos de resultado
+no momento da compilação. O autor revisou integralmente os procedimentos, os
+resultados e o texto, e assume responsabilidade pelo conteúdo.
+
+## Referências
+
+1. Costa F, Hagan JE, Calcagno J, Kane M, Torgerson P, Martinez-Silveira MS, et al. Global morbidity and mortality of leptospirosis: a systematic review. PLoS Negl Trop Dis. 2015;9(9):e0003898. https://doi.org/10.1371/journal.pntd.0003898
+2. Hacker KP, Sacramento GA, Cruz JS, de Oliveira D, Nery N Jr, Lindow JC, et al. Influence of rainfall on *Leptospira* infection and disease in a tropical urban setting, Brazil. Emerg Infect Dis. 2020;26(2):311-4. https://doi.org/10.3201/eid2602.190102
+3. Hagan JE, Moraga P, Costa F, Capian N, Ribeiro GS, Wunder EA Jr, et al. Spatiotemporal determinants of urban leptospirosis transmission: four-year prospective cohort study of slum residents in Brazil. PLoS Negl Trop Dis. 2016;10(1):e0004275. https://doi.org/10.1371/journal.pntd.0004275
+4. Esteves SB, Oliveira LM, Guilloux AGA, Cortez A, Masi E, Ferreira IMR, et al. Into the spotlight: a spatial study of potentially underreported leptospirosis among dengue-negative patients in São Paulo city, Brazil. PLoS Negl Trop Dis. 2025;19(3):e0012888. https://doi.org/10.1371/journal.pntd.0012888
+5. Galan DI, Roess AA, Pereira SVC, Schneider MC. Epidemiology of human leptospirosis in urban and rural areas of Brazil, 2000-2015. PLoS One. 2021;16(3):e0247763. https://doi.org/10.1371/journal.pone.0247763
+6. Camelo IM, Cabral BVB, Sousa DG, Sousa GJB, Pereira MLD. Leptospirosis incidence and mortality: a spatio-temporal analysis, Ceará, 2007-2023. Epidemiol Serv Saude. 2026;35:e20250108. https://doi.org/10.1590/S2237-96222026v35e20250108.en
+7. von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement. Lancet. 2007;370(9596):1453-7. https://doi.org/10.1016/S0140-6736(07)61602-X
+8. Benchimol EI, Smeeth L, Guttmann A, Harron K, Moher D, Petersen I, et al. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. PLoS Med. 2015;12(10):e1001885. https://doi.org/10.1371/journal.pmed.1001885
+9. Instituto Brasileiro de Geografia e Estatística. Projeções da população: Brasil e unidades da federação: revisão 2024. Rio de Janeiro: IBGE; 2024.
+10. Brasil, Ministério da Saúde, Secretaria de Vigilância em Saúde. Guia de vigilância em saúde. 6ª ed. Brasília: Ministério da Saúde; 2024.
+11. Clopper CJ, Pearson ES. The use of confidence or fiducial limits illustrated in the case of the binomial. Biometrika. 1934;26(4):404-13. https://doi.org/10.2307/2331986
+12. Riebler A, Sørbye SH, Simpson D, Rue H. An intuitive Bayesian spatial model for disease mapping that accounts for scaling. Stat Methods Med Res. 2016;25(4):1145-65. https://doi.org/10.1177/0962280216660421
+13. Rue H, Martino S, Chopin N. Approximate Bayesian inference for latent Gaussian models by using integrated nested Laplace approximations. J R Stat Soc Series B. 2009;71(2):319-92. https://doi.org/10.1111/j.1467-9868.2008.00700.x
+14. Ranieri TM, Viegas da Silva E, Vallandro MJ, Oliveira MMd, Barcellos RB, Lenhardt RV, et al. Leptospirosis cases during the 2024 catastrophic flood in Rio Grande do Sul, Brazil. Pathogens. 2025;14(4):393. https://doi.org/10.3390/pathogens14040393

@@ -1,0 +1,5075 @@
+schema: brepi.sidra.registry/1
+rebuilt_at: '2026-07-30T16:53:39+00:00'
+source: https://servicodados.ibge.gov.br/api/v3/agregados
+primary_level: N6
+n_tables: 24
+n_verified: 24
+n_unverified: 0
+tables:
+  '354':
+    id: 354
+    role: pnsb.2008.sanitation_associated_disease
+    why: Municipalities reporting occurrence of sanitation-associated diseases, by disease type, PNSB
+      2008. Includes leptospirosis and is a rare municipality-level administrative statement about the
+      disease that is independent of SINAN notification.
+    purpose: modeling
+    tags:
+    - pnsb
+    - sanitation
+    - leptospirosis
+    intended_level: N6
+    expect_variables:
+    - '2597'
+    note: null
+    name: Número de municípios, total e os com ocorrência de doenças associadas ao saneamento básico,
+      por tipo de doença
+    survey: Pesquisa Nacional de Saneamento Básico
+    subject: Gestão municipal de saneamento básico
+    url: https://sidra.ibge.gov.br/tabela/354
+    periodicity:
+      frequency: anual
+      start: 2008
+      end: 2008
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N14
+      - N7
+      - N13
+      - N3
+      IBGE:
+      - N1105
+    variables:
+    - id: '2597'
+      name: Municípios com ocorrência de doenças associadas ao saneamento básico
+      unit: Unidades
+    - id: '1002597'
+      name: Municípios com ocorrência de doenças associadas ao saneamento básico - percentual do total
+        geral
+      unit: '%'
+    classifications:
+    - id: '12963'
+      name: Tipo de doença
+      n_categories: 15
+      categories:
+      - id: '120931'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '120937'
+        name: Dengue
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120930'
+        name: Total geral de municípios
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120932'
+        name: Diarréia
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120933'
+        name: Leptospirose
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120934'
+        name: Verminoses
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120935'
+        name: Cólera
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120936'
+        name: Difteria
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120938'
+        name: Tifo
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120939'
+        name: Malária
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120940'
+        name: Hepatite
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120941'
+        name: Febre amarela
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120942'
+        name: Dermatite
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120943'
+        name: Doença do aparelho respiratório
+        unit: null
+        level: 1
+        is_total: false
+      - id: '120944'
+        name: Outra
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2008'
+    period_modified:
+      '2008': 20/08/2010
+    n_localities: 5564
+    status: verified
+  '1612':
+    id: 1612
+    role: crops.pam.temporary
+    why: Planted/harvested area and output for temporary crops. Rice and sugarcane cultivation are occupational-exposure
+      proxies for the flooded-field transmission route.
+    purpose: modeling
+    tags:
+    - agriculture
+    - occupational
+    - annual
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '109'
+    - '216'
+    - '214'
+    note: null
+    name: Área plantada, área colhida, quantidade produzida, rendimento médio e valor da produção das
+      lavouras temporárias
+    survey: Produção Agrícola Municipal
+    subject: Lavouras temporárias
+    url: https://sidra.ibge.gov.br/tabela/1612
+    periodicity:
+      frequency: anual
+      start: 1974
+      end: 2024
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N8
+      - N9
+      - N6
+      - N3
+    variables:
+    - id: '109'
+      name: Área plantada
+      unit: Hectares
+    - id: '1000109'
+      name: Área plantada - percentual do total geral
+      unit: '%'
+    - id: '216'
+      name: Área colhida
+      unit: Hectares
+    - id: '1000216'
+      name: Área colhida - percentual do total geral
+      unit: '%'
+    - id: '214'
+      name: Quantidade produzida
+      unit: Toneladas
+    - id: '112'
+      name: Rendimento médio da produção
+      unit: Quilogramas por Hectare
+    - id: '215'
+      name: Valor da produção
+      unit: Mil Cruzeiros [1974 a 1985, 1990 a 1992], Mil Cruzados [1986 a 1988], Mil Cruzados Novos [1989],
+        Mil Cruzeiros Reais [1993], Mil Reais [1994 a 2024]
+    - id: '1000215'
+      name: Valor da produção - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '81'
+      name: Produto das lavouras temporárias
+      n_categories: 34
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2688'
+        name: Abacaxi*
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40471'
+        name: Alfafa fenada
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2689'
+        name: Algodão herbáceo (em caroço)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2690'
+        name: Alho
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2691'
+        name: Amendoim (em casca)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2692'
+        name: Arroz (em casca)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2693'
+        name: Aveia (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2694'
+        name: Batata-doce
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2695'
+        name: Batata-inglesa
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2696'
+        name: Cana-de-açúcar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40470'
+        name: Cana para forragem
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2697'
+        name: Cebola
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2698'
+        name: Centeio (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2699'
+        name: Cevada (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2700'
+        name: Ervilha (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2701'
+        name: Fava (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2702'
+        name: Feijão (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2703'
+        name: Fumo (em folha)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '109179'
+        name: Girassol (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2704'
+        name: Juta (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2705'
+        name: Linho (semente)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2706'
+        name: Malva (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2707'
+        name: Mamona (baga)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2708'
+        name: Mandioca
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2709'
+        name: Melancia
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2710'
+        name: Melão
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2711'
+        name: Milho (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2712'
+        name: Rami (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2713'
+        name: Soja (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2714'
+        name: Sorgo (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2715'
+        name: Tomate
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2716'
+        name: Trigo (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '109180'
+        name: Triticale (em grão)
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '1974'
+    - '1975'
+    - '1976'
+    - '1977'
+    - '1978'
+    - '1979'
+    - '1980'
+    - '1981'
+    - '1982'
+    - '1983'
+    - '1984'
+    - '1985'
+    - '1986'
+    - '1987'
+    - '1988'
+    - '1989'
+    - '1990'
+    - '1991'
+    - '1992'
+    - '1993'
+    - '1994'
+    - '1995'
+    - '1996'
+    - '1997'
+    - '1998'
+    - '1999'
+    - '2000'
+    - '2001'
+    - '2002'
+    - '2003'
+    - '2004'
+    - '2005'
+    - '2006'
+    - '2007'
+    - '2008'
+    - '2009'
+    - '2010'
+    - '2011'
+    - '2012'
+    - '2013'
+    - '2014'
+    - '2015'
+    - '2016'
+    - '2017'
+    - '2018'
+    - '2019'
+    - '2020'
+    - '2021'
+    - '2022'
+    - '2023'
+    - '2024'
+    period_modified:
+      '1974': 01/01/0001
+      '1975': 01/01/0001
+      '1976': 01/01/0001
+      '1977': 01/01/0001
+      '1978': 01/01/0001
+      '1979': 01/01/0001
+      '1980': 01/01/0001
+      '1981': 01/01/0001
+      '1982': 01/01/0001
+      '1983': 01/01/0001
+      '1984': 01/01/0001
+      '1985': 01/01/0001
+      '1986': 01/01/0001
+      '1987': 01/01/0001
+      '1988': 01/01/0001
+      '1989': 16/09/2014
+      '1990': 04/09/2001
+      '1991': 04/09/2001
+      '1992': 04/09/2001
+      '1993': 04/09/2001
+      '1994': 04/09/2001
+      '1995': 04/09/2001
+      '1996': 02/06/2003
+      '1997': 13/01/2003
+      '1998': 04/09/2001
+      '1999': 03/09/2001
+      '2000': 25/03/2009
+      '2001': 28/04/2003
+      '2002': 27/11/2003
+      '2003': 17/05/2006
+      '2004': 29/06/2005
+      '2005': 30/06/2006
+      '2006': 15/12/2008
+      '2007': 12/05/2010
+      '2008': 10/08/2010
+      '2009': 25/08/2011
+      '2010': 08/12/2011
+      '2011': 26/10/2012
+      '2012': 22/09/2021
+      '2013': 14/09/2023
+      '2014': 23/09/2016
+      '2015': 14/09/2023
+      '2016': 14/09/2023
+      '2017': 14/09/2023
+      '2018': 14/09/2023
+      '2019': 14/09/2023
+      '2020': 14/11/2025
+      '2021': 12/09/2024
+      '2022': 14/11/2025
+      '2023': 11/09/2025
+      '2024': 03/10/2025
+    n_localities: 5563
+    status: verified
+  '2065':
+    id: 2065
+    role: sanitation.census2010.water
+    why: Censo 2010 households by piped water and supply form. Pre-2022 comparator.
+    purpose: modeling
+    tags:
+    - sanitation
+    - water
+    - census2010
+    intended_level: N6
+    expect_variables:
+    - '96'
+    note: null
+    name: Domicílios particulares permanentes, por existência de água canalizada e forma de abastecimento
+      de água - Resultados Gerais da Amostra
+    survey: Censo Demográfico
+    subject: Domicílios
+    url: https://sidra.ibge.gov.br/tabela/2065
+    periodicity:
+      frequency: anual
+      start: 2010
+      end: 2010
+    geographic_levels:
+      Administrativo:
+      - N15
+      - N1
+      - N2
+      - N8
+      - N9
+      - N6
+      - N14
+      - N7
+      - N13
+      - N3
+      IBGE:
+      - N18
+    variables:
+    - id: '96'
+      name: Domicílios particulares permanentes
+      unit: Unidades
+    - id: '1000096'
+      name: Domicílios particulares permanentes - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '471'
+      name: Existência de água canalizada e forma de abastecimento
+      n_categories: 9
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '12212'
+        name: Tinham
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12213'
+        name: Tinham - em pelo menos um cômodo
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12214'
+        name: Tinham - em pelo menos um cômodo - rede geral de distribuição
+        unit: null
+        level: 3
+        is_total: false
+      - id: '12215'
+        name: Tinham - em pelo menos um cômodo - outra forma de abastecimento
+        unit: null
+        level: 3
+        is_total: false
+      - id: '12216'
+        name: Tinham - no terreno ou na propriedade
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12217'
+        name: Tinham - no terreno ou na propriedade - rede geral de distribuição
+        unit: null
+        level: 3
+        is_total: false
+      - id: '12218'
+        name: Tinham - no terreno ou na propriedade - outra forma de abastecimento
+        unit: null
+        level: 3
+        is_total: false
+      - id: '12219'
+        name: Não tinham água canalizada
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2010'
+    period_modified:
+      '2010': 06/08/2013
+    n_localities: 5565
+    status: verified
+  '3154':
+    id: 3154
+    role: sanitation.census2010.bathroom_sewage
+    why: Censo 2010 households by bathroom and sewage. Pre-2022 comparator.
+    purpose: modeling
+    tags:
+    - sanitation
+    - sewage
+    - census2010
+    intended_level: N6
+    expect_variables:
+    - '96'
+    note: null
+    name: Domicílios particulares permanentes, por existência de banheiro ou sanitário e tipo de esgotamento
+      sanitário - Resultados Preliminares do Universo
+    survey: Censo Demográfico
+    subject: Domicílios
+    url: https://sidra.ibge.gov.br/tabela/3154
+    periodicity:
+      frequency: anual
+      start: 2010
+      end: 2010
+    geographic_levels:
+      Administrativo:
+      - N15
+      - N1
+      - N2
+      - N8
+      - N9
+      - N6
+      - N14
+      - N7
+      - N13
+      - N3
+    variables:
+    - id: '96'
+      name: Domicílios particulares permanentes
+      unit: Unidades
+    - id: '1000096'
+      name: Domicílios particulares permanentes - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '299'
+      name: Existência de banheiro ou sanitário e esgotamento sanitário
+      n_categories: 6
+      categories:
+      - id: '2942'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '10930'
+        name: Tinham banheiro ou sanitário
+        unit: null
+        level: 0
+        is_total: true
+      - id: '10941'
+        name: Tinham banheiro ou sanitário - rede geral de esgoto ou pluvial
+        unit: null
+        level: 1
+        is_total: false
+      - id: '10942'
+        name: Tinham banheiro ou sanitário - fossa séptica
+        unit: null
+        level: 1
+        is_total: false
+      - id: '10962'
+        name: Tinham banheiro ou sanitário - outro
+        unit: null
+        level: 1
+        is_total: false
+      - id: '10963'
+        name: Não tinham banheiro ou sanitário
+        unit: null
+        level: 0
+        is_total: true
+    periods:
+    - '2010'
+    period_modified:
+      '2010': 24/06/2011
+    n_localities: 5565
+    status: verified
+  '3218':
+    id: 3218
+    role: sanitation.census2010.water_sewage_refuse_power
+    why: Censo 2010 households cross-classified by water, sewage, refuse and electricity. Category systems
+      differ from 2022 and must be harmonised downstream, not assumed comparable.
+    purpose: modeling
+    tags:
+    - sanitation
+    - census2010
+    intended_level: N6
+    expect_variables:
+    - '96'
+    note: null
+    name: Domicílios particulares permanentes, por forma de abastecimento de água, segundo a existência
+      de banheiro ou sanitário e esgotamento sanitário, o destino do lixo e a existência de energia elétrica
+    survey: Censo Demográfico
+    subject: Domicílios
+    url: https://sidra.ibge.gov.br/tabela/3218
+    periodicity:
+      frequency: anual
+      start: 2010
+      end: 2010
+    geographic_levels:
+      Administrativo:
+      - N15
+      - N102
+      - N1
+      - N10
+      - N2
+      - N8
+      - N9
+      - N6
+      - N14
+      - N7
+      - N13
+      - N11
+      - N3
+      Especial:
+      - N23
+    variables:
+    - id: '96'
+      name: Domicílios particulares permanentes
+      unit: Unidades
+    - id: '1000096'
+      name: Domicílios particulares permanentes - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '61'
+      name: Forma de abastecimento de água
+      n_categories: 8
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '92853'
+        name: Rede geral
+        unit: null
+        level: 1
+        is_total: false
+      - id: '10971'
+        name: Poço ou nascente na propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121290'
+        name: Poço ou nascente fora da propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121294'
+        name: Rio, açude, lago ou igarapé
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121296'
+        name: Poço ou nascente na aldeia
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121297'
+        name: Poço ou nascente fora da aldeia
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121295'
+        name: Outra
+        unit: null
+        level: 1
+        is_total: false
+    - id: '299'
+      name: Existência de banheiro ou sanitário e esgotamento sanitário
+      n_categories: 8
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2944'
+        name: Tinham banheiro - de uso exclusivo do domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '9678'
+        name: Tinham banheiro - de uso exclusivo do domicílio - rede geral de esgoto ou pluvial ou fossa
+          séptica
+        unit: null
+        level: 2
+        is_total: false
+      - id: '2950'
+        name: Tinham banheiro - de uso exclusivo do domicílio - outro
+        unit: null
+        level: 2
+        is_total: false
+      - id: '2958'
+        name: Tinham sanitário
+        unit: null
+        level: 1
+        is_total: false
+      - id: '9679'
+        name: Tinham sanitário - rede geral de esgoto ou pluvial ou fossa séptica
+        unit: null
+        level: 2
+        is_total: false
+      - id: '2964'
+        name: Tinham sanitário - outro escoadouro
+        unit: null
+        level: 2
+        is_total: false
+      - id: '10006'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '67'
+      name: Destino do lixo
+      n_categories: 5
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2520'
+        name: Coletado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92863'
+        name: Coletado por serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '92864'
+        name: Coletado em caçamba de serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '1091'
+        name: Outro destino
+        unit: null
+        level: 1
+        is_total: false
+    - id: '309'
+      name: Existência de energia elétrica
+      n_categories: 3
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '3011'
+        name: Tinham
+        unit: null
+        level: 1
+        is_total: false
+      - id: '3018'
+        name: Não tinham
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2010'
+    period_modified:
+      '2010': 01/02/2019
+    n_localities: 5565
+    status: verified
+  '3939':
+    id: 3939
+    role: livestock.ppm.herds
+    why: Municipal herd counts by species. Cattle and swine density is the standard rural leptospirosis
+      reservoir proxy; the human-to-animal ratio needs the population denominator alongside it.
+    purpose: modeling
+    tags:
+    - livestock
+    - reservoir
+    - annual
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '105'
+    note: null
+    name: Efetivo dos rebanhos, por tipo de rebanho
+    survey: Pesquisa da Pecuária Municipal
+    subject: Pecuária
+    url: https://sidra.ibge.gov.br/tabela/3939
+    periodicity:
+      frequency: anual
+      start: 1974
+      end: 2024
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N8
+      - N9
+      - N6
+      - N3
+    variables:
+    - id: '105'
+      name: Efetivo dos rebanhos
+      unit: Cabeças
+    classifications:
+    - id: '79'
+      name: Tipo de rebanho
+      n_categories: 10
+      categories:
+      - id: '2670'
+        name: Bovino
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2675'
+        name: Bubalino
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2672'
+        name: Equino
+        unit: null
+        level: 0
+        is_total: true
+      - id: '32794'
+        name: Suíno - total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '32795'
+        name: Suíno - matrizes de suínos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2681'
+        name: Caprino
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2677'
+        name: Ovino
+        unit: null
+        level: 0
+        is_total: true
+      - id: '32796'
+        name: Galináceos - total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '32793'
+        name: Galináceos - galinhas
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2680'
+        name: Codornas
+        unit: null
+        level: 0
+        is_total: true
+    periods:
+    - '1974'
+    - '1975'
+    - '1976'
+    - '1977'
+    - '1978'
+    - '1979'
+    - '1980'
+    - '1981'
+    - '1982'
+    - '1983'
+    - '1984'
+    - '1985'
+    - '1986'
+    - '1987'
+    - '1988'
+    - '1989'
+    - '1990'
+    - '1991'
+    - '1992'
+    - '1993'
+    - '1994'
+    - '1995'
+    - '1996'
+    - '1997'
+    - '1998'
+    - '1999'
+    - '2000'
+    - '2001'
+    - '2002'
+    - '2003'
+    - '2004'
+    - '2005'
+    - '2006'
+    - '2007'
+    - '2008'
+    - '2009'
+    - '2010'
+    - '2011'
+    - '2012'
+    - '2013'
+    - '2014'
+    - '2015'
+    - '2016'
+    - '2017'
+    - '2018'
+    - '2019'
+    - '2020'
+    - '2021'
+    - '2022'
+    - '2023'
+    - '2024'
+    period_modified:
+      '1974': 03/12/2014
+      '1975': 03/12/2014
+      '1976': 03/12/2014
+      '1977': 03/12/2014
+      '1978': 03/12/2014
+      '1979': 03/12/2014
+      '1980': 03/12/2014
+      '1981': 03/12/2014
+      '1982': 03/12/2014
+      '1983': 03/12/2014
+      '1984': 03/12/2014
+      '1985': 03/12/2014
+      '1986': 03/12/2014
+      '1987': 03/12/2014
+      '1988': 03/12/2014
+      '1989': 03/12/2014
+      '1990': 02/12/2014
+      '1991': 02/12/2014
+      '1992': 02/12/2014
+      '1993': 02/12/2014
+      '1994': 02/12/2014
+      '1995': 02/12/2014
+      '1996': 02/12/2014
+      '1997': 02/12/2014
+      '1998': 02/12/2014
+      '1999': 02/12/2014
+      '2000': 02/12/2014
+      '2001': 02/12/2014
+      '2002': 02/12/2014
+      '2003': 02/12/2014
+      '2004': 02/12/2014
+      '2005': 02/12/2014
+      '2006': 02/12/2014
+      '2007': 02/12/2014
+      '2008': 02/12/2014
+      '2009': 02/12/2014
+      '2010': 02/12/2014
+      '2011': 02/12/2014
+      '2012': 02/12/2014
+      '2013': 21/09/2023
+      '2014': 21/09/2023
+      '2015': 21/09/2023
+      '2016': 21/09/2023
+      '2017': 21/09/2023
+      '2018': 21/09/2023
+      '2019': 21/09/2023
+      '2020': 21/09/2023
+      '2021': 21/09/2023
+      '2022': 19/09/2024
+      '2023': 18/09/2025
+      '2024': 18/09/2025
+    n_localities: 5567
+    status: verified
+  '4709':
+    id: 4709
+    role: population.census2022.totals
+    why: Censo 2022 municipal totals and growth rate. Top-level margin check.
+    purpose: validation
+    tags:
+    - denominator
+    - population
+    - census2022
+    intended_level: N6
+    expect_variables:
+    - '93'
+    note: null
+    name: População residente, Variação absoluta de população residente e Taxa de crescimento geométrico
+    survey: Censo Demográfico
+    subject: Pessoas
+    url: https://sidra.ibge.gov.br/tabela/4709
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '93'
+      name: População residente
+      unit: Pessoas
+    - id: '5936'
+      name: Variação absoluta da população residente 2010 compatibilizada
+      unit: Pessoas
+    - id: '10605'
+      name: Taxa de crescimento geométrico
+      unit: '%'
+    classifications: []
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 22/12/2023
+    n_localities: 5570
+    status: verified
+  '5457':
+    id: 5457
+    role: crops.pam.temporary_and_permanent
+    why: Consolidated PAM series covering temporary and permanent crops.
+    purpose: modeling
+    tags:
+    - agriculture
+    - occupational
+    - annual
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '8331'
+    - '216'
+    - '214'
+    note: null
+    name: Área plantada ou destinada à colheita, área colhida, quantidade produzida, rendimento médio
+      e valor da produção das lavouras temporárias e permanentes
+    survey: Produção Agrícola Municipal
+    subject: Lavouras temporárias e permanentes
+    url: https://sidra.ibge.gov.br/tabela/5457
+    periodicity:
+      frequency: anual
+      start: 1974
+      end: 2024
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N8
+      - N9
+      - N6
+      - N3
+    variables:
+    - id: '8331'
+      name: Área plantada ou destinada à colheita
+      unit: Hectares
+    - id: '1008331'
+      name: Área plantada ou destinada à colheita - percentual do total geral
+      unit: '%'
+    - id: '216'
+      name: Área colhida
+      unit: Hectares
+    - id: '1000216'
+      name: Área colhida - percentual do total geral
+      unit: '%'
+    - id: '214'
+      name: Quantidade produzida
+      unit: Toneladas
+    - id: '112'
+      name: Rendimento médio da produção
+      unit: Quilogramas por Hectare
+    - id: '215'
+      name: Valor da produção
+      unit: Mil Cruzeiros [1974 a 1985, 1990 a 1992], Mil Cruzados [1986 a 1988], Mil Cruzados Novos [1989],
+        Mil Cruzeiros Reais [1993], Mil Reais [1994 a 2024]
+    - id: '1000215'
+      name: Valor da produção - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '782'
+      name: Produto das lavouras temporárias e permanentes
+      n_categories: 72
+      categories:
+      - id: '0'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '40129'
+        name: Abacate
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40092'
+        name: Abacaxi*
+        unit: null
+        level: 1
+        is_total: false
+      - id: '45982'
+        name: Açaí
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40329'
+        name: Alfafa fenada
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40130'
+        name: Algodão arbóreo (em caroço)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40099'
+        name: Algodão herbáceo (em caroço)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40100'
+        name: Alho
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40101'
+        name: Amendoim (em casca)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40102'
+        name: Arroz (em casca)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40103'
+        name: Aveia (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40131'
+        name: Azeitona
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40136'
+        name: Banana (cacho)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40104'
+        name: Batata-doce
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40105'
+        name: Batata-inglesa
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40137'
+        name: Borracha (látex coagulado)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40468'
+        name: Borracha (látex líquido)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40138'
+        name: Cacau (em amêndoa)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40139'
+        name: Café (em grão) Total
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40140'
+        name: Café (em grão) Arábica
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40141'
+        name: Café (em grão) Canephora
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40330'
+        name: Caju
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40106'
+        name: Cana-de-açúcar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40331'
+        name: Cana para forragem
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40142'
+        name: Caqui
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40143'
+        name: Castanha de caju
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40107'
+        name: Cebola
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40108'
+        name: Centeio (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40109'
+        name: Cevada (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40144'
+        name: Chá-da-índia (folha verde)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40145'
+        name: Coco-da-baía*
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40146'
+        name: Dendê (cacho de coco)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40147'
+        name: Erva-mate (folha verde)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40110'
+        name: Ervilha (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40111'
+        name: Fava (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40112'
+        name: Feijão (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40148'
+        name: Figo
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40113'
+        name: Fumo (em folha)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40114'
+        name: Girassol (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40149'
+        name: Goiaba
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40150'
+        name: Guaraná (semente)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40115'
+        name: Juta (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40151'
+        name: Laranja
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40152'
+        name: Limão
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40116'
+        name: Linho (semente)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40260'
+        name: Maçã
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40117'
+        name: Malva (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40261'
+        name: Mamão
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40118'
+        name: Mamona (baga)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40119'
+        name: Mandioca
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40262'
+        name: Manga
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40263'
+        name: Maracujá
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40264'
+        name: Marmelo
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40120'
+        name: Melancia
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40121'
+        name: Melão
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40122'
+        name: Milho (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40265'
+        name: Noz (fruto seco)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40266'
+        name: Palmito
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40267'
+        name: Pera
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40268'
+        name: Pêssego
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40269'
+        name: Pimenta-do-reino
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40123'
+        name: Rami (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40270'
+        name: Sisal ou agave (fibra)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40124'
+        name: Soja (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40125'
+        name: Sorgo (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40271'
+        name: Tangerina
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40126'
+        name: Tomate
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40127'
+        name: Trigo (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40128'
+        name: Triticale (em grão)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40272'
+        name: Tungue (fruto seco)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40273'
+        name: Urucum (semente)
+        unit: null
+        level: 1
+        is_total: false
+      - id: '40274'
+        name: Uva
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '1974'
+    - '1975'
+    - '1976'
+    - '1977'
+    - '1978'
+    - '1979'
+    - '1980'
+    - '1981'
+    - '1982'
+    - '1983'
+    - '1984'
+    - '1985'
+    - '1986'
+    - '1987'
+    - '1988'
+    - '1989'
+    - '1990'
+    - '1991'
+    - '1992'
+    - '1993'
+    - '1994'
+    - '1995'
+    - '1996'
+    - '1997'
+    - '1998'
+    - '1999'
+    - '2000'
+    - '2001'
+    - '2002'
+    - '2003'
+    - '2004'
+    - '2005'
+    - '2006'
+    - '2007'
+    - '2008'
+    - '2009'
+    - '2010'
+    - '2011'
+    - '2012'
+    - '2013'
+    - '2014'
+    - '2015'
+    - '2016'
+    - '2017'
+    - '2018'
+    - '2019'
+    - '2020'
+    - '2021'
+    - '2022'
+    - '2023'
+    - '2024'
+    period_modified:
+      '1974': 17/04/2017
+      '1975': 01/01/0001
+      '1976': 01/01/0001
+      '1977': 17/05/2017
+      '1978': 01/01/0001
+      '1979': 01/01/0001
+      '1980': 01/01/0001
+      '1981': 01/01/0001
+      '1982': 01/01/0001
+      '1983': 01/01/0001
+      '1984': 01/01/0001
+      '1985': 01/01/0001
+      '1986': 01/01/0001
+      '1987': 01/01/0001
+      '1988': 01/01/0001
+      '1989': 01/01/0001
+      '1990': 01/01/0001
+      '1991': 01/01/0001
+      '1992': 01/01/0001
+      '1993': 01/01/0001
+      '1994': 01/01/0001
+      '1995': 01/01/0001
+      '1996': 01/01/0001
+      '1997': 01/01/0001
+      '1998': 01/01/0001
+      '1999': 01/01/0001
+      '2000': 01/01/0001
+      '2001': 01/01/0001
+      '2002': 01/01/0001
+      '2003': 01/01/0001
+      '2004': 01/01/0001
+      '2005': 01/01/0001
+      '2006': 01/01/0001
+      '2007': 01/01/0001
+      '2008': 01/01/0001
+      '2009': 01/01/0001
+      '2010': 01/01/0001
+      '2011': 01/01/0001
+      '2012': 22/09/2021
+      '2013': 14/09/2023
+      '2014': 01/01/0001
+      '2015': 14/09/2023
+      '2016': 14/09/2023
+      '2017': 14/09/2023
+      '2018': 14/09/2023
+      '2019': 14/09/2023
+      '2020': 14/11/2025
+      '2021': 12/09/2024
+      '2022': 14/11/2025
+      '2023': 11/09/2025
+      '2024': 03/10/2025
+    n_localities: 5563
+    status: verified
+  '6579':
+    id: 6579
+    role: population.estimates.annual
+    why: Annual municipal population estimates, the denominator spine for inter-censal years. Note the
+      series omits census years.
+    purpose: modeling
+    tags:
+    - denominator
+    - population
+    intended_level: N6
+    expect_variables:
+    - '9324'
+    note: null
+    name: População residente estimada
+    survey: Estimativas de População
+    subject: Geral
+    url: https://sidra.ibge.gov.br/tabela/6579
+    periodicity:
+      frequency: anual
+      start: 2001
+      end: 2025
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9324'
+      name: População residente estimada
+      unit: Pessoas
+    classifications: []
+    periods:
+    - '2001'
+    - '2002'
+    - '2003'
+    - '2004'
+    - '2005'
+    - '2006'
+    - '2008'
+    - '2009'
+    - '2011'
+    - '2012'
+    - '2013'
+    - '2014'
+    - '2015'
+    - '2016'
+    - '2017'
+    - '2018'
+    - '2019'
+    - '2020'
+    - '2021'
+    - '2024'
+    - '2025'
+    period_modified:
+      '2001': 30/08/2017
+      '2002': 30/08/2017
+      '2003': 30/08/2017
+      '2004': 30/08/2017
+      '2005': 30/08/2017
+      '2006': 30/08/2017
+      '2008': 30/08/2017
+      '2009': 30/08/2017
+      '2011': 30/08/2017
+      '2012': 30/08/2017
+      '2013': 30/08/2017
+      '2014': 30/08/2017
+      '2015': 30/08/2017
+      '2016': 30/08/2017
+      '2017': 05/09/2022
+      '2018': 05/09/2022
+      '2019': 05/09/2022
+      '2020': 05/09/2022
+      '2021': 24/06/2024
+      '2024': 30/12/2024
+      '2025': 15/01/2026
+    n_localities: 5571
+    status: verified
+  '6803':
+    id: 6803
+    role: sanitation.census2022.water_network
+    why: Households by connection to the general water distribution network. Piped-water deficit is a
+      standing leptospirosis exposure proxy.
+    purpose: modeling
+    tags:
+    - sanitation
+    - water
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    note: null
+    name: Domicílios particulares permanentes ocupados, por existência de ligação à rede geral de distribuição
+      de água e principal forma de abastecimento de água
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/6803
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Unidades
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '1821'
+      name: Existência de ligação à rede geral de distribuição de água e principal forma de abastecimento
+        de água
+      n_categories: 18
+      categories:
+      - id: '72129'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72144'
+        name: Possui ligação à rede geral e a utiliza como forma principal
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72145'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72146'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72147'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático
+          ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72148'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou
+          mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72149'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72150'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72151'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Rios, açudes, córregos,
+          lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72152'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72153'
+        name: Não possui ligação com a rede geral
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72154'
+        name: Não possui ligação com a rede geral - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72155'
+        name: Não possui ligação com a rede geral - Poço raso, freático ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72156'
+        name: Não possui ligação com a rede geral - Fonte, nascente ou mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72157'
+        name: Não possui ligação com a rede geral - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72158'
+        name: Não possui ligação com a rede geral - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72159'
+        name: Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72160'
+        name: Não possui ligação com a rede geral - Outra
+        unit: null
+        level: 2
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 23/02/2024
+    n_localities: 5570
+    status: verified
+  '6804':
+    id: 6804
+    role: sanitation.census2022.water_supply
+    why: Households by internal water canalisation and main supply source.
+    purpose: modeling
+    tags:
+    - sanitation
+    - water
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    note: null
+    name: Domicílios particulares permanentes ocupados, por existência de canalização de água e principal
+      forma de abastecimento de água
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/6804
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Unidades
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '301'
+      name: Principal forma de abastecimento de água
+      n_categories: 9
+      categories:
+      - id: '72053'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '31471'
+        name: Rede geral de distribuição
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72054'
+        name: Poço profundo ou artesiano
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72055'
+        name: Poço raso, freático ou cacimba
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72088'
+        name: Fonte, nascente ou mina
+        unit: null
+        level: 1
+        is_total: false
+      - id: '31472'
+        name: Carro-pipa
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72089'
+        name: Água da chuva armazenada
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72090'
+        name: Rios, açudes, córregos, lagos e igarapés
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72091'
+        name: Outra
+        unit: null
+        level: 1
+        is_total: false
+    - id: '1817'
+      name: Existência de canalização de água
+      n_categories: 4
+      categories:
+      - id: '72125'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72126'
+        name: Canalizada até dentro da casa, apartamento ou habitação
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72127'
+        name: Canalizada, mas apenas no terreno
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72128'
+        name: Sem água canalizada
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 23/02/2024
+    n_localities: 5570
+    status: verified
+  '6805':
+    id: 6805
+    role: sanitation.census2022.sewage
+    why: Households by type of sewage disposal. Open sewage and rudimentary pits are the canonical municipal-level
+      leptospirosis exposure covariate.
+    purpose: modeling
+    tags:
+    - sanitation
+    - sewage
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    note: null
+    name: Domicílios particulares permanentes ocupados, por tipo de esgotamento sanitário
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/6805
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Unidades
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '11558'
+      name: Tipo de esgotamento sanitário
+      n_categories: 10
+      categories:
+      - id: '46292'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '46290'
+        name: Rede geral, rede pluvial ou fossa ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72110'
+        name: Rede geral ou pluvial
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72111'
+        name: Fossa séptica ou fossa filtro ligada à rede
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72112'
+        name: Fossa séptica ou fossa filtro não ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72113'
+        name: Fossa rudimentar ou buraco
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92858'
+        name: Vala
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72114'
+        name: Rio, lago, córrego ou mar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72115'
+        name: Outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92861'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 23/02/2024
+    n_localities: 5570
+    status: verified
+  '6806':
+    id: 6806
+    role: sanitation.census2022.bathroom_sewage
+    why: Households cross-classified by bathroom availability and sewage type.
+    purpose: modeling
+    tags:
+    - sanitation
+    - sewage
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    note: null
+    name: Domicílios particulares permanentes ocupados, por existência de banheiro ou sanitário e número
+      de banheiros de uso exclusivo do domicílio e por tipo de esgotamento sanitário
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/6806
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Unidades
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '458'
+      name: Existência de banheiro ou sanitário e número de banheiros de uso exclusivo do domicílio
+      n_categories: 9
+      categories:
+      - id: '72117'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '12032'
+        name: Tinham banheiro de uso exclusivo do domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12033'
+        name: Tinham banheiro de uso exclusivo do domicílio - 1 banheiro
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12034'
+        name: Tinham banheiro de uso exclusivo do domicílio - 2 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12035'
+        name: Tinham banheiro de uso exclusivo do domicílio - 3 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12036'
+        name: Tinham banheiro de uso exclusivo do domicílio - 4 banheiros ou mais
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72118'
+        name: Apenas banheiro de uso comum a mais de um domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72119'
+        name: Apenas sanitário ou buraco para dejeções, inclusive os localizados no terreno
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12046'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '11558'
+      name: Tipo de esgotamento sanitário
+      n_categories: 10
+      categories:
+      - id: '46292'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '46290'
+        name: Rede geral, rede pluvial ou fossa ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72110'
+        name: Rede geral ou pluvial
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72111'
+        name: Fossa séptica ou fossa filtro ligada à rede
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72112'
+        name: Fossa séptica ou fossa filtro não ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72113'
+        name: Fossa rudimentar ou buraco
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92858'
+        name: Vala
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72114'
+        name: Rio, lago, córrego ou mar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72115'
+        name: Outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92861'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 23/02/2024
+    n_localities: 5570
+    status: verified
+  '6892':
+    id: 6892
+    role: sanitation.census2022.refuse
+    why: Households by refuse destination. Uncollected refuse drives commensal rodent density and is the
+      second standing exposure proxy.
+    purpose: modeling
+    tags:
+    - sanitation
+    - refuse
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    note: null
+    name: Domicílios particulares permanentes ocupados, por destino do lixo
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/6892
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Unidades
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '67'
+      name: Destino do lixo
+      n_categories: 8
+      categories:
+      - id: '10972'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2520'
+        name: Coletado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72120'
+        name: Coletado no domicílio por serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72121'
+        name: Depositado em caçamba de serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72122'
+        name: Queimado na propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72123'
+        name: Enterrado na propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72124'
+        name: Jogado em terreno baldio, encosta ou área pública
+        unit: null
+        level: 1
+        is_total: false
+      - id: '1091'
+        name: Outro destino
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 23/02/2024
+    n_localities: 5570
+    status: verified
+  '9514':
+    id: 9514
+    role: population.census2022.age_sex
+    why: Censo 2022 population by sex and single/grouped age. Marginal check for 9606.
+    purpose: validation
+    tags:
+    - denominator
+    - population
+    - census2022
+    intended_level: N6
+    expect_variables:
+    - '93'
+    note: null
+    name: População residente, por sexo, idade e forma de declaração da idade
+    survey: Censo Demográfico
+    subject: Pessoas
+    url: https://sidra.ibge.gov.br/tabela/9514
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '93'
+      name: População residente
+      unit: Pessoas
+    - id: '1000093'
+      name: População residente - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '2'
+      name: Sexo
+      n_categories: 3
+      categories:
+      - id: '6794'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '4'
+        name: Homens
+        unit: null
+        level: 1
+        is_total: false
+      - id: '5'
+        name: Mulheres
+        unit: null
+        level: 1
+        is_total: false
+    - id: '287'
+      name: Idade
+      n_categories: 134
+      categories:
+      - id: '100362'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '93070'
+        name: 0 a 4 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6557'
+        name: Menos de 1 ano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93071'
+        name: Menos de 1 mês
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93072'
+        name: 1 mês
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93073'
+        name: 2 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93074'
+        name: 3 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93075'
+        name: 4 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93076'
+        name: 5 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93077'
+        name: 6 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93078'
+        name: 7 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93079'
+        name: 8 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93080'
+        name: 9 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93081'
+        name: 10 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93082'
+        name: 11 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '6558'
+        name: 1 ano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6559'
+        name: 2 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6560'
+        name: 3 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6561'
+        name: 4 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93084'
+        name: 5 a 9 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6562'
+        name: 5 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6563'
+        name: 6 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6564'
+        name: 7 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6565'
+        name: 8 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6566'
+        name: 9 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93085'
+        name: 10 a 14 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6567'
+        name: 10 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6568'
+        name: 11 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6569'
+        name: 12 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6570'
+        name: 13 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6571'
+        name: 14 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93086'
+        name: 15 a 19 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6572'
+        name: 15 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6573'
+        name: 16 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6574'
+        name: 17 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6575'
+        name: 18 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6576'
+        name: 19 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93087'
+        name: 20 a 24 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6577'
+        name: 20 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6578'
+        name: 21 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6579'
+        name: 22 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6580'
+        name: 23 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6581'
+        name: 24 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93088'
+        name: 25 a 29 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6582'
+        name: 25 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6656'
+        name: 26 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6657'
+        name: 27 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6658'
+        name: 28 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6659'
+        name: 29 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93089'
+        name: 30 a 34 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6583'
+        name: 30 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6584'
+        name: 31 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6585'
+        name: 32 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6586'
+        name: 33 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6587'
+        name: 34 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93090'
+        name: 35 a 39 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6588'
+        name: 35 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6589'
+        name: 36 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6590'
+        name: 37 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6591'
+        name: 38 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6592'
+        name: 39 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93091'
+        name: 40 a 44 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6593'
+        name: 40 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6594'
+        name: 41 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6595'
+        name: 42 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6596'
+        name: 43 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6597'
+        name: 44 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93092'
+        name: 45 a 49 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6598'
+        name: 45 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6599'
+        name: 46 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6600'
+        name: 47 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6601'
+        name: 48 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6602'
+        name: 49 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93093'
+        name: 50 a 54 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6603'
+        name: 50 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6604'
+        name: 51 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6605'
+        name: 52 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6606'
+        name: 53 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6607'
+        name: 54 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93094'
+        name: 55 a 59 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6608'
+        name: 55 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6609'
+        name: 56 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6610'
+        name: 57 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6611'
+        name: 58 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6612'
+        name: 59 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93095'
+        name: 60 a 64 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6613'
+        name: 60 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6614'
+        name: 61 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6615'
+        name: 62 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6616'
+        name: 63 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6617'
+        name: 64 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93096'
+        name: 65 a 69 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6618'
+        name: 65 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6619'
+        name: 66 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6620'
+        name: 67 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6621'
+        name: 68 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6622'
+        name: 69 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93097'
+        name: 70 a 74 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6623'
+        name: 70 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6624'
+        name: 71 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6625'
+        name: 72 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6626'
+        name: 73 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6627'
+        name: 74 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93098'
+        name: 75 a 79 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6628'
+        name: 75 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6629'
+        name: 76 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6630'
+        name: 77 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6631'
+        name: 78 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6632'
+        name: 79 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '49108'
+        name: 80 a 84 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6633'
+        name: 80 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6634'
+        name: 81 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6635'
+        name: 82 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6636'
+        name: 83 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6637'
+        name: 84 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '49109'
+        name: 85 a 89 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6638'
+        name: 85 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6639'
+        name: 86 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6640'
+        name: 87 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6641'
+        name: 88 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6642'
+        name: 89 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '60040'
+        name: 90 a 94 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6643'
+        name: 90 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6644'
+        name: 91 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6645'
+        name: 92 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6646'
+        name: 93 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6647'
+        name: 94 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '60041'
+        name: 95 a 99 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6648'
+        name: 95 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6649'
+        name: 96 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6650'
+        name: 97 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6651'
+        name: 98 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6652'
+        name: 99 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6653'
+        name: 100 anos ou mais
+        unit: null
+        level: 1
+        is_total: false
+    - id: '286'
+      name: Forma de declaração da idade
+      n_categories: 3
+      categories:
+      - id: '113635'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '6555'
+        name: Data de nascimento
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6556'
+        name: Idade presumida
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 22/12/2023
+    n_localities: 5570
+    status: verified
+  '9606':
+    id: 9606
+    role: population.census2022.age_sex_colour
+    why: Population by colour/race, sex and age for 2010 and 2022. The joint denominator tensor anchor.
+      Race here is IBGE self-declaration and must not be silently equated with the administratively recorded
+      race on a SINAN notification.
+    purpose: modeling
+    tags:
+    - denominator
+    - population
+    - census2010
+    - census2022
+    intended_level: N6
+    expect_variables:
+    - '93'
+    note: 'The five colour/race categories do not sum to the race Total: in Censo 2022 they fall 400 short
+      for men in Sao Paulo (5386295 against 5386695), 15 in Porto Alegre, 2 in Rio Branco. The residual
+      is undeclared race, which is inside the Total and outside every category. Race-specific denominators
+      built from this table are therefore slightly smaller than the population they should cover, and
+      a race-specific rate computed against them is correspondingly inflated. Reconcile with check_margins
+      before use and decide explicitly how to treat the residual.'
+    name: População residente, por cor ou raça, segundo o sexo e a idade
+    survey: Censo Demográfico
+    subject: Cor ou raça
+    url: https://sidra.ibge.gov.br/tabela/9606
+    periodicity:
+      frequency: anual
+      start: 2010
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+      Especial:
+      - N134
+      - N131
+    variables:
+    - id: '93'
+      name: População residente
+      unit: Pessoas
+    - id: '1000093'
+      name: População residente - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '86'
+      name: Cor ou raça
+      n_categories: 6
+      categories:
+      - id: '95251'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2776'
+        name: Branca
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2777'
+        name: Preta
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2778'
+        name: Amarela
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2779'
+        name: Parda
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2780'
+        name: Indígena
+        unit: null
+        level: 1
+        is_total: false
+    - id: '2'
+      name: Sexo
+      n_categories: 3
+      categories:
+      - id: '6794'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '4'
+        name: Homens
+        unit: null
+        level: 1
+        is_total: false
+      - id: '5'
+        name: Mulheres
+        unit: null
+        level: 1
+        is_total: false
+    - id: '287'
+      name: Idade
+      n_categories: 134
+      categories:
+      - id: '100362'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '93070'
+        name: 0 a 4 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6557'
+        name: Menos de 1 ano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93071'
+        name: Menos de 1 mês
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93072'
+        name: 1 mês
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93073'
+        name: 2 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93074'
+        name: 3 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93075'
+        name: 4 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93076'
+        name: 5 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93077'
+        name: 6 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93078'
+        name: 7 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93079'
+        name: 8 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93080'
+        name: 9 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93081'
+        name: 10 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '93082'
+        name: 11 meses
+        unit: null
+        level: 3
+        is_total: false
+      - id: '6558'
+        name: 1 ano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6559'
+        name: 2 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6560'
+        name: 3 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6561'
+        name: 4 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93084'
+        name: 5 a 9 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6562'
+        name: 5 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6563'
+        name: 6 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6564'
+        name: 7 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6565'
+        name: 8 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6566'
+        name: 9 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93085'
+        name: 10 a 14 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6567'
+        name: 10 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6568'
+        name: 11 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6569'
+        name: 12 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6570'
+        name: 13 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6571'
+        name: 14 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93086'
+        name: 15 a 19 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6572'
+        name: 15 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6573'
+        name: 16 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6574'
+        name: 17 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6575'
+        name: 18 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6576'
+        name: 19 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93087'
+        name: 20 a 24 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6577'
+        name: 20 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6578'
+        name: 21 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6579'
+        name: 22 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6580'
+        name: 23 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6581'
+        name: 24 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93088'
+        name: 25 a 29 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6582'
+        name: 25 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6656'
+        name: 26 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6657'
+        name: 27 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6658'
+        name: 28 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6659'
+        name: 29 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93089'
+        name: 30 a 34 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6583'
+        name: 30 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6584'
+        name: 31 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6585'
+        name: 32 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6586'
+        name: 33 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6587'
+        name: 34 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93090'
+        name: 35 a 39 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6588'
+        name: 35 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6589'
+        name: 36 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6590'
+        name: 37 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6591'
+        name: 38 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6592'
+        name: 39 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93091'
+        name: 40 a 44 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6593'
+        name: 40 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6594'
+        name: 41 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6595'
+        name: 42 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6596'
+        name: 43 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6597'
+        name: 44 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93092'
+        name: 45 a 49 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6598'
+        name: 45 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6599'
+        name: 46 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6600'
+        name: 47 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6601'
+        name: 48 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6602'
+        name: 49 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93093'
+        name: 50 a 54 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6603'
+        name: 50 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6604'
+        name: 51 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6605'
+        name: 52 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6606'
+        name: 53 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6607'
+        name: 54 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93094'
+        name: 55 a 59 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6608'
+        name: 55 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6609'
+        name: 56 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6610'
+        name: 57 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6611'
+        name: 58 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6612'
+        name: 59 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93095'
+        name: 60 a 64 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6613'
+        name: 60 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6614'
+        name: 61 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6615'
+        name: 62 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6616'
+        name: 63 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6617'
+        name: 64 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93096'
+        name: 65 a 69 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6618'
+        name: 65 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6619'
+        name: 66 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6620'
+        name: 67 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6621'
+        name: 68 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6622'
+        name: 69 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93097'
+        name: 70 a 74 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6623'
+        name: 70 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6624'
+        name: 71 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6625'
+        name: 72 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6626'
+        name: 73 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6627'
+        name: 74 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '93098'
+        name: 75 a 79 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6628'
+        name: 75 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6629'
+        name: 76 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6630'
+        name: 77 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6631'
+        name: 78 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6632'
+        name: 79 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '49108'
+        name: 80 a 84 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6633'
+        name: 80 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6634'
+        name: 81 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6635'
+        name: 82 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6636'
+        name: 83 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6637'
+        name: 84 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '49109'
+        name: 85 a 89 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6638'
+        name: 85 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6639'
+        name: 86 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6640'
+        name: 87 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6641'
+        name: 88 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6642'
+        name: 89 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '60040'
+        name: 90 a 94 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6643'
+        name: 90 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6644'
+        name: 91 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6645'
+        name: 92 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6646'
+        name: 93 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6647'
+        name: 94 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '60041'
+        name: 95 a 99 anos
+        unit: null
+        level: 1
+        is_total: false
+      - id: '6648'
+        name: 95 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6649'
+        name: 96 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6650'
+        name: 97 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6651'
+        name: 98 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6652'
+        name: 99 anos
+        unit: null
+        level: 2
+        is_total: false
+      - id: '6653'
+        name: 100 anos ou mais
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2010'
+    - '2022'
+    period_modified:
+      '2010': 22/12/2023
+      '2022': 22/12/2023
+    n_localities: 5570
+    status: verified
+  '9860':
+    id: 9860
+    role: sanitation.census2022.household_panel
+    why: Households and residents by dwelling type, water, bathroom, sewage and urban/rural location,
+      2010 and 2022. The single table that supports a like-for-like 2010-2022 sanitation comparison.
+    purpose: modeling
+    tags:
+    - sanitation
+    - census2010
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '381'
+    - '382'
+    note: null
+    name: Domicílios particulares permanentes ocupados, total e com pelo menos um morador indígena, e
+      moradores, total e indígenas, em domicílios particulares permanentes ocupados, por tipo de domicílio,
+      existência de ligação à rede geral de distribuição de água e principal forma de abastecimento de
+      água, existência de canalização de água, existência de banheiro ou sanitário e número de banheiros
+      de uso exclusivo do domicílio, tipo de esgotamento sanitário e localização do domicílio
+    survey: Censo Demográfico
+    subject: Domicílios
+    url: https://sidra.ibge.gov.br/tabela/9860
+    periodicity:
+      frequency: anual
+      start: 2010
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+      Especial:
+      - N134
+      - N131
+    variables:
+    - id: '381'
+      name: Domicílios particulares permanentes ocupados
+      unit: Domicílios
+    - id: '1000381'
+      name: Domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    - id: '7088'
+      name: Domicílios particulares permanentes ocupados com pelo menos um morador indígena
+      unit: Domicílios
+    - id: '1007088'
+      name: Domicílios particulares permanentes ocupados com pelo menos um morador indígena - percentual
+        do total geral
+      unit: '%'
+    - id: '382'
+      name: Moradores em domicílios particulares permanentes ocupados
+      unit: Pessoas
+    - id: '1000382'
+      name: Moradores em domicílios particulares permanentes ocupados - percentual do total geral
+      unit: '%'
+    - id: '8691'
+      name: Moradores indígenas em domicílios particulares permanentes ocupados
+      unit: Pessoas
+    - id: '1008691'
+      name: Moradores indígenas em domicílios particulares permanentes ocupados - percentual do total
+        geral
+      unit: '%'
+    classifications:
+    - id: '125'
+      name: Tipo de domicílio
+      n_categories: 7
+      categories:
+      - id: '2932'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '6815'
+        name: Casa
+        unit: null
+        level: 1
+        is_total: false
+      - id: '121264'
+        name: Casa de vila ou em condomínio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '3247'
+        name: Apartamento
+        unit: null
+        level: 1
+        is_total: false
+      - id: '71975'
+        name: Habitação em casa de cômodos ou cortiço
+        unit: null
+        level: 1
+        is_total: false
+      - id: '71976'
+        name: Habitação indígena sem paredes ou maloca
+        unit: null
+        level: 1
+        is_total: false
+      - id: '71977'
+        name: Estrutura residencial permanente degradada ou inacabada
+        unit: null
+        level: 1
+        is_total: false
+    - id: '1821'
+      name: Existência de ligação à rede geral de distribuição de água e principal forma de abastecimento
+        de água
+      n_categories: 18
+      categories:
+      - id: '72129'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72144'
+        name: Possui ligação à rede geral e a utiliza como forma principal
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72145'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72146'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72147'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático
+          ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72148'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou
+          mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72149'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72150'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72151'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Rios, açudes, córregos,
+          lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72152'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72153'
+        name: Não possui ligação com a rede geral
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72154'
+        name: Não possui ligação com a rede geral - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72155'
+        name: Não possui ligação com a rede geral - Poço raso, freático ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72156'
+        name: Não possui ligação com a rede geral - Fonte, nascente ou mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72157'
+        name: Não possui ligação com a rede geral - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72158'
+        name: Não possui ligação com a rede geral - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72159'
+        name: Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72160'
+        name: Não possui ligação com a rede geral - Outra
+        unit: null
+        level: 2
+        is_total: false
+    - id: '1817'
+      name: Existência de canalização de água
+      n_categories: 4
+      categories:
+      - id: '72125'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72126'
+        name: Canalizada até dentro da casa, apartamento ou habitação
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72127'
+        name: Canalizada, mas apenas no terreno
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72128'
+        name: Sem água canalizada
+        unit: null
+        level: 1
+        is_total: false
+    - id: '458'
+      name: Existência de banheiro ou sanitário e número de banheiros de uso exclusivo do domicílio
+      n_categories: 9
+      categories:
+      - id: '72117'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '12032'
+        name: Tinham banheiro de uso exclusivo do domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12033'
+        name: Tinham banheiro de uso exclusivo do domicílio - 1 banheiro
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12034'
+        name: Tinham banheiro de uso exclusivo do domicílio - 2 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12035'
+        name: Tinham banheiro de uso exclusivo do domicílio - 3 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12036'
+        name: Tinham banheiro de uso exclusivo do domicílio - 4 banheiros ou mais
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72118'
+        name: Apenas banheiro de uso comum a mais de um domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72119'
+        name: Apenas sanitário ou buraco para dejeções, inclusive os localizados no terreno
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12046'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '11558'
+      name: Tipo de esgotamento sanitário
+      n_categories: 10
+      categories:
+      - id: '46292'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '46290'
+        name: Rede geral, rede pluvial ou fossa ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72110'
+        name: Rede geral ou pluvial
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72111'
+        name: Fossa séptica ou fossa filtro ligada à rede
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72112'
+        name: Fossa séptica ou fossa filtro não ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72113'
+        name: Fossa rudimentar ou buraco
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92858'
+        name: Vala
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72114'
+        name: Rio, lago, córrego ou mar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72115'
+        name: Outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92861'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '2661'
+      name: Localização do domicílio
+      n_categories: 3
+      categories:
+      - id: '32776'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '12869'
+        name: Em terras indígenas
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12870'
+        name: Fora de terras indígenas
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2010'
+    - '2022'
+    period_modified:
+      '2010': 04/10/2024
+      '2022': 04/10/2024
+    n_localities: 5570
+    status: verified
+  '9883':
+    id: 9883
+    role: favelas.census2022.count_by_municipality
+    why: Number of favelas and urban communities per municipality, Censo 2022. The entry point to the
+      Favelas e Comunidades Urbanas family, which postdates SIDRA_COMPENDIUM.md and was located by name
+      search against the live catalogue.
+    purpose: modeling
+    tags:
+    - favela
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables:
+    - '9910'
+    note: Covers only the 656 municipalities with at least one favela. A municipality absent from this
+      table has none; fill zero, not null.
+    name: Número de favelas e comunidades urbanas, segundo os Municípios
+    survey: Censo Demográfico
+    subject: Território
+    url: https://sidra.ibge.gov.br/tabela/9883
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9910'
+      name: Número de favelas e comunidades urbanas
+      unit: Unidades
+    classifications: []
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 08/11/2024
+    n_localities: 656
+    status: verified
+  '9887':
+    id: 9887
+    role: favelas.census2022.households_population
+    why: Dwellings and resident population per favela, by dwelling species.
+    purpose: modeling
+    tags:
+    - favela
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: Published at N6, but only for the 656 municipalities that have at least one favela. Absence
+      from this table means 'no favela', not 'missing'; joining it to the 5570-municipality lattice must
+      fill zero, not null.
+    name: Domicílios e população residente em favelas e comunidades urbanas, por espécie de domicílio,
+      segundo as Favelas e Comunidades Urbanas
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/9887
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9909'
+      name: Domicílios em favelas e comunidades urbanas
+      unit: Domicílios
+    - id: '1009909'
+      name: Domicílios em favelas e comunidades urbanas - percentual do total geral
+      unit: '%'
+    - id: '9612'
+      name: População residente em favelas e comunidades urbanas
+      unit: Pessoas
+    - id: '1009612'
+      name: População residente em favelas e comunidades urbanas - percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '3'
+      name: Espécie
+      n_categories: 13
+      categories:
+      - id: '59993'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '9697'
+        name: Particular
+        unit: null
+        level: 1
+        is_total: false
+      - id: '2504'
+        name: Particular permanente
+        unit: null
+        level: 2
+        is_total: false
+      - id: '59998'
+        name: Particular permanente ocupado
+        unit: null
+        level: 3
+        is_total: false
+      - id: '59999'
+        name: Particular permanente ocupado - com entrevista
+        unit: null
+        level: 4
+        is_total: false
+      - id: '60000'
+        name: Particular permanente ocupado - sem entrevista
+        unit: null
+        level: 4
+        is_total: false
+      - id: '60001'
+        name: Particular permanente não ocupado
+        unit: null
+        level: 3
+        is_total: false
+      - id: '60002'
+        name: Particular permanente não ocupado - vago
+        unit: null
+        level: 4
+        is_total: false
+      - id: '60003'
+        name: Particular permanente não ocupado - uso ocasional
+        unit: null
+        level: 4
+        is_total: false
+      - id: '2505'
+        name: Particular improvisado
+        unit: null
+        level: 2
+        is_total: false
+      - id: '103995'
+        name: Coletivo
+        unit: null
+        level: 1
+        is_total: false
+      - id: '10004'
+        name: Coletivo - com morador
+        unit: null
+        level: 2
+        is_total: false
+      - id: '10005'
+        name: Coletivo - sem morador
+        unit: null
+        level: 2
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 17/04/2025
+    n_localities: 656
+    status: verified
+  '9888':
+    id: 9888
+    role: favelas.census2022.population_area_density
+    why: Population, area and demographic density per favela. Crowding proxy.
+    purpose: modeling
+    tags:
+    - favela
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: Published at N6 for the 655-656 municipalities that have a favela; absent means 'no favela',
+      not 'missing'.
+    name: População residente, Área territorial e Densidade demográfica em favelas e comunidades urbanas,
+      segundo as Favelas e Comunidades Urbanas
+    survey: Censo Demográfico
+    subject: Território
+    url: https://sidra.ibge.gov.br/tabela/9888
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9612'
+      name: População residente em favelas e comunidades urbanas
+      unit: Pessoas
+    - id: '9911'
+      name: Área territorial de favelas e comunidades urbanas
+      unit: Quilômetros quadrados
+    - id: '13096'
+      name: Densidade demográfica em favelas e comunidades urbanas
+      unit: Habitante por quilômetro quadrado
+    classifications: []
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 17/04/2025
+    n_localities: 656
+    status: verified
+  '9892':
+    id: 9892
+    role: favelas.census2022.bathroom_sewage
+    why: Households in favelas by bathroom availability and sewage type.
+    purpose: modeling
+    tags:
+    - favela
+    - sanitation
+    - sewage
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: Published at N6 for the 655-656 municipalities that have a favela; absent means 'no favela',
+      not 'missing'.
+    name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas, por existência
+      de banheiro ou sanitário e número de banheiros de uso exclusivo do domicílio e tipo de esgotamento
+      sanitário, segundo as Favelas e Comunidades Urbanas
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/9892
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas
+      unit: Domicílios
+    - id: '1009913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas - percentual
+        do total geral
+      unit: '%'
+    classifications:
+    - id: '458'
+      name: Existência de banheiro ou sanitário e número de banheiros de uso exclusivo do domicílio
+      n_categories: 9
+      categories:
+      - id: '72117'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '12032'
+        name: Tinham banheiro de uso exclusivo do domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12033'
+        name: Tinham banheiro de uso exclusivo do domicílio - 1 banheiro
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12034'
+        name: Tinham banheiro de uso exclusivo do domicílio - 2 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12035'
+        name: Tinham banheiro de uso exclusivo do domicílio - 3 banheiros
+        unit: null
+        level: 2
+        is_total: false
+      - id: '12036'
+        name: Tinham banheiro de uso exclusivo do domicílio - 4 banheiros ou mais
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72118'
+        name: Apenas banheiro de uso comum a mais de um domicílio
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72119'
+        name: Apenas sanitário ou buraco para dejeções, inclusive os localizados no terreno
+        unit: null
+        level: 1
+        is_total: false
+      - id: '12046'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '11558'
+      name: Tipo de esgotamento sanitário
+      n_categories: 10
+      categories:
+      - id: '46292'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '46290'
+        name: Rede geral, rede pluvial ou fossa ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72110'
+        name: Rede geral ou pluvial
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72111'
+        name: Fossa séptica ou fossa filtro ligada à rede
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72112'
+        name: Fossa séptica ou fossa filtro não ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72113'
+        name: Fossa rudimentar ou buraco
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92858'
+        name: Vala
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72114'
+        name: Rio, lago, córrego ou mar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72115'
+        name: Outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92861'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 17/04/2025
+    n_localities: 655
+    status: verified
+  '9893':
+    id: 9893
+    role: favelas.census2022.refuse
+    why: Households in favelas by refuse destination.
+    purpose: modeling
+    tags:
+    - favela
+    - sanitation
+    - refuse
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: Published at N6 for the 655-656 municipalities that have a favela; absent means 'no favela',
+      not 'missing'.
+    name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas, por destino do
+      lixo, segundo as Favelas e Comunidades Urbanas
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/9893
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas
+      unit: Domicílios
+    - id: '1009913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas - percentual
+        do total geral
+      unit: '%'
+    classifications:
+    - id: '67'
+      name: Destino do lixo
+      n_categories: 8
+      categories:
+      - id: '10972'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '2520'
+        name: Coletado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72120'
+        name: Coletado no domicílio por serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72121'
+        name: Depositado em caçamba de serviço de limpeza
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72122'
+        name: Queimado na propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72123'
+        name: Enterrado na propriedade
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72124'
+        name: Jogado em terreno baldio, encosta ou área pública
+        unit: null
+        level: 1
+        is_total: false
+      - id: '1091'
+        name: Outro destino
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 17/04/2025
+    n_localities: 655
+    status: verified
+  '9894':
+    id: 9894
+    role: favelas.census2022.water_network
+    why: Households in favelas by connection to the general water network.
+    purpose: modeling
+    tags:
+    - favela
+    - sanitation
+    - water
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: Published at N6 for the 655-656 municipalities that have a favela; absent means 'no favela',
+      not 'missing'.
+    name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas, por existência
+      de ligação à rede geral de distribuição de água e principal forma de abastecimento de água, segundo
+      as Favelas e Comunidades Urbanas
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/9894
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '9913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas
+      unit: Domicílios
+    - id: '1009913'
+      name: Domicílios particulares permanentes ocupados em favelas e comunidades urbanas - percentual
+        do total geral
+      unit: '%'
+    classifications:
+    - id: '1821'
+      name: Existência de ligação à rede geral de distribuição de água e principal forma de abastecimento
+        de água
+      n_categories: 18
+      categories:
+      - id: '72129'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72144'
+        name: Possui ligação à rede geral e a utiliza como forma principal
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72145'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72146'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72147'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Poço raso, freático
+          ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72148'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Fonte, nascente ou
+          mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72149'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72150'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72151'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Rios, açudes, córregos,
+          lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72152'
+        name: Possui ligação à rede geral, mas utiliza principalmente outra forma - Outra
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72153'
+        name: Não possui ligação com a rede geral
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72154'
+        name: Não possui ligação com a rede geral - Poço profundo ou artesiano
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72155'
+        name: Não possui ligação com a rede geral - Poço raso, freático ou cacimba
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72156'
+        name: Não possui ligação com a rede geral - Fonte, nascente ou mina
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72157'
+        name: Não possui ligação com a rede geral - Carro-pipa
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72158'
+        name: Não possui ligação com a rede geral - Água da chuva armazenada
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72159'
+        name: Não possui ligação com a rede geral - Rios, açudes, córregos, lagos e igarapés
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72160'
+        name: Não possui ligação com a rede geral - Outra
+        unit: null
+        level: 2
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 17/04/2025
+    n_localities: 655
+    status: verified
+  '10344':
+    id: 10344
+    role: favelas.census2022.sewage_in_out
+    why: Households by sewage type inside versus outside favelas, for municipalities that have them. Gives
+      the within-municipality contrast that the N6 aggregates cannot.
+    purpose: modeling
+    tags:
+    - favela
+    - sanitation
+    - sewage
+    - census2022
+    - exposure
+    intended_level: N6
+    expect_variables: []
+    note: null
+    name: Domicílios particulares permanentes ocupados e moradores em domicílios particulares permanentes
+      ocupados em setores censitários selecionados para a Pesquisa Urbanística do Entorno dos Domicílios,
+      por tipo de esgotamento sanitário e existência e características do entorno, em Favelas e Comunidades
+      Urbanas e fora de Favelas e Comunidades Urbanas - Municípios com presença de Favelas e Comunidades
+      Urbanas
+    survey: Censo Demográfico
+    subject: Características do domicílio
+    url: https://sidra.ibge.gov.br/tabela/10344
+    periodicity:
+      frequency: anual
+      start: 2022
+      end: 2022
+    geographic_levels:
+      Administrativo:
+      - N1
+      - N2
+      - N6
+      - N3
+    variables:
+    - id: '13548'
+      name: Domicílios particulares permanentes ocupados em setores censitários selecionados para a Pesquisa
+        Urbanística do Entorno dos Domicílios em Favelas e Comunidades Urbanas
+      unit: Domicílios
+    - id: '1013548'
+      name: Domicílios particulares permanentes ocupados em setores censitários selecionados para a Pesquisa
+        Urbanística do Entorno dos Domicílios em Favelas e Comunidades Urbanas - percentual do total geral
+      unit: '%'
+    - id: '13549'
+      name: Domicílios particulares permanentes ocupados em setores censitários selecionados para a Pesquisa
+        Urbanística do Entorno dos Domicílios fora de Favelas e Comunidades Urbanas
+      unit: Domicílios
+    - id: '1013549'
+      name: Domicílios particulares permanentes ocupados em setores censitários selecionados para a Pesquisa
+        Urbanística do Entorno dos Domicílios fora de Favelas e Comunidades Urbanas - percentual do total
+        geral
+      unit: '%'
+    - id: '13550'
+      name: Moradores em domicílios particulares permanentes ocupados em setores censitários selecionados
+        para a Pesquisa Urbanística do Entorno dos Domicílios em Favelas e Comunidades Urbanas
+      unit: Pessoas
+    - id: '1013550'
+      name: Moradores em domicílios particulares permanentes ocupados em setores censitários selecionados
+        para a Pesquisa Urbanística do Entorno dos Domicílios em Favelas e Comunidades Urbanas - percentual
+        do total geral
+      unit: '%'
+    - id: '13551'
+      name: Moradores em domicílios particulares permanentes ocupados em setores censitários selecionados
+        para a Pesquisa Urbanística do Entorno dos Domicílios fora de Favelas e Comunidades Urbanas
+      unit: Pessoas
+    - id: '1013551'
+      name: Moradores em domicílios particulares permanentes ocupados em setores censitários selecionados
+        para a Pesquisa Urbanística do Entorno dos Domicílios fora de Favelas e Comunidades Urbanas -
+        percentual do total geral
+      unit: '%'
+    classifications:
+    - id: '11558'
+      name: Tipo de esgotamento sanitário
+      n_categories: 10
+      categories:
+      - id: '46292'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '46290'
+        name: Rede geral, rede pluvial ou fossa ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72110'
+        name: Rede geral ou pluvial
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72111'
+        name: Fossa séptica ou fossa filtro ligada à rede
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72112'
+        name: Fossa séptica ou fossa filtro não ligada à rede
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72113'
+        name: Fossa rudimentar ou buraco
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92858'
+        name: Vala
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72114'
+        name: Rio, lago, córrego ou mar
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72115'
+        name: Outra forma
+        unit: null
+        level: 1
+        is_total: false
+      - id: '92861'
+        name: Não tinham banheiro nem sanitário
+        unit: null
+        level: 1
+        is_total: false
+    - id: '14'
+      name: Características do entorno
+      n_categories: 36
+      categories:
+      - id: '200'
+        name: Total
+        unit: null
+        level: 0
+        is_total: true
+      - id: '72240'
+        name: Capacidade máxima de circulação da via - Caminhão ou ônibus
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72241'
+        name: Capacidade máxima de circulação da via - Carro ou van
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72242'
+        name: Capacidade máxima de circulação da via - Motocicletas, bicicletas e pedestres
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72243'
+        name: Capacidade de circulação da via - Aquavias
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72244'
+        name: Capacidade de circulação da via - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72246'
+        name: Via pavimentada - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72247'
+        name: Via pavimentada - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72248'
+        name: Via pavimentada - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72250'
+        name: Existência de bueiro / boca de lobo - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72251'
+        name: Existência de bueiro / boca de lobo - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72252'
+        name: Existência de bueiro / boca de lobo - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72254'
+        name: Existência de iluminação pública - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72255'
+        name: Existência de iluminação pública - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72256'
+        name: Existência de iluminação pública - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72258'
+        name: Existência de ponto de ônibus / van - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72259'
+        name: Existência de ponto de ônibus / van - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72260'
+        name: Existência de ponto de ônibus / van - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72262'
+        name: Existência de via sinalizada para bicicleta - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72263'
+        name: Existência de via sinalizada para bicicleta - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72264'
+        name: Existência de via sinalizada para bicicleta - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72266'
+        name: Existência de calçada / passeio - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72267'
+        name: Existência de calçada / passeio - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72268'
+        name: Existência de calçada / passeio - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72270'
+        name: Existência de obstáculo na calçada - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72271'
+        name: Existência de obstáculo na calçada - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72272'
+        name: Existência de obstáculo na calçada - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72274'
+        name: Existência de rampa para cadeirante - Existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72275'
+        name: Existência de rampa para cadeirante - Não existe
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72276'
+        name: Existência de rampa para cadeirante - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72278'
+        name: Arborização - Sem árvores
+        unit: null
+        level: 1
+        is_total: false
+      - id: '50653'
+        name: Arborização - Com árvores
+        unit: null
+        level: 1
+        is_total: false
+      - id: '72279'
+        name: Arborização - De 1 a 2 árvores
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72280'
+        name: Arborização - De 3 a 4 árvores
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72281'
+        name: Arborização - 5 ou mais árvores
+        unit: null
+        level: 2
+        is_total: false
+      - id: '72282'
+        name: Arborização - Não declarado
+        unit: null
+        level: 1
+        is_total: false
+    periods:
+    - '2022'
+    period_modified:
+      '2022': 18/12/2025
+    n_localities: 656
+    status: verified

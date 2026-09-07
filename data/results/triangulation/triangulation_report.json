@@ -1,0 +1,111 @@
+{
+  "numerator_invariance": {
+    "sim_per_sinan_death_national": 0.9949305294780323,
+    "sim_per_sinan_death_by_stratum": [
+      1.0516129032258064,
+      0.9322459222082811,
+      0.9505263157894737,
+      1.0373563218390804,
+      1.0031965903036761
+    ],
+    "spearman_H_vs_sim_per_sinan_ratio": 0.07351498817925575,
+    "n_regions_for_ratio": 84,
+    "spearman_H_vs_sinan_death_rate_per_capita": -0.0602172499341233,
+    "spearman_H_vs_sim_death_rate_per_capita": -0.0789057465822301
+  },
+  "threshold_sweep": [
+    {
+      "min_hosp_known": 0,
+      "regions": 425,
+      "cases": 60046,
+      "cfr_Q1": 0.028054298642533938,
+      "cfr_Q5": 0.1668296151453204,
+      "cfr_ratio_Q5_Q1": 5.946668539857389,
+      "incidence_Q1": 3.489819025302566,
+      "incidence_Q5": 0.9737014726732799,
+      "incidence_ratio_Q1_Q5": 3.584074917460411,
+      "sim_Q1_per_1m": 0.9704691651016264,
+      "sim_Q5_per_1m": 1.4419818112809957,
+      "sim_ratio_Q1_Q5": 0.6730106839832485,
+      "sim_min_per_1m": 0.9704691651016264,
+      "sim_max_per_1m": 1.9967803797001515
+    },
+    {
+      "min_hosp_known": 10,
+      "regions": 264,
+      "cases": 58962,
+      "cfr_Q1": 0.02701702442635085,
+      "cfr_Q5": 0.16727075027183763,
+      "cfr_ratio_Q5_Q1": 6.191309140198703,
+      "incidence_Q1": 5.496597522997107,
+      "incidence_Q5": 1.1111427668375715,
+      "incidence_ratio_Q1_Q5": 4.946796835694659,
+      "sim_Q1_per_1m": 1.4128341246381793,
+      "sim_Q5_per_1m": 1.64623657336812,
+      "sim_ratio_Q1_Q5": 0.8582205908277141,
+      "sim_min_per_1m": 1.4128341246381793,
+      "sim_max_per_1m": 2.13480980312522
+    },
+    {
+      "min_hosp_known": 20,
+      "regions": 204,
+      "cases": 57664,
+      "cfr_Q1": 0.026701767581797667,
+      "cfr_Q5": 0.16838296688004453,
+      "cfr_ratio_Q5_Q1": 6.306060689211809,
+      "incidence_Q1": 5.99969486443449,
+      "incidence_Q5": 1.1765328832435402,
+      "incidence_ratio_Q1_Q5": 5.099470613939962,
+      "sim_Q1_per_1m": 1.530316766879398,
+      "sim_Q5_per_1m": 1.7378839083460784,
+      "sim_ratio_Q1_Q5": 0.880563287070067,
+      "sim_min_per_1m": 1.530316766879398,
+      "sim_max_per_1m": 2.2766611647678574
+    },
+    {
+      "min_hosp_known": 30,
+      "regions": 165,
+      "cases": 56332,
+      "cfr_Q1": 0.026772103658536585,
+      "cfr_Q5": 0.1692425109711887,
+      "cfr_ratio_Q5_Q1": 6.321599271009241,
+      "incidence_Q1": 6.527647101079916,
+      "incidence_Q5": 1.2268179797474457,
+      "incidence_ratio_Q1_Q5": 5.320795104766646,
+      "sim_Q1_per_1m": 1.675112032962161,
+      "sim_Q5_per_1m": 1.8155495964653292,
+      "sim_ratio_Q1_Q5": 0.9226473549515891,
+      "sim_min_per_1m": 1.675112032962161,
+      "sim_max_per_1m": 2.468439468701478
+    },
+    {
+      "min_hosp_known": 50,
+      "regions": 128,
+      "cases": 54212,
+      "cfr_Q1": 0.026521216973578864,
+      "cfr_Q5": 0.17126527394560503,
+      "cfr_ratio_Q5_Q1": 6.457670253828247,
+      "incidence_Q1": 6.611272508268433,
+      "incidence_Q5": 1.2742523068948823,
+      "incidence_ratio_Q1_Q5": 5.188354356900388,
+      "sim_Q1_per_1m": 1.7056108436564752,
+      "sim_Q5_per_1m": 1.8993614109933323,
+      "sim_ratio_Q1_Q5": 0.8979917322656729,
+      "sim_min_per_1m": 1.7056108436564752,
+      "sim_max_per_1m": 2.942031463962368
+    }
+  ],
+  "window": [
+    2008,
+    2024
+  ],
+  "regions_eligible": 165,
+  "cases": 56332,
+  "cfr_gradient_Q5_over_Q1": 6.321599271009241,
+  "sinan_incidence_gradient_Q1_over_Q5": 5.320795104766646,
+  "sih_admission_gradient_Q1_over_Q5": 2.63273588322356,
+  "sim_mortality_gradient_Q1_over_Q5": 0.9226473549515892,
+  "spearman_H_vs_sim_mortality": 0.03204225728387234,
+  "national_sim_deaths": 5299,
+  "national_sinan_deaths_in_window": 5326
+}

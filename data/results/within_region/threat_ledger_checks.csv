@@ -1,0 +1,9 @@
+threat,specification,or_per_10pp_H,or_lo,or_hi,p_value,region_years,regions,deaths,converged
+-,region FE + linear year (primary),1.2173120196406872,1.1518351351479295,1.2865109840319082,3.147065571082863e-12,1193,110,4800,true
+T5 shared secular trend,region FE + year FE,1.2325208611826988,1.1591703872308354,1.3105128374436543,2.419247963167638e-11,1193,110,4800,true
+T3 recording completeness,region FE + year + outcome & hospitalisation completeness,1.2138755893455555,1.14600406425445,1.2857667720119503,4.048324893116105e-11,1193,110,4800,true
+T4 case mix (confounders),region FE + year + age60 & male shares,1.208610392231827,1.1318326587069867,1.2905963341608544,1.5308401620421795e-8,1193,110,4800,true
+"T4 case mix (OVER-adjusted, lower bound)",region FE + year + age/sex + lab & severe shares (mediators),1.162873095247829,1.0705064271384943,1.2632094505643907,0.00035229643705871766,1193,110,4800,true
+T4 case mix (sample-matched baseline),"region FE + year, restricted to the case-mix sample",1.2173120196406872,1.1518351351479295,1.2865109840319082,3.147065571082863e-12,1193,110,4800,true
+T2 mechanism,hospitalised stratum only (d_hosp / hk_hosp),1.031965236838679,0.9672686262016071,1.1009891370357994,0.340831247932867,955,103,4354,true
+T2 mechanism,non-hospitalised stratum only (d_nonhosp / hk_nonhosp),1.3298044036902568,0.9491621951559314,1.8630954341617918,0.09757977670692046,327,56,77,true

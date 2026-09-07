@@ -1,0 +1,86 @@
+model,term,estimate,lower,upper,scale
+A_space_time,(Intercept),0.0892998581959728,0.0821877655673641,0.0969908909891326,odds of death at the national mean of every centred covariate
+A_space_time,phi (BYM2 mixing),0.87236625163037,0.665716224666513,0.979629710492161,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+A_space_time,spatial marginal variance,0.657004503058199,0.487331620211558,0.879178178136292,variance of the BYM2 field on the logit scale (= 1/precision)
+A_space_time,spatial marginal sd,0.81055814292264,0.698091412503805,0.937645017123374,sd of the BYM2 field on the logit scale
+A_space_time,rw1 year precision,15192.8601599106,86.23335403789,102084.10737757,precision
+A_space_time,empirical sd of region effects,0.617764154335072,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+A_space_time,DIC,9226.3773899488,,,information criterion
+A_space_time,WAIC,9293.77602871359,,,information criterion
+A_space_time,cells,4941,,,region-years
+A_space_time,deaths,5950,,,count
+A_space_time,trials,60998,,,count
+B_plus_H,(Intercept),0.0763870907607572,0.0704378802966418,0.0828040031735621,odds of death at the national mean of every centred covariate
+B_plus_H,H10,1.2343319028635,1.20750379028665,1.26175767351595,odds ratio per +10 percentage points
+B_plus_H,phi (BYM2 mixing),0.876937896915268,0.647261827560019,0.984274588653657,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+B_plus_H,spatial marginal variance,0.419034408622179,0.298311201696941,0.577505593214279,variance of the BYM2 field on the logit scale (= 1/precision)
+B_plus_H,spatial marginal sd,0.647328671249914,0.546178726880625,0.759937887734438,sd of the BYM2 field on the logit scale
+B_plus_H,rw1 year precision,287.20956527181,25.6361406447852,1446.2058612534,precision
+B_plus_H,empirical sd of region effects,0.472839763388123,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+B_plus_H,DIC,8890.59502786982,,,information criterion
+B_plus_H,WAIC,8927.0625948348,,,information criterion
+B_plus_H,cells,4941,,,region-years
+B_plus_H,deaths,5950,,,count
+B_plus_H,trials,60998,,,count
+C_plus_case_mix,(Intercept),0.0755123925304334,0.0696086557280961,0.0818816834079963,odds of death at the national mean of every centred covariate
+C_plus_case_mix,H10,1.23089869598365,1.20332265772812,1.25910485223662,odds ratio per +10 percentage points
+C_plus_case_mix,age60_10,1.08206122689898,1.05234203369167,1.1126220847172,odds ratio per +10 percentage points
+C_plus_case_mix,male_10,0.983877307764281,0.96002198248819,1.00833077026744,odds ratio per +10 percentage points
+C_plus_case_mix,phi (BYM2 mixing),0.883803415762873,0.662846425522696,0.985558705196053,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+C_plus_case_mix,spatial marginal variance,0.420819201870294,0.300203193099232,0.5785632913934,variance of the BYM2 field on the logit scale (= 1/precision)
+C_plus_case_mix,spatial marginal sd,0.648705789915809,0.547908015180679,0.760633480326366,sd of the BYM2 field on the logit scale
+C_plus_case_mix,rw1 year precision,335.948101018454,26.5197841912203,1716.35868542067,precision
+C_plus_case_mix,empirical sd of region effects,0.476586453532438,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+C_plus_case_mix,DIC,8863.78833384185,,,information criterion
+C_plus_case_mix,WAIC,8898.786549916,,,information criterion
+C_plus_case_mix,cells,4941,,,region-years
+C_plus_case_mix,deaths,5950,,,count
+C_plus_case_mix,trials,60998,,,count
+D_complete_outcomes,(Intercept),0.075725262204317,0.0690436373120824,0.0830043602057744,odds of death at the national mean of every centred covariate
+D_complete_outcomes,H10,1.23082031728006,1.19488007471377,1.26782425106254,odds ratio per +10 percentage points
+D_complete_outcomes,age60_10,1.06900986890334,1.03508113785381,1.10405224056805,odds ratio per +10 percentage points
+D_complete_outcomes,male_10,0.9760659295919,0.948524772787326,1.0044117115871,odds ratio per +10 percentage points
+D_complete_outcomes,phi (BYM2 mixing),0.780544917184679,0.448959583896768,0.966444291206504,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+D_complete_outcomes,spatial marginal variance,0.381511191279483,0.255649749704692,0.551871881558202,variance of the BYM2 field on the logit scale (= 1/precision)
+D_complete_outcomes,spatial marginal sd,0.617665922064252,0.505618185694197,0.742880799023775,sd of the BYM2 field on the logit scale
+D_complete_outcomes,rw1 year precision,221.090720448488,21.7164326080779,996.936157240122,precision
+D_complete_outcomes,empirical sd of region effects,0.423630457507255,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+D_complete_outcomes,DIC,5391.06798067917,,,information criterion
+D_complete_outcomes,WAIC,5411.72453723198,,,information criterion
+D_complete_outcomes,cells,3565,,,region-years
+D_complete_outcomes,deaths,2612,,,count
+D_complete_outcomes,trials,33384,,,count
+E_within_hospitalised,(Intercept),0.115647496937754,0.106226240293353,0.125854476243072,odds of death at the national mean of every centred covariate
+E_within_hospitalised,H10,1.04438211550139,1.01849946075563,1.07091528301252,odds ratio per +10 percentage points
+E_within_hospitalised,age60_10,1.07768091856822,1.04720844641464,1.1090416439023,odds ratio per +10 percentage points
+E_within_hospitalised,male_10,0.978638002636462,0.954221903961204,1.00368273468112,odds ratio per +10 percentage points
+E_within_hospitalised,phi (BYM2 mixing),0.868015519182546,0.626764887131098,0.98283647101605,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+E_within_hospitalised,spatial marginal variance,0.416845713116206,0.295120266247844,0.57702113667654,variance of the BYM2 field on the logit scale (= 1/precision)
+E_within_hospitalised,spatial marginal sd,0.645635898255515,0.543249727333428,0.759619073402281,sd of the BYM2 field on the logit scale
+E_within_hospitalised,rw1 year precision,131.058667553175,19.7965670252484,515.349229861768,precision
+E_within_hospitalised,empirical sd of region effects,0.472968679599921,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+E_within_hospitalised,DIC,8606.04609935103,,,information criterion
+E_within_hospitalised,WAIC,8639.98369919501,,,information criterion
+E_within_hospitalised,cells,4624,,,region-years
+E_within_hospitalised,deaths,5642,,,count
+E_within_hospitalised,trials,42579,,,count
+F_hosp_known_ge10,(Intercept),0.0756583145576365,0.064943580557592,0.0879572505915447,odds of death at the national mean of every centred covariate
+F_hosp_known_ge10,H10,1.24268221785468,1.20357113520613,1.28303718066761,odds ratio per +10 percentage points
+F_hosp_known_ge10,age60_10,1.19976106678711,1.1305127907283,1.27328869342837,odds ratio per +10 percentage points
+F_hosp_known_ge10,male_10,0.961630126101418,0.915418324344522,1.0102168239817,odds ratio per +10 percentage points
+F_hosp_known_ge10,phi (BYM2 mixing),0.789086287871611,0.463122734330939,0.968825391218519,share of the SPATIAL EFFECT's marginal variance that is spatially structured
+F_hosp_known_ge10,spatial marginal variance,0.447563028466193,0.2925188417083,0.662702684067253,variance of the BYM2 field on the logit scale (= 1/precision)
+F_hosp_known_ge10,spatial marginal sd,0.669001516041775,0.540850110204574,0.814065528116289,sd of the BYM2 field on the logit scale
+F_hosp_known_ge10,rw1 year precision,318.846625053048,26.107548795308,1536.64767713573,precision
+F_hosp_known_ge10,empirical sd of region effects,0.636773692749441,,,"sd across regions with data, of posterior-mean BYM2 effects (logit scale)"
+F_hosp_known_ge10,DIC,4501.95115128075,,,information criterion
+F_hosp_known_ge10,WAIC,4526.4657719301,,,information criterion
+F_hosp_known_ge10,cells,1314,,,region-years
+F_hosp_known_ge10,deaths,4889,,,count
+F_hosp_known_ge10,trials,50634,,,count
+A_vs_B,spatial marginal variance absorbed by H,0.362204662720462,,,proportion; point comparison of posterior means from two separate fits
+A_vs_B,empirical spatial variance absorbed by H,0.414155208675104,,,"proportion; variance of posterior-mean region effects, A versus B"
+FE_region_year_H,H10,1.22733781402985,1.18440563466298,1.2718261933769,odds ratio per +10 percentage points; cluster-robust by health region
+FE_region_year_H_case_mix,H10,1.22193852759111,1.17774423055597,1.26779119478826,odds ratio per +10 percentage points; cluster-robust by health region
+FE_region_year_H_case_mix,age60_10,1.09128137796837,1.0544517744678,1.1293973557981,odds ratio per +10 percentage points; cluster-robust by health region
+FE_region_year_H_case_mix,male_10,0.988469359241898,0.958111114494987,1.01978952062893,odds ratio per +10 percentage points; cluster-robust by health region

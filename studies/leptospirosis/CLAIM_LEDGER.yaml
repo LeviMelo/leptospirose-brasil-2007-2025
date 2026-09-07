@@ -1,0 +1,623 @@
+schema: brepi.study.claim-ledger/1
+study: leptospirosis_brazil
+updated: 2026-07-31
+status_vocabulary:
+  validated_real_data: implemented and executed against the national data
+  implemented_tested: executable code with automated or synthetic tests
+  blocked: required evidence or inputs are absent; no scientific result exists
+claims:
+  - id: outcome_geography
+    status: validated_real_data
+    claim: Every confirmed record in-window is either resolved to the dated municipality lattice or retained in the unresolved-geography stratum.
+    evidence:
+      path: data/results/00_data_quality/sparsity.json
+      unresolved_path: data/interim/lept_confirmed_unresolved_geography.parquet
+      panel_mass_field: cases
+
+  - id: canonical_panel
+    status: validated_real_data
+    claim: Complete 2007-2025 municipality-month analytic spine.
+    evidence:
+      path: data/panel/lept_panel_rq1_socioeconomic_municipality_month.parquet
+      rows: 1269960
+      municipalities: 5570
+      required_columns:
+        - cases
+        - population
+        - precip_mm
+        - sanitation_sewer_share
+        - urban_share
+        - gdp_per_capita_asinh
+
+  - id: sanitation_backbone
+    status: validated_real_data
+    claim: Harmonised 2010/2022 public-or-stormwater sewer share.
+    evidence:
+      path: data/results/00_data_quality/lepto_sanitation_panel_quality.json
+      source_tables: [1394, 6805]
+      rejected_tables: [3154, 9860]
+      margin_mismatches: 0
+      territorial_proxy_anchors: 5
+
+  - id: territorial_change
+    status: implemented_tested
+    claim: Explicit transfer algebra and provenance for changing geographies.
+    evidence:
+      paths:
+        - brepi/geo/transfer.py
+        - docs/ADR-001-versioned-geographies.md
+      tests:
+        - tests/test_geo_transfer.py
+        - tests/test_lattice.py
+
+  - id: official_geometry_graph
+    status: validated_real_data
+    claim: Official 2022 municipal mesh and contracted health-region graph.
+    evidence:
+      geometry: data/panel/geo_municipality.gpkg
+      graph: data/panel/graphs/health_region.adj
+      health_regions: 439
+
+  - id: climate_block
+    status: validated_real_data
+    claim: National monthly rainfall block with typed source and territorial provenance.
+    evidence:
+      path: data/results/00_data_quality/lepto_climate_panel_quality.json
+      panel_column: precip_mm
+    limitation: >
+      Product-splice sensitivity is complete: the unspliced 2007-2023 and
+      calendar-2024 exclusion fits are recorded under the RQ1 claim below.
+
+  - id: statistical_engine
+    status: implemented_tested
+    claim: DLNM cross-basis, continuous effect modification, graph contraction, and INLA execution profiles.
+    evidence:
+      paths:
+        - R/02_crossbasis.R
+        - R/03_inla_spacetime.R
+        - R/00_io.R
+      validation_label: validation_only
+    limitation: A validation fit is an execution test, never a manuscript estimate.
+
+  - id: confirmatory_primary_model
+    status: validated_real_data
+    claim: Confirmatory health-region spatiotemporal DLNM.
+    required_columns:
+      - sanitation_sewer_share
+      - urban_share
+      - gdp_per_capita_asinh
+    evidence:
+      graph: data/panel/graphs/health_region.adj
+      outputs: data/results/rq1_exposure_response/health_region_confirmatory/
+      benchmark: docs/BREPI-001-model-benchmark.md
+    deferred_covariates:
+      - cnes_labs
+      - cnes_beds_per_1k
+      - notif_delay_median_days
+      - field_completeness
+    deferral_reason: Historical CNES is large and taxonomy/geography-unstable; it is optional ascertainment sensitivity, not required confounding control for the rainfall effect.
+    mechanistic_sensitivity:
+      - soil_moisture
+    adjustment_rationale: Soil moisture is downstream of rainfall and belongs in a mediation/mechanistic sensitivity; reporting-process measures may be consequences of floods or caseload and belong in the separate ascertainment model.
+    specification:
+      family: nbinomial
+      spatial: bym2_pc_priors
+      temporal: rw1_monthly
+      seasonal: cyclic_rw1
+      interaction: knorr_held_type_I
+      interaction_time_scale: year
+      interaction_rationale: >
+        The residual interaction is a nuisance term here, not the estimand. A
+        structured area-specific temporal random walk (type II) competes
+        directly with the rainfall signal it is meant to leave alone, and did
+        not converge in 2700 s against 227.8 s for type I on the same number of
+        interaction cells. Type I annual and monthly give near-identical
+        cross-basis coefficients, so the annual resolution loses no information.
+        No-interaction and type II remain prespecified sensitivities.
+    result:
+      profile: confirmatory
+      elapsed_seconds: 225.6
+      n_hyperpar: 6
+      vcov_route: correlation.matrix
+      dic: 119499.0
+      waic: 120111.6
+      log_score: 0.6066
+      n_cpo_failure: 0
+      exposure_scale: unit_relative_local_iqr_above_local_median
+      exposure_scale_note: >
+        NOT millimetres. Each health region is mapped to (x - unit median) /
+        unit IQR before one common basis is applied. National IQR distribution:
+        p10 81 mm, p50 126 mm, p90 211 mm.
+      cumulative_rr_p95_vs_median: 3.039
+      cumulative_rr_p95_ci: [2.829, 3.264]
+      cumulative_rr_p99_vs_median: 6.378
+      cumulative_rr_p99_ci: [5.732, 7.097]
+      peak_lag_months: 0
+      peak_lag_caveat: >
+        Almost certainly monthly aliasing rather than biology: incubation is
+        2-30 days and the Philippines DLNM places the peak at lag 2 weeks. A
+        monthly panel cannot resolve it. See BREPI-015.
+    remaining_gates: []
+    closed_gates:
+      BREPI-014: >
+        Exposure-scale wording enforced. The sentence is written once in
+        26_figures.R and reused, so no two figures can word it differently, and
+        it appears in DATA.md, RESULTS.md and every RQ1 caption.
+      BREPI-015: >
+        Lag-aliasing limitation stated wherever a lag is reported. Not removed
+        -- the panel grain is fixed by the outcome data -- but declared.
+      BREPI-016: >
+        Structural main effects declared not separately identified everywhere
+        they appear; the reported structural estimand is the cross-basis x
+        sanitation interaction, which is within-unit identified.
+      climate_product_splice_sensitivity: >
+        Two fits separating the splice from the 2024 Rio Grande do Sul outbreak:
+        unspliced 2007-2023 moves the estimate +4.9%, dropping calendar 2024
+        moves it +1.5%, both inside the 20% threshold declared before the run.
+        The outbreak accounts for about 30% of the movement; the splice does not
+        drive the estimand. BREPI-007 closed.
+      robustness_battery: >
+        Eight prespecified specifications fitted, largest movement 6.0% against
+        a 20% threshold, zero material. Knorr-Held type II reported as failed to
+        fit rather than omitted.
+    additional_evidence:
+      scale_comparison: data/results/rq1_exposure_response/multiscale/rq1_scale_comparison.csv
+      climate_splice: data/results/rq1_exposure_response/climate_splice/climate_splice_sensitivity.csv
+      enso_modulation: data/results/rq1_exposure_response/enso/enso_phase_exposure_response.csv
+      sensitivity_battery: data/results/rq1_exposure_response/health_region_sensitivity/rq1_sensitivity.csv
+    scale_caveat: >
+      The unit-relative exposure is NOT scale-invariant: a p95 anomaly is
+      defined against each unit's own IQR, so the same percentile denotes a
+      larger physical event at a coarser scale. The estimate rises monotonically
+      with aggregation (UF 3.466, microregion 3.172, immediate region 3.064,
+      health region 2.991; correlation with unit count -0.845), and that
+      movement is partly this redefinition rather than pure MAUP. The health
+      region gives both the narrowest interval and the most conservative point
+      estimate, so the primary scale is not the one that flatters the finding.
+    quotable_as_manuscript_estimate: true
+    quotable_rationale: >
+      The fit executes, converges and diagnoses cleanly with zero CPO failures;
+      the prespecified battery moved it by at most 6.0% against a declared 20%
+      threshold; the climate splice, the geography-assignment rule, ENSO phase
+      and the analytic scale have each been tested or bounded; and the three
+      wording obligations are enforced in the figures and the documents rather
+      than left to the writing.
+
+  - id: manuscript
+    status: blocked
+    claim: Submission-ready paper and reproducible tables/figures.
+    blockers:
+      - manuscript_drafting_and_reporting_review
+
+  # --- added in the descriptive-layer and RQ4 pass, 2026-07-31 ---
+
+  - id: line_level_extract
+    status: validated_real_data
+    claim: Complete decoded and code-translated SINAN-LEPT line level, 2007-2025.
+    evidence:
+      path: data/interim/lept_line_level.parquet
+      rows: 328984
+      columns: 293
+      retained_raw_code_columns: 71
+      decoded_or_derived_columns: 222
+      confirmed_cases: 66667
+      confirmation_ratio: 0.2026
+      column_audit: data/results/00_data_quality/lept_line_level_column_audit.csv
+    notes: >
+      Every year materialised from the already-cached .dbc bytes; the case
+      definition is CLASSI_FIN = confirmado. Discarded 238353, inconclusive
+      11699, unclassified 12265 -- reported rather than absorbed, because the
+      confirmed-to-notified ratio is itself the RQ3 signal.
+
+  - id: descriptive_burden
+    status: validated_real_data
+    claim: >
+      National and regional incidence, case fatality and trend with exact
+      intervals, and age-standardised rates against a stated standard.
+    evidence:
+      incidence_by_region: data/results/01_descriptive/T2a_incidence_by_region.csv
+      cfr_by_region: data/results/01_descriptive/T2c_cfr_by_region.csv
+      asr_by_region: data/results/01_descriptive/T4d_asr_by_region.csv
+      trend: data/results/01_descriptive/T3_trend.csv
+      standard: WHO World Standard (Ahmad 2001), collapsed to 17 groups
+      interval_method: exact gamma; Clopper-Pearson; Fay-Feuer for the ASR
+    key_values:
+      incidence_per_100k_py_South: 4.00
+      incidence_per_100k_py_North: 3.12
+      incidence_per_100k_py_Southeast: 1.34
+      incidence_per_100k_py_Northeast: 1.07
+      incidence_per_100k_py_Central_West: 0.38
+      cfr_known_pct_Northeast: 14.22
+      cfr_known_pct_Southeast: 13.30
+      cfr_known_pct_Central_West: 11.10
+      cfr_known_pct_South: 6.18
+      cfr_known_pct_North: 5.47
+      male_female_rate_ratio: 4.19
+      national_aapc_pct: -2.28
+      national_aapc_lo: -4.08
+      national_aapc_hi: -0.45
+    notes: >
+      Age standardisation moves regional rates by at most 5%, so the regional
+      contrast is not an age-structure artefact. Incidence and case fatality
+      rank almost inversely across regions, which is the descriptive form of
+      the RQ4 result.
+
+  - id: burden_concentration
+    status: validated_real_data
+    claim: The burden is extremely concentrated across municipalities.
+    evidence:
+      path: data/results/01_descriptive/T6a_concentration.csv
+      lorenz: data/results/01_descriptive/T6b_lorenz.csv
+    key_values:
+      municipalities: 5570
+      never_reporting: 2106
+      never_reporting_share: 0.3781
+      gini_of_case_counts: 0.8888
+      population_share_holding_half_the_cases: 0.1229
+      case_share_in_top_10pct_of_units: 0.4285
+    notes: >
+      Half the national case load arises in municipalities holding 12.3% of
+      the population. This is the quantitative argument for a spatial model
+      and against a pooled national rate.
+
+  - id: seasonality_circular
+    status: validated_real_data
+    claim: >
+      The Northeast peaks in June while every other macro-region peaks in
+      February or March.
+    evidence:
+      path: data/results/01_descriptive/T5_seasonality.csv
+      method: resultant vector of the monthly case composition
+    key_values:
+      peak_month_national: 3
+      peak_month_Northeast: 6
+      peak_month_North: 3
+      peak_month_South: 2
+      peak_month_Southeast: 2
+      peak_month_Central_West: 2
+      resultant_r_national: 0.2474
+      resultant_r_Northeast: 0.3815
+    notes: >
+      Computed circularly, so a December-January peak cannot average to
+      mid-year. The Rayleigh p-value is returned but explicitly labelled
+      descriptive: it treats each case as independent, which they are not.
+      Report r, not p. This contrast is what the RQ5 clustering recovers
+      unsupervised as regime 5.
+
+  - id: field_completeness
+    status: validated_real_data
+    claim: >
+      Coded-field completeness is low for several fields and drifts materially
+      over the study period.
+    evidence:
+      overall: data/results/01_descriptive/T7b_completeness_overall.csv
+      by_year: data/results/01_descriptive/T7a_completeness_by_year.csv
+      drift: data/results/01_descriptive/T7c_completeness_drift.csv
+    key_values:
+      evolucao_valid_2007: 0.453
+      evolucao_valid_2025: 0.705
+      tpautocto_missing: 0.990
+      con_ambien_missing: 0.791
+      doenca_tra_missing: 0.747
+      id_ocupa_n_usable: 0.321
+      classi_fin_valid: 0.963
+      cs_sexo_valid: 1.000
+    notes: >
+      Assessed on the raw codes, not the decoded labels, because a decoded
+      label cannot distinguish a blank field from a code the dictionary does
+      not contain. Four decode states are kept apart: missing, unknown,
+      invalid, valid. See BREPI-021 and BREPI-022.
+
+  - id: notification_delay
+    status: validated_real_data
+    claim: Onset-to-notification delay is short and stable across the period.
+    evidence:
+      overall: data/results/01_descriptive/T10a_delay_overall.csv
+      by_year: data/results/01_descriptive/T10b_delay_by_year.csv
+    key_values:
+      median_days: 7
+      p90_days: 21
+      p95_days: 34
+      out_of_range_dropped: 207
+    notes: >
+      Median 7 days in every year from 2007 to 2025. The right edge of the
+      panel is therefore materially complete within about a month of onset,
+      which is what makes 2025 quotable. Records with negative or >365-day
+      delays are dropped and counted, not silently retained.
+
+  - id: rq4_lethality_determinants
+    status: validated_real_data
+    quotable_as_manuscript_estimate: true
+    claim: >
+      The determinants of leptospirosis lethality are distinct from the
+      determinants of its incidence.
+    evidence:
+      comparison: data/results/rq4_lethality/rq4_determinant_comparison.csv
+      primary: data/results/rq4_lethality/rq4_primary_odds.csv
+      health_system: data/results/rq4_lethality/rq4_health_system_odds.csv
+      unadjusted: data/results/rq4_lethality/rq4_unadjusted_odds.csv
+      spatial: data/results/rq4_lethality/rq4_spatial_effects.csv
+      incidence_side: data/results/rq1_exposure_response/health_region_confirmatory/structural_coefficients.csv
+      model: binomial logit with BYM2 and RW1 at health region-year
+      scale: same raw covariate scaling as the RQ1 confirmatory fit
+    key_values:
+      cells: 4974
+      health_regions: 426
+      deaths: 5979
+      known_outcomes: 61258
+      crude_cfr: 0.0976
+      cpo_failures: 0
+      sanitation_difference: 1.3068
+      sanitation_difference_lo: 0.6102
+      sanitation_difference_hi: 2.0033
+      sanitation_difference_p: 0.000236
+      gdp_difference: -0.4872
+      gdp_difference_lo: -0.7732
+      gdp_difference_hi: -0.2011
+      gdp_difference_p: 0.000844
+      urban_difference: -1.1608
+      urban_difference_lo: -2.3224
+      urban_difference_hi: 0.0008
+      spatial_90_10_odds_ratio_spread: 4.72
+      bym2_phi: 0.875
+      hospitalisation_share_or_per_sd: 1.784
+    caveats:
+      - >
+        The two coefficient sets are on different link scales (log rate ratio
+        versus log odds ratio) and case fatality is not rare, so the sign and
+        ordering of each difference carry the argument, not the magnitude.
+      - >
+        The interval treats the two fits as independent. They share cases, so
+        the true standard error is smaller and the test is conservative for
+        declaring a difference.
+      - >
+        The sanitation result -- better sewer coverage associated with HIGHER
+        case fatality -- is at least as consistent with case-mix selection
+        (better-served areas detect proportionally fewer mild cases) as with a
+        causal effect on survival, and must not be reported as the latter.
+
+  # --- added in the overnight completion pass, 2026-07-31 ---
+
+  - id: rq2_flood_excess
+    status: blocked
+    quotable_as_manuscript_estimate: false
+    claim: >
+      Corrected primary inference shows excess incidence around the first flood
+      declaration, including in a rainfall-adjusted monthly count model.
+      Promotion of the stronger causal claim remains blocked by repeated
+      treatment and failed negative-control/pretrend diagnostics.
+    evidence:
+      event_study: data/results/rq2_flood_disasters/corrected_primary_event_study.csv
+      overall: data/results/rq2_flood_disasters/corrected_primary_overall.csv
+      status: data/results/rq2_flood_disasters/corrected_primary_status.csv
+      adjudication: data/results/rq2_flood_disasters/corrected_rq2_adjudication.json
+      machine_summary: data/results/rq2_flood_disasters/corrected_rq2_summary.csv
+      recurrence_clean: data/results/rq2_flood_disasters/corrected_recurrence_clean_event_study.csv
+      never_treated_controls: data/results/rq2_flood_disasters/corrected_nevertreated_event_study.csv
+      drought_negative_control: data/results/rq2_flood_disasters/corrected_drought_placebo_event_study.csv
+      flood_monthly_rainfall_adjusted: data/results/rq2_flood_disasters/corrected_flood_monthly_crosschecks.csv
+      drought_monthly_rainfall_adjusted: data/results/rq2_flood_disasters/corrected_drought_monthly_crosschecks.csv
+      design: Callaway-Sant'Anna group-time ATT, not-yet-treated controls
+      outcome: incidence per 100,000 person-months
+      grain: two-month periods; counts and person-time summed before rate construction
+    key_values:
+      att_e0: 3.5243
+      att_e0_simultaneous_lo: 1.1435
+      att_e0_simultaneous_hi: 5.9051
+      att_e1: 1.4535
+      att_e1_simultaneous_lo: 0.3051
+      att_e1_simultaneous_hi: 2.6020
+      n_units: 5180
+      n_treated: 3928
+      excluded_no_monthly_pre: 252
+      additionally_excluded_no_coarse_pre: 138
+      recurrence_clean_att_e0: 2.9755
+      never_treated_control_att_e0: 3.5497
+      monthly_rainfall_adjusted_irr_e0: 1.916
+      monthly_rainfall_adjusted_irr_e1: 2.144
+      monthly_rainfall_adjusted_irr_e2: 1.372
+    caveats:
+      - >
+        did::att_gt has no count offset interface. The primary is therefore an
+        explicitly population-normalised rate outcome; offset count inference
+        is supplied by the monthly Poisson cross-check.
+      - >
+        Simultaneous critical values triggered did's small-cohort reliability
+        warning. Point estimates, pointwise intervals, HonestDiD bounds, and the
+        conservative simultaneous band are all retained rather than conflated.
+      - >
+        The superseded 0.0893 result summed transformed monthly outcomes after
+        coarsening and claimed an offset that was not in the estimator. It is
+        retained only in historical handoff/provenance records, not as evidence.
+      - >
+        The rainfall-adjusted monthly drought model is null at event months
+        0--2, but its leads -6 through -3 exclude the null. Together with a
+        positive coarsened drought horizon, this prevents a causal reading of
+        the declaration contrast even though the flood association is robust.
+      - >
+        The repaired monthly Sun--Abraham fit exceeded 16.5 GB while memory was
+        still rising and was terminated before the declared 20 GB ceiling. Its
+        status is explicitly infeasible_memory; no substitute estimate is used.
+
+  - id: rq3_ascertainment
+    status: validated_real_data
+    quotable_as_manuscript_estimate: true
+    claim: >
+      In 416 municipalities, zero confirmed resident investigation records in
+      SINAN during 2008--2024 coexisted with at least one resident A27 record in
+      SIM or SIH; 413 remain under the stricter SIM-underlying/SIH-principal
+      definition. The full SINAN cascade separates 41 with no investigation,
+      139 with only discarded investigations, and 236 with an inconclusive or
+      unclassified investigation. This is observed administrative discordance,
+      not a count of unique missed cases or surveillance sensitivity.
+    evidence:
+      classes: data/results/paperA_audit/municipality_surveillance_audit.parquet
+      discordant_municipalities: data/results/paperA_audit/cross_system_discordant_municipalities.csv
+      evidence_tiers: data/results/paperA_audit/evidence_tiers.csv
+      horizon: data/results/paperA_audit/classification_by_horizon.csv
+      baseline_zero_cohort: data/results/paperA_audit/zero_2008_cohort_first_signal.parquet
+      baseline_zero_history: data/results/paperA_audit/zero_2008_cohort_history.csv
+      baseline_zero_states: data/results/paperA_audit/zero_2008_cohort_by_state.csv
+      baseline_zero_pathways: data/results/paperA_audit/zero_2008_first_signal_to_endpoint.csv
+      geography_audit: data/results/paperA_audit/geography_alignment_audit.csv
+      source_flow: data/results/paperA_audit/source_record_flow.csv
+      source_contracts: data/results/paperA_audit/source_contracts.csv
+      source_manifest: data/results/paperA_audit/source_retrieval_manifest.csv
+      opportunity_strata: data/results/paperA_audit/classification_by_opportunity_strata.csv
+      audit_priority: data/results/paperA_audit/audit_priority_partition.csv
+      surveillance_cascade: data/results/paperA_audit/surveillance_cascade_summary.csv
+      comparison_phenotypes: data/results/paperA_audit/comparison_record_phenotypes.csv
+      candidate_pair_summary: data/results/paperA_audit/dual_system_candidate_pair_summary.csv
+      current_queue: data/results/paperA_audit/current_operational_audit_queue.csv
+      sih_schema_audit: data/results/paperA_audit/sih_schema_audit_by_year.csv
+      state_audit: data/results/paperA_audit/state_audit_table.csv
+    key_values:
+      cross_system_discordant_municipalities: 416
+      strict_definition_municipalities: 413
+      discordant_population: 6403915
+      discordant_sim_deaths: 92
+      discordant_sih_admissions: 525
+      no_sinan_investigation: 41
+      only_discarded_investigations: 139
+      unresolved_investigation_present: 236
+      unobserved_in_all_three: 1894
+      baseline_zero_municipalities: 4663
+      baseline_zero_sinan_first: 1495
+      baseline_zero_comparison_first: 761
+      baseline_zero_same_year: 514
+      baseline_zero_remaining: 1893
+      sinan_analytic_records: 60189
+      sim_analytic_records: 5302
+      sih_analytic_records: 35863
+      both_source_groups_observed: 2359
+      sinan_only: 901
+      sih_window: [2008, 2024]
+      mixed_geography_old_count_under_current_time_contract: 410
+      geography_removed: 28
+      geography_added: 34
+    caveats:
+      - >
+        Public files carry no shared person identifier. An A27 admission is an
+        AIH rather than a unique person and cross-system records cannot be
+        labelled individual missed cases.
+      - >
+        The former capture--recapture calculation used an assumed pmin overlap,
+        not an observed capture history; its completeness and burden factors are
+        prohibited manuscript claims.
+      - >
+        A27 coding can be misclassified and all three health information systems
+        share parts of the health-service process. Restrictive evidence features
+        expose, rather than erase, this evidence-strength gradient.
+      - >
+        The 1,890 municipalities unobserved in every system in the cumulative
+        2024 classification cannot be adjudicated:
+        absence of evidence in all three is compatible with no disease and with
+        no surveillance.
+
+  - id: serovar_reservoir
+    status: validated_real_data
+    quotable_as_manuscript_estimate: true
+    claim: >
+      The inferred maintenance reservoir of confirmed leptospirosis varies
+      systematically across macro-regions, from predominantly Rattus in the
+      Northeast to predominantly non-Rattus in the South.
+    evidence:
+      profile: data/results/01_descriptive/T11a_serovar_profile.csv
+      reservoir: data/results/01_descriptive/T11b_reservoir_attribution.csv
+      by_region: data/results/01_descriptive/T11d_rattus_share_by_region.csv
+      concept: brepi/codebook/registry/datasus_codebook.yaml (lept_serovar)
+    key_values:
+      serotyped_cases: 8991
+      serotyped_share_of_confirmed: 0.135
+      rattus_share_overall: 0.440
+      rattus_share_Northeast: 0.655
+      rattus_share_Southeast: 0.456
+      rattus_share_Central_West: 0.441
+      rattus_share_North: 0.428
+      rattus_share_South: 0.283
+      patoc_share: 0.048
+    caveats:
+      - >
+        MAT identifies the serogroup reliably and the serovar only
+        presumptively; cross-reaction within a serogroup is the rule.
+      - >
+        The reservoir is an inference from the serovar's usual maintenance
+        host, not an observation of an animal.
+      - >
+        Serovar 21 (Patoc) is Leptospira biflexa and saprophytic -- a screening
+        antigen. A Patoc-only reaction is reported separately and is never
+        attributed to an animal reservoir.
+      - >
+        Only 13.5% of confirmed cases are serotyped, and serotyping is not
+        random: it concentrates where reference laboratories operate.
+
+  - id: rq1_scale_sensitivity
+    status: validated_real_data
+    quotable_as_manuscript_estimate: true
+    claim: >
+      The precipitation exposure-response is stable in sign and magnitude
+      across analytic scales, and the health-region primary is the most
+      conservative of them.
+    evidence:
+      path: data/results/rq1_exposure_response/multiscale/rq1_scale_comparison.csv
+      spec: studies/leptospirosis/rq1_scale_spec.R
+    key_values:
+      uf_rr: 3.466
+      microregion_rr: 3.172
+      immediate_region_rr: 3.064
+      health_region_rr: 2.991
+      endemic_municipality_rr: 3.255
+      correlation_units_vs_rr: -0.845
+      correlation_scope: the four administrative scales only
+      narrowest_ci_scale: health_region
+    caveats:
+      - >
+        The unit-relative exposure is not scale-invariant: the same percentile
+        denotes a larger physical event at a coarser scale, so part of the
+        movement is that redefinition and not the modifiable areal unit problem.
+      - >
+        The endemic-municipality tier is outcome-conditioned (497 municipalities
+        with at least 20 confirmed cases) and therefore changes the analysed
+        population as well as the unit. Its +8.8% cannot be read as a scale
+        effect and is excluded from the correlation.
+      - >
+        The health-region value here is 2.991 against the confirmatory fit's
+        3.039 because the cross-basis is rebuilt from the aggregated panel
+        rather than reused; agreement to 1.6% across independent
+        reconstructions is a check, not a discrepancy.
+
+  - id: rq4_severity_system_agreement
+    status: validated_real_data
+    quotable_as_manuscript_estimate: true
+    claim: >
+      Two independently generated systems place leptospirosis lethality in the
+      same health regions, which a notification artefact would not produce.
+    evidence:
+      agreement: data/results/rq4_lethality/rq4d_lethality_system_agreement.csv
+      sih_model: data/results/rq4_lethality/rq4c_sih_inhospital_fatality_odds.csv
+      hospitalisation: data/results/rq4_lethality/rq4b_hospitalisation_odds.csv
+    key_values:
+      health_regions_compared: 419
+      pearson_log_or: 0.690
+      pearson_lo: 0.636
+      pearson_hi: 0.737
+      spearman: 0.686
+      quartile_agreement_exact: 0.461
+      quartile_agreement_within_one: 0.895
+      sih_admissions: 36033
+      sih_inhospital_deaths: 2240
+      sih_crude_fatality: 0.0622
+      hospitalisation_sanitation_or: 11.09
+      sih_fatality_sanitation_or: 1.813
+    caveats:
+      - >
+        SIH counts admissions, not people: a transfer or readmission produces a
+        second AIH, so this is an event-level and not a patient-level fatality.
+      - >
+        The two systems are not independent of the health-care pathway itself;
+        both observe patients who reached a facility. Their agreement rules out
+        a notification artefact, not a common care-seeking selection.
+      - >
+        That better sewer coverage predicts higher fatality in BOTH systems
+        strengthens the case-mix selection reading and further weakens any
+        causal reading about survival.

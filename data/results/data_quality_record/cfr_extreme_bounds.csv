@@ -1,0 +1,4 @@
+scenario,deaths_assumed,denominator,cfr_pct,cfr_lo,cfr_hi,level
+observed (deaths / cases with a recorded outcome),5951,61023,9.752060698425185,9.517779901336402,9.990176910815284,national
+lower bound: every unrecorded outcome survived,5951,66358,8.96802194158956,8.751672310357831,9.18796727488275,national
+upper bound: every unrecorded outcome died,11286,66358,17.0077458633473,16.722585908571705,17.29579382555455,national

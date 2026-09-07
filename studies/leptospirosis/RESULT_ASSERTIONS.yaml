@@ -1,0 +1,151 @@
+schema: brepi.study.result-assertions/1
+assertions:
+  - id: line_level_rows
+    path: data/interim/lept_line_level.parquet
+    kind: row_count
+    expected: 328984
+  - id: line_level_columns
+    path: data/interim/lept_line_level.parquet
+    kind: column_count
+    expected: 309
+  - id: rq1_primary_p99_rr
+    path: data/results/rq1_exposure_response/health_region_confirmatory/cumulative_exposure_response.csv
+    kind: column_max
+    column: rr
+    expected: 6.378
+    atol: 0.001
+  - id: rq3_residence_aligned_cross_system_discordance
+    path: data/results/paperA_audit/cross_system_discordant_municipalities.csv
+    kind: row_count
+    expected: 416
+  - id: rq2_corrected_primary_e0
+    path: data/results/rq2_flood_disasters/corrected_primary_event_study.csv
+    kind: cell
+    where: {event_time: 0}
+    column: att
+    expected: 3.5243
+    atol: 0.0001
+  - id: rq2_corrected_primary_e0_simultaneous_lo
+    path: data/results/rq2_flood_disasters/corrected_primary_event_study.csv
+    kind: cell
+    where: {event_time: 0}
+    column: lo
+    expected: 1.1435
+    atol: 0.0001
+  - id: rq2_rainfall_adjusted_monthly_e0_irr
+    path: data/results/rq2_flood_disasters/corrected_rq2_summary.csv
+    kind: cell
+    where: {analysis: flood_monthly_rainfall_adjusted, estimand: event_0}
+    column: estimate
+    expected: 1.916
+    atol: 0.001
+  - id: rq2_causal_adjudication_blocked
+    path: data/results/rq2_flood_disasters/corrected_rq2_adjudication.json
+    kind: json_value
+    keys: [causal_claim_supported]
+    expected: false
+  - id: rq2_asinh_sensitivity_e0
+    path: data/results/rq2_flood_disasters/corrected_primary_asinh_event_study.csv
+    kind: cell
+    where: {event_time: 0}
+    column: att
+    expected: 0.05918
+    atol: 0.00001
+  - id: rq4_system_regions
+    path: data/results/rq4_lethality/rq4d_lethality_system_agreement.csv
+    kind: row_count
+    expected: 419
+  - id: rq4_system_log_or_correlation
+    path: data/results/rq4_lethality/rq4d_lethality_system_agreement.csv
+    kind: correlation
+    columns: [or_sinan, or_sih]
+    transform: log
+    expected: 0.690
+    atol: 0.001
+  - id: rq5_five_regime_stability
+    path: data/results/rq5_regimes/regime_stability.csv
+    kind: cell
+    where: {k: 5}
+    column: mean_ari
+    expected: 0.729
+    atol: 0.001
+  # The atlas is assembled, not measured: every number in it comes from a table
+  # that already passed its own assertion. What can still go wrong is the
+  # assembly -- a join that drops units, a key that lost its leading zero. These
+  # two totals reconcile the municipality atlas against the burden table it was
+  # built independently of, so any such loss shows up as an arithmetic failure
+  # rather than as a slightly emptier map.
+  - id: atlas_municipality_rows
+    path: data/results/atlas/municipality_atlas.csv
+    kind: row_count
+    expected: 5570
+  - id: atlas_municipality_cases_reconcile
+    path: data/results/atlas/municipality_atlas.csv
+    kind: column_sum
+    column: cases
+    expected: 66480
+  - id: atlas_municipality_deaths_reconcile
+    path: data/results/atlas/municipality_atlas.csv
+    kind: column_sum
+    column: deaths
+    expected: 5963
+  - id: atlas_municipality_year_rows
+    path: data/results/atlas/municipality_year_atlas.csv
+    kind: row_count
+    expected: 105830
+  - id: atlas_health_region_rows
+    path: data/results/atlas/health_region_atlas.csv
+    kind: row_count
+    expected: 439
+  - id: paperA_strict_diagnosis_discordance
+    path: data/results/paperA_audit/evidence_tiers.csv
+    kind: cell
+    where: {definition: SIM underlying cause or SIH principal diagnosis}
+    column: municipalities
+    expected: 413
+  - id: paperA_2008_zero_cohort
+    path: data/results/paperA_audit/zero_2008_cohort_first_signal.parquet
+    kind: row_count
+    expected: 4663
+  - id: paperA_2008_zero_cohort_remaining
+    path: data/results/paperA_audit/zero_2008_cohort_history.csv
+    kind: cell
+    where: {year: 2024}
+    column: still_zero
+    expected: 1893
+  - id: paperA_sinan_analytic_records
+    path: data/results/paperA_audit/source_analytic_summary.csv
+    kind: cell
+    where: {source: SINAN}
+    column: analytic_records
+    expected: 60189
+  - id: paperA_sim_analytic_records
+    path: data/results/paperA_audit/source_analytic_summary.csv
+    kind: cell
+    where: {source: SIM}
+    column: analytic_records
+    expected: 5302
+  - id: paperA_sih_analytic_records
+    path: data/results/paperA_audit/source_analytic_summary.csv
+    kind: cell
+    where: {source: SIH}
+    column: analytic_records
+    expected: 35863
+  - id: paperA_no_sinan_investigation
+    path: data/results/paperA_audit/surveillance_cascade_summary.csv
+    kind: cell
+    where: {confirmed_zero_process_state: no SINAN investigation}
+    column: municipalities
+    expected: 41
+  - id: paperA_only_discarded_investigations
+    path: data/results/paperA_audit/surveillance_cascade_summary.csv
+    kind: cell
+    where: {confirmed_zero_process_state: "investigated; all classified discarded"}
+    column: municipalities
+    expected: 139
+  - id: paperA_unresolved_investigation_present
+    path: data/results/paperA_audit/surveillance_cascade_summary.csv
+    kind: cell
+    where: {confirmed_zero_process_state: "investigated; inconclusive or unclassified present"}
+    column: municipalities
+    expected: 236

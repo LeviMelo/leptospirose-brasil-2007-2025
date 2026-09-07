@@ -1,0 +1,16 @@
+{
+  "health_regions": 439,
+  "health_regions_with_independent_signal": 422,
+  "ratio_median": 1.8333333333333333,
+  "ratio_p10": 0.8,
+  "ratio_p90": 4.0,
+  "ratio_lowest_incidence_tertile": 1.5,
+  "ratio_highest_incidence_tertile": 1.7708333333333333,
+  "serogroup_regimes": 5,
+  "serogroup_typed_total": 9106,
+  "sewer_share_available": true,
+  "sewer_share_null": 0,
+  "paired_health_regions": 414,
+  "log_count_correlation_confounded_by_population": 0.9239083946694143,
+  "log_rate_correlation": 0.8688970867520891
+}

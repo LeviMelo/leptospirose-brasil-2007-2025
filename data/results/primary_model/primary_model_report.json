@@ -1,0 +1,213 @@
+{
+  "question": "Across health regions and years, how does reported case fatality change with the hospitalisation proportion H, after accounting for persistent spatial differences, temporal trend and demographic case mix?",
+  "construct": "H = hospitalised confirmed cases / confirmed cases with a valid hospitalisation field. H is an INVERSE indicator of ascertainment breadth: a high H means the surveillance system is finding almost only severe illness (narrow ascertainment).",
+  "measure": "Odds ratio for the case-fatality proportion, per +10 percentage points of H, from a binomial logit model with a BYM2 spatial field and an RW1 over year, fitted by INLA.",
+  "exposure_scale": {
+    "unit": "10 percentage points of H",
+    "centred_at": 0.72192212,
+    "centring_note": "H centred at the national case-weighted value so the intercept is the odds of death at national ascertainment breadth; centring does not affect the slope."
+  },
+  "data": {
+    "panel": "data/results/analysis_panel/region_year_panel.parquet",
+    "panel_cells": 8208,
+    "analysis_cells": 4941,
+    "regions": 426,
+    "graph_nodes": 439,
+    "years": {
+      "min": 2007,
+      "max": 2025
+    },
+    "deaths": 5950,
+    "outcome_known": 60998,
+    "cases": 66082,
+    "crude_case_fatality": 0.09754418,
+    "national_H": 0.72192212,
+    "national_share_age60": 0.10140585,
+    "national_share_male": 0.80011198,
+    "excluded_zero_outcome_denominator": 3242,
+    "excluded_undefined_H": 25,
+    "regions_national": 439,
+    "regions_in_panel": 432,
+    "regions_with_no_case_ever": 7,
+    "cells_from_regions_with_no_case_ever": 133
+  },
+  "models": {
+    "A_space_time": {
+      "description": "BYM2 space + RW1 year, no exposure",
+      "phi": {
+        "estimate": 0.87236625,
+        "lower": 0.66571622,
+        "upper": 0.97962971,
+        "scale": "share of the SPATIAL EFFECT's marginal variance that is spatially structured"
+      },
+      "spatial_marginal_variance": {
+        "estimate": 0.6570045,
+        "lower": 0.48733162,
+        "upper": 0.87917818,
+        "scale": "variance of the BYM2 field on the logit scale (= 1/precision)"
+      },
+      "spatial_marginal_sd": {
+        "estimate": 0.81055814,
+        "lower": 0.69809141,
+        "upper": 0.93764502,
+        "scale": "sd of the BYM2 field on the logit scale"
+      },
+      "dic": 9226.37738995,
+      "waic": 9293.77602871,
+      "cells": 4941
+    },
+    "B_plus_H": {
+      "description": "A + H (continuous)",
+      "or_H_per_10pp": {
+        "estimate": 1.2343319,
+        "lower": 1.20750379,
+        "upper": 1.26175767,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "phi": {
+        "estimate": 0.8769379,
+        "lower": 0.64726183,
+        "upper": 0.98427459,
+        "scale": "share of the SPATIAL EFFECT's marginal variance that is spatially structured"
+      },
+      "spatial_marginal_variance": {
+        "estimate": 0.41903441,
+        "lower": 0.2983112,
+        "upper": 0.57750559,
+        "scale": "variance of the BYM2 field on the logit scale (= 1/precision)"
+      },
+      "dic": 8890.59502787,
+      "waic": 8927.06259483,
+      "cells": 4941
+    },
+    "C_plus_case_mix": {
+      "description": "B + proportion aged 60+ and proportion male",
+      "or_H_per_10pp": {
+        "estimate": 1.2308987,
+        "lower": 1.20332266,
+        "upper": 1.25910485,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "or_age60_per_10pp": {
+        "estimate": 1.08206123,
+        "lower": 1.05234203,
+        "upper": 1.11262208,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "or_male_per_10pp": {
+        "estimate": 0.98387731,
+        "lower": 0.96002198,
+        "upper": 1.00833077,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "phi": {
+        "estimate": 0.88380342,
+        "lower": 0.66284643,
+        "upper": 0.98555871,
+        "scale": "share of the SPATIAL EFFECT's marginal variance that is spatially structured"
+      },
+      "spatial_marginal_variance": {
+        "estimate": 0.4208192,
+        "lower": 0.30020319,
+        "upper": 0.57856329,
+        "scale": "variance of the BYM2 field on the logit scale (= 1/precision)"
+      },
+      "dic": 8863.78833384,
+      "waic": 8898.78654992,
+      "cells": 4941
+    },
+    "D_complete_outcomes": {
+      "description": "C restricted to outcome completeness >= 95%",
+      "or_H_per_10pp": {
+        "estimate": 1.23082032,
+        "lower": 1.19488007,
+        "upper": 1.26782425,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "phi": {
+        "estimate": 0.78054492,
+        "lower": 0.44895958,
+        "upper": 0.96644429,
+        "scale": "share of the SPATIAL EFFECT's marginal variance that is spatially structured"
+      },
+      "spatial_marginal_variance": {
+        "estimate": 0.38151119,
+        "lower": 0.25564975,
+        "upper": 0.55187188,
+        "scale": "variance of the BYM2 field on the logit scale (= 1/precision)"
+      },
+      "dic": 5391.06798068,
+      "waic": 5411.72453723,
+      "cells": 3565,
+      "cell_share_retained": 0.72151386
+    }
+  },
+  "threat_checks": {
+    "E_within_hospitalised": {
+      "threat": "Hospitalised cases die more often, so a higher hospitalised share raises the case-fatality proportion by arithmetic alone.",
+      "discriminates": "Case fatality among hospitalised cases only, against the same H. A null beta would mean the gradient is purely compositional.",
+      "or_H_per_10pp": {
+        "estimate": 1.04438212,
+        "lower": 1.01849946,
+        "upper": 1.07091528,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "within_hospitalised_case_fatality": 0.13250663,
+      "cells": 4624
+    },
+    "F_hosp_known_ge10": {
+      "threat": "In cells with a handful of cases, H and the case-fatality proportion are computed from overlapping people and are not independent measurements.",
+      "discriminates": "Restriction to cells with at least 10 cases behind H.",
+      "or_H_per_10pp": {
+        "estimate": 1.24268222,
+        "lower": 1.20357114,
+        "upper": 1.28303718,
+        "scale": "odds ratio per +10 percentage points"
+      },
+      "cells": 1314,
+      "case_share_retained": 0.82956024
+    }
+  },
+  "spatial_variance_absorbed_by_H": {
+    "marginal_variance_A": 0.6570045,
+    "marginal_variance_B": 0.41903441,
+    "proportion_absorbed_marginal": 0.36220466,
+    "empirical_variance_A": 0.38163255,
+    "empirical_variance_B": 0.22357744,
+    "proportion_absorbed_empirical": 0.41415521,
+    "correlation_of_fields": 0.95886751,
+    "note": "A and B are separate fits, so these are point comparisons of posterior summaries, not a posterior for a difference. Both fits use exactly the same rows."
+  },
+  "within_region": {
+    "specification": "glm(cbind(deaths, outcome_known - deaths) ~ H10 [+ case mix] + region + year, binomial), standard errors clustered on health region.",
+    "regions_contributing": 306,
+    "regions_total": 426,
+    "case_share_retained": 0.97899579,
+    "or_H_per_10pp": {
+      "estimate": 1.22733781,
+      "lower": 1.18440563,
+      "upper": 1.27182619,
+      "scale": "odds ratio per +10 percentage points; cluster-robust by health region"
+    },
+    "or_H_per_10pp_case_mix": {
+      "estimate": 1.22193853,
+      "lower": 1.17774423,
+      "upper": 1.26779119,
+      "scale": "odds ratio per +10 percentage points; cluster-robust by health region"
+    },
+    "ratio_of_log_or_within_to_model_C": 0.96483183
+  },
+  "interpretation_discipline": {
+    "phi": "phi is the share of the SPATIAL RANDOM EFFECT's marginal variance that is spatially structured rather than independent between neighbours. It is NOT the share of variation in case fatality that is spatial.",
+    "ecological": "The observation unit is a health region-year. Every estimate is an ecological association between a territory's ascertainment breadth and its reported case fatality. It does not license the individual-level statement that hospitalising a patient raises that patient's risk of death.",
+    "dic_waic": "DIC and WAIC are comparable across A, B and C, which are fitted to identical rows. They are NOT comparable to D, E or F, which are fitted to different rows or a different outcome."
+  },
+  "provenance": {
+    "script": "studies/leptospirosis/68_primary_model.R",
+    "graph": "data/results/primary_model/health_region_bym2.adj",
+    "graph_source": "paper/figures/geo_health_region.gpkg",
+    "inla_version": "24.12.11",
+    "r_version": "4.4.1",
+    "run_at": "2026-08-14T21:05:40-0300"
+  }
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: >-
+  Amplitude de detecção e letalidade notificada da leptospirose,
+  Brasil, 2007-2025: pacote de reprodutibilidade
+message: >-
+  Ao usar este material, cite o artigo. A autoria segue a do artigo
+  submetido; enquanto ele estiver em avaliação, o registro abaixo
+  identifica apenas o repositório.
+type: software
+authors:
+  - name: LeviMelo
+    alias: LeviMelo
+repository-code: https://github.com/LeviMelo/leptospirose-brasil-2007-2025
+license: MIT
+date-released: '2026-09-07'
+keywords:
+  - leptospirose
+  - vigilância epidemiológica
+  - letalidade
+  - SINAN
+  - análise de séries temporais
+  - reprodutibilidade
+abstract: >-
+  Códigos de extração, decodificação e análise, banco analítico derivado
+  no nível região de saúde por ano e registro de rastreabilidade de cada
+  valor publicado no manuscrito RESS-2026-1462, que avalia se a variação
+  da letalidade notificada da leptospirose entre territórios brasileiros
+  se associa à amplitude do espectro clínico captado pela vigilância,
+  medida pela proporção de casos confirmados internados.

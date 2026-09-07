@@ -1,0 +1,2959 @@
+bindings:
+  CNES-ST:
+    AP01CV01: cnes_service_flag
+    AP01CV02: cnes_service_flag
+    AP01CV03: cnes_service_flag
+    AP01CV04: cnes_service_flag
+    AP01CV05: cnes_service_flag
+    AP01CV06: cnes_service_flag
+    AP02CV01: cnes_service_flag
+    AP02CV02: cnes_service_flag
+    AP02CV03: cnes_service_flag
+    AP02CV04: cnes_service_flag
+    AP02CV05: cnes_service_flag
+    AP02CV06: cnes_service_flag
+    AP03CV01: cnes_service_flag
+    AP03CV02: cnes_service_flag
+    AP03CV03: cnes_service_flag
+    AP03CV04: cnes_service_flag
+    AP03CV05: cnes_service_flag
+    AP03CV06: cnes_service_flag
+    AP04CV01: cnes_service_flag
+    AP04CV02: cnes_service_flag
+    AP04CV03: cnes_service_flag
+    AP04CV04: cnes_service_flag
+    AP04CV05: cnes_service_flag
+    AP04CV06: cnes_service_flag
+    AP05CV01: cnes_service_flag
+    AP05CV02: cnes_service_flag
+    AP05CV03: cnes_service_flag
+    AP05CV04: cnes_service_flag
+    AP05CV05: cnes_service_flag
+    AP05CV06: cnes_service_flag
+    AP06CV01: cnes_service_flag
+    AP06CV02: cnes_service_flag
+    AP06CV03: cnes_service_flag
+    AP06CV04: cnes_service_flag
+    AP06CV05: cnes_service_flag
+    AP06CV06: cnes_service_flag
+    AP07CV01: cnes_service_flag
+    AP07CV02: cnes_service_flag
+    AP07CV03: cnes_service_flag
+    AP07CV04: cnes_service_flag
+    AP07CV05: cnes_service_flag
+    AP07CV06: cnes_service_flag
+    ATENDAMB: cnes_service_flag
+    ATENDHOS: cnes_service_flag
+    ATEND_PR: cnes_service_flag
+    ATIVIDAD: cnes_st_atividad
+    AV_ACRED: cnes_service_flag
+    AV_PNASS: cnes_service_flag
+    CENTRNEO: cnes_service_flag
+    CENTROBS: cnes_service_flag
+    CLASAVAL: cnes_st_clasaval
+    CLIENTEL: cnes_st_clientel
+    COD_IR: cnes_st_cod_ir
+    COLETRES: cnes_service_flag
+    COMISS01: cnes_service_flag
+    COMISS02: cnes_service_flag
+    COMISS03: cnes_service_flag
+    COMISS04: cnes_service_flag
+    COMISS05: cnes_service_flag
+    COMISS06: cnes_service_flag
+    COMISS07: cnes_service_flag
+    COMISS08: cnes_service_flag
+    COMISS09: cnes_service_flag
+    COMISS10: cnes_service_flag
+    COMISS11: cnes_service_flag
+    COMISS12: cnes_service_flag
+    COMISSAO: cnes_service_flag
+    ESFERA_A: cnes_st_esfera_a
+    GESPRG1M: cnes_service_flag
+    GESPRG2E: cnes_service_flag
+    GESPRG2M: cnes_service_flag
+    GESPRG3E: cnes_service_flag
+    GESPRG3M: cnes_service_flag
+    GESPRG4E: cnes_service_flag
+    GESPRG4M: cnes_service_flag
+    GESPRG5E: cnes_service_flag
+    GESPRG5M: cnes_service_flag
+    GESPRG6E: cnes_service_flag
+    GESPRG6M: cnes_service_flag
+    NATUREZA: cnes_st_natureza
+    NAT_JUR: cnes_st_nat_jur
+    NIVATE_A: cnes_service_flag
+    NIVATE_H: cnes_service_flag
+    NIV_DEP: cnes_st_niv_dep
+    NIV_HIER: cnes_st_niv_hier
+    ORGEXPED: cnes_st_orgexped
+    PF_PJ: cnes_st_pf_pj
+    RES_BIOL: cnes_service_flag
+    RES_COMU: cnes_service_flag
+    RES_QUIM: cnes_service_flag
+    RES_RADI: cnes_service_flag
+    RETENCAO: cnes_st_retencao
+    SERAP01P: cnes_service_flag
+    SERAP01T: cnes_service_flag
+    SERAP02P: cnes_service_flag
+    SERAP02T: cnes_service_flag
+    SERAP03P: cnes_service_flag
+    SERAP03T: cnes_service_flag
+    SERAP04P: cnes_service_flag
+    SERAP04T: cnes_service_flag
+    SERAP05P: cnes_service_flag
+    SERAP05T: cnes_service_flag
+    SERAP06P: cnes_service_flag
+    SERAP06T: cnes_service_flag
+    SERAP07P: cnes_service_flag
+    SERAP07T: cnes_service_flag
+    SERAP08P: cnes_service_flag
+    SERAP08T: cnes_service_flag
+    SERAP09P: cnes_service_flag
+    SERAP09T: cnes_service_flag
+    SERAP10P: cnes_service_flag
+    SERAP10T: cnes_service_flag
+    SERAP11P: cnes_service_flag
+    SERAP11T: cnes_service_flag
+    SERAPOIO: cnes_service_flag
+    TERCEIRO: cnes_service_flag
+    TPGESTAO: cnes_st_tpgestao
+    TP_PREST: cnes_st_tp_prest
+    TP_UNID: cnes_st_tp_unid
+    TURNO_AT: cnes_st_turno_at
+    URGEMERG: cnes_service_flag
+    VINCULAC: cnes_st_vinculac
+    VINC_SUS: cnes_service_flag
+  SIH-RD:
+    CAR_INT: sih_rd_car_int
+    COBRANCA: sih_rd_cobranca
+    COD_IDADE: sih_rd_cod_idade
+    COMPLEX: sih_rd_complex
+    CONTRACEP1: sih_rd_contracep1
+    CONTRACEP2: sih_rd_contracep1
+    ESPEC: sih_rd_espec
+    ETNIA: sih_rd_etnia
+    FAEC_TP: sih_rd_faec_tp
+    FINANC: sih_rd_financ
+    GESTAO: sih_rd_gestao
+    GESTOR_COD: sih_rd_gestor_cod
+    GESTRISCO: sih_rd_ind_vdrl
+    HOMONIMO: sih_rd_homonimo
+    IDENT: sih_rd_ident
+    IND_VDRL: sih_rd_ind_vdrl
+    INFEHOSP: sih_rd_ind_vdrl
+    INSTRU: sih_rd_instru
+    MARCA_UCI: sih_rd_marca_uci
+    MARCA_UTI: sih_rd_marca_uti
+    MORTE: sih_rd_ind_vdrl
+    NACIONAL: sih_rd_nacional
+    NATUREZA: sih_rd_natureza
+    NAT_JUR: sih_rd_nat_jur
+    RACA_COR: sih_rd_raca_cor
+    REGCT: sih_rd_regct
+    SEQ_AIH5: sih_rd_seq_aih5
+    SEXO: sih_rd_sexo
+    TPDISEC1: sih_rd_tpdisec1
+    TPDISEC2: sih_rd_tpdisec1
+    TPDISEC3: sih_rd_tpdisec1
+    TPDISEC4: sih_rd_tpdisec1
+    TPDISEC5: sih_rd_tpdisec1
+    TPDISEC6: sih_rd_tpdisec1
+    TPDISEC7: sih_rd_tpdisec1
+    TPDISEC8: sih_rd_tpdisec1
+    TPDISEC9: sih_rd_tpdisec1
+    VINCPREV: sih_rd_vincprev
+  SIM-DO:
+    ACIDTRAB: yes_no_strict
+    ASSISTMED: yes_no_strict
+    ATESTANTE: sim_do_atestante
+    CIRCOBITO: death_circumstance
+    CIRURGIA: yes_no_strict
+    CODINST: sim_do_codinst
+    ESC: education_years_sim
+    ESCMAE: education_years_sim
+    ESTCIV: marital_status
+    EXAME: yes_no_strict
+    FONTE: sim_do_fonte
+    FONTEINV: sim_do_fonteinv
+    GESTACAO: gestation_group_sim
+    GRAVIDEZ: pregnancy_type
+    LOCOCOR: local_of_death
+    NECROPSIA: yes_no_strict
+    OBITOGRAV: yes_no
+    OBITOPARTO: death_timing_delivery
+    OBITOPUERP: puerperium_window
+    PARTO: delivery_type
+    RACACOR: sim_do_racacor
+    SEXO: sim_do_sexo
+    TIPOBITO: death_type
+    TPPOS: investigation_status
+  SINAN-LEPT:
+    ANT_ANIMAI: sinan_sim_nao_ign
+    ANT_CB_CAI: sinan_sim_nao_ign
+    ANT_CB_COR: sinan_sim_nao_ign
+    ANT_CB_CRI: sinan_sim_nao_ign
+    ANT_CB_FOS: sinan_sim_nao_ign
+    ANT_CB_GRA: sinan_sim_nao_ign
+    ANT_CB_LAM: sinan_sim_nao_ign
+    ANT_CB_LIX: sinan_sim_nao_ign
+    ANT_CB_OUT: sinan_sim_nao_ign
+    ANT_CB_PLA: sinan_sim_nao_ign
+    ANT_CB_ROE: sinan_sim_nao_ign
+    ANT_CB_SIN: sinan_sim_nao_ign
+    ANT_CB_TER: sinan_sim_nao_ign
+    ANT_HUMANO: sinan_sim_nao_ign
+    ATE_HOSP: sinan_sim_nao_ign
+    CLASSI_FIN: lept_classi_fin
+    CLI_CARDIA: sinan_sim_nao_ign
+    CLI_CEFALE: sinan_sim_nao_ign
+    CLI_CONGES: sinan_sim_nao_ign
+    CLI_DIARRE: sinan_sim_nao_ign
+    CLI_FEBRE: sinan_sim_nao_ign
+    CLI_HEMOPU: sinan_sim_nao_ign
+    CLI_HEMORR: sinan_sim_nao_ign
+    CLI_ICTERI: sinan_sim_nao_ign
+    CLI_MENING: sinan_sim_nao_ign
+    CLI_MIALGI: sinan_sim_nao_ign
+    CLI_OUTROS: sinan_sim_nao_ign
+    CLI_PANTUR: sinan_sim_nao_ign
+    CLI_PROST: sinan_sim_nao_ign
+    CLI_RENAL: sinan_sim_nao_ign
+    CLI_RESPIR: sinan_sim_nao_ign
+    CLI_VOMITO: sinan_sim_nao_ign
+    CON_AMBIEN: lept_con_ambien
+    CON_AREA: lept_con_area
+    COPAISINF: sinan_copaisinf
+    CRITERIO: lept_criterio
+    CS_ESCOL_N: sinan_escolaridade
+    CS_GESTANT: sinan_gestante
+    CS_RACA: sinan_raca
+    CS_SEXO: sinan_sexo
+    DOENCA_TRA: sinan_sim_nao_ign
+    EVOLUCAO: lept_evolucao
+    ID_AGRAVO: lept_agravo
+    ID_PAIS: sinan_pais
+    LAB_ELIS_1: lept_lab_elis_1
+    LAB_ELIS_2: lept_lab_elis_1
+    LAB_MICR_1: lept_lab_micr_1
+    LAB_MICR_2: lept_lab_micr_1
+    NDUPLIC_N: sinan_nduplic
+    RES_IMUNO: lept_res_imuno
+    RES_ISOL: lept_res_imuno
+    RES_PCR: lept_res_imuno
+    TPAUTOCTO: lept_tpautocto
+    TP_NOT: sinan_tp_not
+  SINASC:
+    CONSULTAS: prenatal_consultation_group
+    ESCMAE: education_years_sinasc
+    ESTCIVMAE: marital_status
+    GESTACAO: gestation_group_sinasc
+    GRAVIDEZ: sinasc_gravidez
+    IDANOMAL: yes_no
+    LOCNASC: local_of_birth
+    PARTO: delivery_type
+    RACACOR: sinasc_racacor
+    RACACORMAE: sinasc_racacormae
+    SEXO: sinasc_sexo
+concepts:
+  cnes_service_flag:
+    dtype: bool
+    unknown: []
+    values:
+      '0': false
+      '1': true
+      '2': false
+  cnes_st_atividad:
+    dtype: string
+    unknown: []
+    values:
+      '1': unidade_universitaria
+      '2': unidade_escola_superior_isolada
+      '3': unidade_auxiliar_de_ensino
+      '4': unidade_sem_atividade_de_ensino
+      '5': hospital_de_ensino
+  cnes_st_clasaval:
+    dtype: string
+    unknown: []
+    values:
+      '0': nao_atendeu_aos_padroes_minimos
+      '1': acreditado_no_nivel_1
+      '2': acreditado_no_nivel_2
+      '3': acreditado_no_nivel_3
+  cnes_st_clientel:
+    dtype: string
+    unknown: []
+    values:
+      '0': fluxo_de_clientela_nao_exigido
+      '1': atendimento_de_demanda_espontanea
+      '2': atendimento_de_demanda_referenciada
+      '3': atendimento_de_demanda_espontanea_e_referenciada
+  cnes_st_cod_ir:
+    dtype: string
+    unknown: []
+    values:
+      '10': estabelecimento_publico
+      '11': estabelecimento_filantropico
+      '12': estabelecimento_sem_fins_lucrativos
+      '13': estabelecimento_privado_luvrativa_simples
+      '14': estabelecimento_privado_luvrativa
+      '15': estabelecimento_sindical
+      '16': estabelecimento_pessoa_fisica
+      '19': estabelecimento_ret_manten_codigo_19
+  cnes_st_esfera_a:
+    dtype: string
+    unknown: []
+    values:
+      '1': federal
+      '2': estadual
+      '3': municipal
+      '4': privada
+  cnes_st_nat_jur:
+    dtype: string
+    unknown: []
+    values:
+      '1000': administracao_publica
+      '1015': orgao_publico_do_poder_executivo_federal
+      '1023': orgao_publico_do_poder_executivo_estadual_ou_do_distrito_federal
+      '1031': orgao_publico_do_poder_executivo_municipal
+      '1040': orgao_publico_do_poder_legislativo_federal
+      '1058': orgao_publico_do_poder_legislativo_estadual_ou_do_distrito_federal
+      '1066': orgao_publico_do_poder_legislativo_municipal
+      '1074': orgao_publico_do_poder_judiciario_federal
+      '1082': orgao_publico_do_poder_judiciario_estadual
+      '1104': autarquia_federal
+      '1112': autarquia_estadual_ou_do_distrito_federal
+      '1120': autarquia_municipal
+      '1139': fundacao_publica_de_direito_publico_federal
+      '1147': fundacao_publica_de_direito_publico_estadual_ou_do_distrito_federal
+      '1155': fundacao_publica_de_direito_publico_municipal
+      '1163': orgao_publico_autonomo_federal
+      '1171': orgao_publico_autonomo_estadual_ou_do_distrito_federal
+      '1180': orgao_publico_autonomo_municipal
+      '1198': comissao_polinacional
+      '1201': fundo_publico
+      '1210': consorcio_publico_de_direito_publico_associacao_publica
+      '1228': consorcio_publico_de_direito_privado
+      '1236': estado_ou_distrito_federal
+      '1244': municipio
+      '1252': fundacao_publica_de_direito_privado_federal
+      '1260': fundacao_publica_de_direito_privado_estadual_ou_do_distrito_federal
+      '1279': fundacao_publica_de_direito_privado_municipal
+      '2000': entidades_empresariais
+      '2001': empresa_publica
+      '2038': sociedade_de_economia_mista
+      '2046': sociedade_anonima_aberta
+      '2054': sociedade_anonima_fechada
+      '2062': sociedade_empresaria_limitada
+      '2070': sociedade_empresaria_em_nome_coletivo
+      '2089': sociedade_empresaria_em_comandita_simples
+      '2097': sociedade_empresaria_em_comandita_por_acoes
+      '2127': sociedade_em_conta_de_participacao
+      '2135': empresario_individual
+      '2143': cooperativa
+      '2151': consorcio_de_sociedades
+      '2160': grupo_de_sociedades
+      '2178': estabelecimento_no_brasil_de_sociedade_estrangeira
+      '2194': estabelecimento_no_brasil_de_empresa_binacional_argentino_brasileira
+      '2216': empresa_domiciliada_no_exterior
+      '2224': clube_fundo_de_investimento
+      '2232': sociedade_simples_pura
+      '2240': sociedade_simples_limitada
+      '2259': sociedade_simples_em_nome_coletivo
+      '2267': sociedade_simples_em_comandita_simples
+      '2275': empresa_binacional
+      '2283': consorcio_de_empregadores
+      '2291': consorcio_simples
+      '2305': empresa_individual_de_responsabilidade_limitada_de_natureza_empresaria
+      '2313': empresa_individual_de_responsabilidade_limitada_de_natureza_simples
+      '2321': sociedade_unipessoal_de_advogados
+      '2330': cooperativas_de_consumo
+      '3000': entidades_sem_fins_lucrativos
+      '3034': servico_notarial_e_registral_cartorio
+      '3069': fundacao_privada
+      '3077': servico_social_autonomo
+      '3085': condominio_edilicio
+      '3107': comissao_de_conciliacao_previa
+      '3115': entidade_de_mediacao_e_arbitragem
+      '3131': entidade_sindical
+      '3204': estabelecimento_no_brasil_de_fundacao_ou_associacao_estrangeiras
+      '3212': fundacao_ou_associacao_domiciliada_no_exterior
+      '3220': organizacao_religiosa
+      '3239': comunidade_indigena
+      '3247': fundo_privado
+      '3255': orgao_de_direcao_nacional_de_partido_politico
+      '3263': orgao_de_direcao_regional_de_partido_politico
+      '3271': orgao_de_direcao_local_de_partido_politico
+      '3280': comite_financeiro_de_partido_politico
+      '3298': frente_plebiscitaria_ou_referendaria
+      '3306': organizacao_social_os
+      '3310': demais_condominios
+      '3999': associacao_privada
+      '4000': pessoas_fisicas
+      '4014': empresa_individual_imobiliaria
+      '4022': segurado_especial
+      '4081': contribuinte_individual
+      '4090': candidato_a_cargo_politico_eletivo
+      '4111': leiloeiro
+      '4124': produtor_rural_pessoa_fisica
+      '5000': organizacoes_internacionais_e_outras_instituicoes_extraterritoriais
+      '5010': organizacao_internacional
+      '5029': representacao_diplomatica_estrangeira
+      '5037': outras_instituicoes_extraterritoriais
+  cnes_st_natureza:
+    dtype: string
+    unknown: []
+    values:
+      '0': natureza_inexistente
+      '1': administracao_direta_da_saude_ms_ses_e_sms
+      '10': servico_social_autonomo
+      '11': entidade_beneficente_sem_fins_lucrativos
+      '12': economia_mista
+      '13': sindicato
+      '2': adm_direta_outros_orgaos_mex_mex_marinha
+      '3': adm_indireta_autarquias
+      '4': adm_indireta_fundacao_publica
+      '5': adm_indireta_empresa_publica
+      '6': adm_indireta_organizacao_social_publica
+      '7': empresa_privada
+      '8': fundacao_privada
+      '9': cooperativa
+  cnes_st_niv_dep:
+    dtype: string
+    unknown: []
+    values:
+      '1': individual
+      '3': mantida
+  cnes_st_niv_hier:
+    dtype: string
+    unknown: []
+    values:
+      '1': pab_paba
+      '2': media_m1
+      '3': media_m2_e_m3
+      '4': alta_complexidade_ambulatorial
+      '5': baixa_m1_e_m2
+      '6': media_m2_e_m3
+      '7': media_m3
+      '8': alta_complexidade_hospitalar_ambulatorial
+  cnes_st_orgexped:
+    dtype: string
+    unknown: []
+    values:
+      '1': ses
+      '2': sms
+  cnes_st_pf_pj:
+    dtype: string
+    unknown: []
+    values:
+      '1': pessoa_fisica
+      '3': pessoa_juridica
+  cnes_st_retencao:
+    dtype: string
+    unknown: []
+    values:
+      '10': estabelecimento_publico
+      '11': estabelecimento_filantropico
+      '12': estabelecimento_sem_fins_lucrativos
+      '13': estabelecimento_privado_luvrativa_simples
+      '14': estabelecimento_privado_luvrativa
+      '15': estabelecimento_sindical
+      '16': estabelecimento_pessoa_fisica
+  cnes_st_tp_prest:
+    dtype: string
+    unknown: []
+    values:
+      '20': privado_com_fins_lucrativos
+      '22': privado_optantes_pelo_simples
+      '30': publico_federal
+      '40': publico_estadual
+      '50': publico_municipal
+      '60': privado_sem_fins_lucrativos
+      '61': filantropico_com_cnas_valido
+      '80': sindicato
+  cnes_st_tp_unid:
+    dtype: string
+    unknown: []
+    values:
+      '1': posto_de_saude
+      '12': pronto_socorro_traumato_ortopedico_antigo
+      '15': unidade_mista
+      '2': centro_de_saude_unidade_basica
+      '20': pronto_socorro_geral
+      '21': pronto_socorro_especializado
+      '22': consultorio_isolado
+      '32': unidade_movel_fluvial
+      '36': clinica_centro_de_saude_de_especialidade
+      '39': unidade_de_apoio_diagnose_e_terapia_sadt_isolado
+      '4': policlinica
+      '40': unidade_movel_terrestre
+      '42': unidade_movel_de_nivel_pre_hospitalar_na_area_de_urgencia
+      '43': farmacia
+      '45': unidade_de_saude_da_familia
+      '5': hospital_geral
+      '50': unidade_de_vigilancia_em_saude
+      '60': cooperativa_ou_empresa_de_cessao_de_trabalhadores_na_saude
+      '61': centro_de_parto_normal_isolado
+      '62': hospital_dia_isolado
+      '63': unidade_autorizadora
+      '64': central_de_regulacao_de_servicos_de_saude
+      '65': unidade_de_vigilancia_epidemiologica_antigo
+      '66': unidade_de_vigilancia_sanitaria_antigo
+      '67': laboratorio_central_de_saude_publica_lacen
+      '68': central_de_gestao_em_saude
+      '69': centro_de_atencao_hemoterapia_e_ou_hematologica
+      '7': hospital_especializado
+      '70': centro_de_atencao_psicosocial
+      '71': centro_de_apoio_a_saude_da_familia
+      '72': unidade_de_atencao_a_saude_indigena
+      '73': pronto_atendimento
+      '74': polo_academia_da_saude
+      '75': telessaude
+      '76': central_de_regulacao_medica_das_urgencias
+      '77': servico_de_atencao_domiciliar_isolado_home_care
+      '78': unidade_de_atencao_em_regime_residencial
+      '79': oficina_ortopedica
+      '80': laboratorio_de_saude_publica
+      '81': central_de_regulacao_do_acesso
+      '82': central_de_notificacao_captacao_e_distribuicao_de_orgaos_estadual
+      '83': polo_de_prevencao_de_doencas_e_agravos_e_promocao_da_saude
+      '9': pronto_socorro_de_hospital_geral_antigo
+  cnes_st_tpgestao:
+    dtype: string
+    unknown: []
+    values:
+      D: dupla
+      E: estadual
+      M: municipal
+      S: sem_gestao
+      Z: sem_gestao
+  cnes_st_turno_at:
+    dtype: string
+    unknown: []
+    values:
+      '1': turnos_intermitentes
+      '2': continuo_24h_dia_pl_sab_dom_fer
+      '3': manha_tarde_noite
+      '4': manha
+      '5': tarde
+      '6': manha_tarde
+      '7': noite
+  cnes_st_vinculac:
+    dtype: string
+    unknown: []
+    values:
+      '1': profissional_contratado
+      '2': profissional_autonomo
+      '3': profissional_vinculo_nao_identificado
+  death_circumstance:
+    dtype: string
+    unknown:
+    - '0'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': accident
+      '2': suicide
+      '3': homicide
+      '4': other
+  death_timing_delivery:
+    dtype: string
+    unknown:
+    - '0'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': before
+      '2': during
+      '3': after
+  death_type:
+    dtype: string
+    unknown:
+    - '0'
+    - '9'
+    values:
+      '1': fetal
+      '2': nonfetal
+  delivery_type:
+    dtype: string
+    unknown:
+    - '0'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': vaginal
+      '2': cesarean
+  education_years_sim:
+    dtype: string
+    unknown:
+    - '0'
+    - '6'
+    - '7'
+    - '9'
+    - A
+    values:
+      '1': none
+      '2': 1_3_years
+      '3': 4_7_years
+      '4': 8_11_years
+      '5': 12_plus_years
+      '8': 9_11_years
+  education_years_sinasc:
+    dtype: string
+    unknown:
+    - '0'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': none
+      '2': 1_3_years
+      '3': 4_7_years
+      '4': 8_11_years
+      '5': 12_plus_years
+  gestation_group_sim:
+    dtype: string
+    unknown:
+    - '0'
+    - '9'
+    values:
+      '1': under_22_weeks
+      '2': 22_27_weeks
+      '3': 28_31_weeks
+      '4': 32_36_weeks
+      '5': 37_41_weeks
+      '6': 42_plus_weeks
+      '7': 28_plus_weeks
+      '8': 28_36_weeks
+      A: 21_27_weeks
+  gestation_group_sinasc:
+    dtype: string
+    unknown:
+    - '0'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': under_22_weeks
+      '2': 22_27_weeks
+      '3': 28_31_weeks
+      '4': 32_36_weeks
+      '5': 37_41_weeks
+      '6': 42_plus_weeks
+  investigation_status:
+    dtype: string
+    unknown: []
+    values:
+      N: not_investigated
+      S: investigated
+  lept_agravo:
+    dtype: string
+    unknown: []
+    values:
+      A27: leptospirose
+      A279: leptospirose_nao_especificada
+  lept_ambiente:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': domiciliar
+      '2': trabalho
+      '3': lazer
+      '4': outro
+  lept_autoctone:
+    dtype: string
+    unknown: []
+    values:
+      '1': sim
+      '2': nao
+      '3': indeterminado
+  lept_classi_fin:
+    dtype: string
+    unknown: []
+    values:
+      '1': confirmado
+      '2': descartado
+      '8': inconclusivo
+  lept_con_ambien:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': domiciliar
+      '2': trabalho
+      '3': lazer
+      '4': outro
+  lept_con_area:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': urbana
+      '2': rural
+      '3': peri_urbana
+  lept_criterio:
+    dtype: string
+    unknown: []
+    values:
+      '1': clinico_laboratorial
+      '2': clinico_epidemiologico
+  lept_evolucao:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': cura
+      '2': obito_por_leptospirose
+      '3': obito_por_outras_causas
+  lept_lab_elis_1:
+    dtype: string
+    unknown: []
+    values:
+      '1': reagente
+      '2': nao_reagente
+      '3': inconclusivo
+      '4': nao_realizado
+  lept_lab_elisa:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': reagente
+      '2': nao_reagente
+      '3': inconclusivo
+      '4': nao_realizado
+  lept_lab_micr_1:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': reagente
+      '2': nao_reagente
+      '3': nao_realizada
+      '4': nao_realizado
+  lept_lab_micro:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': reagente
+      '2': nao_reagente
+      '3': nao_realizada
+  lept_lab_resultado:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': positivo
+      '2': negativo
+      '3': inconclusivo
+      '4': nao_realizado
+  lept_res_imuno:
+    dtype: string
+    unknown: []
+    values:
+      '1': positivo
+      '2': negativo
+      '3': inconclusivo
+      '4': nao_realizado
+  lept_serovar:
+    attributes:
+      reservoir:
+        '1': saprophyte_or_unknown
+        '10': rodent_rattus
+        '11': bat_rodent
+        '12': dog_rodent
+        '13': rodent_vole_wildlife
+        '14': cattle
+        '15': cattle_rodent
+        '16': rodent_rattus
+        '17': rodent_rattus
+        '18': rodent_other
+        '19': dog_rodent
+        '2': swine_equine_hedgehog
+        '20': swine_cattle
+        '21': saprophyte_non_pathogenic
+        '22': rodent_other
+        '23': cattle_rodent
+        '24': cattle_rodent
+        '25': dog_rodent
+        '26': rodent_other
+        '27': cattle
+        '28': swine
+        '3': rodent_other
+        '4': rodent_mouse
+        '5': rodent_dog
+        '6': swine_equine_hedgehog
+        '7': dog
+        '8': rodent_mouse
+        '9': rodent_other
+      serogroup:
+        '1': Semaranga
+        '10': Icterohaemorrhagiae
+        '11': Cynopteri
+        '12': Djasiman
+        '13': Grippotyphosa
+        '14': Sejroe
+        '15': Hebdomadis
+        '16': Icterohaemorrhagiae
+        '17': Icterohaemorrhagiae
+        '18': Javanica
+        '19': Panama
+        '2': Australis
+        '20': Pomona
+        '21': Semaranga
+        '22': Pyrogenes
+        '23': Sejroe
+        '24': Sejroe
+        '25': Djasiman
+        '26': Shermani
+        '27': Sejroe
+        '28': Tarassovi
+        '3': Autumnalis
+        '4': Ballum
+        '5': Bataviae
+        '6': Australis
+        '7': Canicola
+        '8': Ballum
+        '9': Celledoni
+    dtype: string
+    notes: 'Codes harvested from the SINAN-LEPT MAT fields, which self-label as ''10 - COPENHAGENI'' in
+      some years and states and carry a bare code in others. Every code maps to exactly one label across
+      2007-2025. Serovar 21 (Patoc) belongs to Leptospira biflexa and is SAPROPHYTIC: it is included in
+      the MAT panel as a broadly cross-reactive screening antigen, so a Patoc-only reaction is not evidence
+      of infection by a specific pathogenic serovar and must not be attributed to a reservoir.'
+    unknown: []
+    values:
+      '1': andamana
+      '10': copenhageni
+      '11': cynopteri
+      '12': djasiman
+      '13': grippotyphosa
+      '14': hardjo
+      '15': hebdomadis
+      '16': icterohaemorrhagiae
+      '17': icterohaemorrhagiae
+      '18': javanica
+      '19': panama
+      '2': australis
+      '20': pomona
+      '21': patoc
+      '22': pyrogenes
+      '23': saxkoebing
+      '24': sejroe
+      '25': sentot
+      '26': shermani
+      '27': wolffi
+      '28': tarassovi
+      '3': autumnalis
+      '4': ballum
+      '5': bataviae
+      '6': bratislava
+      '7': canicola
+      '8': castellonis
+      '9': celledoni
+  lept_tpautocto:
+    dtype: string
+    unknown: []
+    values:
+      '1': sim
+      '2': nao
+      '3': indeterminado
+  local_of_birth:
+    dtype: string
+    unknown:
+    - '0'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': hospital
+      '2': other_health_facility
+      '3': household
+      '4': other
+  local_of_death:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': hospital
+      '2': other_health_facility
+      '3': household
+      '4': public_road
+      '5': other
+  marital_status:
+    dtype: string
+    unknown:
+    - '0'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': single
+      '2': married
+      '3': widowed
+      '4': separated
+      '5': consensual_union
+  pregnancy_type:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': single
+      '2': twin
+      '3': triplet_plus
+  prenatal_consultation_group:
+    dtype: string
+    unknown:
+    - '0'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': none
+      '2': 1_3_visits
+      '3': 4_6_visits
+      '4': 7_plus_visits
+  puerperium_window:
+    dtype: string
+    unknown:
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': within_42_days
+      '2': 43_days_to_1_year
+      '3': not_in_puerperium
+  sih_rd_car_int:
+    dtype: string
+    unknown: []
+    values:
+      '1': eletivo
+      '2': urgencia
+      '3': acidente_no_local_trabalho_ou_a_serv_da_empresa
+      '4': acidente_no_trajeto_para_o_trabalho
+      '5': outros_tipo_de_acidente_de_transito
+      '6': out_tp_lesoes_e_envenen_por_agent_quim_fisicos
+  sih_rd_cobranca:
+    dtype: string
+    unknown: []
+    values:
+      '11': alta_curado
+      '12': alta_melhorado
+      '13': alta_da_mae_puerpera_e_permanencia_recem_nascido
+      '14': alta_a_pedido
+      '15': alta_com_previsao_de_retorno_p_acomp_do_paciente
+      '16': alta_por_evasao
+      '17': alta_da_mae_puerpera_e_do_recem_nascido
+      '18': alta_por_outros_motivos
+      '19': alta_de_paciente_agudo_em_psiquiatria
+      '21': permanencia_por_caracteristicas_proprias_da_doenca
+      '22': permanencia_por_intercorrencia
+      '23': permanencia_por_impossibilidade_socio_familiar
+      '24': permanencia_proc_doacao_org_tec_cel_doador_vivo
+      '25': permanencia_proc_doacao_org_tec_cel_doador_morto
+      '26': permanencia_por_mudanca_de_procedimento
+      '27': permanencia_por_reoperacao
+      '28': permanencia_por_outros_motivos
+      '29': transferencia_para_internacao_domiciliar
+      '31': transferencia_para_outro_estabelecimento
+      '32': transferencia_para_internacao_domiciliar
+      '41': obito_com_do_fornecida_pelo_medico_assistente
+      '42': obito_com_do_fornecida_pelo_iml
+      '43': obito_com_do_fornecida_pelo_svo
+      '51': encerramento_administrativo
+      '61': alta_da_mae_puerpera_e_do_recem_nascido
+      '62': alta_da_mae_puerpera_e_permanencia_recem_nascido
+      '63': alta_da_mae_puerpera_e_obito_do_recem_nascido
+      '64': alta_da_mae_puerpera_com_obito_fetal
+      '65': obito_da_gestante_e_do_concepto
+      '66': obito_da_mae_puerpera_e_alta_do_recem_nascido
+      '67': obito_da_mae_puerpera_e_permanencia_recem_nascido
+  sih_rd_cod_idade:
+    dtype: string
+    unknown: []
+    values:
+      '2': dias
+      '3': meses
+      '4': anos
+      '5': centena_de_anos_100_idade
+  sih_rd_complex:
+    dtype: string
+    unknown: []
+    values:
+      '1': atencao_basica
+      '2': media_complexidade
+      '3': alta_complexidade
+  sih_rd_contracep1:
+    dtype: string
+    unknown: []
+    values:
+      '1': lam
+      '10': hormonio_oral
+      '11': hormonio_injetavel
+      '12': coito_interrompido
+      '2': ogino_kaus
+      '3': temperatura_basal
+      '4': billings
+      '5': cinto_termico
+      '6': diu
+      '7': diafragma
+      '8': preservativo
+      '9': espermicida
+  sih_rd_espec:
+    dtype: string
+    unknown: []
+    values:
+      '1': cirurgico
+      '10': leito_dia_aids
+      '11': leito_dia_fibrose_cistica
+      '12': leito_dia_intercorrencia_pos_transplante
+      '13': leito_dia_geriatria
+      '14': leito_dia_saude_mental
+      '2': obstetricos
+      '3': clinicos
+      '4': cronicos
+      '5': psiquiatria
+      '51': uti_ii_adulto_covid_19
+      '52': uti_ii_pediatrica_covid_19
+      '6': pneumologia_sanitaria_tsiologia
+      '64': unidade_intermediaria
+      '65': unidade_intermediaria_neonatal
+      '7': pediatricos
+      '74': uti_i
+      '75': uti_adulto_ii
+      '76': uti_adulto_iii
+      '77': uti_infantil_i
+      '78': uti_infantil_ii
+      '79': uti_infantil_iii
+      '8': reabilitacao
+      '80': uti_neonatal_i
+      '81': uti_neonatal_ii
+      '82': uti_neonatal_iii
+      '83': uti_queimados
+      '84': acolhimento_noturno
+      '85': uti_coronariana_uco_tipo_ii
+      '86': uti_coronariana_uco_tipo_iii
+      '87': saude_mental_clinico
+      '88': queimado_adulto_clinico
+      '89': queimado_pediatrico_clinico
+      '9': leito_dia_cirurgicos
+      '90': queimado_adulto_cirurgico
+      '91': queimado_pediatrico_cirurgico
+      '92': uci_unidade_de_cuidados_intermediarios_neonatal_convencional
+      '93': uci_unidade_de_cuidados_intermediarios_neonatal_canguru
+      '94': uci_unidade_de_cuidados_intermediarios_pediatrico
+      '95': uci_unidade_de_cuidados_intermediarios_adulto
+      '96': suporte_ventilatorio_pulmonar_covid_19
+  sih_rd_etnia:
+    dtype: string
+    unknown: []
+    values:
+      '0001': acona_wakonas_naconas_jakona_acoranes
+      '0002': aikana_aikana_mas_saka_tubarao
+      '0003': ajuru
+      '0004': akunsu_akunt_su
+      '0005': amanaye
+      '0006': amondawa
+      '0007': anambe
+      0008: aparai_apalai
+      0009: apiaka_apiaca
+      '0010': apinaye_apinaje_apinaie_apinage
+      '0011': apurina_aporina_ipurina_ipurina_ipurinan
+      '0012': arana_aracuai_do_vale_do_jequitinhonha
+      '0013': arapaso_arapaco
+      '0014': arara_de_rondonia_karo_urucu_uruku
+      '0015': arara_do_acre_shawanaua_amawaka
+      '0016': arara_do_aripuana_arara_do_beiradao_ari_puana
+      '0017': arara_do_para_ukaragma_ukaramma
+      0018: arawete_arauete
+      0019: arikapu_aricapu_arikapo_masubi_maxubi
+      '0020': arikem_ariquen_ariqueme_arikeme
+      '0021': arikose_aricobe
+      '0022': arua
+      '0023': aruak_arawak
+      '0024': ashaninka_kampa
+      '0025': asurini_do_tocantins_akuawa_akwawa
+      '0026': asurini_do_xingu_awaete
+      '0027': atikum_aticum
+      0028: ava_canoeiro
+      0029: aweti_aueti_aueto
+      '0030': bakairi_kura_bacairi
+      '0031': banawa_yafi_banawa_banawa_jafi
+      '0032': baniwa_baniua_baniva_walimanai_wakuenai
+      '0033': bara_waipinomaka
+      '0034': barasana_hanera
+      '0035': bare
+      '0036': bororo_boe
+      '0037': botocudo_geren
+      0038: canoe
+      0039: cassupa
+      '0040': chamacoco
+      '0041': chiquitano_xiquitano
+      '0042': cikiyana_sikiana
+      '0043': cinta_larga_matetamae
+      '0044': columbiara_corumbiara
+      '0045': deni
+      '0046': desana_desana_desano_dessano_wira_umukomasa
+      '0047': diahui_jahoi_jahui_diarroi
+      0048: enawene_nawe_saluma
+      0049: fulni_o
+      '0050': galibi_galibi_do_oiapoque_karinha
+      '0051': galibi_marworno_galibi_do_uaca_arua
+      '0052': gaviao_de_rondonia_digut
+      '0053': gaviao_krikateje
+      '0054': gaviao_parkateje_parkateje
+      '0055': gaviao_pukobie_pukobie_pykopje_gaviao_do_maranhao
+      '0056': guaja_awa_ava
+      '0057': guajajara_tenetehara
+      0058: guarani_kaiowa_pai_tavytera
+      0059: guarani_m_bya
+      '0060': guarani_nandeva_avakatuete_chiripa_nhandewa_ava_guarani
+      '0061': guato
+      '0062': himarima_himerima
+      '0063': ingariko_ingarico_akawaio_kapon
+      '0064': iranxe_irantxe
+      '0065': isse
+      '0066': jaboti_jabuti_kipiu_yabyti
+      '0067': jamamadi_yamamadi_djeoromitxi
+      0068: jarawara
+      0069: jiripanco_jeripanco_geripanco
+      '0070': juma_yuma
+      '0071': juruna
+      '0072': juruti_yuriti
+      '0073': kaapor_urubu_kaapor_ka_apor_kaaporte
+      '0074': kadiweu_caduveo_cadiueu
+      '0075': kaiabi_caiabi_kayabi
+      '0076': kaimbe_caimbe
+      '0077': kaingang_caingangue
+      0078: kaixana_caixana
+      0079: kalabassa_calabassa_calabacas
+      0080: kalanco
+      0081: kalapalo_calapalo
+      0082: kamayura_camaiura_kamaiura
+      0083: kamba_camba
+      0084: kambeba_cambeba_omagua
+      0085: kambiwa_cambiua
+      0086: kambiwa_pipipa_pipipa
+      0087: kampe
+      0088: kanamanti_kanamati_canamanti
+      0089: kanamari_canamari_kanamary_tukuna
+      0090: kanela_apaniekra_canela
+      0091: kanela_rankokamekra_canela
+      0092: kaninde
+      0093: kanoe_canoe
+      0094: kantarure_cantarure
+      0095: kapinawa_capinaua
+      0096: karaja_caraja
+      0097: karaja_javae_javae
+      0098: karaja_xambioa_karaja_do_norte
+      0099: karapana_carapana_muteamasa_ukopinopona
+      '0100': karapoto_carapoto
+      '0101': karipuna_caripuna
+      '0102': karipuna_do_amapa_caripuna
+      '0103': kariri_cariri
+      '0104': kariri_xoco_cariri_choco
+      '0105': karitiana_caritiana
+      '0106': katawixi_katauixi_katawin_katawisi_catauichi
+      '0107': katuena_catuena_katwena
+      0108: katukina_peda_djapa
+      0109: katukina_do_acre
+      '0110': kaxarari_caxarari
+      '0111': kaxinawa_huni_kuin_cashinaua_caxinaua
+      '0112': kaxixo
+      '0113': kaxuyana_caxuiana
+      '0114': kayapo_caiapo
+      '0115': kayapo_kararao_kararao
+      '0116': kayapo_txukahamae_txukahamae
+      '0117': kayapo_xicrim_xikrin
+      0118: kayuisana_caixana_cauixana_kaixana
+      0119: kinikinawa_guan_koinukoen_kinikinao
+      '0120': kiriri
+      '0121': kocama_cocama_kokama
+      '0122': kokuiregateje
+      '0123': korubo
+      '0124': kraho_crao_krao
+      '0125': kreje_krenye
+      '0126': krenak_borun_crenaque
+      '0127': krikati_krinkati
+      0128: kubeo_cubeo_cobewa_kubewa_pamiwa_cubeu
+      0129: kuikuro_kuikuru_cuicuro
+      '0130': kujubim_kuyubi_cujubim
+      '0131': kulina_pano_culina
+      '0132': kulina_madiha_culina_madija_madiha
+      '0133': kuripako_curipaco_curripaco_coripaco_wakuenai
+      '0134': kuruaia_curuaia
+      '0135': kwaza_coaia_koaia
+      '0136': machineri_manchineri_manxineri
+      '0137': macurap_makurap
+      0138: maku_dow_dow
+      0139: maku_hupda_hupda
+      '0140': maku_nadeb_nadeb
+      '0141': maku_yuhupde_yuhupde
+      '0142': makuna_macuna_yeba_masa
+      '0143': makuxi_macuxi_machusi_pemon
+      '0144': marimam_marima
+      '0145': marubo
+      '0146': matipu
+      '0147': matis
+      0148: matse_mayoruna
+      0149: maxakali_maxacali
+      '0150': maya_maya
+      '0151': maytapu
+      '0152': mehinako_meinaku_meinacu
+      '0153': meken_mequem_mekhem_michens
+      '0154': menky_myky_munku_menki_mynky
+      '0155': miranha_miranha_mirana
+      '0156': miriti_tapuia_miriti_tapuya_buia_tapuya
+      '0157': munduruku_mundurucu
+      0158: mura
+      0159: nahukwa_nafuqua
+      '0160': nambikwara_do_campo_halotesu_kithaulu_wakalitesu_sawentes_manduka
+      '0161': nambikwara_do_norte_negarote_mamainde_latunde_sabane_e_manduka_tawande
+      '0162': nambikwara_do_sul_wasusu_hahaintesu_alantesu_waikisu_alaketesu_wasusu_sarare
+      '0163': naravute_naruvoto
+      '0164': nawa_naua
+      '0165': nukini_nuquini_nukuini
+      '0166': ofaie_ofaye_xavante
+      '0167': oro_win
+      0168: paiaku_jenipapo_kaninde
+      0169: pakaa_nova_wari_pacaas_novos
+      '0170': palikur_aukwayene_aukuyene_paliku_ene
+      '0171': panara_krenhakarore_krenakore_krena_karore
+      '0172': pankarare_pancarare
+      '0173': pankararu_pancararu
+      '0174': pankararu_kalanko_kalanko
+      '0175': pankararu_karuazu_karuazu
+      '0176': pankaru_pancaru
+      '0177': parakana_paracana_apiterewa_awaete
+      0178: pareci_paresi_haliti
+      0179: parintintin
+      0180: patamona_kapon
+      0181: pataxo
+      0182: pataxo_ha_ha_hae
+      0183: paumari_palmari
+      0184: paumelenho
+      0185: piraha_mura_piraha
+      0186: piratuapuia_piratapuya_piratapuyo_pira_tapuya_waikana
+      0187: pitaguari
+      0188: potiguara
+      0189: poyanawa_poianaua
+      0190: rikbaktsa_canoeiros_erigpaktsa
+      0191: sakurabiat_mekens_sakirabiap_sakirabiar
+      0192: satere_mawe_satere_maue
+      0193: shanenawa_katukina
+      0194: siriano_siria_masa
+      0195: suriana
+      0196: surui_de_rondonia_paiter
+      0197: surui_do_para_aikewara
+      0198: suya_suia_kisedje
+      0199: tapayuna_beico_de_pau
+      '0200': tapeba
+      '0201': tapirape_tapi_irape
+      '0202': tapuia_tapuia_xavante_tapuio
+      '0203': tariano_tariana_taliaseri
+      '0204': taurepang_taulipang_pemon_arekuna_pageyn
+      '0205': tembe
+      '0206': tenharim
+      '0207': terena
+      0208: ticuna_tikuna_tukuna_maguta
+      0209: tingui_boto
+      '0210': tiriyo_ewarhuyana_tiriyo_trio_tarona_yawi_pianokoto
+      '0211': tiriyo_kah_yana_tiriyo_trio_tarona_yawi_pianokoto
+      '0212': tiriyo_tsikuyana_tiriyo_trio_tarona_yawi_pianokoto
+      '0213': tora
+      '0214': tremembe
+      '0215': truka
+      '0216': trumai
+      '0217': tsohom_djapa_tsunhum_djapa
+      0218: tukano_tucano_ye_pa_masa_dasea
+      0219: tumbalala
+      '0220': tunayana
+      '0221': tupari
+      '0222': tupinamba
+      '0223': tupiniquim
+      '0224': turiwara
+      '0225': tuxa
+      '0226': tuyuka_tuiuca_dokapuara_utapinomakaphona
+      '0227': txikao_txicao_ikpeng
+      0228: umutina_omotina_barbados
+      0229: uru_eu_wau_wau_urueu_uau_uau_urupain_urupa
+      '0230': wai_wai_hixkaryana_hixkaryana
+      '0231': wai_wai_karafawyana_karafawyana_kara_pawyana
+      '0232': wai_wai_xereu_xereu
+      '0233': wai_wai_katuena_katuena
+      '0234': wai_wai_mawayana_mawayana
+      '0235': waiapi_wayampi_oyampi_wayapy
+      '0236': waimiri_atroari_kina
+      '0237': wanano_uanano_wanana
+      0238: wapixana_uapixana_vapidiana_wapisiana_wapishana
+      0239: warekena_uarequena_werekena
+      '0240': wassu
+      '0241': waura_uaura_wauja
+      '0242': wayana_waiana_uaiana
+      '0243': witoto_uitoto_huitoto
+      '0244': xakriaba_xacriaba
+      '0245': xavante_a_uwe_akwe_awen_akwen
+      '0246': xerente_akwe_awen_akwen
+      '0247': xeta
+      0248: xipaia_shipaya_xipaya
+      0249: xokleng_shokleng_xocleng
+      '0250': xoko_xoco_choco
+      '0251': xukuru_xucuru
+      '0252': xukuru_kariri_xucuru_kariri
+      '0253': yaipiyana
+      '0254': yaminawa_jaminawa_iaminawa
+      '0255': yanomami_ninam_ianomami_ianoama_xiriana
+      '0256': yanomami_sanuma_ianomami_ianoama_xiriana
+      '0257': yanomami_yanomam_ianomami_ianoama_xiriana
+      0258: yawalapiti_iaualapiti
+      0259: yawanawa_iauanaua
+      '0260': yekuana_maiongon_ye_kuana_yekwana_mayongong
+      '0261': yudja_juruna_yuruna
+      '0262': zo_e_poturu
+      '0263': zoro_pageyn
+      '0264': zuruaha_sorowaha_suruwaha
+      X265: ahanenawa
+      X266: aicaba
+      X267: aikana_kwasa
+      X268: akuntsu
+      X269: alantesu
+      X271: amawaka
+      X272: anace
+      X273: apurina
+      X274: arana
+      X275: arapaco
+      X276: arara_apolima
+      X277: arara_do_aripuana
+      X278: aripuana
+      X279: assurini
+      X280: awuara
+      X281: borba
+      X282: cabixi
+      X283: camarare
+      X284: camasuri
+      X285: cara_preta
+      X286: charrua
+      X287: cujubim
+      X288: daw
+      X289: gaviao
+      X290: guarani
+      X291: halantesu
+      X292: halotesu
+      X293: hengatu
+      X294: hixkaryana
+      X295: hupde
+      X296: hupdes
+      X297: iauanaua
+      X298: iauarete_acu
+      X299: ikpeng
+      X300: inambu
+      X301: inhabarana
+      X302: javae
+      X303: jenipapo
+      X304: jenipapo_kaninde
+      X305: jiahoi
+      X306: kaiowa
+      X307: kampa
+      X308: kanela
+      X309: karafawyana
+      X310: kararao
+      X311: karubo
+      X312: kassupa
+      X313: katithaulu
+      X314: katokin
+      X315: katukina_pano
+      X316: katukina_peda_djapa
+      X317: katukina_shanenauwa
+      X318: kaxago
+      X319: kayabi
+      X320: kina_waimiri_atroari
+      X321: kiriri_barra
+      X322: kithaulu
+      X323: koiaia
+      X324: koiupanka
+      X325: kontanawa
+      X326: kraho_kanela
+      X327: kulina
+      X328: latunde
+      X329: maku
+      X330: makunambe
+      X331: mamainde
+      X332: mamuri
+      X333: manacapuru
+      X334: manairissu
+      X335: manchineri
+      X336: manduca
+      X337: maribondo
+      X338: massaka
+      X339: mawayana
+      X340: mawe
+      X341: mayoruna
+      X342: miqueleno
+      X343: mokurin
+      X344: mon_oro_waram
+      X345: mutum
+      X346: myky
+      X347: nadeb
+      X348: nambikwara
+      X349: negarote
+      X350: nhengatu
+      X351: ofaie_xavante
+      X352: onca
+      X353: oro_at
+      X354: oro_eo
+      X355: oro_jowin
+      X356: oro_miylin
+      X357: oro_mon
+      X358: oro_nao
+      X359: oro_wam
+      X360: oro_waram
+      X361: oro_waram_xijein
+      X362: paca
+      X363: pankara
+      X364: papagaio
+      X365: payaya
+      X366: pipipan
+      X367: pirata
+      X368: purobora
+      X369: sabane
+      X370: sanuma
+      X371: sawentesu
+      X372: silcy_tapuya
+      X373: siuci
+      X374: tabajara
+      X375: takuara
+      X376: tatu
+      X377: tawande
+      X378: tefe
+      X379: timbira
+      X380: tora_do_baixo_grande
+      X381: tsunhum_djapa
+      X382: tubarao
+      X383: tupaiu
+      X384: tupi
+      X385: tupinamba_de_belmonte
+      X386: urubu
+      X387: urubu_kaapor
+      X388: urupa
+      X389: wai_wai
+      X390: waikisu
+      X391: wakalitesu
+      X392: wassusu
+      X393: xereu
+      X394: xi_ein
+      X395: xicrin
+      X396: xipaya
+      X397: xiriana
+      X398: xiruai
+      X399: yepamassa
+      X400: tiriyo
+      X401: yanomami
+      X402: arara
+      X403: sakiriabar
+      X404: tatz
+      X405: sem_informacao
+  sih_rd_faec_tp:
+    dtype: string
+    unknown: []
+    values:
+      '10000': atencao_basica_pab
+      '20000': assistencia_farmaceutica
+      '21012': faec_cnrac_21012_cod_ant_a_tab_unif_val_p_2008_01
+      '21014': faec_eletiv_21014_cod_ant_a_tab_unif_val_p_2008_01
+      '40000': faec_subtipo_de_financiamento_ignorado
+      '40001': coleta_de_material
+      '40002': diagnostico_em_laboratorio_clinico
+      '40003': coleta_exame_anatomo_patologico_colo_uterino
+      '40004': diagnostico_em_neurologia
+      '40005': diagnostico_em_otorrinolaringologia_fonoaudiologia
+      '40006': diagnostico_em_psicologia_psiquiatria
+      '40007': consultas_medicas_outros_profissionais_de_nivel_superior
+      '40008': atencao_domiciliar
+      '40009': atendimento_acompanhamento_em_reabilitacao_fisica_mental_visual_auditiva_e_multiplas_defic
+      '40010': atendimento_acompanhamento_psicossocial
+      '40011': atendimento_acompanhamento_em_saude_do_idoso
+      '40012': atendimento_acompanhamento_de_queimados
+      '40013': atendimento_acompanhamento_de_diagnostico_de_doencas_endocrinas_metabolicas_e_nutricionais
+      '40014': tratamento_de_doencas_do_sistema_nervoso_central_e_periferico
+      '40015': tratamento_de_doencas_do_aparelho_da_visao
+      '40016': tratamento_em_oncologia
+      '40017': nefrologia
+      '40018': tratamentos_odontologicos
+      '40019': cirurgia_do_sistema_nervoso_central_e_periferico
+      '40020': cirurgias_de_ouvido_nariz_e_garganta
+      '40021': deformidade_labio_palatal_e_cranio_facial
+      '40022': cirurgia_do_aparelho_da_visao
+      '40023': cirurgia_do_aparelho_circulatorio
+      '40024': cirurgia_do_aparelho_digestivo_orgaos_anexos_e_parede_abdominal_inclui_pre_e_pos_operatorio
+      '40025': cirurgia_do_aparelho_geniturinario
+      '40026': tratamento_de_queimados
+      '40027': cirurgia_reparadora_para_lipodistrofia
+      '40028': outras_cirurgias_plasticas_reparadoras
+      '40029': cirurgia_orofacial
+      '40030': sequenciais
+      '40031': cirurgias_em_nefrologia
+      '40032': transplantes_de_orgaos_tecidos_e_celulas
+      '40033': medicamentos_para_transplante
+      '40034': opm_auditivas
+      '40035': opm_em_odontologia
+      '40036': opm_em_queimados
+      '40037': opm_em_nefrologia
+      '40038': opm_para_transplantes
+      '40039': incentivos_ao_pre_natal_e_nascimento
+      '40040': incentivo_ao_registro_civil_de_nascimento
+      '40041': central_nacional_de_regulacao_de_alta_complexidade_cnrac
+      '40042': reguladores_de_atividade_hormonal_inibidores_de_prolactina
+      '40043': politica_nacional_de_cirurgias_eletivas
+      '40044': redesignacao_e_acompanhamento
+      '40045': projeto_olhar_brasil
+      '40046': mamografia_para_rastreamento
+      '40047': projeto_olhar_brasil_consulta
+      '40048': projeto_olhar_brasil_oculos
+      '40049': implementar_cirg_cv_pediatrica
+      '40050': cirurgias_eletivas_componente_i
+      '40051': cirurgias_eletivas_componente_ii
+      '40052': cirurgias_eletivas_componente_iii
+      '40053': protese_mamaria_exames
+      '40054': protese_mamaria_cirurgia
+      '40055': transplante_histocompatibilidade
+      '40056': triagem_neonatal
+      '40057': controle_de_qualidade_do_exame_citopatologico_do_colo_de_utero
+      '40058': exames_do_leite_materno
+      '40059': atencao_as_pessoas_em_situacao_de_violencia_sexual
+      '40060': sangue_e_hemoderivados
+      '40061': mamografia_para_rastreamento_em_faixa_etaria_recomendada
+      '40062': doencas_raras
+      '40063': cadeiras_de_rodas
+      '40064': sistema_de_frequencia_modulada_pessoal_fm
+      '40065': medicamentos_em_urgencia
+      '40066': cirurgias_eletivas_componente_unico
+      '40067': atencao_especializada_em_saude_auditiva
+      '40068': terapias_especializadas_em_angiologia
+      '40069': tratamento_de_doenca_macular
+      '40070': opme_nao_relacionados_ao_ato_cirurgico
+      '40071': diagnostico_tratamento_em_oncologia
+      '40072': diagnostico_de_trombofilia_em_gestante
+      '40073': reabilitacao_pos_covid_19
+      '40074': telemedicina_em_urgencia
+      '40075': fisioterapia_cardiovascular
+      '40076': hemodinamica_em_atendimento_de_urgencia
+      '40077': exames_sorologicos_e_imunologicos
+      '50000': incentivo_mac
+      '60000': media_e_alta_complexidade_mac
+      '70000': vigilancia_em_saude
+      '80000': gestao_do_sus
+  sih_rd_financ:
+    dtype: string
+    unknown: []
+    values:
+      '1': atencao_basica_pab
+      '2': assistencia_farmaceutica
+      '4': fundo_de_acoes_estrategicas_e_compensacoes_faec
+      '5': incentivo_mac
+      '6': media_e_alta_complexidade_mac
+      '7': vigilancia_em_saude
+  sih_rd_gestao:
+    dtype: string
+    unknown: []
+    values:
+      '0': estadual
+      '1': municipal_plena_assist
+      '2': estadual_plena
+  sih_rd_gestor_cod:
+    dtype: string
+    unknown: []
+    values:
+      '1': tempo_de_permanencia
+      '10': id_maior
+      '102': telefone_e_cbo
+      '103': telefone_e_cbo_e_perm_menor
+      '104': telefone_e_cbo_e_id_menor
+      '105': telefone_e_cbo_e_id_menor_e_perm_menor
+      '106': telefone_e_cbo_e_id_maior
+      '107': telefone_e_cbo_e_id_maior_e_perm_menor
+      '11': id_maior_e_perm_menor
+      '110': telefone_e_cbo_e_qtd
+      '111': telefone_e_cbo_e_qtd_e_perm_menor
+      '112': telefone_e_cbo_e_qtd_e_id_menor
+      '113': telefone_e_cbo_e_qtd_e_id_menor_e_perm_menor
+      '114': telefone_e_cbo_e_qtd_e_id_maior
+      '115': telefone_e_cbo_e_qtd_e_id_maior_e_perm_menor
+      '134': cns
+      '136': cns_e_id_menor
+      '137': cns_e_id_menor_e_perm_menor
+      '138': cns_e_id_maior
+      '139': cns_e_id_maior_e_perm_menor
+      '14': qtd
+      '142': cns_e_qtd
+      '143': cns_e_qtd_e_perm_menor
+      '144': cns_e_qtd_e_id_menor
+      '145': cns_e_qtd_e_id_menor_e_perm_menor
+      '146': cns_e_qtd_e_id_maior
+      '147': cns_e_qtd_e_id_maior_e_perm_menor
+      '15': qtd_e_perm_menor
+      '16': qtd_e_id_menor
+      '166': cns_e_cbo
+      '167': cns_e_cbo_e_perm_menor
+      '168': cns_e_cbo_e_id_menor
+      '169': cns_e_cbo_e_id_menor_e_perm_menor
+      '17': qtd_e_id_menor_e_perm_menor
+      '170': cns_e_cbo_e_id_maior
+      '171': cns_e_cbo_e_id_maior_e_perm_menor
+      '174': cns_e_cbo_e_qtd
+      '175': cns_e_cbo_e_qtd_e_perm_menor
+      '176': cns_e_cbo_e_qtd_e_id_menor
+      '177': cns_e_cbo_e_qtd_e_id_menor_e_perm_menor
+      '178': cns_e_cbo_e_qtd_e_id_maior
+      '179': cns_e_cbo_e_qtd_e_id_maior_e_perm_menor
+      '18': qtd_e_id_maior
+      '19': qtd_e_id_maior_e_perm_menor
+      '198': cns_e_telefone
+      '199': cns_e_telefone_e_perm_menor
+      '2': idade_menor
+      '200': cns_e_telefone_e_id_menor
+      '201': cns_e_telefone_e_id_menor_e_perm_menor
+      '202': cns_e_telefone_e_id_maior
+      '203': cns_e_telefone_e_id_maior_e_perm_menor
+      '206': cns_e_telefone_e_qtd
+      '207': cns_e_telefone_e_qtd_e_perm_menor
+      '208': cns_e_telefone_e_qtd_e_id_menor
+      '209': cns_e_telefone_e_qtd_e_id_menor_e_perm_menor
+      '210': cns_e_telefone_e_qtd_e_id_maior
+      '211': cns_e_telefone_e_qtd_e_id_maior_e_perm_menor
+      '230': cns_e_telefone_e_cbo
+      '231': cns_e_telefone_e_cbo_e_perm_menor
+      '232': cns_e_telefone_e_cbo_e_id_menor
+      '233': cns_e_telefone_e_cbo_e_id_menor_e_perm_menor
+      '234': cns_e_telefone_e_cbo_e_id_maior
+      '235': cns_e_telefone_e_cbo_e_id_maior_e_perm_menor
+      '238': cns_e_telefone_e_cbo_e_qtd
+      '239': cns_e_telefone_e_cbo_e_qtd_e_perm_menor
+      '240': cns_e_telefone_e_cbo_e_qtd_e_id_menor
+      '241': cns_e_telefone_e_cbo_e_qtd_e_id_menor_e_perm_menor
+      '242': cns_e_telefone_e_cbo_e_qtd_e_id_maior
+      '243': cns_e_telefone_e_cbo_e_qtd_e_id_maior_e_perm_menor
+      '3': idade_maior
+      '38': cbo
+      '39': cbo_e_perm_menor
+      '4': tempo_de_permanencia_e_idade
+      '40': cbo_e_id_menor
+      '41': cbo_e_id_menor_e_perm_menor
+      '42': cbo_e_id_maior
+      '43': cbo_e_id_maior_e_perm_menor
+      '46': cbo_e_qtd
+      '47': cbo_e_qtd_e_perm_menor
+      '48': cbo_e_qtd_e_id_menor
+      '49': cbo_e_qtd_e_id_menor_e_perm_menor
+      '5': quantidade_maxima
+      '50': cbo_e_qtd_e_id_maior
+      '51': cbo_e_qtd_e_id_maior_e_perm_menor
+      '7': perm_menor
+      '70': telefone
+      '71': telefone_e_perm_menor
+      '72': telefone_e_id_menor
+      '73': telefone_e_id_menor_e_perm_menor
+      '74': telefone_e_id_maior
+      '75': telefone_e_id_maior_e_perm_menor
+      '78': telefone_e_qtd
+      '79': telefone_e_qtd_e_perm_menor
+      '8': id_menor
+      '80': telefone_e_qtd_e_id_menor
+      '81': telefone_e_qtd_e_id_menor_e_perm_menor
+      '82': telefone_e_qtd_e_id_maior
+      '83': telefone_e_qtd_e_id_maior_e_perm_menor
+      '9': id_menor_e_perm_menor
+  sih_rd_homonimo:
+    dtype: bool
+    unknown: []
+    values:
+      '0': false
+      '2': true
+  sih_rd_ident:
+    dtype: string
+    unknown: []
+    values:
+      '1': principal
+      '3': continuacao
+      '5': longa_permanencia
+  sih_rd_ind_vdrl:
+    dtype: bool
+    unknown: []
+    values:
+      '0': false
+      '1': true
+  sih_rd_instru:
+    dtype: string
+    unknown: []
+    values:
+      '1': analfabeto
+      '2': 1o_grau
+      '3': 2o_grau
+      '4': 3o_grau
+  sih_rd_marca_uci:
+    dtype: string
+    unknown: []
+    values:
+      '0': nao_utilizou_uci
+      '1': unidade_de_cuidados_intermed_neonatal_convencional
+      '2': unidade_de_cuidados_intermed_neonatal_canguru
+      '3': unidade_intermediaria_neonatal
+      '88': utilizou_dois_tipos_de_leitos_uci
+  sih_rd_marca_uti:
+    dtype: string
+    unknown: []
+    values:
+      '0': nao_utilizou_uti
+      '1': utilizou_mais_de_um_tipo_de_uti
+      '51': uti_adulto_tipo_ii_covid_19
+      '52': uti_pediatrica_tipo_ii_covid_19
+      '74': uti_adulto_tipo_i
+      '75': uti_adulto_tipo_ii
+      '76': uti_adulto_tipo_iii
+      '77': uti_infantil_tipo_i
+      '78': uti_infantil_tipo_ii
+      '79': uti_infantil_tipo_iii
+      '80': uti_neonatal_tipo_i
+      '81': uti_neonatal_tipo_ii
+      '82': uti_neonatal_tipo_iii
+      '83': uti_de_queimados
+      '85': uti_coronariana_tipo_ii_uco_tipo_ii
+      '86': uti_coronariana_tipo_iii_uco_tipo_iii
+      '99': uti_doador
+  sih_rd_nacional:
+    dtype: string
+    unknown: []
+    values:
+      '010': brasil
+      '020': reservado
+      '021': argentina
+      '022': bolivia
+      '023': chile
+      '024': paraguai
+      '025': uruguai
+      '026': colombia
+      '027': equador
+      028: antigua_e_dep_barbuda
+      029: antilhas_holandesas
+      '030': alemanha
+      '031': belgica
+      '032': gra_bretanha
+      '033': aruba
+      '034': canada
+      '035': espanha
+      '036': estados_unidos_da_america_eua
+      '037': franca
+      038: suica
+      039: italia
+      '040': comunidade_das_bahamas
+      '041': japao
+      '042': china
+      '043': coreia
+      '044': barbados
+      '045': portugal
+      '046': belize
+      '047': ilhas_turks_e_caicos
+      048: reservado
+      049: reservado
+      '050': reservado
+      '051': costa_rica
+      '052': cuba
+      '053': curacao
+      '054': comunidade_dominicana
+      '055': republica_dominicana
+      '056': republica_de_el_salvador
+      '057': estados_assoc_das_antilhas
+      058: ilhas_falklands
+      059: granada
+      '060': ilhas_guadalupe
+      '061': guatemala
+      '062': republica_do_haiti
+      '063': honduras_britanicas
+      '064': honduras
+      '065': ilhas_serranas
+      '066': jamaica
+      '067': ilhas_malvinas
+      068: martinica
+      069: ilha_milhos
+      '070': monte_serrat
+      '071': nicaragua
+      '072': panama
+      '073': panama_zona_do_canal
+      '074': porto_rico
+      '075': quitasueno
+      '076': roncador
+      '077': santa_lucia
+      078: sao_cristovao
+      079: sao_vicente
+      080: ilhas_turca
+      081: ilhas_virgens_britanicas
+      082: ilhas_virgens_americanas
+      083: bermudas
+      084: groenlandia
+      085: mexico
+      086: st_pierre_et_miquelon
+      087: guiana_francesa
+      088: republica_guiana
+      089: peru
+      090: suriname
+      091: trinidad_e_tobago
+      092: venezuela
+      093: albania
+      094: andorra
+      095: austria
+      096: bulgaria
+      097: chipre
+      098: dinamarca
+      099: eire
+      '100': escocia
+      '101': ilhas_faroes
+      '102': finlandia
+      '103': gibraltar
+      '104': grecia
+      '105': holanda
+      '106': hungria
+      '107': ilhas_baleares
+      '108': ilhas_cosmoledo_lomores
+      '109': ilhas_do_canal
+      '110': inglaterra
+      '111': irlanda_do_norte
+      '112': irlanda
+      '113': islandia
+      '114': iugoslavia
+      '115': liechtenstein
+      '116': luxemburgo
+      '117': ilhas_de_man
+      '118': monaco
+      '119': noruega
+      '120': republica_de_malta
+      '121': pais_de_gales
+      '122': paises_baixos
+      '123': polonia
+      '124': romenia
+      '125': san_marino
+      '126': suecia
+      '127': svalbard_e_jan_mayer_is
+      '128': tchecoslovaquia
+      '129': estado_da_cidade_do_vaticano
+      '130': croacia
+      '131': servia
+      '132': eslovenia
+      '133': republica_da_macedonia
+      '134': bosnia_herzegovina
+      '135': republica_tcheca
+      '136': eslovaquia
+      '137': montenegro
+      '138': azerbaijao
+      '139': bashkista
+      '140': republica_da_bielorrussia
+      '141': buryat
+      '142': carelia
+      '143': cazaquistao
+      '144': chechen_ingusth
+      '145': chuvash
+      '146': dagesta
+      '147': estonia
+      '148': georgia
+      '149': gorno_altai
+      '150': kabardino_balkar
+      '151': kalmir
+      '152': karachaevocherkess
+      '153': khakass
+      '154': komi
+      '155': letonia
+      '156': lituania
+      '157': mari
+      '158': moldavia
+      '159': ossetia_setentrional
+      '160': quirguistao
+      '161': tadjiquistao
+      '162': tartaria
+      '163': turcomenistao
+      '164': tuvin
+      '165': ucrania
+      '166': udmurt
+      '167': uniao_sovietica
+      '168': uzbequistao
+      '169': yakut
+      '170': abissinia
+      '171': acores
+      '172': afar_frances
+      '173': republica_da_africa_do_sul
+      '174': alto_volta
+      '175': angola
+      '176': argelia
+      '177': bechuanalandia
+      '178': benin
+      '179': botsuana
+      '180': burundi
+      '181': camaroes
+      '182': ceuta_e_melilla
+      '183': chade
+      '184': ilhas_comores
+      '185': congo
+      '186': costa_do_marfim
+      '187': daome
+      '188': djibuti
+      '189': republica_arabe_do_egito
+      '190': etiopia
+      '191': republica_do_gabao
+      '192': gambia
+      '193': gana
+      '194': gaza
+      '195': guine
+      '196': guine_equatorial
+      '197': ifni
+      '198': ascensao_e_tristao_da_cunha_is
+      '199': ilhas_canarias
+      '200': lesoto
+      '201': liberia
+      '202': libia
+      '203': madeira
+      '204': malawi
+      '205': madagascar
+      '206': mali
+      '207': marrocos
+      '208': mauricio
+      '209': mauritania
+      '210': mocambique
+      '211': nguane
+      '212': republica_do_niger
+      '213': nigeria
+      '214': papua_nova_guine
+      '215': pracas_norte_africanas
+      '216': protetor_do_sudoeste_africano
+      '217': quenia
+      '218': republica_centro_africana
+      '219': reuniao
+      '220': rodesia_zimbabwe
+      '221': ruanda
+      '222': saara_espanhol
+      '223': santa_helena
+      '224': sao_tome_e_principe
+      '225': seychelles
+      '226': serra_leoa
+      '227': somalia_republica
+      '228': suazilandia
+      '229': sudao
+      '230': tanganica
+      '231': territ_britanico_do_oceano_indico
+      '232': transkei
+      '233': togo
+      '234': tunisia
+      '235': uganda
+      '236': zaire
+      '237': zambia
+      '238': burkina_fasso
+      '239': zimbabwe
+      '240': namibia
+      '241': afeganistao
+      '242': arabia_saudita
+      '243': bahrein
+      '244': birmania
+      '245': brunei
+      '246': bhutan
+      '247': catar
+      '248': ceilao
+      '249': china_taiwan
+      '250': coveite
+      '251': emirados_arabes_unidos
+      '252': filipinas
+      '253': hong_kong
+      '254': iemen
+      '255': india
+      '256': indonesia
+      '257': ira
+      '258': iraque
+      '259': israel
+      '260': jordania
+      '261': kmer_camboja
+      '262': kuwait
+      '263': laos
+      '264': libano
+      '265': macau
+      '266': malasia
+      '267': maldivas_is
+      '268': mascate
+      '269': mongolia
+      '270': nepal
+      '271': oman
+      '272': palestina
+      '273': paquistao
+      '274': ruiquiu_is
+      '275': cingapura
+      '276': sequin
+      '277': siria
+      '278': sri_lanka
+      '279': tailandia
+      '280': tregua_estado
+      '281': turquia
+      '282': vietna_do_norte
+      '283': vietna_do_sul
+      '284': mianma
+      '285': arquipelago_manahiki
+      '286': arquipelago_midway
+      '287': ashmore_e_cartier
+      '288': australia
+      '289': arquipelago_de_bismark
+      '290': ilhas_cook
+      '291': republica_de_fiji
+      '292': guam
+      '293': ilhas_baker
+      '294': ilhas_cantao_e_enderburg
+      '295': ilhas_carolinas
+      '296': ilhas_do_pacifico
+      '297': ilhas_christmas
+      '298': ilhas_gilbert
+      '299': ilhas_howland_e_jarvis
+      '300': ilha_johnston_e_sand
+      '301': ilhas_kingman_reef
+      '302': ilhas_macquaire
+      '303': ilhas_marianas
+      '304': ilhas_marshall
+      '305': ilhas_macdonal_e_heard
+      '306': ilhas_niue
+      '307': ilhas_norfolk
+      '308': ilhas_palau
+      '309': ilhas_salomao
+      '310': ilhas_tokelau
+      '311': ilhas_wake
+      '312': kalimatan
+      '314': nauru
+      '315': ilhas_nova_caledonia
+      '316': nova_guine
+      '317': nova_zelandia
+      '318': ilhas_novas_hebridas
+      '319': territorio_de_papua
+      '320': ilhas_pascoa
+      '321': ilhas_pitcairin
+      '322': polinesia_francesa
+      '323': sabah
+      '324': samoa_americana
+      '325': samoa_ocidental
+      '326': ilhas_santa_cruz
+      '327': sarawak
+      '328': territorio_de_cocos
+      '329': timor
+      '330': tonga
+      '331': tuvalu
+      '332': ilhas_wallis_e_futuna
+      '333': antartico_britanico_territorio
+      '334': antartica_francesa
+      '335': terr_antartico_da_australia
+      '336': antartico_chileno
+      '337': antartico_argentino
+      '338': antartico_noruegues
+      '339': apatrida
+      '340': dependencia_de_ross
+      '341': terras_austrais
+      '342': bangladesh
+      '343': cabo_verde
+      '344': guine_bissau
+      '345': iemen_do_sul
+      '346': kara_kalpak
+      '347': armenia
+      '348': russia
+      '349': senegal
+      '350': tanzania
+  sih_rd_nat_jur:
+    dtype: string
+    unknown: []
+    values:
+      '1015': orgao_publico_do_poder_executivo_federal
+      '1023': orgao_publico_do_poder_exec_estadual_ou_distr_fed
+      '1031': orgao_publico_do_poder_executivo_municipal
+      '1040': orgao_publico_do_poder_legislativo_federal
+      '1058': orgao_publico_do_poder_legisl_estadual_ou_dist_fed
+      '1066': orgao_publico_do_poder_legislativo_municipal
+      '1074': orgao_publico_do_poder_judiciario_federal
+      '1082': orgao_publico_do_poder_judiciario_estadual
+      '1104': autarquia_federal
+      '1112': autarquia_estadual_ou_do_distrito_federal
+      '1120': autarquia_municipal
+      '1139': fundacao_federal
+      '1147': fundacao_estadual_ou_do_distrito_federal
+      '1155': fundacao_municipal
+      '1163': orgao_publico_autonomo_federal
+      '1171': orgao_publico_autonomo_estadual_ou_distr_federal
+      '1180': orgao_publico_autonomo_estadual_ou_distr_federal
+      '1198': comissao_polinacional
+      '1201': fundo_publico
+      '1210': associacao_publica
+      '2011': empresa_publica
+      '2038': sociedade_de_economia_mista
+      '2046': sociedade_anonima_aberta
+      '2054': sociedade_anonima_fechada
+      '2062': sociedade_empresaria_limitada
+      '2070': sociedade_empresaria_em_nome_coletivo
+      '2089': sociedade_empresaria_em_comandita_simples
+      '2097': sociedade_empresaria_em_comandita_por_acoes
+      '2127': sociedade_em_conta_de_participacao
+      '2135': empresario_individual
+      '2143': cooperativa
+      '2151': consorcio_de_sociedades
+      '2160': grupo_de_sociedades
+      '2178': estabelecimento_no_brasil_de_sociedade_estrangeira
+      '2194': estab_no_brasil_empr_binacional_argentina_brasil
+      '2216': empresa_domiciliada_no_exterior
+      '2224': clube_fundo_de_investimento
+      '2232': sociedade_simples_pura
+      '2240': sociedade_simples_limitada
+      '2259': sociedade_simples_em_nome_coletivo
+      '2267': sociedade_simples_em_comandita_simples
+      '2275': empresa_binacional
+      '2283': consorcio_de_empregadores
+      '2291': consorcio_simples
+      '2305': empr_individ_responsab_limitada_natur_empresaria
+      '2313': empr_individ_responsab_limitada_natureza_simples
+      '3034': servico_notarial_e_registral_cartorio
+      '3069': fundacao_privada
+      '3077': servico_social_autonomo
+      '3085': condominio_edilicio
+      '3107': comissao_de_conciliacao_previa
+      '3115': entidade_de_mediacao_e_arbitragem
+      '3123': partido_politico
+      '3131': entidade_sindical
+      '3204': estab_no_brasil_de_fundacao_ou_associacao_estrang
+      '3212': fundacao_ou_associacao_domiciliada_no_exterior
+      '3220': organizacao_religiosa
+      '3239': comunidade_indigena
+      '3247': fundo_privado
+      '3999': associacao_privada
+      '4014': empresa_individual_imobiliaria
+      '4022': segurado_especial
+      '4081': contribuinte_individual
+      '4090': candidato_a_cargo_politico_eletivo
+      '4111': leiloeiro
+      '5010': organizacao_internacional
+      '5029': representacao_diplomatica_estrangeira
+      '5037': outras_instituicoes_extraterritoriais
+  sih_rd_natureza:
+    dtype: string
+    unknown: []
+    values:
+      '10': proprio
+      '20': contratado
+      '22': contratado_optante_simples
+      '30': federal
+      '31': federal_verba_propria
+      '40': estadual
+      '41': estadual_verba_propria
+      '50': municipal
+      '60': filantropico
+      '61': filantropico_isento_tributos_e_contr_sociais
+      '63': filantropico_isento_ir_e_contr_s_lucro_liquido
+      '70': universitario_ensino
+      '80': sindicato
+      '90': universitario_pesquisas
+      '91': univ_pesquisas_isento_tributos_e_contr_sociais
+      '92': universitario_de_ensino_e_pesquisa_privado
+      '93': univ_pesquisas_isento_ir_e_contr_s_lucro_liquido
+      '94': universitario_de_ensino_e_pesquisa_privado
+  sih_rd_raca_cor:
+    dtype: string
+    unknown: []
+    values:
+      '1': branca
+      '2': preta
+      '3': parda
+      '4': amarela
+      '5': indigena
+  sih_rd_regct:
+    dtype: string
+    unknown: []
+    values:
+      '0': sem_regra_contratual
+      '7100': tabela_de_nao_geracao_de_credito_por_producao_na_internacao_e_ou_ambulatorio
+      '7101': estabelecimento_de_saude_sem_geracao_de_credito_na_media_complexidade_ambulatorial
+      '7102': estabelecimento_de_saude_sem_geracao_de_credito_na_media_complexidade_hospitalar
+      '7103': estabelecimento_de_saude_sem_geracao_de_credito_na_alta_complexidade_ambulatorial
+      '7104': estabelecimento_de_saude_sem_geracao_de_credito_na_alta_complexidade_hospitalar
+      '7105': estabelecimento_de_saude_sem_geracao_de_credito_para_os_procedimentos_financiados_com_o_faec
+      '7106': estabelecimento_sem_geracao_de_credito_total_excluindo_faec
+      '7107': estabelecimento_sem_geracao_de_credito_nas_acoes_espec_de_odontologia_incentivo_ceo_i_ii_e_iii
+      '7108': estabelecimento_sem_geracao_de_credito_incentivo_a_saude_do_trabalhador
+      '7109': estabelecimento_sem_geracao_de_credito_total_mec
+      '7110': estabelecimento_de_saude_da_estrutura_do_ministerio_da_saude_sem_geracao_de_credito_total
+      '7111': estabelecimento_de_saude_sem_geracao_de_credito_nasf_exceto_faec
+      '7112': estabelecimento_sem_geracao_de_credito_total_incluindo_faec_exclusivo_para_rede_sarah
+      '7113': estabelecimento_sem_geracao_de_credito_total_incluindo_faec_outros_estabelecimentos_federais
+      '7114': estabelecimento_de_saude_sem_geracao_de_credito_total_inclusive_faec_pronto_atendimento
+      '7115': estabelecimento_de_saude_sem_geracao_de_credito_na_media_complexidade_hu_mec
+      '7116': estabelecimento_de_saude_sem_geracao_de_credito_na_media_complexidade_lrpd
+      '7117': estabelecimento_de_saude_sem_geracao_de_credito_na_media_complexidade_exceto_opm_cer
+  sih_rd_seq_aih5:
+    dtype: string
+    unknown: []
+    values:
+      '0': sequencial_zerado
+      '1': seq_1
+      '2': seq_2
+      '3': seq_3
+  sih_rd_sexo:
+    dtype: string
+    unknown: []
+    values:
+      '1': masculino
+      '2': feminino
+      '3': feminino
+  sih_rd_tpdisec1:
+    dtype: string
+    unknown: []
+    values:
+      '1': pre_existente
+      '2': adquirido
+  sih_rd_vincprev:
+    dtype: string
+    unknown: []
+    values:
+      '1': autonomo
+      '2': desempregado
+      '3': aposentado
+      '4': nao_segurado
+      '5': empregado
+      '6': empregador
+  sim_do_atestante:
+    dtype: string
+    unknown: []
+    values:
+      '1': sim
+      '2': substituto
+      '3': iml
+      '4': svo
+      '5': outro
+  sim_do_codinst:
+    dtype: string
+    unknown: []
+    values:
+      E: estadual
+      M: municipal
+      R: regional
+  sim_do_fonte:
+    dtype: string
+    unknown: []
+    values:
+      '1': boletim_de_ocorrencia
+      '2': hospital
+      '3': familia
+      '4': outro
+  sim_do_fonteinv:
+    dtype: string
+    unknown: []
+    values:
+      '1': comite_de_mortalidade_materna_e_ou_infantil
+      '2': visita_familiar_entrevista_familia
+      '3': estabelecimento_de_saude_prontuario
+      '4': relacionamento_com_outros_bancos_de_dados
+      '5': svo
+      '6': iml
+      '7': outra_fonte
+      '8': multiplas_fontes
+  sim_do_racacor:
+    dtype: string
+    unknown: []
+    values:
+      '1': branca
+      '2': preta
+      '3': amarela
+      '4': parda
+      '5': indigena
+  sim_do_sexo:
+    dtype: string
+    unknown: []
+    values:
+      '1': masculino
+      '2': feminino
+  sinan_copaisinf:
+    dtype: string
+    unknown: []
+    values:
+      '0': nao_informado_ou_nao_aplicavel
+      '1': brasil
+  sinan_escolaridade:
+    dtype: string
+    unknown:
+    - 09
+    - '9'
+    values:
+      '00': analfabeto
+      '01': 1a4_incompleta
+      '02': 4a_completa
+      '03': 5a8_incompleta
+      '04': fundamental_completo
+      '05': medio_incompleto
+      '06': medio_completo
+      '07': superior_incompleto
+      08: superior_completo
+      '10': nao_se_aplica
+  sinan_gestante:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': 1o_trimestre
+      '2': 2o_trimestre
+      '3': 3o_trimestre
+      '4': idade_gestacional_ignorada
+      '5': nao
+      '6': nao_se_aplica
+  sinan_nduplic:
+    dtype: string
+    unknown: []
+    values:
+      '0': registro_unico
+      '1': duplicidade_identificada
+      '2': duplicidade_nao_identificada
+  sinan_pais:
+    dtype: string
+    unknown: []
+    values:
+      '1': brasil
+  sinan_raca:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': branca
+      '2': preta
+      '3': amarela
+      '4': parda
+      '5': indigena
+  sinan_sexo:
+    dtype: string
+    unknown:
+    - I
+    values:
+      F: feminino
+      M: masculino
+  sinan_sim_nao_ign:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': sim
+      '2': nao
+  sinan_tp_not:
+    dtype: string
+    unknown: []
+    values:
+      '1': negativa
+      '2': individual
+      '3': surto
+      '4': agregado
+  sinan_zona:
+    dtype: string
+    unknown:
+    - '9'
+    values:
+      '1': urbana
+      '2': rural
+      '3': periurbana
+  sinasc_gravidez:
+    dtype: string
+    unknown: []
+    values:
+      '1': unica
+      '2': dupla
+      '3': tripla_e_mais
+  sinasc_racacor:
+    dtype: string
+    unknown: []
+    values:
+      '1': branca
+      '2': preta
+      '3': amarela
+      '4': parda
+      '5': indigena
+  sinasc_racacormae:
+    dtype: string
+    unknown: []
+    values:
+      '1': branca
+      '2': preta
+      '3': amarela
+      '4': parda
+      '5': indigena
+  sinasc_sexo:
+    dtype: string
+    unknown: []
+    values:
+      '1': masculino
+      '2': feminino
+      F: feminino
+      M: masculino
+  yes_no:
+    dtype: bool
+    unknown:
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    values:
+      '1': true
+      '2': false
+  yes_no_strict:
+    dtype: bool
+    unknown:
+    - '9'
+    values:
+      '1': true
+      '2': false
+ignored:
+  SINAN-LEPT:
+    ANT_OU_DES: 'Free text: description of an ''other'' exposure antecedent. 1,199 distinct strings; not
+      codable without manual coding.'
+    CLI_OTRDES: 'Free text: description of an ''other'' clinical sign. 2,877 distinct strings; not codable
+      without manual coding.'
+    CS_FLXRET: Internal record-return flag; constant in this extract.
+    FLXRECEBI: Internal record-flow flag written by the receiving instance; constant in this extract.
+    ID_REGIONA: SINAN regional health-unit code of notification. A DATASUS administrative division revised
+      without a public changelog; the study uses IBGE-defined health regions instead (see ADR-001).
+    ID_RG_RESI: SINAN regional health-unit code of residence. As ID_REGIONA.
+    ID_UNIDADE: 'CNES establishment identifier. A key, not a category: it joins to the CNES register,
+      and 5,203 distinct values do not constitute a codebook enumeration. Treated as an identifier throughout.'
+    MIGRADO_W: Flag marking records migrated from SinanWindows; constant in this extract.
+    NU_LOTE_H: SINAN transmission batch identifier; an operational key with no analytic meaning.
+    NU_LOTE_I: SINAN transmission batch identifier; an operational key with no analytic meaning.
+    NU_LOTE_V: SINAN transmission batch identifier; an operational key with no analytic meaning.
+lookups:
+  CNES-ST:
+    CODUFMUN: tabMun
+    UFMUNRES: tabMun
+  SIH-RD:
+    CBOR: tabCBO
+    MUNIC_RES: tabMun
+  SIM-DO:
+    CODMUNRES: tabMun
+    NATURAL: tabNaturalidade
+    OCUP: tabCBO
+    OCUPMAE: tabCBO
+  SINAN-LEPT:
+    ATE_MUNICI: ibge_municipality
+    COMUNINF: ibge_municipality
+    ID_AGRAVO: cid10
+    ID_MN_RESI: ibge_municipality
+    ID_MUNICIP: ibge_municipality
+    ID_OCUPA_N: cbo_occupation
+  SINASC:
+    CODMUNRES: tabMun
+    CODOCUPMAE: tabCBO
+references_version: 3
+transforms:
+  SINAN-LEPT:
+    ANO_NASC:
+      kind: numeric
+      maximum: 2030
+      minimum: 1890
+      name: birth_year
+    ATE_MUNICI:
+      kind: reference
+      name: municipality_hospital
+      table: ibge_municipality
+    ATE_UF:
+      kind: reference
+      name: uf_hospital
+      table: ibge_uf
+    COMUNINF:
+      kind: reference
+      name: municipality_infection
+      table: ibge_municipality
+    COUFINF:
+      kind: reference
+      name: uf_infection
+      table: ibge_uf
+    CO_MUN_R1:
+      kind: reference
+      name: municipality_risk_area_1
+      table: ibge_municipality
+    CO_MUN_R2:
+      kind: reference
+      name: municipality_risk_area_2
+      table: ibge_municipality
+    CO_MUN_R3:
+      kind: reference
+      name: municipality_risk_area_3
+      table: ibge_municipality
+    CO_MUN_R4:
+      kind: reference
+      name: municipality_risk_area_4
+      table: ibge_municipality
+    CO_UF_R1:
+      kind: reference
+      name: uf_risk_area_1
+      table: ibge_uf
+    CO_UF_R2:
+      kind: reference
+      name: uf_risk_area_2
+      table: ibge_uf
+    CO_UF_R3:
+      kind: reference
+      name: uf_risk_area_3
+      table: ibge_uf
+    CO_UF_R4:
+      kind: reference
+      name: uf_risk_area_4
+      table: ibge_uf
+    ID_MN_RESI:
+      kind: reference
+      name: municipality_residence
+      table: ibge_municipality
+    ID_MUNICIP:
+      kind: reference
+      name: municipality_notification
+      table: ibge_municipality
+    ID_OCUPA_N:
+      groups:
+        '0': forcas_armadas_policiais_bombeiros
+        '1': membros_superiores_do_poder_publico_dirigentes_e_gerentes
+        '2': profissionais_das_ciencias_e_das_artes
+        '3': tecnicos_de_nivel_medio
+        '4': trabalhadores_de_servicos_administrativos
+        '5': trabalhadores_dos_servicos_comercio_e_vendedores
+        '6': trabalhadores_agropecuarios_florestais_e_da_pesca
+        '7': trabalhadores_da_producao_de_bens_e_servicos_industriais
+        '8': trabalhadores_da_producao_de_bens_e_servicos_industriais_continuos
+        '9': trabalhadores_de_manutencao_e_reparacao
+      kind: prefix_group
+      name: occupation_major_group
+      pad: 6
+      unknown:
+      - '000000'
+      - '998999'
+      - '999991'
+      - '999992'
+      - '999993'
+      - '999994'
+      - '999995'
+      - '999999'
+      width: 1
+    MICRO1_S1:
+      attributes:
+        reservoir:
+          '1': saprophyte_or_unknown
+          '10': rodent_rattus
+          '11': bat_rodent
+          '12': dog_rodent
+          '13': rodent_vole_wildlife
+          '14': cattle
+          '15': cattle_rodent
+          '16': rodent_rattus
+          '17': rodent_rattus
+          '18': rodent_other
+          '19': dog_rodent
+          '2': swine_equine_hedgehog
+          '20': swine_cattle
+          '21': saprophyte_non_pathogenic
+          '22': rodent_other
+          '23': cattle_rodent
+          '24': cattle_rodent
+          '25': dog_rodent
+          '26': rodent_other
+          '27': cattle
+          '28': swine
+          '3': rodent_other
+          '4': rodent_mouse
+          '5': rodent_dog
+          '6': swine_equine_hedgehog
+          '7': dog
+          '8': rodent_mouse
+          '9': rodent_other
+        serogroup:
+          '1': Semaranga
+          '10': Icterohaemorrhagiae
+          '11': Cynopteri
+          '12': Djasiman
+          '13': Grippotyphosa
+          '14': Sejroe
+          '15': Hebdomadis
+          '16': Icterohaemorrhagiae
+          '17': Icterohaemorrhagiae
+          '18': Javanica
+          '19': Panama
+          '2': Australis
+          '20': Pomona
+          '21': Semaranga
+          '22': Pyrogenes
+          '23': Sejroe
+          '24': Sejroe
+          '25': Djasiman
+          '26': Shermani
+          '27': Sejroe
+          '28': Tarassovi
+          '3': Autumnalis
+          '4': Ballum
+          '5': Bataviae
+          '6': Australis
+          '7': Canicola
+          '8': Ballum
+          '9': Celledoni
+      kind: labelled_code
+      name: serovar_s1_first
+      values:
+        '1': andamana
+        '10': copenhageni
+        '11': cynopteri
+        '12': djasiman
+        '13': grippotyphosa
+        '14': hardjo
+        '15': hebdomadis
+        '16': icterohaemorrhagiae
+        '17': icterohaemorrhagiae
+        '18': javanica
+        '19': panama
+        '2': australis
+        '20': pomona
+        '21': patoc
+        '22': pyrogenes
+        '23': saxkoebing
+        '24': sejroe
+        '25': sentot
+        '26': shermani
+        '27': wolffi
+        '28': tarassovi
+        '3': autumnalis
+        '4': ballum
+        '5': bataviae
+        '6': bratislava
+        '7': canicola
+        '8': castellonis
+        '9': celledoni
+    MICRO1_S_2:
+      attributes:
+        reservoir:
+          '1': saprophyte_or_unknown
+          '10': rodent_rattus
+          '11': bat_rodent
+          '12': dog_rodent
+          '13': rodent_vole_wildlife
+          '14': cattle
+          '15': cattle_rodent
+          '16': rodent_rattus
+          '17': rodent_rattus
+          '18': rodent_other
+          '19': dog_rodent
+          '2': swine_equine_hedgehog
+          '20': swine_cattle
+          '21': saprophyte_non_pathogenic
+          '22': rodent_other
+          '23': cattle_rodent
+          '24': cattle_rodent
+          '25': dog_rodent
+          '26': rodent_other
+          '27': cattle
+          '28': swine
+          '3': rodent_other
+          '4': rodent_mouse
+          '5': rodent_dog
+          '6': swine_equine_hedgehog
+          '7': dog
+          '8': rodent_mouse
+          '9': rodent_other
+        serogroup:
+          '1': Semaranga
+          '10': Icterohaemorrhagiae
+          '11': Cynopteri
+          '12': Djasiman
+          '13': Grippotyphosa
+          '14': Sejroe
+          '15': Hebdomadis
+          '16': Icterohaemorrhagiae
+          '17': Icterohaemorrhagiae
+          '18': Javanica
+          '19': Panama
+          '2': Australis
+          '20': Pomona
+          '21': Semaranga
+          '22': Pyrogenes
+          '23': Sejroe
+          '24': Sejroe
+          '25': Djasiman
+          '26': Shermani
+          '27': Sejroe
+          '28': Tarassovi
+          '3': Autumnalis
+          '4': Ballum
+          '5': Bataviae
+          '6': Australis
+          '7': Canicola
+          '8': Ballum
+          '9': Celledoni
+      kind: labelled_code
+      name: serovar_s1_second
+      values:
+        '1': andamana
+        '10': copenhageni
+        '11': cynopteri
+        '12': djasiman
+        '13': grippotyphosa
+        '14': hardjo
+        '15': hebdomadis
+        '16': icterohaemorrhagiae
+        '17': icterohaemorrhagiae
+        '18': javanica
+        '19': panama
+        '2': australis
+        '20': pomona
+        '21': patoc
+        '22': pyrogenes
+        '23': saxkoebing
+        '24': sejroe
+        '25': sentot
+        '26': shermani
+        '27': wolffi
+        '28': tarassovi
+        '3': autumnalis
+        '4': ballum
+        '5': bataviae
+        '6': bratislava
+        '7': canicola
+        '8': castellonis
+        '9': celledoni
+    MICRO1_T_1:
+      kind: numeric
+      maximum: 100000
+      minimum: 1
+      name: titre_s1_first
+    MICRO1_T_2:
+      kind: numeric
+      maximum: 100000
+      minimum: 1
+      name: titre_s1_second
+    MICRO2_S1:
+      attributes:
+        reservoir:
+          '1': saprophyte_or_unknown
+          '10': rodent_rattus
+          '11': bat_rodent
+          '12': dog_rodent
+          '13': rodent_vole_wildlife
+          '14': cattle
+          '15': cattle_rodent
+          '16': rodent_rattus
+          '17': rodent_rattus
+          '18': rodent_other
+          '19': dog_rodent
+          '2': swine_equine_hedgehog
+          '20': swine_cattle
+          '21': saprophyte_non_pathogenic
+          '22': rodent_other
+          '23': cattle_rodent
+          '24': cattle_rodent
+          '25': dog_rodent
+          '26': rodent_other
+          '27': cattle
+          '28': swine
+          '3': rodent_other
+          '4': rodent_mouse
+          '5': rodent_dog
+          '6': swine_equine_hedgehog
+          '7': dog
+          '8': rodent_mouse
+          '9': rodent_other
+        serogroup:
+          '1': Semaranga
+          '10': Icterohaemorrhagiae
+          '11': Cynopteri
+          '12': Djasiman
+          '13': Grippotyphosa
+          '14': Sejroe
+          '15': Hebdomadis
+          '16': Icterohaemorrhagiae
+          '17': Icterohaemorrhagiae
+          '18': Javanica
+          '19': Panama
+          '2': Australis
+          '20': Pomona
+          '21': Semaranga
+          '22': Pyrogenes
+          '23': Sejroe
+          '24': Sejroe
+          '25': Djasiman
+          '26': Shermani
+          '27': Sejroe
+          '28': Tarassovi
+          '3': Autumnalis
+          '4': Ballum
+          '5': Bataviae
+          '6': Australis
+          '7': Canicola
+          '8': Ballum
+          '9': Celledoni
+      kind: labelled_code
+      name: serovar_s2_first
+      values:
+        '1': andamana
+        '10': copenhageni
+        '11': cynopteri
+        '12': djasiman
+        '13': grippotyphosa
+        '14': hardjo
+        '15': hebdomadis
+        '16': icterohaemorrhagiae
+        '17': icterohaemorrhagiae
+        '18': javanica
+        '19': panama
+        '2': australis
+        '20': pomona
+        '21': patoc
+        '22': pyrogenes
+        '23': saxkoebing
+        '24': sejroe
+        '25': sentot
+        '26': shermani
+        '27': wolffi
+        '28': tarassovi
+        '3': autumnalis
+        '4': ballum
+        '5': bataviae
+        '6': bratislava
+        '7': canicola
+        '8': castellonis
+        '9': celledoni
+    MICRO2_S_2:
+      attributes:
+        reservoir:
+          '1': saprophyte_or_unknown
+          '10': rodent_rattus
+          '11': bat_rodent
+          '12': dog_rodent
+          '13': rodent_vole_wildlife
+          '14': cattle
+          '15': cattle_rodent
+          '16': rodent_rattus
+          '17': rodent_rattus
+          '18': rodent_other
+          '19': dog_rodent
+          '2': swine_equine_hedgehog
+          '20': swine_cattle
+          '21': saprophyte_non_pathogenic
+          '22': rodent_other
+          '23': cattle_rodent
+          '24': cattle_rodent
+          '25': dog_rodent
+          '26': rodent_other
+          '27': cattle
+          '28': swine
+          '3': rodent_other
+          '4': rodent_mouse
+          '5': rodent_dog
+          '6': swine_equine_hedgehog
+          '7': dog
+          '8': rodent_mouse
+          '9': rodent_other
+        serogroup:
+          '1': Semaranga
+          '10': Icterohaemorrhagiae
+          '11': Cynopteri
+          '12': Djasiman
+          '13': Grippotyphosa
+          '14': Sejroe
+          '15': Hebdomadis
+          '16': Icterohaemorrhagiae
+          '17': Icterohaemorrhagiae
+          '18': Javanica
+          '19': Panama
+          '2': Australis
+          '20': Pomona
+          '21': Semaranga
+          '22': Pyrogenes
+          '23': Sejroe
+          '24': Sejroe
+          '25': Djasiman
+          '26': Shermani
+          '27': Sejroe
+          '28': Tarassovi
+          '3': Autumnalis
+          '4': Ballum
+          '5': Bataviae
+          '6': Australis
+          '7': Canicola
+          '8': Ballum
+          '9': Celledoni
+      kind: labelled_code
+      name: serovar_s2_second
+      values:
+        '1': andamana
+        '10': copenhageni
+        '11': cynopteri
+        '12': djasiman
+        '13': grippotyphosa
+        '14': hardjo
+        '15': hebdomadis
+        '16': icterohaemorrhagiae
+        '17': icterohaemorrhagiae
+        '18': javanica
+        '19': panama
+        '2': australis
+        '20': pomona
+        '21': patoc
+        '22': pyrogenes
+        '23': saxkoebing
+        '24': sejroe
+        '25': sentot
+        '26': shermani
+        '27': wolffi
+        '28': tarassovi
+        '3': autumnalis
+        '4': ballum
+        '5': bataviae
+        '6': bratislava
+        '7': canicola
+        '8': castellonis
+        '9': celledoni
+    MICRO2_T_1:
+      kind: numeric
+      maximum: 100000
+      minimum: 1
+      name: titre_s2_first
+    MICRO2_T_2:
+      kind: numeric
+      maximum: 100000
+      minimum: 1
+      name: titre_s2_second
+    NU_ANO:
+      kind: numeric
+      maximum: 2030
+      minimum: 1990
+      name: notification_year
+    NU_IDADE_N:
+      kind: sinan_packed_age
+      name: age
+    SEM_NOT:
+      kind: epi_week
+      name: epiweek_notification
+    SEM_PRI:
+      kind: epi_week
+      name: epiweek_onset
+    SG_UF:
+      kind: reference
+      name: uf_residence
+      table: ibge_uf
+    SG_UF_NOT:
+      kind: reference
+      name: uf_notification
+      table: ibge_uf
+version: 6

@@ -1,0 +1,128 @@
+schema: brepi.study.analytic-datasets/1
+policy:
+  visualization_neutral: true
+  preserve_native_grain: true
+  plot_generation_in_scope: false
+datasets:
+  - id: sinan_line_level
+    path: data/interim/lept_line_level.parquet
+    grain: notification
+    rows: 328984
+    columns: 309
+    components: {raw_code_columns: 71, decoded_or_derived_columns: 222}
+    role: decoded source-level audit and descriptive epidemiology
+  - id: population_tensor
+    path: data/interim/population_tensor_long.parquet
+    grain: municipality_year_sex_age
+    keys: [munic_code, year, sex, age_group]
+    rows: 3598254
+    columns: 5
+    role: rates and direct standardisation denominators
+  - id: primary_municipality_month_panel
+    path: data/panel/lept_panel_rq1_socioeconomic_municipality_month.parquet
+    grain: municipality_month
+    keys: [munic_code, period]
+    rows: 1269960
+    columns: 69
+    role: canonical complete panel for exposure and event analyses
+  - id: surveillance_triangulation_panel
+    path: data/panel/triangulation_municipality_year.parquet
+    grain: municipality_year
+    keys: [munic_code, year]
+    rows: 105830
+    columns: 19
+    role: aligned SINAN, SIM, SIH and population evidence
+  - id: flood_events
+    path: data/panel/flood_events.parquet
+    grain: declaration_event
+    rows: 21644
+    columns: 8
+    role: RQ2 exposure events
+  - id: drought_events
+    path: data/panel/drought_events.parquet
+    grain: declaration_event
+    rows: 22665
+    columns: 8
+    role: RQ2 negative-control events
+  - id: rq1_exposure_lag_surface
+    path: data/results/rq1_exposure_response/health_region_confirmatory/exposure_lag_surface.csv
+    grain: exposure_lag_cell
+    rows: 780
+    columns: 7
+    role: full exposure-lag response with uncertainty
+  - id: rq2_group_time_primary
+    path: data/results/rq2_flood_disasters/corrected_primary_group_time.csv
+    grain: treatment_cohort_period
+    rows: 3646
+    columns: 5
+    role: full corrected Callaway-SantAnna cell estimates
+  - id: rq2_cross_specification_summary
+    path: data/results/rq2_flood_disasters/corrected_rq2_summary.csv
+    grain: analysis_estimand
+    rows: 78
+    columns: 6
+    role: normalised result summary, not a replacement for group-time data
+  - id: rq3_surveillance_map_data
+    path: data/results/rq3_ascertainment/16_surveillance_completeness_map.csv
+    grain: municipality
+    keys: [munic_code]
+    rows: 5570
+    columns: 14
+    role: municipality-level three-system classification
+  - id: rq4_lethality_panel
+    path: data/results/rq4_lethality/rq4_lethality_panel.csv
+    grain: health_region_year
+    keys: [health_region_code, year]
+    rows: 4974
+    columns: 18
+    role: model-ready severity panel
+  - id: rq5_regime_assignment
+    path: data/results/rq5_regimes/regime_assignment.csv
+    grain: higher_burden_municipality
+    keys: [munic_code]
+    rows: 497
+    columns: 5
+    role: five-regime assignment for eligible municipalities
+  - id: municipality_atlas
+    path: data/results/atlas/municipality_atlas.parquet
+    grain: municipality
+    keys: [munic_code]
+    rows: 5570
+    columns: 64
+    role: >-
+      every municipality-level answer on one spine - burden with exact
+      intervals, seasonality, serology, disaster exposure, RQ3 surveillance
+      class, RQ5 regime, structural covariates and geography keys. Built for
+      unit-level tables and maps without further joins. Municipalities with no
+      cases are present with explicit zeros; they are RQ3's subject, not an
+      absence.
+  - id: municipality_year_atlas
+    path: data/results/atlas/municipality_year_atlas.parquet
+    grain: municipality_year
+    keys: [munic_code, year]
+    rows: 105830
+    columns: 43
+    role: >-
+      the time-varying counterpart - annual counts, exact rates, climate
+      aggregates, structural covariates and the SIM/SIH triangulation columns.
+  - id: municipality_serogroup_long
+    path: data/results/atlas/municipality_serogroup_long.parquet
+    grain: municipality_serogroup
+    keys: [munic_code, serogroup]
+    rows: 3365
+    columns: 5
+    role: >-
+      non-zero serogroup cells with their municipal denominator. Long rather
+      than wide because MAT typing reaches about three per cent of
+      notifications and a wide table would be almost entirely zeros.
+  - id: health_region_atlas
+    path: data/results/atlas/health_region_atlas.parquet
+    grain: health_region
+    keys: [health_region_code]
+    rows: 439
+    columns: 32
+    role: >-
+      RQ1's latent spatial field beside the burden and severity it explains.
+      The only grain at which that field exists - it is not interpolated to
+      municipalities, which would invent within-region variation the model
+      never estimated.

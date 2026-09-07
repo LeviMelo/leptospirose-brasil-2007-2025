@@ -1,0 +1,8 @@
+Modelo,Especificação,OR de H por +10 pp,Tipo de intervalo,Células,Observação
+A,"Espaço + tendência anual, sem exposição",—,ICr95% (credibilidade),4.941,"Referência sem exposição. Variância marginal do efeito espacial 0,66 (0,49–0,88)"
+B,A + H (contínuo),"1,23 (1,21–1,26)",ICr95% (credibilidade),4.941,"Variância marginal do efeito espacial 0,42 (0,30–0,58); redução de 36,2% em relação a A"
+C,B + composição etária e sexo,"1,23 (1,20–1,26)",ICr95% (credibilidade),4.941,"Modelo principal. OR por +10 pp de casos com 60 anos ou mais 1,08 (1,05–1,11)"
+D,"C, apenas onde o desfecho está preenchido em ≥ 95% dos casos","1,23 (1,20–1,27)",ICr95% (credibilidade),3.565,"Restrição a células com completude do desfecho ≥ 95%; 72,2% das células retidas"
+E,"C, com desfecho redefinido como letalidade apenas entre internados","1,04 (1,02–1,07)",ICr95% (credibilidade),4.624,Desfecho restrito a óbitos entre casos internados; 4.624 células
+F,"C, apenas em células com ≥ 10 casos por trás de H","1,24 (1,20–1,28)",ICr95% (credibilidade),1.314,"Restrição a células com ≥ 10 casos no denominador de H; 83,0% dos casos retidos"
+FE,Efeitos fixos de região e de ano + composição; erros-padrão agrupados por região,"1,22 (1,18–1,27)","IC95% (confiança, robusto)",4.289,"306 de 426 regiões contribuem; 97,9% dos casos. Efeitos fixos de região e de ano"

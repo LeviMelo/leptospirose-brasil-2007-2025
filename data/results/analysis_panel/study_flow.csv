@@ -1,0 +1,11 @@
+step,n,pct_of_notifications
+notifications in the SINAN files,328984,100.0
+discarded,238353,72.45
+inconclusive,11699,3.56
+no final classification,12265,3.73
+confirmed (CLASSI_FIN = confirmado),66667,20.26
+"confirmed, excluded: symptom-onset date invalid",155,0.05
+"confirmed, excluded: onset outside 2007-2025",105,0.03
+"confirmed, in the analytic window",66407,20.19
+"in window, excluded: no residence municipality",49,0.01
+ANALYTIC POPULATION,66358,20.17

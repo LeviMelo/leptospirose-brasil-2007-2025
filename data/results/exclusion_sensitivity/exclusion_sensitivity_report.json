@@ -1,0 +1,226 @@
+{
+  "window": [
+    2007,
+    2025
+  ],
+  "health_regions_total": 439,
+  "person_time_denominator": {
+    "national_person_years_2007_2025": 3856326294,
+    "health_regions": 439,
+    "health_regions_in_region_totals": 432,
+    "max_abs_person_year_gap_vs_region_totals": 0,
+    "regions_with_no_confirmed_case_ever": 7,
+    "their_person_years": 11380846,
+    "their_share_of_national_person_years_pct": 0.29512144803999824,
+    "note": "regions that never notified a confirmed case cannot appear in a notification-keyed panel; they are territory the study covers and are counted on the excluded side of every threshold here"
+  },
+  "a_what_is_excluded_at_30": {
+    "health_regions_excluded": 229,
+    "health_regions_retained": 210,
+    "excluded_person_year_share_pct": 23.189758278270837,
+    "excluded_case_share_pct": 3.637843214081196,
+    "excluded_incidence_per_100k": [
+      0.2699400167116353,
+      0.25927802846342435,
+      0.2809278780051667
+    ],
+    "retained_incidence_per_100k": [
+      2.1587725867810676,
+      2.1420723073910177,
+      2.175570709748505
+    ],
+    "excluded_cfr_pct": [
+      10.609697551608258,
+      9.319306584498865,
+      12.012084727877061
+    ],
+    "retained_cfr_pct": [
+      9.721750933152357,
+      9.483719773096883,
+      9.963756387788425
+    ],
+    "excluded_H": [
+      0.7843803056027164,
+      0.7672135497079532,
+      0.8008370170767898
+    ],
+    "retained_H": [
+      0.7198477609523039,
+      0.7162872570202062,
+      0.7233875921110047
+    ],
+    "excluded_outcome_known": 2083,
+    "excluded_regions_with_estimable_cfr": 216
+  },
+  "a_informativeness_of_the_excluded_tail": {
+    "n_regions": 431,
+    "spearman_cases_vs_H": [
+      -0.17738689828796061,
+      0.00021445781086590438
+    ],
+    "spearman_incidence_vs_H": [
+      -0.26343300663654945,
+      2.8324932406172126e-08
+    ],
+    "spearman_cases_vs_outcome_completeness": [
+      0.07185586833586656,
+      0.13639256804519545
+    ],
+    "n_regions_with_cfr": 426,
+    "reading": "case count ranks negatively against H: regions with few confirmed cases tend to be regions recording a higher hospitalised fraction, i.e. narrower ascertainment. The excluded tail is the informative end of the exposure, not statistical noise."
+  },
+  "b_gradient_by_threshold": [
+    {
+      "threshold": 0,
+      "health_regions": 426,
+      "cases": 66350,
+      "pct_of_national_person_years": 99.3613908128491,
+      "cfr_Q1_pct": 2.778672680412371,
+      "cfr_Q1_lo_pct": 2.4966527063837245,
+      "cfr_Q1_hi_pct": 3.0831094157542682,
+      "cfr_Q5_pct": 17.033968516984256,
+      "cfr_Q5_lo_pct": 16.36717500250593,
+      "cfr_Q5_hi_pct": 17.71669937617584,
+      "cfr_gradient_Q5_over_Q1": 6.130253713242798,
+      "H_median_Q1": 0.5,
+      "H_median_Q5": 0.9666666666666667,
+      "spearman_H_vs_cfr": 0.23709074763017407,
+      "spearman_p": 7.426300445008636e-07
+    },
+    {
+      "threshold": 10,
+      "health_regions": 311,
+      "cases": 65782,
+      "pct_of_national_person_years": 89.62564691109097,
+      "cfr_Q1_pct": 2.7476090128059654,
+      "cfr_Q1_lo_pct": 2.466308854552962,
+      "cfr_Q1_hi_pct": 3.051485958218636,
+      "cfr_Q5_pct": 17.05556488165184,
+      "cfr_Q5_lo_pct": 16.384101103882337,
+      "cfr_Q5_hi_pct": 17.743164866860656,
+      "cfr_gradient_Q5_over_Q1": 6.207420634507976,
+      "H_median_Q1": 0.5435540069686411,
+      "H_median_Q5": 0.9354838709677419,
+      "spearman_H_vs_cfr": 0.4136498623501288,
+      "spearman_p": 2.7639694288367527e-14
+    },
+    {
+      "threshold": 20,
+      "health_regions": 250,
+      "cases": 64892,
+      "pct_of_national_person_years": 82.23777658374672,
+      "cfr_Q1_pct": 2.683569311820876,
+      "cfr_Q1_lo_pct": 2.4034634539926643,
+      "cfr_Q1_hi_pct": 2.9866441224079847,
+      "cfr_Q5_pct": 17.07977328483208,
+      "cfr_Q5_lo_pct": 16.405301287922356,
+      "cfr_Q5_hi_pct": 17.770496916096786,
+      "cfr_gradient_Q5_over_Q1": 6.364573186016567,
+      "H_median_Q1": 0.5378531073446328,
+      "H_median_Q5": 0.9328582145536384,
+      "spearman_H_vs_cfr": 0.4617326467438363,
+      "spearman_p": 1.3215276433548148e-14
+    },
+    {
+      "threshold": 30,
+      "health_regions": 210,
+      "cases": 63944,
+      "pct_of_national_person_years": 76.81024172172916,
+      "cfr_Q1_pct": 2.6703499079189688,
+      "cfr_Q1_lo_pct": 2.3886467000029414,
+      "cfr_Q1_hi_pct": 2.975421584652822,
+      "cfr_Q5_pct": 17.2212543554007,
+      "cfr_Q5_lo_pct": 16.534608013086626,
+      "cfr_Q5_hi_pct": 17.92456464062657,
+      "cfr_gradient_Q5_over_Q1": 6.44906283791902,
+      "H_median_Q1": 0.5268018018018018,
+      "H_median_Q5": 0.928548644338118,
+      "spearman_H_vs_cfr": 0.5221328684736725,
+      "spearman_p": 4.387957489681802e-16
+    },
+    {
+      "threshold": 50,
+      "health_regions": 168,
+      "cases": 62386,
+      "pct_of_national_person_years": 70.06224014818804,
+      "cfr_Q1_pct": 2.6459077760762293,
+      "cfr_Q1_lo_pct": 2.363281344381392,
+      "cfr_Q1_hi_pct": 2.952302186162231,
+      "cfr_Q5_pct": 17.32602049991009,
+      "cfr_Q5_lo_pct": 16.62676487898074,
+      "cfr_Q5_hi_pct": 18.042423318328044,
+      "cfr_gradient_Q5_over_Q1": 6.54823295678274,
+      "H_median_Q1": 0.4798728813559322,
+      "H_median_Q5": 0.9272727272727272,
+      "spearman_H_vs_cfr": 0.5984051137496526,
+      "spearman_p": 1.0718808771075402e-17
+    }
+  ],
+  "c_hierarchical_binomial": {
+    "engine": "R-INLA, binomial likelihood, iid region intercept",
+    "diagnostics": {
+      "regions_in_model": 426,
+      "regions_with_a_case_but_no_decoded_outcome": 6,
+      "regions_with_a_case_but_no_decoded_hospitalisation": 1,
+      "regions_with_no_confirmed_case_at_all": 7,
+      "region_years_with_a_decoded_outcome": 4966,
+      "region_years_with_a_decoded_outcome_and_H": 4941
+    },
+    "no_exclusion": {
+      "or_per_10pp_H": [
+        1.3837260378,
+        1.3066068103,
+        1.4637469023
+      ],
+      "or_per_unit_H": [
+        25.7336347303,
+        14.5027104092,
+        45.1502219845
+      ],
+      "n_regions": 426,
+      "region_sd": 0.59900486338
+    },
+    "cases_ge_30": {
+      "or_per_10pp_H": [
+        1.4437660106,
+        1.3513034386,
+        1.5417069804
+      ],
+      "or_per_unit_H": [
+        39.3521199713,
+        20.3015323183,
+        75.8609693174
+      ],
+      "n_regions": 210,
+      "region_sd": 0.6056559998
+    },
+    "region_year_time_varying_H_no_exclusion_or_per_10pp": [
+      1.2369975047,
+      1.2097281391,
+      1.2650596458
+    ],
+    "region_year_time_varying_H_ge_30_or_per_10pp": [
+      1.2365805168,
+      1.2082175629,
+      1.2656078299
+    ],
+    "lossless_aggregation_check": {
+      "what": "region-year rows with the time-constant region H must reproduce the region-level fit, because the binomial is closed under summation at constant p",
+      "region_level_beta_H": 3.246911029,
+      "region_year_beta_H_region": 3.2473624602
+    }
+  },
+  "outputs": [
+    "_inla_binomial.R",
+    "excluded_macroregion_composition.csv",
+    "exclusion_by_threshold.csv",
+    "exclusion_sensitivity_report.json",
+    "gradient_by_threshold.csv",
+    "gradient_summary_by_threshold.csv",
+    "hierarchical_model_fits.csv",
+    "inla_fits.json",
+    "model_frame_region.csv",
+    "model_frame_region_year.csv",
+    "region_inclusion.csv"
+  ]
+}

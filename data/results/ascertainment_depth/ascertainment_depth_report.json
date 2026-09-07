@@ -1,0 +1,107 @@
+{
+  "n_health_regions": 212,
+  "min_cases": 30,
+  "min_known_outcomes": 20,
+  "pooled": {
+    "hosp_share_vs_cfr": [
+      0.4959710971718565,
+      1.4572882279338054e-14
+    ],
+    "sewer_vs_cfr": [
+      0.3202053691090871,
+      1.9298110560520616e-06
+    ],
+    "sewer_vs_hosp_share": [
+      0.10100515218641917,
+      0.14272642431143706
+    ],
+    "hosp_share_vs_incidence": [
+      -0.4476940191465828,
+      7.611049896467283e-12
+    ],
+    "cfr_vs_incidence": [
+      -0.3195743046744714,
+      2.026818863753069e-06
+    ]
+  },
+  "within_region": {
+    "Norte": {
+      "n": 27,
+      "hosp_share_vs_cfr": [
+        0.7448825099810846,
+        8.332023671109563e-06
+      ],
+      "sewer_vs_cfr": [
+        -0.2624103407686937,
+        0.1860626118897427
+      ]
+    },
+    "Nordeste": {
+      "n": 36,
+      "hosp_share_vs_cfr": [
+        0.47910900269108686,
+        0.00311347030322388
+      ],
+      "sewer_vs_cfr": [
+        0.2603154302838,
+        0.12519126816725373
+      ]
+    },
+    "Centro-Oeste": {
+      "n": 9,
+      "hosp_share_vs_cfr": [
+        -0.6359888306543495,
+        0.06559475746297287
+      ],
+      "sewer_vs_cfr": [
+        -0.18410202992625907,
+        0.6353826478012163
+      ]
+    },
+    "Sudeste": {
+      "n": 75,
+      "hosp_share_vs_cfr": [
+        0.5233257928738284,
+        1.4548931198518714e-06
+      ],
+      "sewer_vs_cfr": [
+        -0.021765726883852,
+        0.8529524285274289
+      ]
+    },
+    "Sul": {
+      "n": 65,
+      "hosp_share_vs_cfr": [
+        0.057238395019273906,
+        0.6506291937475459
+      ],
+      "sewer_vs_cfr": [
+        0.5659680498210214,
+        8.956698854273895e-07
+      ]
+    }
+  },
+  "threat_mechanical": {
+    "regions_with_deaths_exceeding_hospitalised": 0,
+    "regions_where_cfr_exceeds_80pct_of_hosp_share": 0,
+    "verdict": "ceiling never binds; the association is not arithmetically forced"
+  },
+  "threat_completeness": {
+    "hosp_share_vs_completeness": [
+      -0.08150560340818758,
+      0.23732861605669858
+    ],
+    "completeness_vs_cfr": [
+      -0.16944896501404702,
+      0.013491707899198666
+    ],
+    "partial_hosp_share_vs_cfr_given_completeness": 0.4908680761676994
+  },
+  "municipality_replication": {
+    "n_municipalities": 349,
+    "hosp_share_vs_all_case_cfr": [
+      0.6306911034569392,
+      4.153334472832043e-40
+    ]
+  }
+}

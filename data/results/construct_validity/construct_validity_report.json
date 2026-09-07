@@ -1,0 +1,447 @@
+{
+  "coverage": {
+    "regions_total": 432,
+    "regions_eligible": 209,
+    "min_hosp_known": 30,
+    "cases_total": 66358,
+    "cases_in_eligible_regions": 63914,
+    "cases_retained_pct": 96.31694746677115,
+    "quintile_H": {
+      "Q1": 0.41915085817524844,
+      "Q2": 0.6706794861436536,
+      "Q3": 0.7441766418634747,
+      "Q4": 0.8445305415876679,
+      "Q5": 0.9139496329043972
+    }
+  },
+  "strand1_confirmation_pathway": {
+    "region_spearman_H_vs_lab_share": {
+      "spearman_rho": -0.28350783156063775,
+      "p": 3.186475381773455e-05,
+      "regions": 209
+    },
+    "pathway_mechanism": {
+      "note": "clinical-epidemiological confirmation is partly death-driven where laboratory capacity is thin; it is a sicker case series, not a diluted one, so it cannot be the source of a gradient that runs the other way",
+      "by_quintile": [
+        {
+          "q": 1,
+          "H": 0.41915085817524844,
+          "H_within_lab": 0.4317690209724443,
+          "H_within_lab_lo": 0.42232702281656526,
+          "H_within_lab_hi": 0.4412484046391374,
+          "H_within_clinepi": 0.32238193018480493,
+          "H_within_clinepi_lo": 0.2984505258036694,
+          "H_within_clinepi_hi": 0.34702959616614576,
+          "cfr_ratio_clinepi_over_lab": 1.718729470503219,
+          "cfr_ratio_lo": 1.2754745632633453,
+          "cfr_ratio_hi": 2.2840287863115534
+        },
+        {
+          "q": 2,
+          "H": 0.6706794861436536,
+          "H_within_lab": 0.6766424650256774,
+          "H_within_lab_lo": 0.6679267767680636,
+          "H_within_lab_hi": 0.685267013833099,
+          "H_within_clinepi": 0.5923970432946146,
+          "H_within_clinepi_lo": 0.5603249920382638,
+          "H_within_clinepi_hi": 0.6238926647898693,
+          "cfr_ratio_clinepi_over_lab": 2.7452484742807326,
+          "cfr_ratio_lo": 2.296421874920458,
+          "cfr_ratio_hi": 3.265615624704702
+        },
+        {
+          "q": 3,
+          "H": 0.7441766418634747,
+          "H_within_lab": 0.7603503918856616,
+          "H_within_lab_lo": 0.7522010777545706,
+          "H_within_lab_hi": 0.7683597051921416,
+          "H_within_clinepi": 0.6100950987564009,
+          "H_within_clinepi_lo": 0.5836603246092182,
+          "H_within_clinepi_hi": 0.6360554878496307,
+          "cfr_ratio_clinepi_over_lab": 2.2923492554077916,
+          "cfr_ratio_lo": 1.9754304719427118,
+          "cfr_ratio_hi": 2.6521835293724463
+        },
+        {
+          "q": 4,
+          "H": 0.8445305415876679,
+          "H_within_lab": 0.8587657018022938,
+          "H_within_lab_lo": 0.8514630700826477,
+          "H_within_lab_hi": 0.8658392305096029,
+          "H_within_clinepi": 0.8033022254127782,
+          "H_within_clinepi_lo": 0.7880470231180261,
+          "H_within_clinepi_hi": 0.8179174723895805,
+          "cfr_ratio_clinepi_over_lab": 2.271799037598355,
+          "cfr_ratio_lo": 2.047795771222789,
+          "cfr_ratio_hi": 2.5191614695632034
+        },
+        {
+          "q": 5,
+          "H": 0.9139496329043972,
+          "H_within_lab": 0.9122307619318721,
+          "H_within_lab_lo": 0.9066665234508303,
+          "H_within_lab_hi": 0.9175659851940087,
+          "H_within_clinepi": 0.9249617151607963,
+          "H_within_clinepi_lo": 0.9123923256120037,
+          "H_within_clinepi_hi": 0.9362403580959789,
+          "cfr_ratio_clinepi_over_lab": 2.7461267355977164,
+          "cfr_ratio_lo": 2.4969546899010506,
+          "cfr_ratio_hi": 3.0179426661431865
+        }
+      ]
+    },
+    "lab_share_national": 0.8563598922857596,
+    "criterion_completeness_national": 0.9877335169133523,
+    "lab_share_by_quintile": {
+      "Q1": 0.8794,
+      "Q2": 0.9153,
+      "Q3": 0.8825,
+      "Q4": 0.7606,
+      "Q5": 0.8433
+    },
+    "lab_share_by_year": {
+      "2007": 0.8594,
+      "2008": 0.8621,
+      "2009": 0.884,
+      "2010": 0.8796,
+      "2011": 0.8991,
+      "2012": 0.9211,
+      "2013": 0.9186,
+      "2014": 0.8688,
+      "2015": 0.8422,
+      "2016": 0.8665,
+      "2017": 0.8647,
+      "2018": 0.8727,
+      "2019": 0.8225,
+      "2020": 0.8298,
+      "2021": 0.8448,
+      "2022": 0.8155,
+      "2023": 0.8271,
+      "2024": 0.7505,
+      "2025": 0.8001
+    },
+    "rs_lab_share_by_year": {
+      "2007": 0.8281,
+      "2008": 0.8422,
+      "2009": 0.9538,
+      "2010": 0.9179,
+      "2011": 0.9545,
+      "2012": 0.9355,
+      "2013": 0.9175,
+      "2014": 0.9342,
+      "2015": 0.947,
+      "2016": 0.9615,
+      "2017": 0.9207,
+      "2018": 0.9474,
+      "2019": 0.852,
+      "2020": 0.8389,
+      "2021": 0.8307,
+      "2022": 0.9146,
+      "2023": 0.8211,
+      "2024": 0.5802,
+      "2025": 0.76
+    },
+    "cfr_gradient_by_case_definition": {
+      "all confirmed": {
+        "cfr_Q1": 0.026703499079189688,
+        "cfr_Q5": 0.17221254355400697,
+        "Q5_over_Q1": 6.449062837919019,
+        "Q5_over_Q1_lo": 5.726891425736291,
+        "Q5_over_Q1_hi": 7.281538904581995,
+        "deaths_Q1": 319,
+        "outcome_known_Q1": 11946,
+        "deaths_Q5": 1977,
+        "outcome_known_Q5": 11480
+      },
+      "laboratory-confirmed only": {
+        "cfr_Q1": 0.024653607262302913,
+        "cfr_Q5": 0.13527879103699844,
+        "Q5_over_Q1": 5.487180419388329,
+        "Q5_over_Q1_lo": 4.797320013763105,
+        "Q5_over_Q1_hi": 6.296037643845845,
+        "deaths_Q1": 258,
+        "outcome_known_Q1": 10465,
+        "deaths_Q5": 1298,
+        "outcome_known_Q5": 9595
+      },
+      "clinical-epidemiological only": {
+        "cfr_Q1": 0.0423728813559322,
+        "cfr_Q5": 0.37149270482603813,
+        "Q5_over_Q1": 8.7672278338945,
+        "Q5_over_Q1_lo": 6.724663383836082,
+        "Q5_over_Q1_hi": 11.618696107997,
+        "deaths_Q1": 60,
+        "outcome_known_Q1": 1416,
+        "deaths_Q5": 662,
+        "outcome_known_Q5": 1782
+      }
+    },
+    "region_spearman_H_vs_cfr": {
+      "all confirmed": {
+        "spearman_rho": 0.5302668870937038,
+        "p": 1.4920229982803512e-16,
+        "regions": 209
+      },
+      "laboratory-confirmed only": {
+        "spearman_rho": 0.4954424334208967,
+        "p": 2.4109635503494695e-14,
+        "regions": 209
+      },
+      "clinical-epidemiological only": {
+        "spearman_rho": 0.3090163369661673,
+        "p": 9.440211523715782e-06,
+        "regions": 198
+      }
+    },
+    "H_vs_H_lab": {
+      "regions": 196,
+      "spearman_rho": 0.9731405798494652,
+      "p": 1.0516765168598962e-125,
+      "same_quintile": 161,
+      "same_quintile_pct": 82.14285714285714,
+      "within_one_quintile": 196,
+      "within_one_quintile_pct": 100.0,
+      "H_median_all": 0.7652045286453888,
+      "H_median_lab": 0.7677789012470508
+    },
+    "verdict": {
+      "gradient_survives_in_both_pathways": true,
+      "attenuation_restricting_to_laboratory_pct": 14.915072820736697,
+      "ordering_preserved_under_lab_only_H": true,
+      "statement": "Restricting to a homogeneous, laboratory-confirmed case definition attenuates the case-fatality gradient from 6.45 to 5.49 but does not remove it; the gradient is steeper still (8.77) among clinical-epidemiological cases. The association is robust to confirmation pathway."
+    }
+  },
+  "strand2_severity_phenotype": {
+    "hemopu_vs_hemorr": {
+      "both_valid": 58695,
+      "disagree": 13,
+      "disagree_pct": 0.0221483942414175,
+      "exactly_one_valid": 10,
+      "verdict": "cli_hemopu carries no independent information: it is the same field in practice and is excluded from every severity definition except the explicit four-component check"
+    },
+    "clinical_block_completeness": {
+      "cli_febre": {
+        "national": 0.9767030697499766,
+        "min_quintile": 0.9657134071340714,
+        "max_quintile": 0.984417821627124
+      },
+      "cli_mialgi": {
+        "national": 0.9673936852645743,
+        "min_quintile": 0.9506775921840529,
+        "max_quintile": 0.9815224257738471
+      },
+      "cli_cefale": {
+        "national": 0.9560033795412586,
+        "min_quintile": 0.9300430504305043,
+        "max_quintile": 0.9794693619709413
+      },
+      "cli_prost": {
+        "national": 0.9399036204900335,
+        "min_quintile": 0.8963126378821304,
+        "max_quintile": 0.9672299431459255
+      },
+      "cli_vomito": {
+        "national": 0.9517320148950151,
+        "min_quintile": 0.9246769618657422,
+        "max_quintile": 0.9718888186986734
+      },
+      "cli_diarre": {
+        "national": 0.9389022749319398,
+        "min_quintile": 0.8974156949259376,
+        "max_quintile": 0.9665192672141504
+      },
+      "cli_icteri": {
+        "national": 0.9545795913258441,
+        "min_quintile": 0.9257800189095493,
+        "max_quintile": 0.9663613392293114
+      },
+      "cli_conges": {
+        "national": 0.9269800043808868,
+        "min_quintile": 0.8776394579262528,
+        "max_quintile": 0.9595704358812381
+      },
+      "cli_pantur": {
+        "national": 0.9391056732484275,
+        "min_quintile": 0.9043665436654367,
+        "max_quintile": 0.9670720151610865
+      },
+      "cli_renal": {
+        "national": 0.9252902337516037,
+        "min_quintile": 0.8764576110936023,
+        "max_quintile": 0.956964624131396
+      },
+      "cli_hemorr": {
+        "national": 0.9184216290640548,
+        "min_quintile": 0.8673179955877718,
+        "max_quintile": 0.9556222362602653
+      },
+      "cli_hemopu": {
+        "national": 0.9184216290640548,
+        "min_quintile": 0.8673179955877718,
+        "max_quintile": 0.9557012002526848
+      },
+      "cli_respir": {
+        "national": 0.9355383796977188,
+        "min_quintile": 0.8922943586511188,
+        "max_quintile": 0.9602811118130132
+      },
+      "cli_cardia": {
+        "national": 0.9117564226929937,
+        "min_quintile": 0.8554207374724235,
+        "max_quintile": 0.9512792166771952
+      },
+      "cli_mening": {
+        "national": 0.9126951841537065,
+        "min_quintile": 0.855735896627797,
+        "max_quintile": 0.9521478205938092
+      },
+      "cli_outros": {
+        "national": 0.8818568701692899,
+        "min_quintile": 0.82579950799508,
+        "max_quintile": 0.9302747946936197
+      },
+      "block_known": {
+        "national": 0.8143912131927278,
+        "min_quintile": 0.7307810578105781,
+        "max_quintile": 0.89679406190777
+      }
+    },
+    "total_incidence_Q1_over_Q5": {
+      "ratio": 4.4687973972460915,
+      "lo": 4.360440027224889,
+      "hi": 4.579838283403643
+    },
+    "severity_gradients": {
+      "all confirmed cases | jaundice OR renal OR haemorrhage (primary)": {
+        "severe_Q1_over_Q5": 2.1328624895905826,
+        "severe_lo": 2.0536168754400252,
+        "severe_hi": 2.2148780443278846,
+        "nonsevere_Q1_over_Q5": 13.8642355132012,
+        "nonsevere_lo": 13.26625294927254,
+        "nonsevere_hi": 14.492722710410863,
+        "nonsevere_exceeds_severe": true
+      },
+      "all confirmed cases | jaundice OR renal OR haemorrhage OR pulmonary haemorrhage": {
+        "severe_Q1_over_Q5": 2.1328624895905826,
+        "severe_lo": 2.0536168754400252,
+        "severe_hi": 2.2148780443278846,
+        "nonsevere_Q1_over_Q5": 13.862500748997846,
+        "nonsevere_lo": 13.264583728356246,
+        "nonsevere_hi": 14.490919225267119,
+        "nonsevere_exceeds_severe": true
+      },
+      "all confirmed cases | jaundice alone": {
+        "severe_Q1_over_Q5": 1.8959464252042182,
+        "severe_lo": 1.8237086785347845,
+        "severe_hi": 1.9707390637484121,
+        "nonsevere_Q1_over_Q5": 11.110086910400184,
+        "nonsevere_lo": 10.682680975325326,
+        "nonsevere_hi": 11.556440182964794,
+        "nonsevere_exceeds_severe": true
+      },
+      "all confirmed cases | renal failure alone": {
+        "severe_Q1_over_Q5": 1.1495387887831312,
+        "severe_lo": 1.076788359207374,
+        "severe_hi": 1.22642395977262,
+        "nonsevere_Q1_over_Q5": 7.04231011472429,
+        "nonsevere_lo": 6.834938858313485,
+        "nonsevere_hi": 7.256313092116701,
+        "nonsevere_exceeds_severe": true
+      },
+      "all confirmed cases | jaundice AND renal (Weil-like)": {
+        "severe_Q1_over_Q5": 0.8587715226967647,
+        "severe_lo": 0.7928245753368531,
+        "severe_hi": 0.9291951206301844,
+        "nonsevere_Q1_over_Q5": 6.7256540793285895,
+        "nonsevere_lo": 6.533268066893992,
+        "nonsevere_hi": 6.923979109618683,
+        "nonsevere_exceeds_severe": true
+      },
+      "all confirmed cases | score >= 2 of 3": {
+        "severe_Q1_over_Q5": 0.9864972044358172,
+        "severe_lo": 0.9161340864067118,
+        "severe_hi": 1.0613317354237772,
+        "nonsevere_Q1_over_Q5": 7.1546259522408535,
+        "nonsevere_lo": 6.944132836704144,
+        "nonsevere_hi": 7.371856877168128,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | jaundice OR renal OR haemorrhage (primary)": {
+        "severe_Q1_over_Q5": 2.358383907627948,
+        "severe_lo": 2.2659727830394925,
+        "severe_hi": 2.454250933296434,
+        "nonsevere_Q1_over_Q5": 15.132221357411266,
+        "nonsevere_lo": 14.44424506000136,
+        "nonsevere_hi": 15.857573836696012,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | jaundice OR renal OR haemorrhage OR pulmonary haemorrhage": {
+        "severe_Q1_over_Q5": 2.3590232093106875,
+        "severe_lo": 2.2665952539973504,
+        "severe_hi": 2.45490749454459,
+        "nonsevere_Q1_over_Q5": 15.130247932612438,
+        "nonsevere_lo": 14.442350943753265,
+        "nonsevere_hi": 15.855516987797534,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | jaundice alone": {
+        "severe_Q1_over_Q5": 2.256800504457319,
+        "severe_lo": 2.162795893286247,
+        "severe_hi": 2.3545301280195026,
+        "nonsevere_Q1_over_Q5": 12.575535028081937,
+        "nonsevere_lo": 12.056811787382134,
+        "nonsevere_hi": 13.119288001250347,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | renal failure alone": {
+        "severe_Q1_over_Q5": 1.326936251052833,
+        "severe_lo": 1.2341207956096572,
+        "severe_hi": 1.4257036838103898,
+        "nonsevere_Q1_over_Q5": 7.748269909096225,
+        "nonsevere_lo": 7.507059754919604,
+        "nonsevere_hi": 7.997740452827969,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | jaundice AND renal (Weil-like)": {
+        "severe_Q1_over_Q5": 1.0058049056322667,
+        "severe_lo": 0.9211281494648476,
+        "severe_hi": 1.0969141788752503,
+        "nonsevere_Q1_over_Q5": 7.4168835052056,
+        "nonsevere_lo": 7.192659500522728,
+        "nonsevere_hi": 7.648519979087252,
+        "nonsevere_exceeds_severe": true
+      },
+      "clinical block fully decoded | score >= 2 of 3": {
+        "severe_Q1_over_Q5": 1.0982310498103005,
+        "severe_lo": 1.0146642935711268,
+        "severe_hi": 1.1875449015622772,
+        "nonsevere_Q1_over_Q5": 7.795573856976653,
+        "nonsevere_lo": 7.554533235078219,
+        "nonsevere_hi": 8.044816908821,
+        "nonsevere_exceeds_severe": true
+      }
+    },
+    "conclusion_consistent_across_definitions": true,
+    "separation_by_interval": {
+      "all confirmed cases | jaundice OR renal OR haemorrhage (primary)": true,
+      "all confirmed cases | jaundice OR renal OR haemorrhage OR pulmonary haemorrhage": true,
+      "all confirmed cases | jaundice alone": true,
+      "all confirmed cases | renal failure alone": true,
+      "all confirmed cases | jaundice AND renal (Weil-like)": true,
+      "all confirmed cases | score >= 2 of 3": true,
+      "clinical block fully decoded | jaundice OR renal OR haemorrhage (primary)": true,
+      "clinical block fully decoded | jaundice OR renal OR haemorrhage OR pulmonary haemorrhage": true,
+      "clinical block fully decoded | jaundice alone": true,
+      "clinical block fully decoded | renal failure alone": true,
+      "clinical block fully decoded | jaundice AND renal (Weil-like)": true,
+      "clinical block fully decoded | score >= 2 of 3": true
+    },
+    "definition_verdict": {
+      "primary_severe_Q1_over_Q5": 2.1328624895905826,
+      "max_severe_Q1_over_Q5_across_definitions": 2.1328624895905826,
+      "primary_is_the_most_conservative": true,
+      "min_nonsevere_over_severe_gradient": 5.57228474703213,
+      "statement": "The primary three-component phenotype leaves the LARGEST residual gradient in severe-case incidence of any definition tested; stricter phenotypes (Weil-like, score >= 2) drive it to unity or below. Keeping the three-component definition therefore understates the mechanism rather than manufacturing it, and the conclusion does not depend on which definition is used."
+    }
+  }
+}

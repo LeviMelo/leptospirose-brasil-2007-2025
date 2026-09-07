@@ -1,0 +1,15 @@
+record_item,requirement,where_addressed,status
+1.1,Data source(s) and type of data named in the title or abstract,manuscript title/abstract,author action
+1.2,Geographic region and timeframe named,manuscript title/abstract,author action
+1.3,Linkage between databases reported if applicable,"data/results/triangulation/ (SINAN, SIM, SIH aligned by municipality of residence and year, not by person: no record linkage was performed and none is claimed)",satisfied
+6.1,"Methods of study-population selection: codes and algorithms, with a validation reference or a statement that none exists",data/results/data_quality_record/field_dictionary.csv,satisfied by this script
+6.2,"Codes and algorithms used to classify exposures, outcomes, confounders and effect modifiers, listed",data/results/data_quality_record/field_dictionary.csv,satisfied by this script
+6.3,"Validation of the codes/algorithms, if done","data/results/triangulation/ (external comparison against SIM and SIH, two systems with different failure modes) and docs/CODEBOOK.md (registry reconciled against the published data dictionary)",partially satisfied: no chart-review validation of SINAN case status exists for this study and none is claimed
+6.4,Linkage quality evaluated,no person-level linkage performed,not applicable
+7.1,Data cleaning methods described,docs/CODEBOOK.md (four decode states); studies/leptospirosis/60_analysis_panel.py; data/results/data_quality_record/field_dictionary.csv,satisfied
+12.1,"Methods of cleaning, linkage and any data-quality restriction described",data/results/data_quality_record/completeness_by_*.csv and cfr_gradient_by_completeness_restriction.csv,satisfied by this script
+12.2,Sensitivity analyses of the database's fitness for purpose,data/results/data_quality_record/cfr_gradient_by_completeness_restriction.csv and cfr_extreme_bounds.csv,satisfied by this script
+12.3,"Person-level, institutional or other data linkage described","none performed; all aggregation is ecological, at health-region-year",not applicable
+13.1,"Selection of included persons described, with a flow diagram",data/results/analysis_panel/study_flow.csv,satisfied
+19.1,"Discussion of the implications of using data not created for research, including misclassification, unmeasured confounding and missing data",data/results/data_quality_record/ (this analysis) -> manuscript discussion,evidence produced; author must write it up
+22.1,"Statement on how to access the protocol, raw data and programming code",manuscript data-availability section; the repository is the code,author action

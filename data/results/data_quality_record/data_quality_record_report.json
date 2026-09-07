@@ -1,0 +1,514 @@
+{
+  "analytic_population": {
+    "confirmed_cases": 66358,
+    "health_regions_with_any_case": 432,
+    "eligible_regions_min_cases": 30,
+    "eligible_regions": 210,
+    "eligible_cases": 63944,
+    "eligible_case_share_pct": 96.3621567859188
+  },
+  "completeness_overall": [
+    {
+      "measure": "outcome (evolucao)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 61023,
+      "missing": 2750,
+      "unknown": 2585,
+      "invalid": 0,
+      "pct_valid": 91.96027607824226,
+      "pct_valid_lo": 91.7508008918993,
+      "pct_valid_hi": 92.1660733620294
+    },
+    {
+      "measure": "hospitalisation (ate_hosp)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 64101,
+      "missing": 1501,
+      "unknown": 756,
+      "invalid": 0,
+      "pct_valid": 96.59875222279153,
+      "pct_valid_lo": 96.45803188249995,
+      "pct_valid_hi": 96.73537831268155
+    },
+    {
+      "measure": "severity block (all three decoded)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 59787,
+      "missing": 3176,
+      "unknown": 3395,
+      "invalid": 0,
+      "pct_valid": 90.09765212935893,
+      "pct_valid_lo": 89.86788001339185,
+      "pct_valid_hi": 90.32391111590769
+    },
+    {
+      "measure": "jaundice (cli_icteri)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 63338,
+      "missing": 1793,
+      "unknown": 1227,
+      "invalid": 0,
+      "pct_valid": 95.4489285391362,
+      "pct_valid_lo": 95.28759753422497,
+      "pct_valid_hi": 95.60627004397408
+    },
+    {
+      "measure": "renal impairment (cli_renal)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 61423,
+      "missing": 2503,
+      "unknown": 2432,
+      "invalid": 0,
+      "pct_valid": 92.56306700021098,
+      "pct_valid_lo": 92.36082028677383,
+      "pct_valid_hi": 92.76158232562744
+    },
+    {
+      "measure": "haemorrhage (cli_hemorr)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 60957,
+      "missing": 2874,
+      "unknown": 2527,
+      "invalid": 0,
+      "pct_valid": 91.86081557611743,
+      "pct_valid_lo": 91.65018171916475,
+      "pct_valid_hi": 92.06778034671434
+    },
+    {
+      "measure": "confirmation criterion (criterio)",
+      "denominator_confirmed_cases": 66358,
+      "valid": 65489,
+      "missing": 869,
+      "unknown": 0,
+      "invalid": 0,
+      "pct_valid": 98.69043672202297,
+      "pct_valid_lo": 98.60102399776547,
+      "pct_valid_hi": 98.77555325743282
+    }
+  ],
+  "completeness_by_year_range": {
+    "outcome (evolucao)": {
+      "min_pct": 89.32659932659934,
+      "max_pct": 94.24809424809425,
+      "first_year_pct": 92.02159568086384,
+      "last_year_pct": 89.32659932659934,
+      "swing_pp": 4.9214949214949115
+    },
+    "hospitalisation (ate_hosp)": {
+      "min_pct": 93.68955512572535,
+      "max_pct": 98.12583668005355,
+      "first_year_pct": 96.88062387522496,
+      "last_year_pct": 97.23905723905723,
+      "swing_pp": 4.436281554328204
+    },
+    "severity block (all three decoded)": {
+      "min_pct": 87.22255548890222,
+      "max_pct": 92.58457374830853,
+      "first_year_pct": 87.22255548890222,
+      "last_year_pct": 91.88552188552188,
+      "swing_pp": 5.362018259406312
+    },
+    "jaundice (cli_icteri)": {
+      "min_pct": 93.9796233405372,
+      "max_pct": 97.35294117647058,
+      "first_year_pct": 95.08098380323935,
+      "last_year_pct": 95.75757575757575,
+      "swing_pp": 3.3733178359333778
+    },
+    "renal impairment (cli_renal)": {
+      "min_pct": 90.64526088298858,
+      "max_pct": 94.64079464079464,
+      "first_year_pct": 91.18176364727054,
+      "last_year_pct": 93.8047138047138,
+      "swing_pp": 3.995533757806058
+    },
+    "haemorrhage (cli_hemorr)": {
+      "min_pct": 89.74992281568386,
+      "max_pct": 94.34049434049435,
+      "first_year_pct": 89.92201559688063,
+      "last_year_pct": 93.03030303030303,
+      "swing_pp": 4.5905715248104855
+    },
+    "confirmation criterion (criterio)": {
+      "min_pct": 97.99323017408123,
+      "max_pct": 99.21360255047821,
+      "first_year_pct": 98.77024595080984,
+      "last_year_pct": 98.01346801346801,
+      "swing_pp": 1.2203723763969805
+    }
+  },
+  "completeness_vs_H_spearman": [
+    {
+      "measure": "outcome (evolucao)",
+      "rho_eligible": -0.18138035307742348,
+      "p_eligible": 0.00842235518143442,
+      "n_regions_eligible": 210,
+      "rho_all_regions": -0.045936445381077565,
+      "p_all_regions": 0.3414023013737445,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    },
+    {
+      "measure": "hospitalisation (ate_hosp)",
+      "rho_eligible": 0.16417096451223362,
+      "p_eligible": 0.01726378012973423,
+      "n_regions_eligible": 210,
+      "rho_all_regions": 0.1456575535847855,
+      "p_all_regions": 0.0024347929206152063,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": true
+    },
+    {
+      "measure": "severity block (all three decoded)",
+      "rho_eligible": -0.27902619723438205,
+      "p_eligible": 4.1121317358370135e-05,
+      "n_regions_eligible": 210,
+      "rho_all_regions": -0.1078551735471763,
+      "p_all_regions": 0.025145227090452155,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    },
+    {
+      "measure": "jaundice (cli_icteri)",
+      "rho_eligible": -0.05342533074425627,
+      "p_eligible": 0.44121936276248325,
+      "n_regions_eligible": 210,
+      "rho_all_regions": 0.015123618572336512,
+      "p_all_regions": 0.7542194497465302,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    },
+    {
+      "measure": "renal impairment (cli_renal)",
+      "rho_eligible": -0.23105364481773993,
+      "p_eligible": 0.0007406486229033858,
+      "n_regions_eligible": 210,
+      "rho_all_regions": -0.05847529045559032,
+      "p_all_regions": 0.22570769745406072,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    },
+    {
+      "measure": "haemorrhage (cli_hemorr)",
+      "rho_eligible": -0.25296933356273343,
+      "p_eligible": 0.00021186830818088536,
+      "n_regions_eligible": 210,
+      "rho_all_regions": -0.073708862542117,
+      "p_all_regions": 0.12654464192890003,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    },
+    {
+      "measure": "confirmation criterion (criterio)",
+      "rho_eligible": -0.16609295699248544,
+      "p_eligible": 0.015982800615498977,
+      "n_regions_eligible": 210,
+      "rho_all_regions": -0.012467847389041985,
+      "p_all_regions": 0.7963316046963814,
+      "n_regions_all": 431,
+      "shares_denominator_with_H": false
+    }
+  ],
+  "outcome_completeness_vs_region_size_spearman": {
+    "rho": 0.010762129622627216,
+    "p": 0.8767963345531259,
+    "n": 210
+  },
+  "outcome_completeness_vs_cfr_spearman": {
+    "rho": -0.13490488305426115,
+    "p": 0.050911818419155444,
+    "n": 210
+  },
+  "threat_verdict": {
+    "outcome_completeness_falls_as_H_rises": true,
+    "rho": -0.18138035307742348,
+    "p": 0.00842235518143442,
+    "n_regions": 210
+  },
+  "gradient_under_restriction": {
+    "all eligible regions (no completeness restriction)": {
+      "bands_present": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "q_low": 1,
+      "q_high": 5,
+      "health_regions": [
+        30,
+        37,
+        53,
+        50,
+        40
+      ],
+      "q_low_cfr_pct": [
+        2.6703499079189688,
+        2.3886467000029414,
+        2.975421584652822
+      ],
+      "q_low_known_outcomes": 11946,
+      "q_high_cfr_pct": [
+        17.2212543554007,
+        16.534608013086626,
+        17.92456464062657
+      ],
+      "q_high_known_outcomes": 11480,
+      "ratio_high_over_low": 6.44906283791902,
+      "intervals_disjoint": true,
+      "cases_retained": 63944
+    },
+    "fixed bands, region outcome completeness >= 0.95": {
+      "bands_present": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "q_low": 1,
+      "q_high": 5,
+      "health_regions": [
+        12,
+        12,
+        24,
+        15,
+        9
+      ],
+      "q_low_cfr_pct": [
+        1.7957190058899584,
+        1.496894756462509,
+        2.1358283576605857
+      ],
+      "q_low_known_outcomes": 6961,
+      "q_high_cfr_pct": [
+        20.41484716157205,
+        17.84848506930463,
+        23.172993768458948
+      ],
+      "q_high_known_outcomes": 916,
+      "ratio_high_over_low": 11.368620087336245,
+      "intervals_disjoint": true,
+      "cases_retained": 21585,
+      "regions_retained": 72,
+      "regions_total": 210,
+      "case_retention_pct": 33.756099086700864
+    },
+    "rebanded, region outcome completeness >= 0.95": {
+      "bands_present": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "q_low": 1,
+      "q_high": 5,
+      "health_regions": [
+        1,
+        13,
+        6,
+        21,
+        31
+      ],
+      "q_low_cfr_pct": [
+        0.7332722273143905,
+        0.3170909402274712,
+        1.4397016798278601
+      ],
+      "q_low_known_outcomes": 1091,
+      "q_high_cfr_pct": [
+        9.967637540453074,
+        9.119848958090474,
+        10.866230509972645
+      ],
+      "q_high_known_outcomes": 4635,
+      "ratio_high_over_low": 13.59336569579288,
+      "intervals_disjoint": true,
+      "cases_retained": 21585,
+      "regions_retained": 72,
+      "case_retention_pct": 33.756099086700864
+    },
+    "fixed bands, region outcome completeness >= 0.99": {
+      "bands_present": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "q_low": 1,
+      "q_high": 5,
+      "health_regions": [
+        3,
+        4,
+        7,
+        3,
+        1
+      ],
+      "q_low_cfr_pct": [
+        1.195773081201335,
+        0.8667015519440726,
+        1.607351936600692
+      ],
+      "q_low_known_outcomes": 3596,
+      "q_high_cfr_pct": [
+        30.555555555555557,
+        16.34739846284936,
+        48.10706300000798
+      ],
+      "q_high_known_outcomes": 36,
+      "ratio_high_over_low": 25.55297157622739,
+      "intervals_disjoint": true,
+      "cases_retained": 6121,
+      "regions_retained": 18,
+      "regions_total": 210,
+      "case_retention_pct": 9.572438383585638
+    },
+    "rebanded, region outcome completeness >= 0.99": {
+      "bands_present": [
+        3,
+        4,
+        5
+      ],
+      "q_low": 3,
+      "q_high": 5,
+      "health_regions": [
+        3,
+        6,
+        9
+      ],
+      "q_low_cfr_pct": [
+        1.195773081201335,
+        0.8667015519440726,
+        1.607351936600692
+      ],
+      "q_low_known_outcomes": 3596,
+      "q_high_cfr_pct": [
+        8.833063209076176,
+        7.308805628277421,
+        10.55665621073631
+      ],
+      "q_high_known_outcomes": 1234,
+      "ratio_high_over_low": 7.386905883683238,
+      "intervals_disjoint": true,
+      "cases_retained": 6121,
+      "regions_retained": 18,
+      "case_retention_pct": 9.572438383585638
+    }
+  },
+  "national_case_fatality_bounds": {
+    "national": [
+      {
+        "scenario": "observed (deaths / cases with a recorded outcome)",
+        "deaths_assumed": 5951,
+        "denominator": 61023,
+        "cfr_pct": 9.752060698425185,
+        "cfr_lo": 9.517779901336402,
+        "cfr_hi": 9.990176910815284
+      },
+      {
+        "scenario": "lower bound: every unrecorded outcome survived",
+        "deaths_assumed": 5951,
+        "denominator": 66358,
+        "cfr_pct": 8.96802194158956,
+        "cfr_lo": 8.751672310357831,
+        "cfr_hi": 9.18796727488275
+      },
+      {
+        "scenario": "upper bound: every unrecorded outcome died",
+        "deaths_assumed": 11286,
+        "denominator": 66358,
+        "cfr_pct": 17.0077458633473,
+        "cfr_lo": 16.722585908571705,
+        "cfr_hi": 17.29579382555455
+      }
+    ],
+    "confirmed_cases": 66358,
+    "outcomes_recorded": 61023,
+    "outcomes_unrecorded": 5335,
+    "adversarial_gradient": [
+      {
+        "scenario": "observed",
+        "q_low_cfr_pct": 2.6703499079189688,
+        "q_low_lo": 2.3886467000029414,
+        "q_low_hi": 2.975421584652822,
+        "q_low_denominator": 11946,
+        "q_high_cfr_pct": 17.2212543554007,
+        "q_high_lo": 16.534608013086626,
+        "q_high_hi": 17.92456464062657,
+        "q_high_denominator": 11480,
+        "ratio_high_over_low": 6.449062837919019,
+        "ordering_preserved": true,
+        "intervals_disjoint": true
+      },
+      {
+        "scenario": "adversarial: broad band all died, narrow band all survived",
+        "q_low_cfr_pct": 8.188566013897661,
+        "q_low_lo": 7.71672085417446,
+        "q_low_hi": 8.679729393055586,
+        "q_low_denominator": 12664,
+        "q_high_cfr_pct": 15.198339483394834,
+        "q_high_lo": 14.585391211577662,
+        "q_high_hi": 15.826900532951024,
+        "q_high_denominator": 13008,
+        "ratio_high_over_low": 1.8560440811736953,
+        "ordering_preserved": true,
+        "intervals_disjoint": true
+      },
+      {
+        "scenario": "favourable: broad band all survived, narrow band all died",
+        "q_low_cfr_pct": 2.5189513581806695,
+        "q_low_lo": 2.2530404717417682,
+        "q_low_hi": 2.806976156879758,
+        "q_low_denominator": 12664,
+        "q_high_cfr_pct": 26.944956949569494,
+        "q_high_lo": 26.18389637946134,
+        "q_high_hi": 27.716344425847893,
+        "q_high_denominator": 13008,
+        "ratio_high_over_low": 10.696894508130033,
+        "ordering_preserved": true,
+        "intervals_disjoint": true
+      }
+    ]
+  },
+  "record_items_not_satisfied": [
+    {
+      "record_item": "1.1",
+      "requirement": "Data source(s) and type of data named in the title or abstract",
+      "where_addressed": "manuscript title/abstract",
+      "status": "author action"
+    },
+    {
+      "record_item": "1.2",
+      "requirement": "Geographic region and timeframe named",
+      "where_addressed": "manuscript title/abstract",
+      "status": "author action"
+    },
+    {
+      "record_item": "6.3",
+      "requirement": "Validation of the codes/algorithms, if done",
+      "where_addressed": "data/results/triangulation/ (external comparison against SIM and SIH, two systems with different failure modes) and docs/CODEBOOK.md (registry reconciled against the published data dictionary)",
+      "status": "partially satisfied: no chart-review validation of SINAN case status exists for this study and none is claimed"
+    },
+    {
+      "record_item": "6.4",
+      "requirement": "Linkage quality evaluated",
+      "where_addressed": "no person-level linkage performed",
+      "status": "not applicable"
+    },
+    {
+      "record_item": "12.3",
+      "requirement": "Person-level, institutional or other data linkage described",
+      "where_addressed": "none performed; all aggregation is ecological, at health-region-year",
+      "status": "not applicable"
+    },
+    {
+      "record_item": "22.1",
+      "requirement": "Statement on how to access the protocol, raw data and programming code",
+      "where_addressed": "manuscript data-availability section; the repository is the code",
+      "status": "author action"
+    }
+  ]
+}

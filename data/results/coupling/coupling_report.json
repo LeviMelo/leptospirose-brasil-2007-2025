@@ -1,0 +1,17 @@
+{
+  "min_hosp_known": 30,
+  "regions_eligible": 176,
+  "regions_total": 426,
+  "cases_eligible": 62680,
+  "case_share_eligible": 0.9446872645064054,
+  "gradient_cfr_overall_Q5_over_Q1": 6.511424829812936,
+  "gradient_cfr_within_hospitalised_Q5_over_Q1": 2.966657716509038,
+  "gradient_predicted_by_mix_alone": 2.005696487224906,
+  "spearman_H_vs_cfr_overall": 0.5880884260485512,
+  "spearman_H_vs_cfr_overall_p": 9.356082689027674e-18,
+  "spearman_H_vs_cfr_within_hospitalised": 0.41520337503787386,
+  "spearman_H_vs_cfr_within_hospitalised_p": 1.0053235802008355e-08,
+  "f_hospitalised_implied_by_proportionality": 0.14420916549596188,
+  "f_hospitalised_measured": 0.13313756719092176,
+  "f_nonhospitalised_measured": 0.01045208412038786
+}

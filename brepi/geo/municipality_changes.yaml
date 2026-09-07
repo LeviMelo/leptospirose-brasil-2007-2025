@@ -1,0 +1,786 @@
+# Municipalities that entered the IBGE lattice after the 2000 Census.
+#
+# Why this file exists
+# --------------------
+# Brazil's municipality lattice is not fixed. A leptospirosis case notified in
+# 2005 under Santarem/PA covers territory that has been Mojui dos Campos/PA
+# since 2013; comparing its 2005 and 2015 incidence at face value compares two
+# different places. brepi.geo.lattice reads this file to date the lattice
+# (load_municipalities), to state what is and is not resolvable across a
+# boundary change (build_crosswalk), and to compute the merge sets that make a
+# 2000-2022 panel comparable (amc_groups).
+#
+# What 'effective_year' means
+# ---------------------------
+# The first year the code appears in the IBGE lattice -- NOT the date of the
+# state law, and not always the legal installation date. It was derived
+# empirically: for each code, the first year IBGE's own population estimate
+# series (SIDRA aggregate 6579) reports a non-sentinel value, cross-checked
+# against the census lattices. Where the two disagree (Mesquita/RJ, Nazaria/PI)
+# the IBGE lattice wins and the discrepancy is recorded in 'note', because the
+# denominators this project joins against follow the lattice, not the statute.
+#
+# Cumulative counts implied by this file, all of which reconcile with IBGE:
+#   2000: 5507   2001: 5560   2004: 5564   2010: 5565   2013: 5570   2025: 5571
+#
+# 'parents' lists every municipality that donated territory. A multi-parent
+# entry is NOT accompanied by area shares: IBGE publishes the areas but the
+# population and case shares are not recoverable from them, so any backward
+# apportionment through such an entry is marked unresolvable rather than
+# silently weighted.
+#
+# Do not edit by hand without updating 'source' and re-running
+# brepi.geo.lattice.self_check().
+schema: brepi.geo.municipality_changes/1
+compiled_at: '2026-07-30'
+lattice_counts:
+  2000: 5507
+  2001: 5560
+  2004: 5564
+  2010: 5565
+  2013: 5570
+  2025: 5571
+sources:
+- what: Municipality lattice by year, derived empirically
+  how: Censo 2000 aggregate 1302 /localidades/N6 (5507); IBGE population estimates aggregate 6579, first year each code carries
+    a non-sentinel value; Censo 2010 aggregate 2065 (5565); Censo 2022 aggregate 9514 (5570); IBGE localidades v1 /municipios
+    (5571).
+  url: https://servicodados.ibge.gov.br/api/v3/agregados
+  retrieved: '2026-07-30'
+- what: Parent (desmembrado de) relations
+  how: IBGE Cidades 'Historico' page per municipality, Formacao Administrativa block where present, narrative Historico otherwise.
+    Per-entry URL in the 'source' field.
+  url: https://cidades.ibge.gov.br/
+  retrieved: '2026-07-30'
+- what: Legal framework for municipality creation
+  url: https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/evolucao_da_divisao_territorial_do_brasil/evolucao_da_divisao_territorial_do_brasil_1872_2010/evolucao_do_marco_legal_da_criacao_de_municipios_no_brasil.pdf
+created:
+- code7: '2207793'
+  name: Pau D'Arco do Piauí
+  uf: PI
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '2200400'
+  parent_names:
+  - Altos
+  source: https://cidades.ibge.gov.br/brasil/pi/pau-darco-do-piaui/historico
+- code7: '2406155'
+  name: Jundiá
+  uf: RN
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '2414704'
+  parent_names:
+  - Várzea
+  source: https://cidades.ibge.gov.br/brasil/rn/jundia/historico
+- code7: '2703759'
+  name: Jequiá da Praia
+  uf: AL
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '2708600'
+  - '2702306'
+  parent_names:
+  - São Miguel dos Campos
+  - Coruripe
+  source: https://cidades.ibge.gov.br/brasil/al/jequia-da-praia/historico
+- code7: '2903276'
+  name: Barrocas
+  uf: BA
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '2930501'
+  parent_names:
+  - Serrinha
+  note: Parent established from Serrinha's historico (Lei Estadual 7.620/2000); Barrocas' own page carries no 'desmembrado
+    de' sentence. Original 1985 creation was annulled in 1988 and re-enacted in 2000.
+  source: https://cidades.ibge.gov.br/brasil/ba/barrocas/historico
+- code7: '2919553'
+  name: Luís Eduardo Magalhães
+  uf: BA
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '2903201'
+  parent_names:
+  - Barreiras
+  source: https://cidades.ibge.gov.br/brasil/ba/luis-eduardo-magalhaes/historico
+- code7: '3202256'
+  name: Governador Lindenberg
+  uf: ES
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '3201506'
+  parent_names:
+  - Colatina
+  source: https://cidades.ibge.gov.br/brasil/es/governador-lindenberg/historico
+- code7: '3302858'
+  name: Mesquita
+  uf: RJ
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '3303500'
+  parent_names:
+  - Nova Iguaçu
+  note: IBGE's own historico gives installation on 2005-01-01, but the IBGE population estimate series carries Mesquita from
+    2001. effective_year follows the IBGE lattice, not the installation date.
+  source: https://cidades.ibge.gov.br/brasil/rj/mesquita/historico
+- code7: '4300034'
+  name: Aceguá
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4301602'
+  parent_names:
+  - Bagé
+  source: https://cidades.ibge.gov.br/brasil/rs/acegua/historico
+- code7: '4300471'
+  name: Almirante Tamandaré do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4304705'
+  parent_names:
+  - Carazinho
+  source: https://cidades.ibge.gov.br/brasil/rs/almirante-tamandare-do-sul/historico
+- code7: '4301073'
+  name: Arroio do Padre
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4314407'
+  parent_names:
+  - Pelotas
+  source: https://cidades.ibge.gov.br/brasil/rs/arroio-do-padre/historico
+- code7: '4302220'
+  name: Boa Vista do Cadeado
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4306106'
+  - '4310207'
+  - '4301503'
+  parent_names:
+  - Cruz Alta
+  - Ijuí
+  - Augusto Pestana
+  source: https://cidades.ibge.gov.br/brasil/rs/boa-vista-do-cadeado/historico
+- code7: '4302238'
+  name: Boa Vista do Incra
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4306106'
+  - '4308458'
+  parent_names:
+  - Cruz Alta
+  - Fortaleza dos Valos
+  source: https://cidades.ibge.gov.br/brasil/rs/boa-vista-do-incra/historico
+- code7: '4302584'
+  name: Bozano
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4310207'
+  parent_names:
+  - Ijuí
+  source: https://cidades.ibge.gov.br/brasil/rs/bozano/historico
+- code7: '4304614'
+  name: Canudos do Vale
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4311403'
+  - '4315156'
+  - '4302451'
+  parent_names:
+  - Lajeado
+  - Progresso
+  - Boqueirão do Leão
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/canudos-do-vale/historico
+- code7: '4304622'
+  name: Capão Bonito do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4311304'
+  parent_names:
+  - Lagoa Vermelha
+  source: https://cidades.ibge.gov.br/brasil/rs/capao-bonito-do-sul/historico
+- code7: '4304655'
+  name: Capão do Cipó
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4317400'
+  - '4319158'
+  - '4322202'
+  parent_names:
+  - Santiago
+  - São Miguel das Missões
+  - Tupanciretã
+  source: https://cidades.ibge.gov.br/brasil/rs/capao-do-cipo/historico
+- code7: '4305835'
+  name: Coqueiro Baixo
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4313003'
+  - '4315453'
+  parent_names:
+  - Nova Bréscia
+  - Relvado
+  source: https://cidades.ibge.gov.br/brasil/rs/coqueiro-baixo/historico
+- code7: '4305934'
+  name: Coronel Pilar
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4308607'
+  - '4315800'
+  parent_names:
+  - Garibaldi
+  - Roca Sales
+  source: https://cidades.ibge.gov.br/brasil/rs/coronel-pilar/historico
+- code7: '4306130'
+  name: Cruzaltense
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4303806'
+  parent_names:
+  - Campinas do Sul
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/cruzaltense/historico
+- code7: '4308433'
+  name: Forquetinha
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4311403'
+  parent_names:
+  - Lajeado
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/forquetinha/historico
+- code7: '4310652'
+  name: Itati
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4321436'
+  parent_names:
+  - Terra de Areia
+  note: Parent is Terra de Areia, not Osorio (Osorio was Terra de Areia's own parent, in 1988).
+  source: https://cidades.ibge.gov.br/brasil/rs/itati/historico
+- code7: '4310876'
+  name: Jacuizinho
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4316451'
+  parent_names:
+  - Salto do Jacuí
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/jacuizinho/historico
+- code7: '4311239'
+  name: Lagoa Bonita do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4320701'
+  parent_names:
+  - Sobradinho
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/lagoa-bonita-do-sul/historico
+- code7: '4312179'
+  name: Mato Queimado
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4303301'
+  parent_names:
+  - Caibaté
+  source: https://cidades.ibge.gov.br/brasil/rs/mato-queimado/historico
+- code7: '4313466'
+  name: Novo Xingu
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4305801'
+  parent_names:
+  - Constantina
+  note: Parent taken from Constantina's historico; Novo Xingu's own page calls Constantina only the 'municipio mae'.
+  source: https://cidades.ibge.gov.br/brasil/rs/novo-xingu/historico
+- code7: '4314134'
+  name: Paulo Bento
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4307005'
+  - '4310900'
+  - '4314787'
+  - '4301701'
+  parent_names:
+  - Erechim
+  - Jacutinga
+  - Ponte Preta
+  - Barão de Cotegipe
+  source: https://cidades.ibge.gov.br/brasil/rs/paulo-bento/historico
+- code7: '4314175'
+  name: Pedras Altas
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4307104'
+  - '4314506'
+  parent_names:
+  - Herval
+  - Pinheiro Machado
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/pedras-altas/historico
+- code7: '4314464'
+  name: Pinhal da Serra
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4307401'
+  parent_names:
+  - Esmeralda
+  source: https://cidades.ibge.gov.br/brasil/rs/pinhal-da-serra/historico
+- code7: '4315313'
+  name: Quatro Irmãos
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4307005'
+  - '4310900'
+  parent_names:
+  - Erechim
+  - Jacutinga
+  source: https://cidades.ibge.gov.br/brasil/rs/quatro-irmaos/historico
+- code7: '4315958'
+  name: Rolador
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4318903'
+  parent_names:
+  - São Luiz Gonzaga
+  source: https://cidades.ibge.gov.br/brasil/rs/rolador/historico
+- code7: '4316733'
+  name: Santa Cecília do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4320909'
+  parent_names:
+  - Tapejara
+  source: https://cidades.ibge.gov.br/brasil/rs/santa-cecilia-do-sul/historico
+- code7: '4316972'
+  name: Santa Margarida do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4318309'
+  parent_names:
+  - São Gabriel
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/santa-margarida-do-sul/historico
+- code7: '4318614'
+  name: São José do Sul
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4316501'
+  - '4312401'
+  - '4311791'
+  parent_names:
+  - Salvador do Sul
+  - Montenegro
+  - Maratá
+  source: https://cidades.ibge.gov.br/brasil/rs/sao-jose-do-sul/historico
+- code7: '4319364'
+  name: São Pedro das Missões
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4313706'
+  parent_names:
+  - Palmeira das Missões
+  source: https://cidades.ibge.gov.br/brasil/rs/sao-pedro-das-missoes/historico
+- code7: '4321469'
+  name: Tio Hugo
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4323200'
+  - '4307054'
+  - '4309951'
+  parent_names:
+  - Victor Graeff
+  - Ernestina
+  - Ibirapuitã
+  source: https://cidades.ibge.gov.br/brasil/rs/tio-hugo/historico
+- code7: '4323770'
+  name: Westfália
+  uf: RS
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '4321451'
+  - '4310363'
+  parent_names:
+  - Teutônia
+  - Imigrante
+  note: Parent read from the narrative Historico section of the IBGE Cidades page; the page has no formal 'Formacao Administrativa'
+    block.
+  source: https://cidades.ibge.gov.br/brasil/rs/westfalia/historico
+- code7: '5101852'
+  name: Bom Jesus do Araguaia
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5100359'
+  - '5107180'
+  parent_names:
+  - Alto Boa Vista
+  - Ribeirão Cascalheira
+  source: https://cidades.ibge.gov.br/brasil/mt/bom-jesus-do-araguaia/historico
+- code7: '5103254'
+  name: Colniza
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5101407'
+  parent_names:
+  - Aripuanã
+  source: https://cidades.ibge.gov.br/brasil/mt/colniza/historico
+- code7: '5103361'
+  name: Conquista D'Oeste
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5106752'
+  parent_names:
+  - Pontes e Lacerda
+  source: https://cidades.ibge.gov.br/brasil/mt/conquista-doeste/historico
+- code7: '5103437'
+  name: Curvelândia
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5102504'
+  - '5105622'
+  - '5105234'
+  parent_names:
+  - Cáceres
+  - Mirassol d'Oeste
+  - Lambari D'Oeste
+  note: IBGE's text reads 'Itambi d'Oeste', which is not a municipality; it is a typo for Lambari D'Oeste (5105234), confirmed
+    against Lei Estadual 6.981/1998.
+  source: https://cidades.ibge.gov.br/brasil/mt/curvelandia/historico
+- code7: '5106174'
+  name: Nova Nazaré
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5100201'
+  parent_names:
+  - Água Boa
+  source: https://cidades.ibge.gov.br/brasil/mt/nova-nazare/historico
+- code7: '5106190'
+  name: Nova Santa Helena
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5104559'
+  - '5103056'
+  parent_names:
+  - Itaúba
+  - Cláudia
+  source: https://cidades.ibge.gov.br/brasil/mt/nova-santa-helena/historico
+- code7: '5106315'
+  name: Novo Santo Antônio
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5107859'
+  - '5103106'
+  parent_names:
+  - São Félix do Araguaia
+  - Cocalinho
+  source: https://cidades.ibge.gov.br/brasil/mt/novo-santo-antonio/historico
+- code7: '5107578'
+  name: Rondolândia
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5101407'
+  parent_names:
+  - Aripuanã
+  source: https://cidades.ibge.gov.br/brasil/mt/rondolandia/historico
+- code7: '5107743'
+  name: Santa Cruz do Xingu
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5107354'
+  parent_names:
+  - São José do Xingu
+  source: https://cidades.ibge.gov.br/brasil/mt/santa-cruz-do-xingu/historico
+- code7: '5107768'
+  name: Santa Rita do Trivelato
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5106224'
+  parent_names:
+  - Nova Mutum
+  source: https://cidades.ibge.gov.br/brasil/mt/santa-rita-do-trivelato/historico
+- code7: '5107792'
+  name: Santo Antônio do Leste
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5106281'
+  parent_names:
+  - Novo São Joaquim
+  source: https://cidades.ibge.gov.br/brasil/mt/santo-antonio-do-leste/historico
+- code7: '5107883'
+  name: Serra Nova Dourada
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5100359'
+  - '5107859'
+  parent_names:
+  - Alto Boa Vista
+  - São Félix do Araguaia
+  source: https://cidades.ibge.gov.br/brasil/mt/serra-nova-dourada/historico
+- code7: '5108352'
+  name: Vale de São Domingos
+  uf: MT
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5106752'
+  parent_names:
+  - Pontes e Lacerda
+  source: https://cidades.ibge.gov.br/brasil/mt/vale-de-sao-domingos/historico
+- code7: '5204854'
+  name: Campo Limpo de Goiás
+  uf: GO
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5201108'
+  parent_names:
+  - Anápolis
+  source: https://cidades.ibge.gov.br/brasil/go/campo-limpo-de-goias/historico
+- code7: '5208152'
+  name: Gameleira de Goiás
+  uf: GO
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5220603'
+  parent_names:
+  - Silvânia
+  source: https://cidades.ibge.gov.br/brasil/go/gameleira-de-goias/historico
+- code7: '5210158'
+  name: Ipiranga de Goiás
+  uf: GO
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5205406'
+  parent_names:
+  - Ceres
+  source: https://cidades.ibge.gov.br/brasil/go/ipiranga-de-goias/historico
+- code7: '5212253'
+  name: Lagoa Santa
+  uf: GO
+  effective_year: 2001
+  installed: '2001-01-01'
+  parents:
+  - '5210802'
+  parent_names:
+  - Itajá
+  source: https://cidades.ibge.gov.br/brasil/go/lagoa-santa/historico
+- code7: '2200954'
+  name: Aroeiras do Itaim
+  uf: PI
+  effective_year: 2004
+  parents:
+  - '2208007'
+  parent_names:
+  - Picos
+  law: Lei Estadual PI 5.094 de 1999-10-27; desmembrado de Picos.
+  source: https://cidades.ibge.gov.br/brasil/pi/aroeiras-do-itaim/historico
+- code7: '5003900'
+  name: Figueirão
+  uf: MS
+  effective_year: 2004
+  parents:
+  - '5002605'
+  - '5003256'
+  parent_names:
+  - Camapuã
+  - Costa Rica
+  law: Lei Estadual MS 2.615 de 2003-09-29; desmembrado de Camapua e Costa Rica.
+  source: https://cidades.ibge.gov.br/brasil/ms/figueirao/historico
+- code7: '5104526'
+  name: Ipiranga do Norte
+  uf: MT
+  effective_year: 2004
+  parents:
+  - '5108006'
+  parent_names:
+  - Tapurah
+  law: Lei Estadual MT 7.265 de 2000-03-29; desmembrado de Tapurah.
+  source: https://cidades.ibge.gov.br/brasil/mt/ipiranga-do-norte/historico
+- code7: '5104542'
+  name: Itanhangá
+  uf: MT
+  effective_year: 2004
+  parents:
+  - '5108006'
+  parent_names:
+  - Tapurah
+  law: Lei Estadual MT 7.266 de 2000-03-29; desmembrado de Tapurah.
+  source: https://cidades.ibge.gov.br/brasil/mt/itanhanga/historico
+- code7: '2206720'
+  name: Nazária
+  uf: PI
+  effective_year: 2008
+  parents:
+  - '2211001'
+  parent_names:
+  - Teresina
+  law: Desmembrado de Teresina. Legally installed 2013-01-01, but IBGE carries Nazaria in the population estimates from 2008
+    and in the 2010 Census lattice (5565 municipalities); effective_year follows the IBGE lattice.
+  source: https://cidades.ibge.gov.br/brasil/pi/nazaria/historico
+- code7: '1504752'
+  name: Mojuí dos Campos
+  uf: PA
+  effective_year: 2013
+  parents:
+  - '1506807'
+  parent_names:
+  - Santarém
+  law: Installed 2013-01-01, desmembrado de Santarem (4988.236 km2).
+  source: https://cidades.ibge.gov.br/brasil/pa/mojui-dos-campos/historico
+- code7: '4212650'
+  name: Pescaria Brava
+  uf: SC
+  effective_year: 2013
+  parents:
+  - '4209409'
+  parent_names:
+  - Laguna
+  law: Installed 2013-01-01, desmembrado de Laguna (105.169 km2).
+  source: https://cidades.ibge.gov.br/brasil/sc/pescaria-brava/historico
+- code7: '4220000'
+  name: Balneário Rincão
+  uf: SC
+  effective_year: 2013
+  parents:
+  - '4207007'
+  parent_names:
+  - Içara
+  law: Installed 2013-01-01, desmembrado de Icara (64.636 km2).
+  source: https://cidades.ibge.gov.br/brasil/sc/balneario-rincao/historico
+- code7: '4314548'
+  name: Pinto Bandeira
+  uf: RS
+  effective_year: 2013
+  parents:
+  - '4302105'
+  parent_names:
+  - Bento Gonçalves
+  law: Installed 2013-01-01, desmembrado de Bento Goncalves (105.072 km2). Pinto Bandeira had been emancipated in 1996 and
+    annulled in 2001 before this second, definitive installation.
+  source: https://cidades.ibge.gov.br/brasil/rs/pinto-bandeira/historico
+- code7: '5006275'
+  name: Paraíso das Águas
+  uf: MS
+  effective_year: 2013
+  parents:
+  - '5003256'
+  - '5002951'
+  - '5000203'
+  parent_names:
+  - Costa Rica
+  - Chapadão do Sul
+  - Água Clara
+  law: Installed 2013-01-01, desmembrado de Costa Rica, Chapadao do Sul e Agua Clara (5032.469 km2).
+  source: https://cidades.ibge.gov.br/brasil/ms/paraiso-das-aguas/historico
+- code7: '5101837'
+  name: Boa Esperança do Norte
+  uf: MT
+  effective_year: 2025
+  parents:
+  - '5106240'
+  - '5107925'
+  parent_names:
+  - Nova Ubiratã
+  - Sorriso
+  law: Creation approved by plebiscite in March 2000, upheld by the STF in October 2023, installed 2025-01-01. Roughly 80
+    percent of its territory came from Nova Ubirata; it had earlier been a district of Sorriso. IBGE code assigned in December
+    2024.
+  note: Parent shares are approximate; treat any split of pre-2025 records as unresolvable.
+  source: https://cidades.ibge.gov.br/brasil/mt/boa-esperanca-do-norte/historico

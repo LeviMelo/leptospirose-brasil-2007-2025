@@ -1,0 +1,217 @@
+{
+  "question": "When ascertainment breadth changes within a single health region over time, does reported case fatality move with it?",
+  "exposure": "H = hospitalised / hosp_known, per 10 percentage points; higher H = narrower ascertainment",
+  "measure": "odds ratio for leptospirosis death among confirmed cases with a valid outcome field, binomial GLM with logit link, health-region fixed effects, cluster-robust by region",
+  "primary_minimum_denominator": 10,
+  "estimation_sample": {
+    "region_years": 1193,
+    "regions": 110,
+    "deaths": 4800,
+    "outcome_known": 49166,
+    "case_fatality": 0.09762844241955823,
+    "case_fatality_ci": [
+      0.09501848864650102,
+      0.10028601165426572
+    ],
+    "H": 0.7108169928251648,
+    "H_ci": [
+      0.7068662940595308,
+      0.7147437560355878
+    ]
+  },
+  "a_within_region": {
+    "beta": 0.19664516540149582,
+    "se": 0.028209051623468838,
+    "or": 1.2173120196406872,
+    "or_lo": 1.1518351351479295,
+    "or_hi": 1.2865109840319082,
+    "p": 3.147065571082863e-12
+  },
+  "b_pooled": {
+    "beta": 0.35125193120155673,
+    "se": 0.03423369175987626,
+    "or": 1.4208452360734838,
+    "or_lo": 1.3286390242725603,
+    "or_hi": 1.5194504662227744,
+    "p": 1.0624762718080675e-24
+  },
+  "b_between_vs_within": {
+    "difference_in_log_odds": 0.24681823098431158,
+    "se": 0.0437959586557566,
+    "ratio_of_odds_ratios": 1.2799464370282971,
+    "ratio_lo": 1.1746593045993823,
+    "ratio_hi": 1.394670671952973,
+    "z": 5.635639418795311,
+    "p": 1.7440997441628102e-08
+  },
+  "b_within_share_of_pooled_log_odds": 0.5598408092129639,
+  "b_within_share_of_pooled_log_odds_noise_corrected": 0.7475135519839995,
+  "b_within_share_of_between_log_odds_noise_corrected": 0.6014053580468912,
+  "a_marginal_percentage_scale": {
+    "predicted_cfr_at_H_50": 0.0582484798604401,
+    "predicted_cfr_at_H_70": 0.0832499125986762,
+    "predicted_cfr_at_H_90": 0.1172654661419867,
+    "percentage_point_difference_H90_minus_H50": 0.0590169862815466,
+    "observed_mean_H": 0.7108169928251648
+  },
+  "T1_measurement_error": [
+    {
+      "min_denominator": 5,
+      "within_variance_of_H_observed": 0.017921766809697696,
+      "within_variance_of_H_binomial_noise": 0.0057168055980656605,
+      "reliability_ratio_lambda": 0.6810132807345632,
+      "observed_or_per_10pp": 1.2107237781100202,
+      "attenuation_corrected_or_per_10pp": 1.324168936278013,
+      "corrected_or_lo": 1.2386003507438839,
+      "corrected_or_hi": 1.4156490192745106
+    },
+    {
+      "min_denominator": 10,
+      "within_variance_of_H_observed": 0.015954905912935236,
+      "within_variance_of_H_binomial_noise": 0.00400568116174898,
+      "reliability_ratio_lambda": 0.7489373372925111,
+      "observed_or_per_10pp": 1.2173120196406872,
+      "attenuation_corrected_or_per_10pp": 1.300261734890691,
+      "corrected_or_lo": 1.2077285010271641,
+      "corrected_or_hi": 1.3998846411118382
+    },
+    {
+      "min_denominator": 20,
+      "within_variance_of_H_observed": 0.014325648048639556,
+      "within_variance_of_H_binomial_noise": 0.0026255985812537034,
+      "reliability_ratio_lambda": 0.8167204323086071,
+      "observed_or_per_10pp": 1.2355792506119696,
+      "attenuation_corrected_or_per_10pp": 1.2956485535229276,
+      "corrected_or_lo": 1.1918574756081886,
+      "corrected_or_hi": 1.408478118064775
+    },
+    {
+      "min_denominator": 30,
+      "within_variance_of_H_observed": 0.012837972254571416,
+      "within_variance_of_H_binomial_noise": 0.0020245529340284607,
+      "reliability_ratio_lambda": 0.8422996331599372,
+      "observed_or_per_10pp": 1.2355120718295332,
+      "attenuation_corrected_or_per_10pp": 1.2854143253447678,
+      "corrected_or_lo": 1.1637154038483686,
+      "corrected_or_hi": 1.4198402653582447
+    }
+  ],
+  "T2_composition_counterfactual": {
+    "min_denominator": 10,
+    "region_years": 1185,
+    "regions": 110,
+    "deaths": 4682,
+    "observed_or_per_10pp": 1.2093147778195499,
+    "observed_lo": 1.145657763302324,
+    "observed_hi": 1.276508813275355,
+    "composition_only_or_per_10pp": 1.1721493217692767,
+    "composition_only_lo": 1.1582586961072172,
+    "composition_only_hi": 1.1862065332570517,
+    "share_of_observed_log_odds_explained_by_composition": 0.8357581233225637,
+    "national_cfr_hospitalised": 0.13477601735976932,
+    "national_cfr_non_hospitalised": 0.010653613590555715
+  },
+  "c_first_differences_primary": {
+    "min_denominator": 10,
+    "min_years": 8,
+    "regions": 65,
+    "consecutive_year_pairs": 846,
+    "pooled_spearman_rho": 0.1383960979445647,
+    "pooled_rho_lo": 0.07334456383755131,
+    "pooled_rho_hi": 0.20313611521152602,
+    "bootstrap_replicates": 2000,
+    "regions_with_rho_computed": 63,
+    "regions_with_positive_rho": 45,
+    "share_positive": 0.7142857142857143,
+    "sign_test_p": 0.0008980471786680215,
+    "median_within_region_rho": 0.18885448916408668,
+    "iqr_within_region_rho": [
+      -0.03841700691739955,
+      0.3560672257611971
+    ]
+  },
+  "c_first_differences_min5": {
+    "min_denominator": 5,
+    "min_years": 8,
+    "regions": 109,
+    "consecutive_year_pairs": 1441,
+    "pooled_spearman_rho": 0.11517040244883613,
+    "pooled_rho_lo": 0.06199438134399678,
+    "pooled_rho_hi": 0.17253115637579985,
+    "bootstrap_replicates": 2000,
+    "regions_with_rho_computed": 106,
+    "regions_with_positive_rho": 72,
+    "share_positive": 0.6792452830188679,
+    "sign_test_p": 0.00028452861891625184,
+    "median_within_region_rho": 0.15919116360325264,
+    "iqr_within_region_rho": [
+      -0.058847110944281356,
+      0.35385706914344683
+    ]
+  },
+  "d_lag_lead": {
+    "sample_region_years": 747,
+    "sample_regions": 66,
+    "contemporaneous_vs_lead": {
+      "difference_in_log_odds": 0.16608247993719025,
+      "se": 0.04311709405106323,
+      "ratio_of_odds_ratios": 1.180670479334349,
+      "ratio_lo": 1.0849923926627505,
+      "ratio_hi": 1.284785764580835,
+      "z": 3.8518940942657243,
+      "p": 0.00011720771485091774
+    },
+    "contemporaneous_vs_lag": {
+      "difference_in_log_odds": 0.1664271486004714,
+      "se": 0.03963087312513271,
+      "ratio_of_odds_ratios": 1.1810774895880476,
+      "ratio_lo": 1.0928081167374744,
+      "ratio_hi": 1.2764766431056005,
+      "z": 4.199431793364358,
+      "p": 2.6758561703475054e-05
+    },
+    "autocorrelation_of_H_lag1": 0.7390722369653294
+  },
+  "sensitivity_by_threshold": {
+    "5": {
+      "within_or": 1.2107237781100202,
+      "within_lo": 1.1568784827535759,
+      "within_hi": 1.2670752276349835,
+      "pooled_or": 1.4044662526264509,
+      "pooled_lo": 1.3221254221746475,
+      "pooled_hi": 1.491935198948185,
+      "regions": 164,
+      "region_years": 1929
+    },
+    "10": {
+      "within_or": 1.2173120196406872,
+      "within_lo": 1.1518351351479295,
+      "within_hi": 1.2865109840319082,
+      "pooled_or": 1.4208452360734838,
+      "pooled_lo": 1.3286390242725603,
+      "pooled_hi": 1.5194504662227744,
+      "regions": 110,
+      "region_years": 1193
+    },
+    "20": {
+      "within_or": 1.2355792506119696,
+      "within_lo": 1.1541294091850427,
+      "within_hi": 1.3227772140568215,
+      "pooled_or": 1.4478155318166128,
+      "pooled_lo": 1.3432580377744967,
+      "pooled_hi": 1.5605116479647838,
+      "regions": 65,
+      "region_years": 662
+    },
+    "30": {
+      "within_or": 1.2355120718295332,
+      "within_lo": 1.1362225121039542,
+      "within_hi": 1.3434781157520714,
+      "pooled_or": 1.4491647809735362,
+      "pooled_lo": 1.3341461359448092,
+      "pooled_hi": 1.5740993477651182,
+      "regions": 44,
+      "region_years": 445
+    }
+  }
+}

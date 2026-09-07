@@ -1,0 +1,22 @@
+{
+  "window": [
+    2007,
+    2025
+  ],
+  "age_cut": 60,
+  "confirmed_cases": 66358,
+  "region_years": 8208,
+  "regions": 432,
+  "regions_with_any_case": 432,
+  "national": {
+    "H": 0.7222196221587807,
+    "cfr": 0.09752060698425184,
+    "outcome_completeness": 0.9196027607824226,
+    "hosp_completeness": 0.9659875222279153,
+    "severity_completeness": 0.9009765212935893,
+    "criterion_completeness": 0.9869043672202297,
+    "share_lab": 0.8573195498480661,
+    "share_severe": 0.5489487681268503,
+    "share_age60": 0.1013758910137589
+  }
+}
