@@ -73,7 +73,8 @@ ITENS = [
      "O título passou a “Amplitude de detecção e letalidade notificada da "
      "leptospirose: análise de séries temporais, Brasil, 2007-2025”, e a "
      "expressão foi eliminada de todas as seções. O descritor “Estudos "
-     "Ecológicos” foi substituído por “Estudos de Séries Temporais”. A "
+     "Ecológicos” foi substituído por “Estudos de Séries Temporais”, termo "
+     "exato da DeCS. A "
      "ressalva sobre inferência ecológica permanece na discussão e na nota da "
      "Tabela 2, agora como cautela de interpretação da unidade de observação, "
      "e não como rótulo de delineamento."),
@@ -167,11 +168,16 @@ def main() -> None:
         p(doc, "**%d. %s**" % (i, pedido), espaco_antes=6, espaco_depois=3)
         p(doc, feito, espaco_depois=8, recuo=0.5)
 
-    p(doc, "**Uma observação**", espaco_antes=10, espaco_depois=3)
+    p(doc, "**Uma consulta sobre o sigilo da avaliação**", espaco_antes=10,
+      espaco_depois=3)
     p(doc,
-      "O descritor que substituiu “Estudos Ecológicos” foi escolhido pela "
-      "correspondência com o delineamento; caso a secretaria prefira outro "
-      "termo da DeCS, faremos a substituição.", espaco_depois=8, recuo=0.5)
+      "O item 6 pede o endereço do repositório citado no corpo do manuscrito e "
+      "incluído na lista de referências, e foi assim que o atendemos. Como o "
+      "endereço e a referência identificam a autoria, e a revista adota "
+      "avaliação por pares cega, submetemos a questão à secretaria: se "
+      "preferirem, substituímos ambos por uma versão anônima do repositório "
+      "durante a avaliação e informamos o endereço definitivo na aceitação.",
+      espaco_depois=8, recuo=0.5)
 
     doc.save(SAIDA)
     print("gravado:", SAIDA)

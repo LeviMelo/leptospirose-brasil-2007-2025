@@ -1,7 +1,8 @@
 # Amplitude de detecção e letalidade notificada da leptospirose, Brasil, 2007–2025
 
-Pacote de reprodutibilidade do manuscrito submetido à *Revista de Saúde
-Ambiental e Epidemiológica* (RESS-2026-1462): códigos de extração,
+Pacote de reprodutibilidade do manuscrito submetido à *Epidemiologia e
+Serviços de Saúde: revista do Sistema Único de Saúde do Brasil* (RESS),
+manuscrito RESS-2026-1462: códigos de extração,
 decodificação e análise, banco analítico derivado no nível região de saúde por
 ano, registro de rastreabilidade de cada valor publicado e o programa que monta
 o documento de submissão.
