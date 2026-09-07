@@ -3,12 +3,11 @@ title: >-
   Amplitude de detecção e letalidade notificada da leptospirose,
   Brasil, 2007-2025: pacote de reprodutibilidade
 message: >-
-  Ao usar este material, cite o artigo. A autoria segue a do artigo
-  submetido; enquanto ele estiver em avaliação, o registro abaixo
-  identifica apenas o repositório.
+  Ao usar este material, cite o artigo a que ele pertence.
 type: software
 authors:
-  - name: LeviMelo
+  - family-names: Amorim
+    given-names: Levi de Melo
     alias: LeviMelo
 repository-code: https://github.com/LeviMelo/leptospirose-brasil-2007-2025
 license: MIT

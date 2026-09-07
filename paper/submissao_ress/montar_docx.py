@@ -42,6 +42,8 @@ SAIDA = AQUI / "RESS-2026-1462_v2_ajustado.docx"
 FONTE = "Times New Roman"
 CORPO = Pt(12)
 TAB = Pt(8.5)
+ENTRELINHA = 1.0
+ALINHAMENTO = WD_ALIGN_PARAGRAPH.LEFT
 
 
 # --------------------------------------------------------------------------- #
@@ -61,8 +63,8 @@ def _runs(par, texto):
             par.add_run(pedaco)
 
 
-def p(doc, texto, alinhamento=WD_ALIGN_PARAGRAPH.JUSTIFY, espaco_antes=0,
-      espaco_depois=6, entrelinha=1.5, tamanho=None, recuo=False,
+def p(doc, texto, alinhamento=ALINHAMENTO, espaco_antes=0,
+      espaco_depois=6, entrelinha=ENTRELINHA, tamanho=None, recuo=False,
       manter=False):
     par = doc.add_paragraph()
     par.alignment = alinhamento
@@ -87,7 +89,7 @@ def titulo(doc, texto, nivel=1):
     pf = par.paragraph_format
     pf.space_before = Pt(12 if nivel == 1 else 10)
     pf.space_after = Pt(6)
-    pf.line_spacing = 1.5
+    pf.line_spacing = ENTRELINHA
     pf.keep_with_next = True
     r = par.add_run(texto)
     r.bold = True
@@ -128,7 +130,7 @@ def quadro_etica(doc, cabecalho, texto):
     _borda_paragrafo(cab, ("top", "left", "right"))
 
     corpo = doc.add_paragraph()
-    corpo.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    corpo.alignment = ALINHAMENTO
     pf = corpo.paragraph_format
     pf.space_before = Pt(0)
     pf.space_after = Pt(12)
@@ -244,7 +246,7 @@ normal.element.rPr.rFonts.set(qn("w:eastAsia"), FONTE)
 # --------------------------------------------------------------------- topo --
 p(doc, "**Artigo original**", WD_ALIGN_PARAGRAPH.LEFT, espaco_depois=10)
 p(doc, "**Amplitude de detecção e letalidade notificada da leptospirose: "
-       "análise de séries temporais, Brasil, 2007–2025**",
+       "análise de séries temporais, Brasil, 2007-2025**",
   WD_ALIGN_PARAGRAPH.LEFT, espaco_depois=14)
 
 # ------------------------------------------------------------------- resumo --
@@ -255,23 +257,23 @@ p(doc,
   "clínico captado pela vigilância, usando a proporção de casos confirmados "
   "internados como indicador operacional inverso dessa amplitude. "
   "**Métodos.** Análise de séries temporais de base populacional, com unidade de "
-  "análise a região de saúde por ano, de 2007 a 2025, sobre casos confirmados do "
+  "análise a região de saúde por ano, 2007-2025, sobre casos confirmados do "
   "Sistema de Informação de Agravos de Notificação (SINAN). A exposição foi a "
   "proporção de casos confirmados com registro de internação; valores altos "
-  "indicam detecção mais concentrada entre hospitalizados. Ajustou-se modelo "
-  "binomial hierárquico com efeito espacial e tendência temporal, e "
+  "indicam detecção concentrada entre hospitalizados. Ajustaram-se modelo "
+  "binomial hierárquico com efeito espacial e tendência temporal e "
   "especificação com efeitos fixos de região e de ano. Compararam-se "
   "notificação, internação hospitalar e mortalidade populacional pela "
-  "Classificação Internacional de Doenças, 10ª revisão (CID-10), código A27. "
+  "Classificação Internacional de Doenças, 10ª revisão, código A27. "
   "**Resultados.** Analisaram-se 66.358 casos confirmados. Entre quintis da "
   "proporção de casos internados, a letalidade subiu de 2,7% para 16,9% e a "
   "incidência caiu de 6,53 para 1,23 por 100.000 pessoas-ano; a mortalidade "
   "populacional variou entre 1,68 e 2,47 por milhão, sem gradiente monotônico. "
   "Cada 10 pontos percentuais a mais na proporção de casos internados "
   "associaram-se a razão de chances de óbito de 1,23 (intervalo de confiança de "
-  "95% [IC95%] 1,20; 1,26) e, com efeitos fixos de região e de ano, 1,22 (IC95% "
-  "1,18; 1,27). **Conclusão.** A letalidade notificada associou-se fortemente à "
-  "composição do espectro de casos captado pela vigilância, enquanto a "
+  "95% [IC95%] 1,20; 1,26) e, com efeitos fixos, 1,22 (IC95% 1,18; 1,27). "
+  "**Conclusão.** A letalidade notificada associou-se fortemente à "
+  "composição dos casos captados pela vigilância, enquanto a "
   "mortalidade populacional não apresentou gradiente monotônico com a proporção "
   "de casos internados. Comparações de letalidade devem considerar a composição "
   "dos casos detectados.")
@@ -316,7 +318,7 @@ p(doc,
   "Um território que investiga sobretudo o caso grave produz, para a mesma "
   "doença, menos casos notificados e maior letalidade do que um território que "
   "também alcança o caso leve. A descrição nacional mais recente, para "
-  "2000–2015, reportou 60.952 casos confirmados, incidência de 1,9 por 100.000 "
+  "2000-2015, reportou 60.952 casos confirmados, incidência de 1,9 por 100.000 "
   "habitantes e letalidade de 10,0% entre 58.986 casos com desfecho conhecido, "
   "e nomeou a subnotificação como limitação não resolvida, sem dispor de "
   "instrumento para medi-la.(5) Uma análise estadual posterior manteve esse "
@@ -348,7 +350,7 @@ titulo(doc, "Cenário e fontes de dados", 2)
 p(doc,
   "Os 5.570 municípios brasileiros foram agregados em 439 regiões de saúde por "
   "uma única configuração contemporânea, aplicada retrospectivamente a "
-  "2007–2025; mudanças de limites no período não foram modeladas. Casos: "
+  "2007-2025; mudanças de limites no período não foram modeladas. Casos: "
   "arquivos anuais nacionais do SINAN. Óbitos populacionais: Sistema de "
   "Informações sobre Mortalidade, causa básica CID-10 A27, por município "
   "de residência e ano do óbito. Internações: Sistema de Informações "
@@ -357,7 +359,7 @@ p(doc,
   "internação, sem deduplicação de reinternações ou de autorizações de longa "
   "permanência. Denominadores: estimativas populacionais do Instituto "
   "Brasileiro de Geografia e Estatística compatíveis com a Revisão 2024 das "
-  "projeções.(9) As comparações entre os três sistemas usam 2008–2024, janela "
+  "projeções.(9) As comparações entre os três sistemas usam 2008-2024, janela "
   "comum com anos completos.")
 
 titulo(doc, "Variáveis", 2)
@@ -458,7 +460,7 @@ p(doc,
   "perturbação da vigilância com a composição sazonal. Compararam-se a "
   "proporção de casos internados, a confirmação laboratorial e a letalidade "
   "entre as janelas por razão de chances com intervalo exato. A comparação "
-  "entre unidades federativas usa 2024 contra 2019–2023 e restringe-se às sete "
+  "entre unidades federativas usa 2024 contra 2019-2023 e restringe-se às sete "
   "com ao menos 150 casos confirmados em 2024. O painel B da Figura 3 agrega "
   "por trimestre civil, para que os denominadores sustentem intervalos "
   "interpretáveis; a janela do evento cai no segundo trimestre de 2024. Os "
@@ -570,7 +572,7 @@ p(doc,
   "A enchente de maio de 2024 submeteu um único território a uma mudança "
   "abrupta de esforço de busca (Figura 3). Os casos confirmados com início de "
   "sintomas em maio de 2024 superaram em cinco vezes o máximo mensal de "
-  "2019–2023, e a proporção de casos internados caiu de 71,1% na linha de base "
+  "2019-2023, e a proporção de casos internados caiu de 71,1% na linha de base "
   "para 40,7% em 2024, razão de chances de 0,28 (IC95% 0,24; 0,33). O movimento "
   "é específico: entre as sete unidades federativas com ao menos 150 casos "
   "confirmados em 2024, o Rio Grande do Sul caiu 30,4 pontos percentuais e a "
@@ -627,7 +629,7 @@ p(doc,
   "replicável nacionalmente, ao passo que o campo de internação existe para "
   "todos os municípios desde 2007.")
 p(doc,
-  "A comparação mais direta é com a descrição nacional de 2000–2015, que "
+  "A comparação mais direta é com a descrição nacional de 2000-2015, que "
   "reportou letalidade de 10,0% e incidência de 1,9 por 100.000 e nomeou a "
   "subnotificação como limitação não resolvida, dispondo apenas do SINAN.(5) A "
   "ordenação regional é a mesma descrita há uma década: o contraste persiste, e "
@@ -680,7 +682,7 @@ p(doc,
   "texto, nas tabelas e nas figuras, em que toda estimativa é lida do arquivo "
   "de resultado que a produziu. O pacote não contém dados identificáveis. A "
   "versão correspondente a esta submissão está identificada pela etiqueta "
-  "submissao-ress no mesmo endereço.")
+  "submissao-ress no mesmo endereço.(15)", alinhamento=WD_ALIGN_PARAGRAPH.LEFT)
 
 titulo(doc, "Uso de inteligência artificial generativa")
 p(doc,
@@ -770,10 +772,15 @@ REFS = [
  "Lenhardt RV, et al. Leptospirosis cases during the 2024 catastrophic flood in "
  "Rio Grande do Sul, Brazil. Pathogens [Internet]. 2025 [citado em 7 set. "
  "2026];14(4):393. Disponível em: https://doi.org/10.3390/pathogens14040393",
+
+ "Amorim LM. Amplitude de detecção e letalidade notificada da leptospirose, "
+ "Brasil, 2007-2025: pacote de reprodutibilidade [conjunto de dados e "
+ "códigos]. 2026 [citado em 7 set. 2026]. GitHub. Disponível em: "
+ "https://github.com/LeviMelo/leptospirose-brasil-2007-2025",
 ]
 for i, ref in enumerate(REFS, 1):
     par = p(doc, "%d. %s" % (i, ref), WD_ALIGN_PARAGRAPH.LEFT,
-            espaco_depois=4, entrelinha=1.15, tamanho=Pt(11))
+            espaco_depois=4, entrelinha=ENTRELINHA, tamanho=Pt(11))
     par.paragraph_format.left_indent = Cm(0.75)
     par.paragraph_format.first_line_indent = Cm(-0.75)
 
@@ -783,7 +790,7 @@ doc.add_page_break()
 p(doc, "**Figura 1.** Incidência notificada por 100.000 pessoas-ano (A), "
        "letalidade (B) e proporção de casos confirmados internados (C), por "
        "região de saúde, com ampliação da faixa Sul–Sudeste (D, E e F). Brasil, "
-       "2007–2025 (n = 66.358 casos confirmados; 311 regiões de saúde com "
+       "2007-2025 (n = 66.358 casos confirmados; 311 regiões de saúde com "
        "estimativa)", espaco_depois=4, manter=True)
 figura(doc, FIG / "figura1_geografia.png")
 nota(doc, "Notas: escalas truncadas no percentil 98 das regiões estimáveis, com "
@@ -794,7 +801,7 @@ nota(doc, "Notas: escalas truncadas no percentil 98 das regiões estimáveis, co
 p(doc, "**Tabela 1.** Casos confirmados, incidência notificada, letalidade, "
        "proporção de casos internados, confirmação laboratorial e completude do "
        "campo de desfecho, com intervalos de confiança de 95% (IC95%), por "
-       "macrorregião. Brasil, 2007–2025 (n = 66.358 casos confirmados)",
+       "macrorregião. Brasil, 2007-2025 (n = 66.358 casos confirmados)",
   espaco_antes=10, espaco_depois=6, manter=True)
 E = WD_ALIGN_PARAGRAPH.LEFT
 D = WD_ALIGN_PARAGRAPH.RIGHT
@@ -819,10 +826,10 @@ tabela(
     [2.0, 2.0, 3.0, 2.6, 2.9, 1.7, 1.8],
     [E, D, D, D, D, D, D])
 nota(doc, "Notas: casos confirmados do Sistema de Informação de Agravos de "
-          "Notificação com data de início de sintomas entre 2007 e 2025. A "
+          "Notificação com data de início de sintomas entre 2007 e 2025; a "
           "letalidade tem por denominador os casos com desfecho registrado; a "
           "proporção de casos internados, os casos com o campo de internação "
-          "válido. Intervalos exatos de Poisson para a incidência e de "
+          "válido; intervalos exatos de Poisson para a incidência e de "
           "Clopper–Pearson para as proporções.")
 
 p(doc, "**Figura 2.** Associação entre a proporção de casos confirmados "
@@ -830,8 +837,8 @@ p(doc, "**Figura 2.** Associação entre a proporção de casos confirmados "
        "incidência de casos graves e não graves por quintil da proporção de "
        "casos internados (B); e comparação entre notificação, internação "
        "hospitalar e mortalidade populacional, indexada ao primeiro quintil (C). "
-       "Brasil, 2007–2025 (A: n = 311 regiões de saúde; B e C: n = 165 regiões, "
-       "56.332 casos, 2008–2024)", espaco_antes=10, espaco_depois=6, manter=True)
+       "Brasil, 2007-2025 (A: n = 311 regiões de saúde; B e C: n = 165 regiões, "
+       "56.332 casos, 2008-2024)", espaco_antes=10, espaco_depois=6, manter=True)
 figura(doc, FIG / "figura2_associacao.png")
 nota(doc, "Notas: em (A) cada ponto é uma região de saúde com ao menos 10 casos "
           "com campo de internação válido, com área proporcional ao número de "
@@ -840,13 +847,13 @@ nota(doc, "Notas: em (A) cada ponto é uma região de saúde com ao menos 10 cas
           "em (C) cada série é indexada ao seu próprio primeiro quintil "
           "(I = 100) porque as três têm unidades diferentes — notificação e "
           "internação por 100.000 e mortalidade por 1.000.000 de pessoas-ano. A "
-          "janela comum é 2008–2024.")
+          "janela comum é 2008-2024.")
 
 p(doc, "**Figura 3.** Casos confirmados por mês de início de sintomas (A); "
        "proporção de casos internados e proporção de confirmação laboratorial, "
        "com intervalos de confiança de 95% (IC95%) (B); e variação da proporção "
-       "de casos internados entre 2024 e a linha de base 2019–2023, por unidade "
-       "federativa (C). Rio Grande do Sul e Brasil, 2019–2025 (A e B: n = 3.527 "
+       "de casos internados entre 2024 e a linha de base 2019-2023, por unidade "
+       "federativa (C). Rio Grande do Sul e Brasil, 2019-2025 (A e B: n = 3.527 "
        "casos confirmados no Rio Grande do Sul; C: n = 7 unidades federativas "
        "com ao menos 150 casos confirmados em 2024)",
   espaco_antes=10, espaco_depois=6, manter=True)
@@ -859,7 +866,7 @@ nota(doc, "Notas: a faixa sombreada em (A) e (B) marca maio a julho de 2024, "
 p(doc, "**Tabela 2.** Razão de chances de óbito por leptospirose entre casos "
        "confirmados com desfecho conhecido, por 10 pontos percentuais a mais na "
        "proporção de casos internados, com intervalos de 95%, segundo "
-       "especificação do modelo. Brasil, 2007–2025 (n = 4.941 células "
+       "especificação do modelo. Brasil, 2007-2025 (n = 4.941 células "
        "região-ano; 426 regiões de saúde)", espaco_antes=10, espaco_depois=6, manter=True)
 tabela(
     doc,
@@ -882,20 +889,21 @@ tabela(
       "4.289"]],
     [1.8, 7.4, 4.0, 2.3],
     [E, E, D, D])
-nota(doc, "Notas: célula = combinação de região de saúde e ano. Nos modelos A a "
-          "F o intervalo de 95% é de credibilidade; no modelo G é intervalo de "
+nota(doc, "Notas: célula = combinação de região de saúde e ano; nos modelos A a "
+          "F o intervalo de 95% é de credibilidade e no modelo G é intervalo de "
           "confiança de 95% (IC95%), com erros-padrão robustos agrupados por "
-          "região. A variância marginal do componente espacial foi 0,66 (0,49; "
-          "0,88) no modelo A e 0,42 (0,30; 0,58) no modelo B, redução de 36,2%. "
-          "No modelo C, a razão de chances por 10 pontos percentuais a mais de "
-          "casos com 60 anos ou mais foi 1,08 (1,05; 1,11). O modelo D retém "
-          "72,2% das células; o modelo F retém 83,0% dos casos; o modelo G "
-          "reúne 306 das 426 regiões e 97,9% dos casos. Os modelos A, B e C são "
-          "ajustados sobre as mesmas células e são comparáveis entre si; D, E, "
-          "F e G usam subconjuntos ou desfecho distinto e não o são. A unidade "
-          "de observação é o território: toda estimativa é uma associação entre "
-          "a composição dos casos detectados de um território e sua letalidade "
-          "notificada, e não autoriza leitura individual.")
+          "região; a variância marginal do componente espacial foi 0,66 (0,49; "
+          "0,88) no modelo A e 0,42 (0,30; 0,58) no modelo B, redução de 36,2%; "
+          "no modelo C, a razão de chances por 10 pontos percentuais a mais de "
+          "casos com 60 anos ou mais foi 1,08 (1,05; 1,11); o modelo D retém "
+          "72,2% das células, o modelo F retém 83,0% dos casos e o modelo G "
+          "reúne 306 das 426 regiões e 97,9% dos casos; os modelos A, B e C são "
+          "ajustados sobre as mesmas células e são comparáveis entre si, "
+          "enquanto D, E, F e G usam subconjuntos ou desfecho distinto e não o "
+          "são; a unidade de observação é o território, de modo que toda "
+          "estimativa é uma associação entre a composição dos casos detectados "
+          "de um território e sua letalidade notificada, e não autoriza leitura "
+          "individual.")
 
 SAIDA.parent.mkdir(parents=True, exist_ok=True)
 doc.save(SAIDA)
